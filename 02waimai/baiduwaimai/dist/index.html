@@ -4,40 +4,16 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>Document</title>
-	<link rel="stylesheet" href="lib/swiper/swiper.min.css">
-	<style>
-		body,html{
-			height: 100%;
-		}
-		body{
-			margin: 0;
-		}
-		.swiper-container{
-			height: 100%;
-		}
-		.swiper-slide{
-			font-size: 100px;
-			text-align: center;
-			border: 10px solid hotpink;
-			box-sizing: border-box;
-		}
-		.loading{
-			position: absolute;
-			background-color: skyblue;
-			top: 0;
-			width: 100%;
-			height: 100%;
-			z-index: 2;
-		}
-		.welcome{
-			background-color: lightseagreen;
-			top: 0;
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			z-index: 1;
-		}
-	</style>
+	<script>
+		// var fontSize=window.screen.width/20;
+		// document.querySelector('html').style.fontSize=fontSize+'px';
+		// window.onresize=function(){
+		// 	var fontSize=window.screen.width/20;
+		// document.querySelector('html').style.fontSize=fontSize+'px';
+		// }
+	</script>
+	<link rel="stylesheet" href="lib/swiper/swiper.min.css">	
+	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 	<div class="swiper-container">
@@ -50,23 +26,24 @@
 	    <div class="swiper-slide">6</div>
 	  </div>
 	</div>
-	<div class="loading">loading</div>
-	<div class="welcome">welcome</div>
+	
+	<div class="welcome">
+		bb
+	</div>
+	<div class="loading">
+		<div class="rider"></div>
+		<div class="progress">
+			<div class="step"></div>
+		</div>
+		<div class="info"></div>
+		<div class="log"></div>
+		<div class="desc">
+			@ 2018 Baridu WaiMai Produced
+		</div>
+	</div>
 	<script src="lib/swiper/swiper.min.js"></script>
-	<script src="lib/zepto/zepto.js"></script>
-	<script src="lib/zepto/event.js"></script>
-	<script src="lib/zepto/fx.js"></script>
-	<script src="lib/zepto/fx_methods.js"></script>
 	<script>
-		var mySwiper=new Swiper('.swiper-container',{
-			direction: 'vertical'
-		});
-		$('.loading').click(function(){
-			$(this).fadeOut();
-		});
-		$('.welcome').click(function(){
-			$(this).fadeOut();
-		})
+		var mySwiper=new Swiper('swiper-container')
 	</script>
 </body>
 </html>

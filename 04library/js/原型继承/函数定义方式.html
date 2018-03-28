@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="box">
+		aaa
+	</div>
+	<div class="box">
+		bbb
+	</div>
+<script>
+
+	//函数声明会提升 函数表达式不会提升。
+	var arr=[45,56,78,67,99,56,88]
+	var max=Math.max.apply(Math,arr);
+	console.log(max)
+	console.log.apply(console,arr);
+	var obj={
+		0:6,
+		1:7,
+		2:8,
+		3:9,
+		length:4
+	}
+	// Array.prototype.splice.call(obj,0,2);
+	// console.log(obj)
+	// Array.prototype.push.call(obj,15);
+	console.log(obj.toString());
+	console.log(arr.toString());
+	console.log(Object.prototype.toString.call(arr));
+	// delete obj['3'];
+	// console.log(obj);
+</script>
+</body>
+</html>

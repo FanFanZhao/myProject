@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="Bookmark" href="/favicon.ico" >
+<link rel="Shortcut Icon" href="/favicon.ico" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="http://lib.h-ui.net/html5.js"></script>
+<script type="text/javascript" src="http://lib.h-ui.net/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/h-ui/3.1/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/h-ui.admin/3.1/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/www/home/css/H-ui.doc.css" />
+<link rel="stylesheet" type="text/css" href="http://lib.h-ui.net/Hui-iconfont/1.0.8/iconfont.min.css" />
+<!--[if lt IE 9]>
+<link href="http://static.h-ui.net/h-ui/css/H-ui.ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="text/javascript" src="http://lib.h-ui.net/jquery/1.9.1/jquery.min.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('.pngfix,.iconpic,.list-icon');</script>
+<![endif]-->
+<!-- 反运营商劫持 S -->
+<style type="text/css">
+html {
+	display:none}
+</style>
+<script>
+if( self == top ) {
+	document.documentElement.style.display = 'block' } else {
+	top.location = self.location }
+</script>
+<!-- 反运营商劫持 E -->
+<meta property="og:type" content="article"/>
+<meta property="og:image" content=""/>
+<meta property="og:release_date" content=""/>
+<meta property="og:title" content="[H-ui] jquery.lazyload.js 图片延迟加载"/>
+<title>jquery.lazyload.js - H-ui前端框架官方网站</title>
+<meta name="keywords" content="lazyload.js,jquery.lazyload,图片延迟加载,懒加载,H-ui前端框架">
+<meta name="description" content="jquery.lazyload.js是一个用JavaScript编写的jQuery图片延迟加载插件。">
+<style type="text/css">
+#Hui-nav li#Huinav_3 a, #Hui-nav li#Huinav_3 a:hover {
+	color: #fff;
+	background-color: #111
+}
+ol.linenums li {
+	color: #333
+}
+</style>
+</head>
+<body onLoad="prettyPrint()">
+<header class="navbar-wrapper">
+	<div class="navbar navbar-black">
+		<div class="container-fluid cl"> <a class="logo navbar-logo hidden-xs" href="/aboutHui.shtml">H-ui前端框架</a> <a class="logo navbar-logo-m visible-xs" href="/aboutHui.shtml">H-ui</a> <span class="logo navbar-slogan hidden-xs">简单 &middot; 免费 &middot; 适合中国网站</span> <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:;">&#xe667;</a>
+			<nav id="Hui-nav" class="nav navbar-nav">
+				<ul class="cl">
+					<li id="Huinav_1"> <a href="/index.shtml">首页</a> </li>
+					<li id="Huinav_2"> <a href="/Hui-overview.shtml">核心</a> </li>
+					<li id="Huinav_3"> <a href="/lib/jQuery.cookie.js.shtml">脚本</a> </li>
+					<li id="Huinav_4"> <a href="/ext/list.shtml">扩展</a> </li>
+					<li id="Huinav_5"> <a href="/cases/index.shtml">案例</a> </li>
+				</ul>
+			</nav>
+			<nav class="navbar-userbar f-r hidden-xs hidden-sm">
+				<a href="javascript:void(0);" onclick="addFavoritepage();return !1;" class="btn btn-primary radius" title="收藏">收藏本页</a>
+				<a class="btn btn-success radius" target="_blank" href="/shareCode.shtml">代码分享</a>
+				<a class="btn btn-success radius juanzeng" target="_blank" href="/juanzeng.shtml">捐赠<span style="color:#333" class="bk-gray box-shadow text-c"><img width="300" src="http://static.h-ui.net/www/home/images/alipay.jpg"></span></a>
+			</nav>
+		</div>
+	</div>
+</header>
+<aside class="Hui-aside">
+	<input runat="server" id="divScrollValue" type="hidden" value="" />
+	<div class="menu_dropdown bk_2">
+		<dl id="menu-jquery">
+			<dt>1、jquery系列<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="jQuery.cookie.js.shtml">jQuery.cookie.js</a></li>
+					<li><a href="jQuery.form.js.shtml">jQuery.form.js</a></li>
+					<li><a href="jQuery.lazyload.js.shtml">jQuery.lazyload.js</a></li>
+					<!--
+					<li><a href="jQuery.contextmenu.js.shtml">jQuery.contextmenu.js</a></li>
+					<li><a href="jQuery.autocomplete.js.shtml">jQuery.autocomplete.js</a></li>
+					<li><a href="jQuery.fullPage.js.shtml">jQuery.fullPage.js</a></li>
+					<li><a href="jQuery.parallax.js.shtml">jQuery.parallax.js</a></li>-->
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu-hui">
+			<dt>2、Hui系列<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="jQuery.Huihover.js.shtml">Huihover.js</a></li>
+					<li><a href="jQuery.Huifocusblur.js.shtml">Huifocusblur.js</a></li>
+					<li><a href="jQuery.Huifold.js.shtml">Huifold.js</a></li>
+					<li><a href="jQuery.Huispinner.js.shtml">Huispinner.js</a></li>
+					<li><a href="jQuery.Huitab.js.shtml">Huitab.js</a></li>
+					<li><a href="jQuery.Huitags.js.shtml">Huitags.js</a></li>
+					<li><a href="jQuery.Huitextarealength.js.shtml">Huitextarealength.js</a></li>
+					<li><a href="jQuery.HuitogglePassword.js.shtml">HuitogglePassword.js</a></li>
+					<li><a href="jQuery.Huitotop.js.shtml">Huitotop.js</a></li>
+					<li><a href="jQuery.Huipreview.js.shtml">Huipreview.js</a></li>
+					<!--<li><a href="jQuery.HuiphotoLayout.js.shtml">HuiphotoLayout.js</a></li>-->
+				</ul>
+			</dd>
+		</dl>
+		<!--<dl id="menu-bootstrap">
+			<dt>3、bootstrap系列<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Bootstrap.datetimepicker.js.shtml">Bootstrap.datetimepicker.js</a></li>
+				</ul>
+			</dd>
+		</dl>-->
+	</div>
+</aside>
+
+<div class="dislpayArrow hidden-xs"><a class="pngfix" href="javascript:void(0);" onClick="displaynavbar(this)"></a></div>
+<section class="Hui-article-box">
+	<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i>
+		<a class="maincolor" href="/">脚本</a>
+		<span class="c-999 en">&gt;</span>
+		<span class="c-666">jquery.lazyload.js</span>
+	</nav>
+	<div class="Hui-article">
+		<article class="cl pd-20">
+			<h1 class="page_title">jquery.lazyload.js <span class="label label-success radius">已封装</span></h1>
+			<p>H-ui.js 中已封装，无需单独下载。单独下载地址
+				<a href="http://lib.h-ui.net/lazyload/1.9.3/lazyload.js" class="btn radius btn-primary">jquery.lazyload.js</a>
+			</p>
+			<p>Lazy Load是一个用js编写的jQuery插件，用来实现图片的延迟加载。只有在浏览器可视区域的图片才会被加载，没有滚动到的区域img标签上会有一个占位图片，而真实图片不会被载入。当页面比较长，图片比较多的时候，延迟加载图片可以加快页面加载速度，在某些情况下降低服务器负担。</p>		
+			<h2>使用方法</h2>
+			<p>1、lazyload.js依赖jquery或者zepto.js。</p>
+			<p>2、将图片的真实路径放在img的data-original属性上。给img标签增加一个自定义的类名如：lazyload，方便js调用。</p>
+<pre class="prettyprint linenums">&lt;img class=&quot;lazyload&quot; alt=&quot;&quot; width=&quot;1000&quot; height=&quot;60&quot; data-original=&quot;http://images.h-ui.net/www/AD-1000x60.gif&quot; /&gt;</pre>
+			<p>js调用</p>
+<pre class="prettyprint linenums">$(function() {
+    $("img.lazyload").lazyload()});</pre>
+			<h2>demo效果</h2>
+			<p><img class="lazyload" alt="" width="320" height="250" data-original="http://images.h-ui.net/www/AD-300x250.gif" /></p>
+			<p><img class="lazyload" alt="" width="320" height="250" data-original="http://images.h-ui.net/www/AD-300x250.gif" /></p>
+			<p><img class="lazyload" alt="" width="320" height="250" data-original="http://images.h-ui.net/www/AD-300x250.gif" /></p>
+			<p><img class="lazyload" alt="" width="320" height="250" data-original="http://images.h-ui.net/www/AD-300x250.gif" /></p>
+			<p><img class="lazyload" alt="" width="320" height="250" data-original="http://images.h-ui.net/www/AD-300x250.gif" /></p>
+			<p><img class="lazyload" alt="" width="320" height="250" data-original="http://images.h-ui.net/www/AD-300x250.gif" /></p>
+			<p><img class="lazyload" alt="" width="320" height="250" data-original="http://images.h-ui.net/www/AD-300x250.gif" /></p>
+			<p><img class="lazyload" alt="" width="320" height="250" data-original="http://images.h-ui.net/www/AD-300x250.gif" /></p>
+			<p><img class="lazyload" alt="" width="320" height="250" data-original="http://images.h-ui.net/www/AD-300x250.gif" /></p>
+			<p><img class="lazyload" alt="" width="320" height="250" data-original="http://images.h-ui.net/www/AD-300x250.gif" /></p>
+			<h2>相关参数</h2>
+			<table class="table table-border table-bg table-bordered">
+				<thead>
+					<tr>
+						<th width="10%">属性</th>
+						<th width="10%">默认值</th>
+						<th width="15%">描述</th>
+						<th>备注</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>threshold</td>
+						<td>0</td>
+						<td>临界点</td>
+						<td>可以设置>0的数值，让图片距离屏幕一定像素时提前加载。</td>
+					</tr>
+					<tr>
+						<td>failure_limit</td>
+						<td>0</td>
+						<td>当图像不连续时</td>
+						<td>滚动页面的时候, Lazy Load 会循环为加载的图片. 在循环中检测图片是否在可视区域内. 默认情况下在找到第一张不在可见区域的图片时停止循环. 图片被认为是流式分布。特殊布局请设高参数。</td>
+					</tr>
+					<tr>
+						<td>container</td>
+						<td>window</td>
+						<td>触发可滚动的容器</td>
+						<td>默认是浏览器的滚动条，也就是window。可以自定义带滚动条的 DIV 元素。如：$("#container")</td>
+					</tr>
+					<tr>
+						<td>event</td>
+						<td>scroll</td>
+						<td>设置事件来触发加载</td>
+						<td>click、mouseover可自定义事件</td>
+					</tr>
+					<tr>
+						<td>effect</td>
+						<td>show</td>
+						<td>载入特效</td>
+						<td>fadeIn（淡入效果）</td>
+					</tr>
+					<tr>
+						<td>skip_invisible</td>
+						<td>true</td>
+						<td>加载隐藏的图片</td>
+						<td>默认忽略了隐藏图片，可以设置为false加载隐藏图片</td>
+					</tr>	
+					<tr>
+						<td>placeholder</td>
+						<td>data:image/png;base64,iVBOR……</td>
+						<td>默认的占位图片</td>
+						<td>可以直接把占位的图片路径赋给img的src</td>
+					</tr>			
+				</tbody>
+			</table>
+			<!--高速版-->
+<div id="SOHUCS" sid=""></div>
+<script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: 'cystmLO0N',
+        conf: 'prod_06226f5d322c22bcd421cb90462fe2a2'
+    });
+</script> 
+		</article>
+		﻿<footer class="footer mt-20">
+	<div class="container-fluid">
+		<nav>
+			<a href="/aboutHui.shtml" target="_blank">关于H-ui</a>
+			<span class="pipe">|</span>
+			<a href="/copyright.shtml" target="_blank">软件著作权</a>
+			<span class="pipe">|</span>
+			<a href="/juanzeng.shtml" target="_blank">感谢捐赠</a>
+		</nav>
+		<p>Copyright &copy;2013-2017 H-ui.net All Rights Reserved. <br>
+			<a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">京ICP备15015336号-1</a><br>
+			未经允许，禁止转载、抄袭、镜像<br>
+			用心做站，做不一样的站</p>
+	</div>
+</footer>
+<script type="text/javascript" src="http://lib.h-ui.net/prettify.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/h-ui/3.1/js/H-ui.min.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/www/home/js/H-ui.admin.www.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/www/home/js/common.js"></script> 
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?080836300300be57b7f34f4b3e97d911";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s)})();
+</script>
+	</div>
+</section>
+<script type="text/javascript">
+$(function() {
+	$("#menu-jquery dt").addClass("selected");$("#menu-jquery dd").show();
+    $("img.lazyload").lazyload({
+		container:$(".Hui-article"),
+		effect:"fadeIn"
+	});
+});
+</script>
+</body>
+</html>

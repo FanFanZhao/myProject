@@ -1,0 +1,456 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<link rel="Bookmark" href="/favicon.ico" >
+<link rel="Shortcut Icon" href="/favicon.ico" />
+<!-- Standard iPhone -->  
+<link rel="apple-touch-icon" sizes="57x57" href="http://static.h-ui.net/www/home/images/touch-icon-iphone-114.png" />  
+<!-- Retina iPhone -->  
+<link rel="apple-touch-icon" sizes="114x114" href="http://static.h-ui.net/www/home/images/touch-icon-iphone-114.png" />  
+<!-- Standard iPad -->  
+<link rel="apple-touch-icon" sizes="72x72" href="http://static.h-ui.net/www/home/images/touch-icon-ipad-144.png" />  
+<!-- Retina iPad -->  
+<link rel="apple-touch-icon" sizes="144x144" href="http://static.h-ui.net/www/home/images/touch-icon-ipad-144.png" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="http://lib.h-ui.net/html5.js"></script>
+<script type="text/javascript" src="http://lib.h-ui.net/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/h-ui/3.1/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/h-ui.admin/3.1/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/www/home/css/H-ui.doc.css" />
+<link rel="stylesheet" type="text/css" href="http://lib.h-ui.net/Hui-iconfont/1.0.8/iconfont.min.css" />
+<!--[if lt IE 9]>
+<link href="http://static.h-ui.net/h-ui/css/H-ui.ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="text/javascript" src="http://lib.h-ui.net/jquery/1.9.1/jquery.min.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('.pngfix,.iconpic,.list-icon');</script>
+<![endif]-->
+<!-- 反运营商劫持 S -->
+<style type="text/css">
+html {
+	display:none}
+</style>
+<script>
+if( self == top ) {
+	document.documentElement.style.display = 'block' } else {
+	top.location = self.location }
+</script>
+<!-- 反运营商劫持 E -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2472599678883446",
+    enable_page_level_ads: true
+  });
+</script>
+<title>对话框modal 弹出层popover - 组件 - H-ui前端框架官方网站</title>
+<meta name="keywords" content="modal,popover,对话框,弹出层,H-ui前端框架">
+<meta name="description" content="H-ui前端框架对话框modal，弹出层popover。">
+<style type="text/css">
+#Hui-nav li#Huinav_2 a, #Hui-nav li#Huinav_2 a:hover {
+	color: #fff;
+	background-color: #111
+}
+</style>
+</head>
+<body onLoad="prettyPrint()">
+<header class="navbar-wrapper">
+	<div class="navbar navbar-black">
+		<div class="container-fluid cl"> <a class="logo navbar-logo hidden-xs" href="/aboutHui.shtml">H-ui前端框架</a> <a class="logo navbar-logo-m visible-xs" href="/aboutHui.shtml">H-ui</a> <span class="logo navbar-slogan hidden-xs">简单 &middot; 免费 &middot; 适合中国网站</span> <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:;">&#xe667;</a>
+			<nav id="Hui-nav" class="nav navbar-nav">
+				<ul class="cl">
+					<li id="Huinav_1"> <a href="/index.shtml">首页</a> </li>
+					<li id="Huinav_2"> <a href="/Hui-overview.shtml">核心</a> </li>
+					<li id="Huinav_3"> <a href="/lib/jQuery.cookie.js.shtml">脚本</a> </li>
+					<li id="Huinav_4"> <a href="/ext/list.shtml">扩展</a> </li>
+					<li id="Huinav_5"> <a href="/cases/index.shtml">案例</a> </li>
+				</ul>
+			</nav>
+			<nav class="navbar-userbar f-r hidden-xs hidden-sm">
+				<a href="javascript:void(0);" onclick="addFavoritepage();return !1;" class="btn btn-primary radius" title="收藏">收藏本页</a>
+				<a class="btn btn-success radius" target="_blank" href="/shareCode.shtml">代码分享</a>
+				<a class="btn btn-success radius juanzeng" target="_blank" href="/juanzeng.shtml">捐赠<span style="color:#333" class="bk-gray box-shadow text-c"><img width="300" src="http://static.h-ui.net/www/home/images/alipay.jpg"></span></a>
+			</nav>
+		</div>
+	</div>
+</header>
+<aside class="Hui-aside">
+	<input runat="server" id="divScrollValue" type="hidden" value="" />
+	<div class="menu_dropdown bk_2">
+		<ul>
+			<li><a href="Hui-overview.shtml">&nbsp;&nbsp;&nbsp;&nbsp;概述</a></li>
+		</ul>
+		<dl id="menu_notes">
+			<dt>&nbsp;&nbsp;&nbsp;&nbsp;注释<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-notes-htmlStructure.shtml">Html书写规范</a></li>
+					<li><a href="Hui-notes-css.shtml">CSS写作注意事项</a></li>
+					<li><a href="Hui-notes-cnFont.shtml">中文字体css编码转换</a></li>
+					<li><a href="Hui-notes-cssHack.shtml">CSS Hack</a></li>
+					<li><a href="Hui-notes-keycode.shtml">键盘按钮keycode</a></li>
+					<li><a href="Hui-notes-ARIA.shtml">ARIA属性值</a></li>
+					<li><a href="Hui-notes-cssHame.shtml">css 命名规范</a></li>
+					<li><a href="Hui-notes-htmlName.shtml">html命名规范</a></li>
+					<li><a href="Hui-notes-fileName.shtml">文件夹命名规范</a></li>
+					<li><a href="Hui-notes-regular.shtml">常用正则表达式</a></li>
+					<li><a href="Hui-notes-csscursor.shtml">css中cursor(光标类型)</a></li>
+					<li><a href="Hui-notes-EDM.shtml">EDM制作规范</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<ul>
+			<li><a href="Hui-notes-menu.shtml">&nbsp;&nbsp;&nbsp;&nbsp;结构目录</a></li>
+		</ul>
+		<ul>
+			<li><a href="Hui-1-cssReset.shtml">1. css reset</a></li>
+		</ul>
+		<dl id="menu_2">
+			<dt>2. 框架<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-2.1-gridSystem.shtml">2.1 响应式栅格系统</a></li>
+					<li><a href="Hui-2.2-show&hide.shtml">2.2 响应式隐藏显示</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu_3">
+			<dt>3. 基础<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-3.1-typography.shtml">3.1 排版</a></li>
+					<li><a href="Hui-3.2-code.shtml">3.2 代码</a></li>
+					<li><a href="Hui-3.3-table.shtml">3.3 表格</a></li>
+					<li><a href="Hui-3.4-form.shtml">3.4 表单</a></li>
+					<li><a href="Hui-3.5-button.shtml">3.5 按钮</a></li>
+					<li><a href="Hui-3.6-images.shtml">3.6 图片</a></li>
+					<li><a href="Hui-3.7-Hui-iconfont.shtml">3.7 图标</a></li>
+					<li><a href="Hui-3.8-animation.shtml">3.8 动画</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu_4">
+			<dt>4. 组件<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-4.1-buttonGroups.shtml">4.1 按钮组</a></li>
+					<li><a href="Hui-4.2-nav.shtml">4.2 导航 &amp; 翻页</a></li>
+					<li><a href="Hui-4.3-dropDown.shtml">4.3 下拉菜单</a></li>
+					<li><a href="Hui-4.4-slider.shtml">4.4 幻灯片</a></li>
+					<li><a href="Hui-4.5-tab.shtml">4.5 选项卡</a></li>
+					<li><a href="Hui-4.6-labelBadge.shtml">4.6 便签与标号</a></li>
+					<li><a href="Hui-4.7-thumbnails.shtml"><del>4.7 缩略图</del></a></li>
+					<li><a href="Hui-4.8-alert.shtml">4.8 警告</a></li>
+					<li><a href="Hui-4.9-progress.shtml">4.9 进度条 loading</a></li>
+					<li><a href="Hui-4.10-modal.shtml">4.10 对话框 弹出层</a></li>
+					<li><a href="Hui-4.11-kefu.shtml">4.11 客服</a></li>
+					<li><a href="Hui-4.12-toTop.shtml">4.12 返回顶部</a></li>
+					<li><a href="Hui-4.13-share.shtml">4.13 分享</a></li>
+					<li><a href="Hui-4.14-panel.shtml">4.14 面板</a></li>
+					<li><a href="Hui-4.15-example.shtml">4.15 案例</a></li>
+					<li><a href="Hui-4.16-rolling.shtml">4.16 滚动</a></li>
+					<li><a href="Hui-4.17-search.shtml">4.17 搜索</a></li>
+					<li><a href="Hui-4.18-ad.shtml">4.18 广告</a></li>
+					<li><a href="Hui-4.19-tags.shtml">4.19 标签</a></li>
+					<li><a href="Hui-4.20-fold.shtml">4.20 折叠</a></li>
+					<li><a href="Hui-4.21-maskBar.shtml">4.21 遮罩条</a></li>
+					<li><a href="Hui-4.22-comment.shtml">4.22 评论列表</a></li>
+					<li><a href="Hui-4.23-footer.shtml">4.23 页脚</a></li>
+					<li><a href="Hui-4.24-star.shtml">4.24 星星评价</a></li>
+					<li><a href="Hui-4.25-tooltip.shtml">4.25 tooltip效果</a></li>
+					<li><a href="Hui-4.26-popover.shtml">4.26 popover效果</a></li>
+					<!--<li><a href="Hui-4.26-select-category.shtml">4.26 分类检索</a></li>-->
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu_5">
+			<dt>5. 页面<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="404.shtml" target="_blank">5.1 404页面</a></li>
+					<!--<li><a href="Hui-5.1-blog-list.shtml">5.2 博客列表页</a></li>
+					<li><a href="Hui-5.2-blog-show.shtml">5.3 博客详情页</a></li>
+					<li><a href="Hui-5.3-aboutus.shtml">5.4 关于我们页</a></li>
+					<li><a href="Hui-5.4-help-list.shtml">5.5 帮助列表页</a></li>
+					<li><a href="Hui-5.5-help-show.shtml">5.6 帮助详情页</a></li> -->
+					<li>&nbsp;</li>
+					<li>&nbsp;</li>
+				</ul>
+			</dd>
+		</dl>
+	</div>
+</aside>
+
+<div class="dislpayArrow hidden-xs"><a class="pngfix" href="javascript:void(0);" onClick="displaynavbar(this)"></a></div>
+<section class="Hui-article-box">
+	<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i>
+		<a class="maincolor" href="/">首页</a>
+		<span class="c-999 en">&gt;</span>
+		组件
+		<span class="c-999 en">&gt;</span>
+		<span class="c-666">对话框 弹出层</span>
+	</nav>
+	<div class="Hui-article">
+		<input id="scrollTop1" name="" type="hidden" value="0">
+		<input id="scrollTop2" name="" type="hidden" value="0">
+		<article class="cl pd-20">
+			<h1 class="page_title">对话框 弹出层</h1>
+			<div class="codeView docs-example">
+				<button class="btn radius btn-primary size-L" onClick="modaldemo()">弹出对话框</button>
+				<button class="btn radius btn-primary size-L ml-20" onClick="modalalertdemo()">消息框，2秒钟自动消失</button>
+				<!----></div>
+			<h3>HTML代码</h3>
+			<pre class="prettyprint linenums">&lt;button class=&quot;btn radius btn-primary size-L&quot; onClick=&quot;modaldemo()&quot;&gt;弹出对话框&lt;/button&gt;</pre>
+			<p>弹出层代码</p>
+			<pre class="prettyprint linenums">&lt;div id=&quot;modal-demo&quot; class=&quot;modal fade&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;myModalLabel&quot; aria-hidden=&quot;true&quot;&gt;<br>	&lt;div class=&quot;modal-dialog&quot;&gt;<br>		&lt;div class=&quot;modal-content radius&quot;&gt;<br>			&lt;div class=&quot;modal-header&quot;&gt;<br>				&lt;h3 class=&quot;modal-title&quot;&gt;对话框标题&lt;/h3&gt;<br>				&lt;a class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot; href=&quot;javascript:void();&quot;&gt;×&lt;/a&gt;<br>			&lt;/div&gt;<br>			&lt;div class=&quot;modal-body&quot;&gt;<br>				&lt;p&gt;对话框内容…&lt;/p&gt;<br>			&lt;/div&gt;<br>			&lt;div class=&quot;modal-footer&quot;&gt;<br>				&lt;button class=&quot;btn btn-primary&quot;&gt;确定&lt;/button&gt;<br>				&lt;button class=&quot;btn&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot;&gt;关闭&lt;/button&gt;<br>			&lt;/div&gt;<br>		&lt;/div&gt;<br>	&lt;/div&gt;<br>&lt;/div&gt;</pre>
+			<h3>CSS代码</h3>
+<pre class="prettyprint linenums">.fade {opacity: 0;
+	-webkit-transition: opacity .15s linear;
+	-o-transition: opacity .15s linear;
+	transition: opacity .15s linear}
+.fade.in {opacity: 1}
+.modal-open {overflow: hidden}
+.modal{ position:fixed; left:0; top:0; right:0; bottom:0; z-index:1040; display:none; overflow:hidden;-webkit-overflow-scrolling:touch; outline:0}
+.modal.fade .modal-dialog{
+	-webkit-transition: -webkit-transform .3s ease-out;
+	-o-transition: -o-transform .3s ease-out;
+	transition: transform .3s ease-out;
+	-webkit-transform: translate(0,-50%);
+	-ms-transform: translate(0,-50%);
+	-o-transform: translate(0,-50%);
+	transform: translate(0,-50%)}
+.modal.in .modal-dialog {
+	-webkit-transform: translate(0, 0);
+	-ms-transform: translate(0, 0);
+	-o-transform: translate(0, 0);
+	transform: translate(0, 0)}
+.modal-open .modal {overflow-x: hidden;overflow-y: auto}
+	.modal-backdrop {position: fixed;top: 0;right: 0;bottom: 0;left: 0;background-color: #000}
+	.modal-backdrop.fade {filter: alpha(opacity=0);opacity: 0}
+	.modal-backdrop.in {filter: alpha(opacity=50);opacity: .5}
+	.modal-dialog {position: relative;width: auto;margin: 10px}
+	.modal-content{position: relative;background-color: #fff;border: 1px solid #999;border: 1px solid rgba(0,0,0,.2);outline: 0;
+		-webkit-background-clip: padding-box;
+		background-clip: padding-box; 
+		-webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+		box-shadow: 0 3px 9px rgba(0,0,0,.5)}
+	
+		.modal-header {min-height: 16.42857143px;padding: 15px;border-bottom: 1px solid #eee; position:relative}
+		.modal-header .close{position:absolute; right:10px; top:10px}
+		.modal-header h3,.modal-header .modal-title{margin:0; padding:10px 0; font-size:16px}
+	
+		.modal-body {position:relative;padding: 15px;overflow-y:visible;word-break:break-all}
+			.modal-form {margin-bottom: 0}
+	
+		.modal-footer {padding:15px;margin-bottom: 0;text-align: right;background-color: #f5f5f5;border-top: 1px solid #eee;*zoom: 1}
+		.modal-footer:before,.modal-footer:after {display: table;content: &quot;&quot}
+		.modal-footer:after {clear: both}
+		.modal-footer .btn + .btn {margin-left: 5px;margin-bottom: 0}
+		.modal-footer .btn-group .btn + .btn {margin-left: -1px}
+		.modal-footer .btn-block + .btn-block {margin-left: 0}
+		
+	.modal-scrollbar-measure {position: absolute;top: -9999px;width: 50px;height: 50px;overflow: scroll}
+	
+	.radius .modal-content{ border-radius:6px}
+	.radius .modal-footer{ border-bottom-left-radius:6px; border-bottom-right-radius:6px}
+	@media (min-width: 768px) {
+		.modal-dialog {width: 600px;margin: 30px auto}
+		.modal-content {-webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);box-shadow: 0 5px 15px rgba(0, 0, 0, .5)}
+		.modal-sm {width: 300px}
+	}
+	@media (min-width: 992px) {
+		.modal-lg {width: 900px}
+	}
+
+.modal-alert{position:fixed; right:auto; bottom:auto; width:300px; left:50%;margin-left:-150px; top:50%;margin-top:-30px; z-index:9999;background-color: #fff;border: 1px solid #999;border: 1px solid rgba(0,0,0,.2);outline: 0;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box; 
+	-webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+	box-shadow: 0 3px 9px rgba(0,0,0,.5)}
+.modal-alert-info{padding:30px; text-align:center; font-size:14px; background-color:#fff}
+			</pre>
+			<h3>JS代码</h3>
+			<p>引入jquery.js 和 H-ui.js</p>
+			<p>模态弹出窗默认支持的自定义属性主要有：</p>
+			<table class="table table-border table-bg table-bordered">
+				<thead>
+					<tr>
+						<th>属性</th>
+						<th>类型</th>
+						<th>默认值</th>
+						<th>描述</th>
+						<th>备注</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>backdrop</td>
+						<td>布尔值</td>
+						<td>true</td>
+						<td>点击背景是否关闭模态框，true关闭，false不关闭</td>
+						<td>等价于data-backdrop</td>
+					</tr>
+					<tr>
+						<td>keyboard</td>
+						<td>布尔值</td>
+						<td>true</td>
+						<td>按ESC是否关闭模态框，true关闭，false不关闭</td>
+						<td>等价于data-keyboard</td>
+					</tr>
+					<tr>
+						<td>show</td>
+						<td>布尔值</td>
+						<td>true</td>
+						<td>初始化时弹出框是否显示</td>
+						<td>等价于data-show</td>
+					</tr>
+				</tbody>
+			</table>
+			<h4>参数</h4>
+			<table class="table table-border table-bg table-bordered">
+				<thead>
+					<tr>
+						<th>参数</th>
+						<th>使用方法</th>
+						<th>描述</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>toggle</td>
+						<td>$(“#mymodal”).modal(“toggle”)</td>
+						<td>触发时，反转模态弹出窗的状态。如果模态弹出窗是显示的，则关闭；反之，如果模态弹出窗是关闭的，则显示</td>
+					</tr>
+					<tr>
+						<td>show</td>
+						<td>$(“#mymodal”).modal(“show”)</td>
+						<td>触发时，显示模态弹出窗</td>
+					</tr>
+					<tr>
+						<td>hide</td>
+						<td>$(“#mymodal”).modal(“hide”)</td>
+						<td>触发时，关闭模态弹出窗</td>
+					</tr>
+				</tbody>
+			</table>
+			<h4>事件设置</h4>
+			<p>模态弹出窗还支持四种类型的事件，分别是模态弹出窗的弹出前、弹出后，关闭前、关闭后，具体描述如下：</p>
+			<table class="table table-border table-bg table-bordered">
+				<thead>
+					<tr>
+						<th>事件类型</th>
+						<th>描述</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>show.bs.modal</td>
+						<td>在show方法调用时立即触发（尚未显示之前）；如果单击了一个元素，那么该元素将作为事件的relatedTarget属性</td>
+					</tr>
+					<tr>
+						<td>shown.bs.modal</td>
+						<td>该事件在模态弹出窗完全显示给用户之后（并且等CSS动画完成之后）触发；如果单击了一个元素，那么该元素将作为事件的relatedTarget事件</td>
+					</tr>
+					<tr>
+						<td>hide.bs.modal</td>
+						<td>在hide方法调用时（但还未关闭隐藏）立即触发</td>
+					</tr>
+					<tr>
+						<td>hidden.bs.modal</td>
+						<td>该事件在模态弹出窗完全隐藏之后（并且CSS动画漂完成之后）触发</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>调用方法也非常简单：</p>
+			<pre class="prettyprint linenums">function modaldemo(){
+	$("#modal-demo").modal("show")}
+function modalalertdemo(){
+	$.Huimodalalert('我是消息框，2秒后我自动滚蛋！',2000)}
+</pre>
+			<!--高速版-->
+<div id="SOHUCS" sid=""></div>
+<script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: 'cystmLO0N',
+        conf: 'prod_06226f5d322c22bcd421cb90462fe2a2'
+    });
+</script>
+		</article>
+		﻿<footer class="footer mt-20">
+	<div class="container-fluid">
+		<nav>
+			<a href="/aboutHui.shtml" target="_blank">关于H-ui</a>
+			<span class="pipe">|</span>
+			<a href="/copyright.shtml" target="_blank">软件著作权</a>
+			<span class="pipe">|</span>
+			<a href="/juanzeng.shtml" target="_blank">感谢捐赠</a>
+		</nav>
+		<p>Copyright &copy;2013-2017 H-ui.net All Rights Reserved. <br>
+			<a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">京ICP备15015336号-1</a><br>
+			未经允许，禁止转载、抄袭、镜像<br>
+			用心做站，做不一样的站</p>
+	</div>
+</footer>
+<script type="text/javascript" src="http://lib.h-ui.net/prettify.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/h-ui/3.1/js/H-ui.min.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/www/home/js/H-ui.admin.www.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/www/home/js/common.js"></script> 
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?080836300300be57b7f34f4b3e97d911";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s)})();
+</script>
+	</div>
+</section>
+
+<!--普通弹出层-->
+<div id="modal-demo" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content radius">
+			<div class="modal-header">
+				<h3 id="myModalLabel">对话框标题</h3>
+				<a class="close" data-dismiss="modal" aria-hidden="true" href="javascript:void();">×</a>
+			</div>
+			<div class="modal-body">
+				<p>对话框内容…</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-primary">确定</button>
+				<button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$("#menu_4 dt").addClass("selected");$("#menu_4 dd").show();
+$(function(){	
+	$(".Hui-aside").scrollTop(320);
+});
+/*获取滚动条高度*/
+$(document).scroll(
+  function(){
+    var sTop=$(document).scrollTop();
+    $("#scrollTop1").val(sTop)}
+);
+
+function modaldemo(){
+	$("#modal-demo").modal("show")}
+function modalalertdemo(){
+	$.Huimodalalert('我是消息框，2秒后我自动滚蛋！',2000);
+}
+</script>
+</body>
+</html>

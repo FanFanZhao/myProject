@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+	function Person(region,name){
+		this.region=region;
+		this.name=name;
+	}
+	function Student(region,name,age){
+		this.age=age;
+		Person.call(this,region,name);
+	}
+	var stu=new Student('lisi','chinese',22);
+</script>
+</html>

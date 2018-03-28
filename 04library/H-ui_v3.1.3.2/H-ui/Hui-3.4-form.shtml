@@ -1,0 +1,1001 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<link rel="Bookmark" href="/favicon.ico" >
+<link rel="Shortcut Icon" href="/favicon.ico" />
+<!-- Standard iPhone -->  
+<link rel="apple-touch-icon" sizes="57x57" href="http://static.h-ui.net/www/home/images/touch-icon-iphone-114.png" />  
+<!-- Retina iPhone -->  
+<link rel="apple-touch-icon" sizes="114x114" href="http://static.h-ui.net/www/home/images/touch-icon-iphone-114.png" />  
+<!-- Standard iPad -->  
+<link rel="apple-touch-icon" sizes="72x72" href="http://static.h-ui.net/www/home/images/touch-icon-ipad-144.png" />  
+<!-- Retina iPad -->  
+<link rel="apple-touch-icon" sizes="144x144" href="http://static.h-ui.net/www/home/images/touch-icon-ipad-144.png" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="http://lib.h-ui.net/html5.js"></script>
+<script type="text/javascript" src="http://lib.h-ui.net/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/h-ui/3.1/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/h-ui.admin/3.1/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/www/home/css/H-ui.doc.css" />
+<link rel="stylesheet" type="text/css" href="http://lib.h-ui.net/Hui-iconfont/1.0.8/iconfont.min.css" />
+<!--[if lt IE 9]>
+<link href="http://static.h-ui.net/h-ui/css/H-ui.ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="text/javascript" src="http://lib.h-ui.net/jquery/1.9.1/jquery.min.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('.pngfix,.iconpic,.list-icon');</script>
+<![endif]-->
+<!-- 反运营商劫持 S -->
+<style type="text/css">
+html {
+	display:none}
+</style>
+<script>
+if( self == top ) {
+	document.documentElement.style.display = 'block' } else {
+	top.location = self.location }
+</script>
+<!-- 反运营商劫持 E -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2472599678883446",
+    enable_page_level_ads: true
+  });
+</script>
+<title>form表单 - H-ui前端框架官方网站</title>
+<meta name="keywords" content="form表单,H-ui前端框架">
+<meta name="description" content="H-ui前端框架form表单。">
+<style type="text/css">
+#Hui-nav li#Huinav_2 a, #Hui-nav li#Huinav_2 a:hover
+{
+	color: #fff;
+	background-color: #111
+}
+</style>
+</head>
+<body onLoad="prettyPrint()">
+<header class="navbar-wrapper">
+	<div class="navbar navbar-black">
+		<div class="container-fluid cl"> <a class="logo navbar-logo hidden-xs" href="/aboutHui.shtml">H-ui前端框架</a> <a class="logo navbar-logo-m visible-xs" href="/aboutHui.shtml">H-ui</a> <span class="logo navbar-slogan hidden-xs">简单 &middot; 免费 &middot; 适合中国网站</span> <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:;">&#xe667;</a>
+			<nav id="Hui-nav" class="nav navbar-nav">
+				<ul class="cl">
+					<li id="Huinav_1"> <a href="/index.shtml">首页</a> </li>
+					<li id="Huinav_2"> <a href="/Hui-overview.shtml">核心</a> </li>
+					<li id="Huinav_3"> <a href="/lib/jQuery.cookie.js.shtml">脚本</a> </li>
+					<li id="Huinav_4"> <a href="/ext/list.shtml">扩展</a> </li>
+					<li id="Huinav_5"> <a href="/cases/index.shtml">案例</a> </li>
+				</ul>
+			</nav>
+			<nav class="navbar-userbar f-r hidden-xs hidden-sm">
+				<a href="javascript:void(0);" onclick="addFavoritepage();return !1;" class="btn btn-primary radius" title="收藏">收藏本页</a>
+				<a class="btn btn-success radius" target="_blank" href="/shareCode.shtml">代码分享</a>
+				<a class="btn btn-success radius juanzeng" target="_blank" href="/juanzeng.shtml">捐赠<span style="color:#333" class="bk-gray box-shadow text-c"><img width="300" src="http://static.h-ui.net/www/home/images/alipay.jpg"></span></a>
+			</nav>
+		</div>
+	</div>
+</header> 
+<aside class="Hui-aside">
+	<input runat="server" id="divScrollValue" type="hidden" value="" />
+	<div class="menu_dropdown bk_2">
+		<ul>
+			<li><a href="Hui-overview.shtml">&nbsp;&nbsp;&nbsp;&nbsp;概述</a></li>
+		</ul>
+		<dl id="menu_notes">
+			<dt>&nbsp;&nbsp;&nbsp;&nbsp;注释<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-notes-htmlStructure.shtml">Html书写规范</a></li>
+					<li><a href="Hui-notes-css.shtml">CSS写作注意事项</a></li>
+					<li><a href="Hui-notes-cnFont.shtml">中文字体css编码转换</a></li>
+					<li><a href="Hui-notes-cssHack.shtml">CSS Hack</a></li>
+					<li><a href="Hui-notes-keycode.shtml">键盘按钮keycode</a></li>
+					<li><a href="Hui-notes-ARIA.shtml">ARIA属性值</a></li>
+					<li><a href="Hui-notes-cssHame.shtml">css 命名规范</a></li>
+					<li><a href="Hui-notes-htmlName.shtml">html命名规范</a></li>
+					<li><a href="Hui-notes-fileName.shtml">文件夹命名规范</a></li>
+					<li><a href="Hui-notes-regular.shtml">常用正则表达式</a></li>
+					<li><a href="Hui-notes-csscursor.shtml">css中cursor(光标类型)</a></li>
+					<li><a href="Hui-notes-EDM.shtml">EDM制作规范</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<ul>
+			<li><a href="Hui-notes-menu.shtml">&nbsp;&nbsp;&nbsp;&nbsp;结构目录</a></li>
+		</ul>
+		<ul>
+			<li><a href="Hui-1-cssReset.shtml">1. css reset</a></li>
+		</ul>
+		<dl id="menu_2">
+			<dt>2. 框架<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-2.1-gridSystem.shtml">2.1 响应式栅格系统</a></li>
+					<li><a href="Hui-2.2-show&hide.shtml">2.2 响应式隐藏显示</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu_3">
+			<dt>3. 基础<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-3.1-typography.shtml">3.1 排版</a></li>
+					<li><a href="Hui-3.2-code.shtml">3.2 代码</a></li>
+					<li><a href="Hui-3.3-table.shtml">3.3 表格</a></li>
+					<li><a href="Hui-3.4-form.shtml">3.4 表单</a></li>
+					<li><a href="Hui-3.5-button.shtml">3.5 按钮</a></li>
+					<li><a href="Hui-3.6-images.shtml">3.6 图片</a></li>
+					<li><a href="Hui-3.7-Hui-iconfont.shtml">3.7 图标</a></li>
+					<li><a href="Hui-3.8-animation.shtml">3.8 动画</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu_4">
+			<dt>4. 组件<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-4.1-buttonGroups.shtml">4.1 按钮组</a></li>
+					<li><a href="Hui-4.2-nav.shtml">4.2 导航 &amp; 翻页</a></li>
+					<li><a href="Hui-4.3-dropDown.shtml">4.3 下拉菜单</a></li>
+					<li><a href="Hui-4.4-slider.shtml">4.4 幻灯片</a></li>
+					<li><a href="Hui-4.5-tab.shtml">4.5 选项卡</a></li>
+					<li><a href="Hui-4.6-labelBadge.shtml">4.6 便签与标号</a></li>
+					<li><a href="Hui-4.7-thumbnails.shtml"><del>4.7 缩略图</del></a></li>
+					<li><a href="Hui-4.8-alert.shtml">4.8 警告</a></li>
+					<li><a href="Hui-4.9-progress.shtml">4.9 进度条 loading</a></li>
+					<li><a href="Hui-4.10-modal.shtml">4.10 对话框 弹出层</a></li>
+					<li><a href="Hui-4.11-kefu.shtml">4.11 客服</a></li>
+					<li><a href="Hui-4.12-toTop.shtml">4.12 返回顶部</a></li>
+					<li><a href="Hui-4.13-share.shtml">4.13 分享</a></li>
+					<li><a href="Hui-4.14-panel.shtml">4.14 面板</a></li>
+					<li><a href="Hui-4.15-example.shtml">4.15 案例</a></li>
+					<li><a href="Hui-4.16-rolling.shtml">4.16 滚动</a></li>
+					<li><a href="Hui-4.17-search.shtml">4.17 搜索</a></li>
+					<li><a href="Hui-4.18-ad.shtml">4.18 广告</a></li>
+					<li><a href="Hui-4.19-tags.shtml">4.19 标签</a></li>
+					<li><a href="Hui-4.20-fold.shtml">4.20 折叠</a></li>
+					<li><a href="Hui-4.21-maskBar.shtml">4.21 遮罩条</a></li>
+					<li><a href="Hui-4.22-comment.shtml">4.22 评论列表</a></li>
+					<li><a href="Hui-4.23-footer.shtml">4.23 页脚</a></li>
+					<li><a href="Hui-4.24-star.shtml">4.24 星星评价</a></li>
+					<li><a href="Hui-4.25-tooltip.shtml">4.25 tooltip效果</a></li>
+					<li><a href="Hui-4.26-popover.shtml">4.26 popover效果</a></li>
+					<!--<li><a href="Hui-4.26-select-category.shtml">4.26 分类检索</a></li>-->
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu_5">
+			<dt>5. 页面<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="404.shtml" target="_blank">5.1 404页面</a></li>
+					<!--<li><a href="Hui-5.1-blog-list.shtml">5.2 博客列表页</a></li>
+					<li><a href="Hui-5.2-blog-show.shtml">5.3 博客详情页</a></li>
+					<li><a href="Hui-5.3-aboutus.shtml">5.4 关于我们页</a></li>
+					<li><a href="Hui-5.4-help-list.shtml">5.5 帮助列表页</a></li>
+					<li><a href="Hui-5.5-help-show.shtml">5.6 帮助详情页</a></li> -->
+					<li>&nbsp;</li>
+					<li>&nbsp;</li>
+				</ul>
+			</dd>
+		</dl>
+	</div>
+</aside>
+ 
+<div class="dislpayArrow hidden-xs"><a class="pngfix" href="javascript:void(0);" onClick="displaynavbar(this)"></a></div>
+<section class="Hui-article-box">
+	<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> <a class="maincolor" href="/">首页</a><span class="c-999 en">&gt;</span>基础<span class="c-999 en">&gt;</span><span class="c-666">表单</span></nav>
+	<div class="Hui-article">
+		<article class="cl pd-20">
+			<h1 class="page_title">表单</h1>
+			<h2>3.4.1 input,textarea 文本域 文本区域</h2>
+			<p>文本框样式 <span class="c_blue">.input-text</span>，文本域样式 <span class="c_blue">.textarea</span>，追加 <span class="c_blue">.radius</span> 就会显示css3圆角效果。</p>
+			<div class="codeView docs-example">
+				<table class="table table-border table-bordered table-striped">
+					<thead>
+						<tr>
+							<th width="30%">默认效果</th>
+							<th width="20%">class=""</th>
+							<th width="30%">圆角效果</th>
+							<th>class=""</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="text" class="input-text"  placeholder="文本框"></td>
+							<td><code>input-text</code></td>
+							<td><input type="text" class="input-text radius"  placeholder="文本框"></td>
+							<td><code>input-text radius</code></td>
+						</tr>
+						<tr>
+							<td><input type="password" class="input-text"  placeholder="密码"></td>
+							<td><code>input-text</code></td>
+							<td><input type="password" class="input-text radius"  placeholder="密码"></td>
+							<td><code>input-text radius</code></td>
+						</tr>
+						<tr>
+							<td><textarea name="" cols="" rows="" class="textarea"  placeholder="说点什么..."></textarea></td>
+							<td><code>textarea</code></td>
+							<td><textarea name="" cols="" rows="" class="textarea radius"  placeholder="说点什么..."></textarea></td>
+							<td><code>textarea radius</code></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<p>不支持圆角和背景渐变浏览器，如IE低版本，会显示扁平纯色直角效果。</p>
+			<h3>文本框尺寸</h3>
+			<p>定义了五种规格尺寸</p>
+			<div class="codeView docs-example">
+				<table class="table table-border table-bordered table-striped">
+					<thead>
+						<tr>
+							<th width="50%">文本框</th>
+							<th>class=""</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="text" placeholder="迷你尺寸" class="input-text radius size-MINI"></td>
+							<td>input-text radius size-MINI</td>
+						</tr>
+						<tr>
+							<td><input type="text" placeholder="小尺寸" class="input-text radius size-S"></td>
+							<td>input-text radius size-S</td>
+						</tr>
+						<tr>
+							<td><input type="text" placeholder="默认尺寸" class="input-text radius size-M"></td>
+							<td>input-text radius size-M</td>
+						</tr>
+						<tr>
+							<td><input type="text" placeholder="大尺寸" class="input-text radius size-L"></td>
+							<td>input-text radius size-L</td>
+						</tr>
+						<tr>
+							<td><input type="text" placeholder="特大尺寸" class="input-text radius size-XL"></td>
+							<td>input-text radius size-XL</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<h3>HTML代码</h3>
+<pre class="prettyprint linenums">&lt;input type=&quot;text&quot; placeholder=&quot;迷你尺寸&quot; class=&quot;input-text radius size-MINI&quot;&gt;
+&lt;input type=&quot;text&quot; placeholder=&quot;小尺寸&quot; class=&quot;input-text radius size-S&quot;&gt;
+&lt;input type=&quot;text&quot; placeholder=&quot;默认尺寸&quot; class=&quot;input-text radius size-M&quot;&gt;
+&lt;input type=&quot;text&quot; placeholder=&quot;大尺寸&quot; class=&quot;input-text radius size-L&quot;&gt;
+&lt;input type=&quot;text&quot; placeholder=&quot;特大尺寸&quot; class=&quot;input-text radius size-XL&quot;&gt;</pre>
+			<h3>CSS代码</h3>
+<pre class="prettyprint linenums">/*默认状态*/<br>.input-text,.textarea{box-sizing:border-box;border:solid 1px #ddd;width:100%;<br>    -webkit-transition:all 0.2s linear 0s;<br>       -moz-transition:all 0.2s linear 0s;<br>         -o-transition:all 0.2s linear 0s;<br>            transition:all 0.2s linear 0s}<br>.textarea{ height:auto; font-size:14px; padding:4px}<br>.input-text:hover,.textarea:hover{border: solid 1px #3bb4f2}<br>/*得到焦点后*/<br>.input-text.focus,textarea.focus{border:solid 1px #0f9ae0 \9;border-color:rgba(82,168,236,0.8);box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6)}<br>/*不可点击*/<br>.input-text.disabled,.textarea.disabled,.input-text.disabled.focus,.textarea.disabled.focus{background-color:#ededed; cursor:default;border-color: #ddd;<br>	-webkit-box-shadow:inset 0 2px 2px #e8e7e7;<br>       -moz-box-shadow:inset 0 2px 2px #e8e7e7;<br>            box-shadow:inset 0 2px 2px #e8e7e7}<br>/*只读状态*/<br>.input-text.disabled,.textarea.disabled{background-color:#e6e6e6; cursor:default}<br>/*阴影*/<br>.input-text.box-shadow,.textarea.box-shadow{-ms-box-shadow:inset 0 1px 1px rgba(0,0,0,0.075);-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,0.075);box-shadow:inset 0 1px 1px rgba(0,0,0,0.075)}</pre>
+			<h2>3.4.2 radio,checkbox 单选 多选</h2>
+			<p>使用icheck插件进行美化。</p>
+			<p>须单独引用icheck.css，jquery.icheck.min.js两个文件。<a href="http://down.h-ui.net/h-ui/icheck.zip" class="btn btn-success radius"><i class="Hui-iconfont">&#xe640;</i> 打包下载</a></p>
+			<div class="codeView docs-example">
+				<div class="skin-minimal">
+					<div class="check-box">
+						<input type="checkbox" id="checkbox-1">
+						<label for="checkbox-1">复选框</label>
+					</div>
+					<div class="check-box">
+						<input type="checkbox" id="checkbox-2" checked>
+						<label for="checkbox-2">复选框 checked状态</label>
+					</div>
+					<div class="check-box">
+						<input type="checkbox" id="checkbox-disabled" disabled>
+						<label for="checkbox-disabled">Disabled</label>
+					</div>
+					<div class="check-box">
+						<input type="checkbox" id="checkbox-disabled-checked" checked disabled>
+						<label for="checkbox-disabled-checked">Disabled &amp; checked</label>
+					</div>
+				</div>
+				<div class="mt-20 skin-minimal">
+					<div class="radio-box">
+						<input type="radio" id="radio-1" name="demo-radio1">
+						<label for="radio-1">单选按钮</label>
+					</div>
+					<div class="radio-box">
+						<input type="radio" id="radio-2" name="demo-radio1" checked>
+						<label for="radio-2">单选按钮 checked状态</label>
+					</div>
+					<div class="radio-box">
+						<input type="radio" id="radio-disabled" disabled>
+						<label for="radio-disabled">Disabled</label>
+					</div>
+					<div class="radio-box">
+						<input type="radio" id="radio-disabled-checked" checked disabled>
+						<label for="radio-disabled-checked">Disabled &amp; checked</label>
+					</div>
+				</div>
+			</div>
+			<h3>HTML代码</h3>
+<pre class="prettyprint linenums">&lt;div class=&quot;skin-minimal&quot;&gt;<br>  &lt;div class=&quot;check-box&quot;&gt;<br>    &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-1&quot;&gt;<br>    &lt;label for=&quot;checkbox-1&quot;&gt;复选框&lt;/label&gt;<br>  &lt;/div&gt;<br>  &lt;div class=&quot;check-box&quot;&gt;<br>    &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-2&quot; checked&gt;<br>    &lt;label for=&quot;checkbox-2&quot;&gt;复选框 checked状态&lt;/label&gt;<br>  &lt;/div&gt;<br>  &lt;div class=&quot;check-box&quot;&gt;<br>    &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-disabled&quot; disabled&gt;<br>    &lt;label for=&quot;checkbox-disabled&quot;&gt;Disabled&lt;/label&gt;<br>  &lt;/div&gt;<br>  &lt;div class=&quot;check-box&quot;&gt;<br>    &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-disabled-checked&quot; checked disabled&gt;<br>    &lt;label for=&quot;checkbox-disabled-checked&quot;&gt;Disabled &amp;amp; checked&lt;/label&gt;<br>  &lt;/div&gt;<br>&lt;/div&gt;<br>&lt;div class=&quot;mt-20 skin-minimal&quot;&gt;<br>  &lt;div class=&quot;radio-box&quot;&gt;<br>    &lt;input type=&quot;radio&quot; id=&quot;radio-1&quot; name=&quot;demo-radio1&quot;&gt;<br>    &lt;label for=&quot;radio-1&quot;&gt;单选按钮&lt;/label&gt;<br>  &lt;/div&gt;<br>  &lt;div class=&quot;radio-box&quot;&gt;<br>    &lt;input type=&quot;radio&quot; id=&quot;radio-2&quot; name=&quot;demo-radio1&quot; checked&gt;<br>    &lt;label for=&quot;radio-2&quot;&gt;单选按钮 checked状态&lt;/label&gt;<br>  &lt;/div&gt;<br>  &lt;div class=&quot;radio-box&quot;&gt;<br>    &lt;input type=&quot;radio&quot; id=&quot;radio-disabled&quot; disabled&gt;<br>    &lt;label for=&quot;radio-disabled&quot;&gt;Disabled&lt;/label&gt;<br>  &lt;/div&gt;<br>  &lt;div class=&quot;radio-box&quot;&gt;<br>    &lt;input type=&quot;radio&quot; id=&quot;radio-disabled-checked&quot; checked disabled&gt;<br>    &lt;label for=&quot;radio-disabled-checked&quot;&gt;Disabled &amp;amp; checked&lt;/label&gt;<br>  &lt;/div&gt;<br>&lt;/div&gt;</pre>
+			<h3>JS代码</h3>
+<pre class="prettyprint linenums">$(function(){<br>	$('.skin-minimal input').iCheck({<br>		checkboxClass: 'icheckbox-blue',<br>		radioClass: 'iradio-blue',<br>		increaseArea: '20%'
+	})});</pre>
+			<h3>Switch 效果</h3>
+			<p>须单独引用bootstrapSwitch.css，bootstrapSwitch.js这两个文件。<a href="http://down.h-ui.net/h-ui/Switch.zip" class="btn btn-success radius"><i class="Hui-iconfont">&#xe640;</i> 打包下载</a></p>
+			<div class="docs-example">
+				<div class="switch" data-on="primary" data-off="info">
+					<input type="checkbox" checked />
+				</div>
+				<div class="switch" data-on="info" data-off="success">
+					<input type="checkbox" checked />
+				</div>
+				<div class="switch" data-on="success" data-off="warning">
+					<input type="checkbox" checked />
+				</div>
+				<div class="switch" data-on="warning" data-off="danger">
+					<input type="checkbox" checked />
+				</div>
+				<div class="switch" data-on="danger" data-off="primary">
+					<input type="checkbox" checked />
+				</div>
+			</div>
+			<p><a class="c-primary" href="Switch.shtml" target="_blank" title="bootstrapSwitch">点击查看更多效果</a></p>
+			<h2>3.4.3 select 下拉框</h2>
+			<p>select是个奇葩的表单组件，是表单元素中通过css最难美化的一个，各个浏览器显示都存在很大差异。</p>
+			<p>原生效果</p>
+			<p>
+				<select class="select" size="1" name="demo1">
+					<option value="" selected>原生select</option>
+					<option value="1">菜单一</option>
+					<option value="2">菜单二</option>
+					<option value="3">菜单三</option>
+				</select>
+			</p>
+			<p>原生美化方式：</p>
+			<p>1、为select外层嵌套个 标签，设置边框，圆角，隐藏掉select本身的表框。</p>
+			<div class="codeView docs-example"> <span class="select-box">
+				<select class="select" size="1" name="demo1">
+					<option value="" selected>默认select</option>
+					<option value="1">菜单一</option>
+					<option value="2">菜单二</option>
+					<option value="3">菜单三</option>
+				</select>
+				</span> <span class="select-box radius mt-20">
+				<select class="select" size="1" name="demo2">
+					<option value="" selected>圆角select效果</option>
+					<option value="1">菜单一</option>
+					<option value="2">菜单二</option>
+					<option value="3">菜单三</option>
+				</select>
+				</span> </div>
+			<!--<p>2、将原生的隐藏掉，用其他元素（如div li）通过js模拟下拉交互，然后再传值给源生的select。优点：好看，兼容好；缺点：代码冗余，依赖JS，不方便操作。</p>-->
+			
+			<h3>HTML代码</h3>
+<pre class="prettyprint linenums">&lt;span class=&quot;select-box&quot;&gt;
+  &lt;select class=&quot;select&quot; size=&quot;1&quot; name=&quot;demo1&quot;&gt;
+    &lt;option value=&quot;&quot; selected&gt;默认select&lt;/option&gt;
+    &lt;option value=&quot;1&quot;&gt;菜单一&lt;/option&gt;
+    &lt;option value=&quot;2&quot;&gt;菜单二&lt;/option&gt;
+    &lt;option value=&quot;3&quot;&gt;菜单三&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/span&gt;</pre>
+			<h3>CSS代码</h3>
+<pre class="prettyprint linenums">/*方法一、修改源生*/
+.select-box{border:solid 1px #ddd;box-sizing:border-box;vertical-align:middle; width:100%; display:inline-block}
+	.select{border:solid 1px #ddd;box-sizing:border-box;cursor: pointer;line-height:normal;font-weight: normal;width:100%; white-space:nowrap}
+.select-box .select{ border:none}
+.select-box.inline,.select-box.inline .select{ width:auto}
+.select-box,.select-box.size-M{padding:4px 5px}
+	.select,.size-M .select{font-size: 14px}
+.select-box.size-MINI{padding:0px 5px}
+	.size-MINI .select{font-size: 12px}
+.select-box.size-S{padding:3px 5px}
+	.size-S .select{font-size: 12px}
+.select-box.size-L{padding:8px 5px}
+	.size-L .select{font-size: 16px}
+.select-box.size-XL{padding:10px 5px}
+	.size-XL .select{font-size: 18px}
+@media (max-width: 767px) {
+	.responsive .select-box{ border:none}
+	.responsive .select-box .select,
+	.responsive .select{border:solid 1px #ddd; padding:10px;font-size:16px}
+	.responsive .select-box,
+	.responsive .select-box.size-M,
+	.responsive .select-box.size-MINI,
+	.responsive .select-box.size-S,
+	.responsive .select-box.size-L,
+	.responsive .select-box.size-XL{ height:auto; padding:0}
+}</pre>
+<br>
+<pre class="prettyprint linenums">是
+</pre>
+			<h2>3.4.4 input-file 文件上传</h2>
+			<p>input file 是另一个奇葩组件，一直以来都是前端开发的噩梦，原生的基本无法通过CSS美化。基于原生的做法：把文件选择域设为透明,通过绝对定位覆盖在长的好看的按钮上面。优点：完全源生。兼容性好，统一浏览器显示效果。</p>
+			<p>原生效果</p>
+			<p>
+				<input type="file" multiple name="file_0">
+			</p>
+			<div class="codeView docs-example">
+				<p>上传按钮</p>
+				<span class="btn-upload"> <a href="javascript:void();" class="btn btn-primary radius upload=btn"><i class="Hui-iconfont">&#xe642;</i> 浏览文件</a>
+				<input type="file" multiple name="file_0" class="input-file">
+				</span>
+				<p>带文本框</p>
+				<span class="btn-upload form-group">
+				<input class="input-text upload-url radius" type="text" name="uploadfile-1" id="uploadfile-1" readonly>
+				<a href="javascript:void();" class="btn btn-primary radius upload-btn"><i class="Hui-iconfont">&#xe642;</i> 浏览文件</a>
+				<input type="file" multiple name="file-1" class="input-file">
+				</span> </div>
+			<p>手动在文本框上加style="width: " 来控制input框的宽度。</p>
+			<h3>HTML代码</h3>
+<pre class="prettyprint linenums">//上传按钮
+&lt;span class=&quot;btn-upload&quot;&gt;
+  &lt;a href=&quot;javascript:void();&quot; class=&quot;btn btn-primary radius&quot;&gt;&lt;i class=&quot;iconfont&quot;&gt;&amp;#xf0020;&lt;/i&gt; 浏览文件&lt;/a&gt;
+  &lt;input type=&quot;file&quot; multiple name=&quot;file_0&quot; class=&quot;input-file&quot;&gt;
+&lt;/span&gt;
+
+//带文本框
+&lt;span class=&quot;btn-upload form-group&quot;&gt;
+  &lt;input class=&quot;input-text upload-url radius&quot; type=&quot;text&quot; name=&quot;uploadfile-1&quot; id=&quot;uploadfile-1&quot; readonly&gt;&lt;a href=&quot;javascript:void();&quot; class=&quot;btn btn-primary radius&quot;&gt;&lt;i class=&quot;iconfont&quot;&gt;&amp;#xf0020;&lt;/i&gt; 浏览文件&lt;/a&gt;
+  &lt;input type=&quot;file&quot; multiple name=&quot;file-1&quot; class=&quot;input-file&quot;&gt;
+&lt;/span&gt;</pre>
+			<h3>CSS代码</h3>
+<pre class="prettyprint linenums">.btn-upload{position: relative; display:inline-block;height:36px; *display:inline;overflow:hidden;vertical-align:middle;cursor:pointer}
+.upload-url{cursor: pointer}
+.input-file{position:absolute; right:0; top:0; cursor: pointer; z-index:1; font-size:30em; *font-size:30px;opacity:0;filter: alpha(opacity=0)}
+.btn-upload .input-text{ width:auto}
+.form-group .upload-btn{ margin-left:-1px}</pre>
+			<h2>3.4.5 表单布局</h2>
+			<div class="codeView docs-example">
+				<form action="" method="post" class="form form-horizontal" id="demoform-1">
+					<legend>表单布局</legend>
+					<div class="row cl">
+						<label class="form-label col-xs-4 col-sm-3">文本框：</label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<input type="text" class="input-text" autocomplete="off" placeholder="帐号">
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label col-xs-4 col-sm-3">密码框：</label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<input type="password" class="input-text" autocomplete="off" placeholder="密码">
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label col-xs-4 col-sm-3">单选框：</label>
+						<div class="formControls skin-minimal col-xs-8 col-sm-9">
+							<div class="radio-box">
+								<input type="radio" id="sex-1" name="sex" checked>
+								<label for="sex-1">男</label>
+							</div>
+							<div class="radio-box">
+								<input type="radio" id="sex-0" name="sex">
+								<label for="sex-0">女</label>
+							</div>
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label col-xs-4 col-sm-3">复选框：</label>
+						<div class="formControls skin-minimal col-xs-8 col-sm-9">
+							<div class="check-box">
+								<input type="checkbox" id="checkbox-5">
+								<label for="checkbox-5">复选框</label>
+							</div>
+							<div class="check-box">
+								<input type="checkbox" id="checkbox-6" checked>
+								<label for="checkbox-6">复选框 checked状态</label>
+							</div>
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label col-xs-4 col-sm-3">文件域：</label>
+						<div class="formControls col-xs-8 col-sm-9"> <span class="btn-upload form-group">
+							<input class="input-text upload-url" type="text" name="uploadfile-2" id="uploadfile-2" readonly>
+							<a href="javascript:void();" class="btn btn-primary upload-btn"><i class="Hui-iconfont">&#xe642;</i> 浏览文件</a>
+							<input type="file" multiple name="file-2" class="input-file">
+							</span> </div>
+					</div>
+					<div class="row cl">
+						<label class="form-label col-xs-4 col-sm-3">下拉框：</label>
+						<div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
+							<select class="select" size="1" name="demo1">
+								<option value="" selected>默认select</option>
+								<option value="1">菜单一</option>
+								<option value="2">菜单二</option>
+								<option value="3">菜单三</option>
+							</select>
+							</span> </div>
+					</div>
+					<div class="row cl">
+						<label class="form-label col-xs-4 col-sm-3">文本域：</label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<textarea class="textarea" placeholder="说点什么..." rows="" cols="" name=""></textarea>
+						</div>
+					</div>
+					<div class="row cl">
+						<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+							<input class="btn btn-primary radius" type="submit" value="提交">
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="codeView docs-example"> </div>
+			<h2>3.4.6 表单验证</h2>
+			<p>两种验证插件：jQuery.Validate.js和Validform.js</p>
+			<div id="tab-form" class="HuiTab">
+				<div class="tabBar cl"><span>jQuery.Validate</span><span>Validform</span></div>
+				<div class="tabCon bk_gray">
+					<p>从H-ui_v2.1.6版开始，表单验证将引入jQuery Validate插件，相信很多人都用过，而且非常熟悉。jQuery Validate 插件为表单提供了强大的验证功能，让客户端表单验证变得更简单，同时提供了大量的定制选项，满足应用程序各种需求。该插件捆绑了一套有用的验证方法，包括 URL 和电子邮件验证，同时提供了一个用来编写用户自定义方法的 API。所有的捆绑方法默认使用英语作为错误信息，且已翻译成其他 37 种语言。更重要的是他是由jQuery 团队、 jQuery UI 团队的主要开发人员Jörn Zaefferer 编写和维护的。具体我们可以访问 <a target="_blank" href="http://jqueryvalidation.org/">jQuery Validate 官网</a>，下载最新版的 jQuery Validate 插件。</p>
+					<p>具体的使用教程，可移步慕课网在线免费学习 <a href="http://www.imooc.com/learn/385" target="_blank" rel="nofollow" title="jQuery Validation表单验证插件">http://www.imooc.com/learn/385</a>。</p>
+					<h3>引入脚本</h3>
+<pre>&lt;script type=&quot;text/javascript&quot; src=&quot;lib/jquery.validation/1.14.0/jquery.validate.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;lib/jquery.validation/1.14.0/validate-methods.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;lib/jquery.validation/1.14.0/messages_zh.min.js&quot;&gt;&lt;/script&gt;</pre>
+					<p>validate-methods.js 为扩展的验证规则</p>
+					<p>messages_zh.js 为验证提示文件</p>
+					<h3>默认校验规则</h3>
+					<table class="table table-border table-bg table-bordered">
+						<thead>
+							<tr>
+								<th width="10%">序号</th>
+								<th width="30%">规则</th>
+								<th width="60%">描述</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>required:true</td>
+								<td>必须输入的字段。</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>remote:"check.php"</td>
+								<td>使用 ajax 方法调用 check.php 验证输入值。</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>email:true</td>
+								<td>必须输入正确格式的电子邮件。</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>url:true</td>
+								<td>必须输入正确格式的网址。</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>date:true</td>
+								<td>必须输入正确格式的日期。日期校验 ie6 出错，慎用。</td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td>dateISO:true</td>
+								<td>必须输入正确格式的日期（ISO），例如：2009-06-23，1998/01/22。只验证格式，不验证有效性。</td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td>number:true</td>
+								<td>必须输入合法的数字（负数，小数）。</td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td>digits:true</td>
+								<td>必须输入整数。</td>
+							</tr>
+							<tr>
+								<td>9</td>
+								<td>creditcard:</td>
+								<td>必须输入合法的信用卡号。</td>
+							</tr>
+							<tr>
+								<td>10</td>
+								<td>equalTo:"#password"</td>
+								<td>输入值必须和 #password 相同,通常用于密码验证。</td>
+							</tr>
+							<tr>
+								<td>11</td>
+								<td>accept:</td>
+								<td>输入拥有合法后缀名的字符串（上传文件的后缀）。</td>
+							</tr>
+							<tr>
+								<td>12</td>
+								<td>maxlength:5</td>
+								<td>输入长度最多是 5 的字符串（汉字算一个字符）。</td>
+							</tr>
+							<tr>
+								<td>13</td>
+								<td>minlength:10</td>
+								<td>输入长度最小是 10 的字符串（汉字算一个字符）。</td>
+							</tr>
+							<tr>
+								<td>14</td>
+								<td>rangelength:[5,10]</td>
+								<td>输入长度必须介于 5 和 10 之间的字符串（汉字算一个字符）。</td>
+							</tr>
+							<tr>
+								<td>15</td>
+								<td>range:[5,10]</td>
+								<td>输入值必须介于 5 和 10 之间。</td>
+							</tr>
+							<tr>
+								<td>16</td>
+								<td>max:5</td>
+								<td>输入值不能大于 5。</td>
+							</tr>
+							<tr>
+								<td>17</td>
+								<td>min:10</td>
+								<td>输入值不能小于 10。</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="codeView docs-example">
+						<form action="" method="post" class="form form-horizontal" id="demoform-2">
+							<legend>带验证表单</legend>
+							<div class="row cl">
+								<label class="form-label col-xs-4 col-sm-3">邮箱：</label>
+								<div class="formControls col-xs-8 col-sm-9">
+									<input type="text" class="input-text" placeholder="@" name="email" id="email">
+								</div>
+							</div>
+							<div class="row cl">
+								<label class="form-label col-xs-4 col-sm-3">用户名：</label>
+								<div class="formControls col-xs-8 col-sm-9">
+									<input type="text" class="input-text" placeholder="4~16个字符，字母/中文/数字/下划线" name="username" id="username">
+								</div>
+							</div>
+							<div class="row cl">
+								<label class="form-label col-xs-4 col-sm-3">账户：</label>
+								<div class="formControls col-xs-8 col-sm-9">
+									<input type="text" class="input-text" autocomplete="off" placeholder="手机/邮箱" name="account" id="account">
+								</div>
+							</div>
+							<div class="row cl">
+								<label class="form-label col-xs-4 col-sm-3">密码：</label>
+								<div class="formControls col-xs-8 col-sm-9">
+									<input type="password" class="input-text" autocomplete="off" placeholder="密码" name="password" id="password">
+								</div>
+							</div>
+							<div class="row cl">
+								<label class="form-label col-xs-4 col-sm-3">密码验证：</label>
+								<div class="formControls col-xs-8 col-sm-9">
+									<input type="password" class="input-text" autocomplete="off" placeholder="密码" name="password2" id="password2">
+								</div>
+							</div>
+							<div class="row cl">
+								<label class="form-label col-xs-4 col-sm-3">网址：</label>
+								<div class="formControls col-xs-8 col-sm-9">
+									<input type="text" class="input-text" autocomplete="off" placeholder="http://" name="url" id="url">
+								</div>
+							</div>
+							<div class="row cl">
+								<label class="form-label col-xs-4 col-sm-3">单选框：</label>
+								<div class="formControls skin-minimal col-xs-8 col-sm-9">
+									<div class="radio-box">
+										<input type="radio" id="sex-1" name="sex">
+										<label for="sex-1">男</label>
+									</div>
+									<div class="radio-box">
+										<input type="radio" id="sex-2" name="sex">
+										<label for="sex-2">女</label>
+									</div>
+									<div class="radio-box">
+										<input type="radio" id="sex-3" name="sex">
+										<label for="sex-3">保密</label>
+									</div>
+								</div>
+							</div>
+							<div class="row cl">
+								<label class="form-label col-xs-4 col-sm-3">爱好：</label>
+								<div class="formControls skin-minimal col-xs-8 col-sm-9">
+									<div class="check-box">
+										<input type="checkbox" id="aihao-5" name="aihao">
+										<label for="checkbox-5">上网</label>
+									</div>
+									<div class="check-box">
+										<input type="checkbox" id="aihao-6" name="aihao">
+										<label for="checkbox-6">摄影</label>
+									</div>
+								</div>
+							</div>
+							<div class="row cl">
+								<label class="form-label col-xs-4 col-sm-3">附件：</label>
+								<div class="formControls col-xs-8 col-sm-9"> <span class="btn-upload form-group">
+									<input class="input-text upload-url" type="text" name="uploadfile1" id="uploadfile1" readonly style="width:200px">
+									<a href="javascript:void();" class="btn btn-primary upload-btn"><i class="Hui-iconfont">&#xe642;</i> 浏览文件</a>
+									<input type="file" multiple name="file-2" class="input-file">
+									</span> </div>
+							</div>
+							<div class="row cl">
+								<label class="form-label col-xs-4 col-sm-3">所在城市：</label>
+								<div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
+									<select class="select" size="1" name="city">
+										<option value="" selected>请选择城市</option>
+										<option value="1">北京</option>
+										<option value="2">上海</option>
+										<option value="3">广州</option>
+									</select>
+									</span> </div>
+							</div>
+							<div class="row cl">
+								<label class="form-label col-xs-4 col-sm-3">网址：</label>
+								<div class="formControls col-xs-8 col-sm-9">
+									<input type="text" class="input-text" placeholder="http://" name="url" id="url">
+								</div>
+							</div>
+							<div class="row cl">
+								<label class="form-label col-xs-4 col-sm-3">备注：</label>
+								<div class="formControls col-xs-8 col-sm-9">
+									<textarea class="textarea"  placeholder="说点什么...最少输入10个字符" name="beizhu" onKeyUp="$.Huitextarealength(this,500)"></textarea>
+									<p class="textarea-numberbar"><em class="textarea-length">0</em>/500</p>
+								</div>
+							</div>
+							<div class="row cl">
+								<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+									<input class="btn btn-primary" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="tabCon bk_gray">
+					<p> <span class="label label-warning radius">本站郑重声明：</span>H-ui框架直接使用了Validform.js作为表单验证。
+						本人研究了很多表单验证插件，最后发现Validform.js比较方便、简单，相对灵活性比较高，在这我代表H-ui由衷的像作者Validform致敬。
+						Validform.js表单验证插件归原作者所有，本站只做技术研究和学习，如果大家感觉好方便，请联系移步http://validform.rjboy.cn/联系原作者购买授权。如有冒犯还请立即通知我们，我们会立即撤下相关资源。如果您和本人有共同的志向，可以合作。 </p>
+					<p>需引入Validform_v5.3.2.js</p>
+					<div class="codeView docs-example">
+						<form action="" method="post" class="form form-horizontal" id="demoform-3">
+							<legend>带验证表单</legend>
+							<div class="row cl">
+								<label class="form-label col-xs-4 col-sm-3">邮箱：</label>
+								<div class="formControls col-xs-8 col-sm-6">
+									<input type="text" class="input-text" placeholder="@" name="email2" id="email2" datatype="e" nullmsg="请输入邮箱！">
+								</div>
+								<div class="col-xs-8 col-sm-6 col-xs-offset-4 col-sm-offset-3"> </div>
+							</div>
+							<div class="row cl">
+								<label class="form-label col-xs-4 col-sm-3">用户名：</label>
+								<div class="formControls col-xs-8 col-sm-6">
+									<input type="text" class="input-text" placeholder="4~16个字符，字母/中文/数字/下划线" name="username2" id="username2" datatype="*4-16" nullmsg="用户名不能为空">
+								</div>
+								<div class="col-xs-8 col-sm-6 col-xs-offset-4 col-sm-offset-3"> </div>
+							</div>
+							<div class="row cl">
+								<label class="form-label col-xs-4 col-sm-3">账户：</label>
+								<div class="formControls col-xs-8 col-sm-6">
+									<input type="text" class="input-text" autocomplete="off" placeholder="手机/邮箱" name="account2" id="account2" datatype="m|e" nullmsg="账户不能为空">
+								</div>
+								<div class="col-xs-8 col-sm-6 col-xs-offset-4 col-sm-offset-3"> </div>
+							</div>
+							<div class="row cl">
+								<label class="form-label col-xs-4 col-sm-3">密码：</label>
+								<div class="formControls col-xs-8 col-sm-6">
+									<input type="password" class="input-text" autocomplete="off" placeholder="密码" name="password3" id="password3" datatype="*6-18" nullmsg="请输入密码！" >
+								</div>
+								<div class="col-xs-8 col-sm-6 col-xs-offset-4 col-sm-offset-3"> </div>
+							</div>
+							<div class="row cl">
+								<label class="form-label col-xs-4 col-sm-3">密码验证：</label>
+								<div class="formControls col-xs-8 col-sm-6">
+									<input type="password" class="input-text" autocomplete="off" placeholder="密码" name="password4" id="password4" recheck="password" datatype="*6-18" nullmsg="请再输入一次密码！" errormsg="您两次输入的密码不一致！" >
+								</div>
+								<div class="col-xs-8 col-sm-6 col-xs-offset-4 col-sm-offset-3"> </div>
+							</div>
+							<div class="row cl">
+								<label class="form-label col-xs-4 col-sm-3">单选框：</label>
+								<div class="formControls skin-minimal col-xs-8 col-sm-6">
+									<div class="radio-box">
+										<input type="radio" id="sex2-1" name="sex2" datatype="*" nullmsg="请选择性别！">
+										<label for="sex-1">男</label>
+									</div>
+									<div class="radio-box">
+										<input type="radio" id="sex2-2" name="sex2">
+										<label for="sex-2">女</label>
+									</div>
+									<div class="radio-box">
+										<input type="radio" id="sex2-3" name="sex2">
+										<label for="sex-3">保密</label>
+									</div>
+								</div>
+								<div class="col-xs-8 col-sm-6 col-xs-offset-4 col-sm-offset-3"> </div>
+							</div>
+							<div class="row cl">
+								<label class="form-label col-xs-4 col-sm-3">爱好：</label>
+								<div class="formControls skin-minimal col-xs-8 col-sm-6">
+									<div class="check-box">
+										<input type="checkbox" id="aihao2-5" name="aihao2" datatype="*" nullmsg="爱好不能为空！">
+										<label for="checkbox-5">上网</label>
+									</div>
+									<div class="check-box">
+										<input type="checkbox" id="aihao2-6" name="aihao2">
+										<label for="checkbox-6">摄影</label>
+									</div>
+								</div>
+								<div class="col-xs-8 col-sm-6 col-xs-offset-4 col-sm-offset-3"> </div>
+							</div>
+							<div class="row cl">
+								<label class="form-label col-xs-4 col-sm-3">附件：</label>
+								<div class="formControls col-xs-8 col-sm-6"> <span class="btn-upload form-group">
+									<input class="input-text upload-url" type="text" name="uploadfile3" id="uploadfile3" readonly  datatype="*" nullmsg="请添加附件！" style="width:200px">
+									<a href="javascript:void();" class="btn btn-primary upload-btn"><i class="Hui-iconfont">&#xe642;</i> 浏览文件</a>
+									<input type="file" multiple name="file-2" class="input-file">
+									</span> </div>
+								<div class="col-xs-8 col-sm-6 col-xs-offset-4 col-sm-offset-3"> </div>
+							</div>
+							<div class="row cl">
+								<label class="form-label col-xs-4 col-sm-3">所在城市：</label>
+								<div class="formControls col-xs-8 col-sm-6"> <span class="select-box">
+									<select class="select" size="1" name="city2" datatype="*" nullmsg="请选择所在城市！">
+										<option value="" selected>请选择城市</option>
+										<option value="1">北京</option>
+										<option value="2">上海</option>
+										<option value="3">广州</option>
+									</select>
+									</span> </div>
+								<div class="col-xs-8 col-sm-6 col-xs-offset-4 col-sm-offset-3"> </div>
+							</div>
+							<div class="row cl">
+								<label class="form-label col-xs-4 col-sm-3">网址：</label>
+								<div class="formControls col-xs-8 col-sm-6">
+									<input type="text" class="input-text" placeholder="http://" name="url2" id="url2" datatype="url" nullmsg="网址不能为空">
+								</div>
+								<div class="col-xs-8 col-sm-6 col-xs-offset-4 col-sm-offset-3"> </div>
+							</div>
+							<div class="row cl">
+								<label class="form-label col-xs-4 col-sm-3">备注：</label>
+								<div class="formControls col-xs-8 col-sm-6">
+									<textarea name="beizhu2" cols="" rows="" class="textarea"  placeholder="说点什么...最少输入10个字符" datatype="*10-500" nullmsg="备注不能为空！" onKeyUp="$.Huitextarealength(this,500)"></textarea>
+									<p class="textarea-numberbar"><em class="textarea-length">0</em>/500</p>
+								</div>
+								<div class="col-xs-8 col-sm-6 col-xs-offset-4 col-sm-offset-3"> </div>
+							</div>
+							<div class="row cl">
+								<div class="col-xs-8 col-sm-6 col-xs-offset-4 col-sm-offset-3">
+									<input class="btn btn-primary" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-header">推荐课程</div>
+				<div class="panel-body">
+					<ul class="clearfix">
+						<li><a href="http://www.imooc.com/learn/385" target="_blank">jQuery插件——Validation Plugin</a></li>
+						<li><a href="http://www.imooc.com/learn/44" target="_blank">源生开发表单验证</a></li>
+					</ul>
+				</div>
+			</div>
+			<!--高速版-->
+<div id="SOHUCS" sid=""></div>
+<script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: 'cystmLO0N',
+        conf: 'prod_06226f5d322c22bcd421cb90462fe2a2'
+    });
+</script> 
+		</article>
+		﻿<footer class="footer mt-20">
+	<div class="container-fluid">
+		<nav>
+			<a href="/aboutHui.shtml" target="_blank">关于H-ui</a>
+			<span class="pipe">|</span>
+			<a href="/copyright.shtml" target="_blank">软件著作权</a>
+			<span class="pipe">|</span>
+			<a href="/juanzeng.shtml" target="_blank">感谢捐赠</a>
+		</nav>
+		<p>Copyright &copy;2013-2017 H-ui.net All Rights Reserved. <br>
+			<a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">京ICP备15015336号-1</a><br>
+			未经允许，禁止转载、抄袭、镜像<br>
+			用心做站，做不一样的站</p>
+	</div>
+</footer>
+<script type="text/javascript" src="http://lib.h-ui.net/prettify.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/h-ui/3.1/js/H-ui.min.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/www/home/js/H-ui.admin.www.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/www/home/js/common.js"></script> 
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?080836300300be57b7f34f4b3e97d911";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s)})();
+</script>
+	</div>
+</section>
+<!--表单验证插件-->
+<script type="text/javascript" src="http://lib.h-ui.net/jquery.validation/1.14.0/jquery.validate.min.js"></script>
+<script type="text/javascript" src="http://lib.h-ui.net/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript" src="http://lib.h-ui.net/jquery.validation/1.14.0/messages_zh.min.js"></script>
+<script type="text/javascript" src="http://lib.h-ui.net/Validform/5.3.2/Validform.min.js"></script> 
+<script type="text/javascript" src="http://lib.h-ui.net/Validform/5.3.2/passwordStrength-min.js"></script> 
+<script type="text/javascript">
+$("#menu_3 dt").addClass("selected");$("#menu_3 dd").show();
+$(function(){
+	$('.skin-minimal input').iCheck({
+		checkboxClass: 'icheckbox-blue',
+		radioClass: 'iradio-blue',
+		increaseArea: '20%'
+	});
+	
+	
+	$("#tab-form").Huitab();
+	$("#demoform-2").validate({
+		rules:{
+			email:{
+				required:true,
+				email:true,
+			},
+			username:{
+				required:true,
+				minlength:4,
+				maxlength:16
+			},
+			account:{
+				required:true,
+			},
+			password:{
+				required:true,
+			},
+			password2:{
+				required:true,
+				equalTo: "#password"
+			},
+			url:{
+				required:true,
+				url:true,
+			},
+			sex:{
+				required:true,
+			},
+			aihao:{
+				required:true,
+			},
+			fujian:{
+				required:true,
+			},
+			city:{
+				required:true,
+			},
+			url:{
+				required:true,
+				url:true
+			},
+			beizhu:{
+				required:true,
+			},
+		},
+		onkeyup:false,
+		focusCleanup:true,
+		success:"valid",
+		submitHandler:function(form){
+			$("#modal-shenqing-success").modal("show");
+			$(form).ajaxSubmit()}
+	});
+	$("#demoform-3").Validform({
+		tiptype:2,
+		usePlugin:{
+			datepicker:{},//日期控件校验;
+			passwordstrength:{
+				minLen:6,//设置密码长度最小值，默认为0;
+				maxLen:18,//设置密码长度最大值，默认为30;
+				trigger:function(obj,error){
+					//该表单元素的keyup和blur事件会触发该函数的执行;
+					//obj:当前表单元素jquery对象;
+					//error:所设密码是否符合验证要求，验证不能通过error为true，验证通过则为false;					
+					//console.log(error);
+					if(error){
+						obj.parent().find(".Validform_checktip").show();
+						obj.parent().find(".passwordStrength").hide()}else{
+						obj.parent().find(".passwordStrength").show()}
+				}
+			}
+		}
+	})});
+</script>
+</body>
+</html>

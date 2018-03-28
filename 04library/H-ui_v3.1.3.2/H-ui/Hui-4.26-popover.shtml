@@ -1,0 +1,442 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<link rel="Bookmark" href="/favicon.ico" >
+<link rel="Shortcut Icon" href="/favicon.ico" />
+<!-- Standard iPhone -->  
+<link rel="apple-touch-icon" sizes="57x57" href="http://static.h-ui.net/www/home/images/touch-icon-iphone-114.png" />  
+<!-- Retina iPhone -->  
+<link rel="apple-touch-icon" sizes="114x114" href="http://static.h-ui.net/www/home/images/touch-icon-iphone-114.png" />  
+<!-- Standard iPad -->  
+<link rel="apple-touch-icon" sizes="72x72" href="http://static.h-ui.net/www/home/images/touch-icon-ipad-144.png" />  
+<!-- Retina iPad -->  
+<link rel="apple-touch-icon" sizes="144x144" href="http://static.h-ui.net/www/home/images/touch-icon-ipad-144.png" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="http://lib.h-ui.net/html5.js"></script>
+<script type="text/javascript" src="http://lib.h-ui.net/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/h-ui/3.1/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/h-ui.admin/3.1/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/www/home/css/H-ui.doc.css" />
+<link rel="stylesheet" type="text/css" href="http://lib.h-ui.net/Hui-iconfont/1.0.8/iconfont.min.css" />
+<!--[if lt IE 9]>
+<link href="http://static.h-ui.net/h-ui/css/H-ui.ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="text/javascript" src="http://lib.h-ui.net/jquery/1.9.1/jquery.min.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('.pngfix,.iconpic,.list-icon');</script>
+<![endif]-->
+<!-- 反运营商劫持 S -->
+<style type="text/css">
+html {
+	display:none}
+</style>
+<script>
+if( self == top ) {
+	document.documentElement.style.display = 'block' } else {
+	top.location = self.location }
+</script>
+<!-- 反运营商劫持 E -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2472599678883446",
+    enable_page_level_ads: true
+  });
+</script>
+<title>popover插件 - H-ui前端框架官方网站</title>
+<meta name="keywords" content="弹出框(Popover),Popover.js,bootstrap popover,H-ui前端框架">
+<meta name="description" content="H-ui前端框架，,Bootstrap 弹出框（Popover）插件。">
+<style type="text/css">
+#Hui-nav li#Huinav_2 a, #Hui-nav li#Huinav_2 a:hover {
+	color: #fff;
+	background-color: #111
+}
+</style>
+</head>
+<body onLoad="prettyPrint()">
+<header class="navbar-wrapper">
+	<div class="navbar navbar-black">
+		<div class="container-fluid cl"> <a class="logo navbar-logo hidden-xs" href="/aboutHui.shtml">H-ui前端框架</a> <a class="logo navbar-logo-m visible-xs" href="/aboutHui.shtml">H-ui</a> <span class="logo navbar-slogan hidden-xs">简单 &middot; 免费 &middot; 适合中国网站</span> <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:;">&#xe667;</a>
+			<nav id="Hui-nav" class="nav navbar-nav">
+				<ul class="cl">
+					<li id="Huinav_1"> <a href="/index.shtml">首页</a> </li>
+					<li id="Huinav_2"> <a href="/Hui-overview.shtml">核心</a> </li>
+					<li id="Huinav_3"> <a href="/lib/jQuery.cookie.js.shtml">脚本</a> </li>
+					<li id="Huinav_4"> <a href="/ext/list.shtml">扩展</a> </li>
+					<li id="Huinav_5"> <a href="/cases/index.shtml">案例</a> </li>
+				</ul>
+			</nav>
+			<nav class="navbar-userbar f-r hidden-xs hidden-sm">
+				<a href="javascript:void(0);" onclick="addFavoritepage();return !1;" class="btn btn-primary radius" title="收藏">收藏本页</a>
+				<a class="btn btn-success radius" target="_blank" href="/shareCode.shtml">代码分享</a>
+				<a class="btn btn-success radius juanzeng" target="_blank" href="/juanzeng.shtml">捐赠<span style="color:#333" class="bk-gray box-shadow text-c"><img width="300" src="http://static.h-ui.net/www/home/images/alipay.jpg"></span></a>
+			</nav>
+		</div>
+	</div>
+</header>
+<aside class="Hui-aside">
+	<input runat="server" id="divScrollValue" type="hidden" value="" />
+	<div class="menu_dropdown bk_2">
+		<ul>
+			<li><a href="Hui-overview.shtml">&nbsp;&nbsp;&nbsp;&nbsp;概述</a></li>
+		</ul>
+		<dl id="menu_notes">
+			<dt>&nbsp;&nbsp;&nbsp;&nbsp;注释<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-notes-htmlStructure.shtml">Html书写规范</a></li>
+					<li><a href="Hui-notes-css.shtml">CSS写作注意事项</a></li>
+					<li><a href="Hui-notes-cnFont.shtml">中文字体css编码转换</a></li>
+					<li><a href="Hui-notes-cssHack.shtml">CSS Hack</a></li>
+					<li><a href="Hui-notes-keycode.shtml">键盘按钮keycode</a></li>
+					<li><a href="Hui-notes-ARIA.shtml">ARIA属性值</a></li>
+					<li><a href="Hui-notes-cssHame.shtml">css 命名规范</a></li>
+					<li><a href="Hui-notes-htmlName.shtml">html命名规范</a></li>
+					<li><a href="Hui-notes-fileName.shtml">文件夹命名规范</a></li>
+					<li><a href="Hui-notes-regular.shtml">常用正则表达式</a></li>
+					<li><a href="Hui-notes-csscursor.shtml">css中cursor(光标类型)</a></li>
+					<li><a href="Hui-notes-EDM.shtml">EDM制作规范</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<ul>
+			<li><a href="Hui-notes-menu.shtml">&nbsp;&nbsp;&nbsp;&nbsp;结构目录</a></li>
+		</ul>
+		<ul>
+			<li><a href="Hui-1-cssReset.shtml">1. css reset</a></li>
+		</ul>
+		<dl id="menu_2">
+			<dt>2. 框架<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-2.1-gridSystem.shtml">2.1 响应式栅格系统</a></li>
+					<li><a href="Hui-2.2-show&hide.shtml">2.2 响应式隐藏显示</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu_3">
+			<dt>3. 基础<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-3.1-typography.shtml">3.1 排版</a></li>
+					<li><a href="Hui-3.2-code.shtml">3.2 代码</a></li>
+					<li><a href="Hui-3.3-table.shtml">3.3 表格</a></li>
+					<li><a href="Hui-3.4-form.shtml">3.4 表单</a></li>
+					<li><a href="Hui-3.5-button.shtml">3.5 按钮</a></li>
+					<li><a href="Hui-3.6-images.shtml">3.6 图片</a></li>
+					<li><a href="Hui-3.7-Hui-iconfont.shtml">3.7 图标</a></li>
+					<li><a href="Hui-3.8-animation.shtml">3.8 动画</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu_4">
+			<dt>4. 组件<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-4.1-buttonGroups.shtml">4.1 按钮组</a></li>
+					<li><a href="Hui-4.2-nav.shtml">4.2 导航 &amp; 翻页</a></li>
+					<li><a href="Hui-4.3-dropDown.shtml">4.3 下拉菜单</a></li>
+					<li><a href="Hui-4.4-slider.shtml">4.4 幻灯片</a></li>
+					<li><a href="Hui-4.5-tab.shtml">4.5 选项卡</a></li>
+					<li><a href="Hui-4.6-labelBadge.shtml">4.6 便签与标号</a></li>
+					<li><a href="Hui-4.7-thumbnails.shtml"><del>4.7 缩略图</del></a></li>
+					<li><a href="Hui-4.8-alert.shtml">4.8 警告</a></li>
+					<li><a href="Hui-4.9-progress.shtml">4.9 进度条 loading</a></li>
+					<li><a href="Hui-4.10-modal.shtml">4.10 对话框 弹出层</a></li>
+					<li><a href="Hui-4.11-kefu.shtml">4.11 客服</a></li>
+					<li><a href="Hui-4.12-toTop.shtml">4.12 返回顶部</a></li>
+					<li><a href="Hui-4.13-share.shtml">4.13 分享</a></li>
+					<li><a href="Hui-4.14-panel.shtml">4.14 面板</a></li>
+					<li><a href="Hui-4.15-example.shtml">4.15 案例</a></li>
+					<li><a href="Hui-4.16-rolling.shtml">4.16 滚动</a></li>
+					<li><a href="Hui-4.17-search.shtml">4.17 搜索</a></li>
+					<li><a href="Hui-4.18-ad.shtml">4.18 广告</a></li>
+					<li><a href="Hui-4.19-tags.shtml">4.19 标签</a></li>
+					<li><a href="Hui-4.20-fold.shtml">4.20 折叠</a></li>
+					<li><a href="Hui-4.21-maskBar.shtml">4.21 遮罩条</a></li>
+					<li><a href="Hui-4.22-comment.shtml">4.22 评论列表</a></li>
+					<li><a href="Hui-4.23-footer.shtml">4.23 页脚</a></li>
+					<li><a href="Hui-4.24-star.shtml">4.24 星星评价</a></li>
+					<li><a href="Hui-4.25-tooltip.shtml">4.25 tooltip效果</a></li>
+					<li><a href="Hui-4.26-popover.shtml">4.26 popover效果</a></li>
+					<!--<li><a href="Hui-4.26-select-category.shtml">4.26 分类检索</a></li>-->
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu_5">
+			<dt>5. 页面<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="404.shtml" target="_blank">5.1 404页面</a></li>
+					<!--<li><a href="Hui-5.1-blog-list.shtml">5.2 博客列表页</a></li>
+					<li><a href="Hui-5.2-blog-show.shtml">5.3 博客详情页</a></li>
+					<li><a href="Hui-5.3-aboutus.shtml">5.4 关于我们页</a></li>
+					<li><a href="Hui-5.4-help-list.shtml">5.5 帮助列表页</a></li>
+					<li><a href="Hui-5.5-help-show.shtml">5.6 帮助详情页</a></li> -->
+					<li>&nbsp;</li>
+					<li>&nbsp;</li>
+				</ul>
+			</dd>
+		</dl>
+	</div>
+</aside>
+
+<div class="dislpayArrow hidden-xs"><a class="pngfix" href="javascript:void(0);" onClick="displaynavbar(this)"></a></div>
+<section class="Hui-article-box">
+	<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i>
+		<a class="maincolor" href="/">首页</a>
+		<span class="c-999 en">&gt;</span>
+		组件
+		<span class="c-999 en">&gt;</span>
+		<span class="c-666">popover插件</span>
+	</nav>
+	<div class="Hui-article">
+		<article class="cl pd-20">
+			<h1 class="page_title">popover插件</h1>
+			<div class="demo-popover">
+				<button type="button" class="btn btn-primary radius" title="标题" data-container="body" data-toggle="popover" data-placement="left" data-content="左侧的 Popover 中的一些内容">左侧的 Popover</button>
+				<button type="button" class="btn btn-primary radius" title="标题" data-container="body" data-toggle="popover" data-placement="top" data-content="顶部的 Popover 中的一些内容">顶部的 Popover</button>
+				<button type="button" class="btn btn-primary radius" title="标题" data-container="body" data-toggle="popover" data-placement="bottom" data-content="底部的 Popover 中的一些内容">底部的 Popover</button>
+				<button type="button" class="btn btn-primary radius" title="标题" data-container="body" data-toggle="popover" data-placement="right" data-content="右侧的 Popover 中的一些内容">右侧的 Popover</button>
+			</div>
+			<h3>HTML代码</h3>
+			<pre class="prettyprint linenums">&lt;button type=&quot;button&quot; class=&quot;btn btn-primary radius&quot; title=&quot;标题&quot; data-container=&quot;body&quot; data-toggle=&quot;popover&quot; data-placement=&quot;left&quot; data-content=&quot;左侧的 Popover 中的一些内容&quot;&gt;左侧的 Popover&lt;/button&gt;</pre>
+			<h3>CSS代码</h3>
+			<pre class="prettyprint linenums">.popover {position: absolute;top: 0;left: 0;z-index: 1060;display: none;max-width: 276px;padding: 1px;font-size: 14px;font-weight: normal;line-height: 1.42857143;text-align: left;white-space: normal;background-color: #fff;-webkit-background-clip: padding-box;background-clip: padding-box;border: 1px solid #ccc;border: 1px solid rgba(0, 0, 0, .2);border-radius: 6px;-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .2);box-shadow: 0 5px 10px rgba(0, 0, 0, .2)
+.popover.top {margin-top: -10px}<br>.popover.right {margin-left: 10px}<br>.popover.bottom {margin-top: 10px}<br>.popover.left {margin-left: -10px}<br>.popover-title {padding: 8px 14px;margin: 0;font-size: 14px;background-color: #f7f7f7;border-bottom: 1px solid #ebebeb;border-radius: 5px 5px 0 0}<br>.popover-content {padding: 9px 14px}<br>.popover &gt; .arrow,.popover &gt; .arrow:after {position: absolute;display: block;width: 0;height: 0;border-color: transparent;border-style: solid}<br>.popover &gt; .arrow {border-width: 11px}<br>.popover &gt; .arrow:after {content: &quot;&quot;;border-width: 10px}<br>.popover.top &gt; .arrow {bottom: -11px;left: 50%;margin-left: -11px;border-top-color: #999;border-top-color: rgba(0, 0, 0, .25);border-bottom-width: 0}<br>.popover.top &gt; .arrow:after {bottom: 1px;margin-left: -10px;content: &quot; &quot;;border-top-color: #fff;border-bottom-width: 0}<br>.popover.right &gt; .arrow {top: 50%;left: -11px;margin-top: -11px;border-right-color: #999;border-right-color: rgba(0, 0, 0, .25);border-left-width: 0}<br>.popover.right &gt; .arrow:after {bottom: -10px;left: 1px;content: &quot; &quot;;border-right-color: #fff;border-left-width: 0}<br>.popover.bottom &gt; .arrow {top: -11px;left: 50%;margin-left: -11px;border-top-width: 0;border-bottom-color: #999;border-bottom-color: rgba(0, 0, 0, .25)}<br>.popover.bottom &gt; .arrow:after {top: 1px;margin-left: -10px;content: &quot; &quot;;border-top-width: 0;border-bottom-color: #fff}<br>.popover.left &gt; .arrow {top: 50%;right: -11px;margin-top: -11px;border-right-width: 0;border-left-color: #999;border-left-color: rgba(0, 0, 0, .25)}<br>.popover.left &gt; .arrow:after {right: 1px;bottom: -10px;content: &quot; &quot;;border-right-width: 0;border-left-color: #fff}</pre>
+			<h3>JS代码</h3>
+			<p>依赖jquery 和 h-ui.js</p>
+			<p>用法很简单，只需要在标签添加 data-toggle="popover" title="提示标题" data-content="提示内容" data-placement="left|top|bottom|right" 这两个属性即可，然后通过$(function () { $(&quot;[data-toggle='popover']&quot;).popover()}); 激活popover工具。</p>
+			<h4>调用参数</h4>
+			<table class="table table-border table-bordered table-bg">
+				<thead>
+					<tr>
+						<th>选项名称</th>
+						<th>类型/默认值</th>
+						<th>Data 属性名称</th>
+						<th>描述</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>animation</td>
+						<td>boolean<br>
+							<i>默认值：true</i></td>
+						<td>data-animation</td>
+						<td>向弹出框应用 CSS 褪色过渡效果。</td>
+					</tr>
+					<tr>
+						<td>html</td>
+						<td>boolean<br>
+							<i>默认值：false</i></td>
+						<td>data-html</td>
+						<td>向弹出框插入 HTML。如果为 false，jQuery 的 text 方法将被用于向 dom 插入内容。如果您担心 XSS 攻击，请使用 text。</td>
+					</tr>
+					<tr>
+						<td>placement</td>
+						<td>string|function<br>
+							<i>默认值：top</i></td>
+						<td>data-placement</td>
+						<td>规定如何定位弹出框（即 top|bottom|left|right|auto）。<br>
+							当指定为 <i>auto</i> 时，会动态调整弹出框。例如，如果 placement 是 "auto left"，弹出框将会尽可能显示在左边，在情况不允许的情况下它才会显示在右边。</td>
+					</tr>
+					<tr>
+						<td>selector</td>
+						<td>string<br>
+							<i>默认值：false</i></td>
+						<td>data-selector</td>
+						<td>如果提供了一个选择器，弹出框对象将被委派到指定的目标。</td>
+					</tr>
+					<tr>
+						<td>title</td>
+						<td>string | function<br>
+							<i>默认值：''</i></td>
+						<td>data-title</td>
+						<td>如果未指定 <i>title</i> 属性，则 title 选项是默认的 title 值。</td>
+					</tr>
+					<tr>
+						<td>trigger</td>
+						<td>string<br>
+							<i>默认值：'hover focus'</i></td>
+						<td>data-trigger</td>
+						<td>定义如何触发弹出框：
+							<b>
+							click| hover | focus | manual
+							</b>
+							。您可以传递多个触发器，每个触发器之间用空格分隔。</td>
+					</tr>
+					<tr>
+						<td>delay</td>
+						<td>number | object<br>
+							<i>默认值：0</i></td>
+						<td>data-delay</td>
+						<td>延迟显示和隐藏弹出框的毫秒数 - 对 manual 手动触发类型不适用。如果提供的是一个数字，那么延迟将会应用于显示和隐藏。如果提供的是对象，结构如下所示：
+							<pre class="prettyprint prettyprinted"><span class="pln">delay</span><span class="pun">:</span><span class="pln">
+</span><span class="pun">{</span><span class="pln"> show</span><span class="pun">:</span><span class="pln"> </span><span class="lit">500</span><span class="pun">,</span><span class="pln"> hide</span><span class="pun">:</span><span class="pln"> </span><span class="lit">100</span><span class="pln"> </span><span class="pun">}</span>
+</pre></td>
+					</tr>
+					<tr>
+						<td>container</td>
+						<td>string | false<br>
+							<i>默认值：false</i></td>
+						<td>data-container</td>
+						<td>向指定元素追加弹出框。<br>
+							实例： container: 'body'</td>
+					</tr>
+				</tbody>
+			</table>
+			<h4>方法</h4>
+			<table class="table table-border table-bordered table-bg">
+				<thead>
+					<tr>
+						<th>方法</th>
+						<th>描述</th>
+						<th>实例</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><b>
+							Options:
+							</b>
+							.popover(options)</td>
+						<td>向元素集合附加弹出框句柄。</td>
+						<td><pre class="prettyprint prettyprinted"><span class="pln">$</span><span class="pun">().</span><span class="pln">popover</span><span class="pun">(</span><span class="pln">options</span><span class="pun">)</span>
+</pre></td>
+					</tr>
+					<tr>
+						<td><b>
+							Toggle:
+							</b>
+							.popover('toggle')</td>
+						<td>切换显示/隐藏元素的弹出框。</td>
+						<td><pre class="prettyprint prettyprinted"><span class="pln">$</span><span class="pun">(</span><span class="str">'#element'</span><span class="pun">).</span><span class="pln">popover</span><span class="pun">(</span><span class="str">'toggle'</span><span class="pun">)</span>
+</pre></td>
+					</tr>
+					<tr>
+						<td><b>
+							Show:
+							</b>
+							.popover('show')</td>
+						<td>显示元素的弹出框。</td>
+						<td><pre class="prettyprint prettyprinted"><span class="pln">$</span><span class="pun">(</span><span class="str">'#element'</span><span class="pun">).</span><span class="pln">popover</span><span class="pun">(</span><span class="str">'show'</span><span class="pun">)</span>
+</pre></td>
+					</tr>
+					<tr>
+						<td><b>
+							Hide:
+							</b>
+							.popover('hide')</td>
+						<td>隐藏元素的弹出框。</td>
+						<td><pre class="prettyprint prettyprinted"><span class="pln">$</span><span class="pun">(</span><span class="str">'#element'</span><span class="pun">).</span><span class="pln">popover</span><span class="pun">(</span><span class="str">'hide'</span><span class="pun">)</span>
+</pre></td>
+					</tr>
+					<tr>
+						<td><b>
+							Destroy:
+							</b>
+							.popover('destroy')</td>
+						<td>隐藏并销毁元素的弹出框。</td>
+						<td><pre class="prettyprint prettyprinted"><span class="pln">$</span><span class="pun">(</span><span class="str">'#element'</span><span class="pun">).</span><span class="pln">popover</span><span class="pun">(</span><span class="str">'destroy'</span><span class="pun">)</span>
+</pre></td>
+					</tr>
+				</tbody>
+			</table>
+			<h4>事件</h4>
+			<table class="table table-border table-bordered table-bg">
+				<thead>
+					<tr>
+						<th>事件</th>
+						<th>描述</th>
+						<th>实例</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>show.bs.popover</td>
+						<td>当调用 show 实例方法时立即触发该事件。</td>
+						<td><pre class="prettyprint prettyprinted"><span class="pln">$</span><span class="pun">(</span><span class="str">'#mypopover'</span><span class="pun">).</span><span class="pln">on</span><span class="pun">(</span><span class="str">'show.bs.popover'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="com">// 执行一些动作...</span><span class="pln">
+</span><span class="pun">})</span>
+</pre></td>
+					</tr>
+					<tr>
+						<td>shown.bs.popover</td>
+						<td>当弹出框对用户可见时触发该事件（将等待 CSS 过渡效果完成）。</td>
+						<td><pre class="prettyprint prettyprinted"><span class="pln">$</span><span class="pun">(</span><span class="str">'#mypopover'</span><span class="pun">).</span><span class="pln">on</span><span class="pun">(</span><span class="str">'shown.bs.popover'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="com">// 执行一些动作...</span><span class="pln">
+</span><span class="pun">})</span>
+</pre></td>
+					</tr>
+					<tr>
+						<td>hide.bs.popover</td>
+						<td>当调用 hide 实例方法时立即触发该事件。</td>
+						<td><pre class="prettyprint prettyprinted"><span class="pln">$</span><span class="pun">(</span><span class="str">'#mypopover'</span><span class="pun">).</span><span class="pln">on</span><span class="pun">(</span><span class="str">'hide.bs.popover'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="com">// 执行一些动作...</span><span class="pln">
+</span><span class="pun">})</span>
+</pre></td>
+					</tr>
+					<tr>
+						<td>hidden.bs.popover</td>
+						<td>当工具提示对用户隐藏时触发该事件（将等待 CSS 过渡效果完成）。</td>
+						<td><pre class="prettyprint prettyprinted"><span class="pln">$</span><span class="pun">(</span><span class="str">'#mypopover'</span><span class="pun">).</span><span class="pln">on</span><span class="pun">(</span><span class="str">'hidden.bs.popover'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="com">// 执行一些动作...</span><span class="pln">
+</span><span class="pun">})</span>
+</pre></td>
+					</tr>
+				</tbody>
+			</table>
+			<!--高速版-->
+<div id="SOHUCS" sid=""></div>
+<script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: 'cystmLO0N',
+        conf: 'prod_06226f5d322c22bcd421cb90462fe2a2'
+    });
+</script>
+		</article>
+		﻿<footer class="footer mt-20">
+	<div class="container-fluid">
+		<nav>
+			<a href="/aboutHui.shtml" target="_blank">关于H-ui</a>
+			<span class="pipe">|</span>
+			<a href="/copyright.shtml" target="_blank">软件著作权</a>
+			<span class="pipe">|</span>
+			<a href="/juanzeng.shtml" target="_blank">感谢捐赠</a>
+		</nav>
+		<p>Copyright &copy;2013-2017 H-ui.net All Rights Reserved. <br>
+			<a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">京ICP备15015336号-1</a><br>
+			未经允许，禁止转载、抄袭、镜像<br>
+			用心做站，做不一样的站</p>
+	</div>
+</footer>
+<script type="text/javascript" src="http://lib.h-ui.net/prettify.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/h-ui/3.1/js/H-ui.min.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/www/home/js/H-ui.admin.www.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/www/home/js/common.js"></script> 
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?080836300300be57b7f34f4b3e97d911";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s)})();
+</script>
+	</div>
+</section>
+<script type="text/javascript">
+	$("#menu_4 dt").addClass("selected");$("#menu_4 dd").show();
+	$(".Hui-aside").scrollTop(600);
+</script>
+</body>
+</html>

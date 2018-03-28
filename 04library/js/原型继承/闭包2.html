@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul class="box">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+	</ul>
+<script>
+	var lists=document.querySelectorAll('.box li');
+	//方法1
+	// for(var i=0;i<lists.length;i++){
+	// 	var li=lists[i];
+	// 	li.index=i;
+	// 	lists[i].onclick=function(){
+	// 		console.log(this.index);
+	// 	}
+	// }
+	// 方法2 闭包
+	// for(var i=0,len=lists.length;i<len;i++){
+	// 	var li=lists[i];
+	// 	li.onclick=(function(index){
+	// 		return function(){
+	// 			console.log(index);
+	// 		}
+	// 	})(i)
+	// }
+	//方法3 闭包
+	for(var i=0,len=lists.length;i<len;i++){
+		var li=lists[i];
+		(function(index){
+			li.onclick=function(){
+				console.log(index);
+			}
+		})(i)
+	}
+</script>
+</body>
+</html>

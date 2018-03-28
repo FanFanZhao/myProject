@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<input type="button" data-size='12' value="fon12" id="btn1">
+	<input type="button" data-size='18' value="fon20" id="btn2">
+	<input type="button" data-size='32' value="fon26" id="btn3">
+	<input type="button" data-size='40' value="fon32" id="btn4">
+	<input type="button" data-size='60' value="fon50" id="btn5">
+	<div>
+		闭包方式来改变字体大小
+	</div>
+	<script>
+		function setSize(size){
+			return function(){	
+				// this.a=123;	 		
+				document.body.style.fontSize=size +'px';
+			}
+		}
+		// var b=setSize()
+		// console.log((new b()).a);
+		// var size12=setSize(12);
+		// console.log(setSize()());
+		// document.getElementById('btn1').onclick=size12;
+		// var size20=setSize(20);
+		// document.getElementById('btn2').onclick=size20;
+		// var size26=setSize(26);
+		// document.getElementById('btn3').onclick=size26;
+		// var size32=setSize(32);
+		// document.getElementById('btn4').onclick=size32;
+		// var size50=setSize(50);
+		// document.getElementById('btn5').onclick=size50;
+		var btns=document.querySelectorAll('input[type=button]');
+		Array.prototype.forEach.call(btns,function(item){
+			item.onclick=function (){
+				document.body.style.fontSize=this.dataset.size + 'px';
+			}
+		})
+	</script>
+</body>
+</html>

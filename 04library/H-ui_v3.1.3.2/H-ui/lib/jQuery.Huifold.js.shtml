@@ -1,0 +1,517 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="Bookmark" href="/favicon.ico" >
+<link rel="Shortcut Icon" href="/favicon.ico" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="http://lib.h-ui.net/html5.js"></script>
+<script type="text/javascript" src="http://lib.h-ui.net/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/h-ui/3.1/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/h-ui.admin/3.1/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/www/home/css/H-ui.doc.css" />
+<link rel="stylesheet" type="text/css" href="http://lib.h-ui.net/Hui-iconfont/1.0.8/iconfont.min.css" />
+<!--[if lt IE 9]>
+<link href="http://static.h-ui.net/h-ui/css/H-ui.ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="text/javascript" src="http://lib.h-ui.net/jquery/1.9.1/jquery.min.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('.pngfix,.iconpic,.list-icon');</script>
+<![endif]-->
+<!-- 反运营商劫持 S -->
+<style type="text/css">
+html {
+	display:none}
+</style>
+<script>
+if( self == top ) {
+	document.documentElement.style.display = 'block' } else {
+	top.location = self.location }
+</script>
+<!-- 反运营商劫持 E -->
+<meta property="og:type" content="article"/>
+<meta property="og:image" content=""/>
+<meta property="og:release_date" content=""/>
+<meta property="og:title" content="[H-ui] jQuery.Huifold.js折叠插件"/>
+<title>jQuery.Huifold.js - H-ui前端框架官方网站 - 专注前端解决方案</title>
+<meta name="keywords" content="jQuery.Huifold.js,折叠插件,H-ui前端框架">
+<meta name="description" content="jQuery.Huifold.js插件帮助手册。">
+<style type="text/css">
+#Hui-nav li#Huinav_3 a,
+#Hui-nav li#Huinav_3 a:hover { color: #fff; background-color: #111 }
+ol.linenums li { color: #333 }
+</style>
+</head>
+<body onLoad="prettyPrint()">
+<header class="navbar-wrapper">
+	<div class="navbar navbar-black">
+		<div class="container-fluid cl"> <a class="logo navbar-logo hidden-xs" href="/aboutHui.shtml">H-ui前端框架</a> <a class="logo navbar-logo-m visible-xs" href="/aboutHui.shtml">H-ui</a> <span class="logo navbar-slogan hidden-xs">简单 &middot; 免费 &middot; 适合中国网站</span> <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:;">&#xe667;</a>
+			<nav id="Hui-nav" class="nav navbar-nav">
+				<ul class="cl">
+					<li id="Huinav_1"> <a href="/index.shtml">首页</a> </li>
+					<li id="Huinav_2"> <a href="/Hui-overview.shtml">核心</a> </li>
+					<li id="Huinav_3"> <a href="/lib/jQuery.cookie.js.shtml">脚本</a> </li>
+					<li id="Huinav_4"> <a href="/ext/list.shtml">扩展</a> </li>
+					<li id="Huinav_5"> <a href="/cases/index.shtml">案例</a> </li>
+				</ul>
+			</nav>
+			<nav class="navbar-userbar f-r hidden-xs hidden-sm">
+				<a href="javascript:void(0);" onclick="addFavoritepage();return !1;" class="btn btn-primary radius" title="收藏">收藏本页</a>
+				<a class="btn btn-success radius" target="_blank" href="/shareCode.shtml">代码分享</a>
+				<a class="btn btn-success radius juanzeng" target="_blank" href="/juanzeng.shtml">捐赠<span style="color:#333" class="bk-gray box-shadow text-c"><img width="300" src="http://static.h-ui.net/www/home/images/alipay.jpg"></span></a>
+			</nav>
+		</div>
+	</div>
+</header> 
+<aside class="Hui-aside">
+	<input runat="server" id="divScrollValue" type="hidden" value="" />
+	<div class="menu_dropdown bk_2">
+		<dl id="menu-jquery">
+			<dt>1、jquery系列<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="jQuery.cookie.js.shtml">jQuery.cookie.js</a></li>
+					<li><a href="jQuery.form.js.shtml">jQuery.form.js</a></li>
+					<li><a href="jQuery.lazyload.js.shtml">jQuery.lazyload.js</a></li>
+					<!--
+					<li><a href="jQuery.contextmenu.js.shtml">jQuery.contextmenu.js</a></li>
+					<li><a href="jQuery.autocomplete.js.shtml">jQuery.autocomplete.js</a></li>
+					<li><a href="jQuery.fullPage.js.shtml">jQuery.fullPage.js</a></li>
+					<li><a href="jQuery.parallax.js.shtml">jQuery.parallax.js</a></li>-->
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu-hui">
+			<dt>2、Hui系列<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="jQuery.Huihover.js.shtml">Huihover.js</a></li>
+					<li><a href="jQuery.Huifocusblur.js.shtml">Huifocusblur.js</a></li>
+					<li><a href="jQuery.Huifold.js.shtml">Huifold.js</a></li>
+					<li><a href="jQuery.Huispinner.js.shtml">Huispinner.js</a></li>
+					<li><a href="jQuery.Huitab.js.shtml">Huitab.js</a></li>
+					<li><a href="jQuery.Huitags.js.shtml">Huitags.js</a></li>
+					<li><a href="jQuery.Huitextarealength.js.shtml">Huitextarealength.js</a></li>
+					<li><a href="jQuery.HuitogglePassword.js.shtml">HuitogglePassword.js</a></li>
+					<li><a href="jQuery.Huitotop.js.shtml">Huitotop.js</a></li>
+					<li><a href="jQuery.Huipreview.js.shtml">Huipreview.js</a></li>
+					<!--<li><a href="jQuery.HuiphotoLayout.js.shtml">HuiphotoLayout.js</a></li>-->
+				</ul>
+			</dd>
+		</dl>
+		<!--<dl id="menu-bootstrap">
+			<dt>3、bootstrap系列<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Bootstrap.datetimepicker.js.shtml">Bootstrap.datetimepicker.js</a></li>
+				</ul>
+			</dd>
+		</dl>-->
+	</div>
+</aside>
+ 
+<div class="dislpayArrow hidden-xs"><a class="pngfix" href="javascript:void(0);" onClick="displaynavbar(this)"></a></div>
+<section class="Hui-article-box">
+	<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> <a class="maincolor" href="/">脚本</a>
+		<span class="c-999 en">&gt;</span>
+		<span class="c-666">jQuery.Huifold.js</span>
+	</nav>
+	<div class="Hui-article">
+		<article class="cl pd-20">
+			<h1 class="page_title">jQuery.Huifold.js
+				<span class="label label-success radius">已封装</span>
+			</h1>
+			<p>H-ui.js 中已封装，无需单独下载。单独下载地址 <a href="http://lib.h-ui.net/H-ui/3.1/jQuery.Huifold.js" class="btn radius btn-primary">jQuery.Huifold.js</a> </p>
+			<p>jQuery.Huifold是一个用js编写的jQuery插件，实现折叠效果。</p>
+			<h2>使用方法</h2>
+			<p>1、jQuery.Huifold.js依赖jQuery或者zepto.js。</p>
+			<p>js调用</p>
+<pre class="prettyprint linenums">$("#Huifold-demo1").Huifold({
+	titCell:'.item h4',
+	mainCell:'.item .info',
+	type:1,
+	trigger:'click',
+	className:"selected",
+	speed:"first",
+});
+
+$("#Huifold-demo2").Huifold({
+	titCell:'.item h4',
+	mainCell:'.item .info',
+	type:2,
+	trigger:'click',
+	className:"selected",
+	speed:"first",
+});
+
+$("#Huifold-demo3").Huifold({
+	titCell:'.item h4',
+	mainCell:'.item .info',
+	type:3,
+	trigger:'click',
+	className:"selected",
+	speed:"first",
+});
+
+$("#Huifold-demo4").Huifold({
+	titCell:'.item h4',
+	mainCell:'.item .info',
+	type:1,
+	trigger:'mouseover',
+	className:"selected",
+	speed:"first",
+});
+
+$("#Huifold-demo5").Huifold({
+	titCell:'.item h4',
+	mainCell:'.item .info',
+	type:2,
+	trigger:'mouseover',
+	className:"selected",
+	speed:"first",
+});
+
+$("#Huifold-demo6").Huifold({
+	titCell:'.item h4',
+	mainCell:'.item .info',
+	type:3,
+	trigger:'mouseover',
+	className:"selected",
+	speed:"first",
+});</pre>
+			<h2>demo效果</h2>
+			<p>只打开一个，可以关闭</p>
+			<div class="codeView docs-example">
+				<div class="cl">
+					<div class="l" style="width:48%">
+						<p><strong>点击效果</strong></p>
+						<ul id="Huifold-demo1" class="Huifold">
+							<li class="item">
+								<h4>标题
+									<b>
+									+
+									</b>
+								</h4>
+								<div class="info"> 内容<br>很多内容 </div>
+							</li>
+							<li class="item">
+								<h4>标题
+									<b>
+									+
+									</b>
+								</h4>
+								<div class="info"><img src="http://images.h-ui.net/www/2.png" width="300" height="150"><br> 可以是图片</div>
+							</li>
+							<li class="item">
+								<h4>标题
+									<b>
+									+
+									</b>
+								</h4>
+								<div class="info"><img src="http://images.h-ui.net/www/1.png" width="300" height="150"></div>
+							</li>
+						</ul>
+					</div>
+					<div class="r" style="width:48%">
+						<p><strong>鼠标经过效果</strong></p>
+						<ul id="Huifold-demo4" class="Huifold">
+							<li class="item">
+								<h4>标题
+									<b>
+									+
+									</b>
+								</h4>
+								<div class="info"> 内容<br>很多内容 </div>
+							</li>
+							<li class="item">
+								<h4>标题
+									<b>
+									+
+									</b>
+								</h4>
+								<div class="info"><img src="http://images.h-ui.net/www/2.png" width="300" height="150"><br> 可以是图片</div>
+							</li>
+							<li class="item">
+								<h4>标题
+									<b>
+									+
+									</b>
+								</h4>
+								<div class="info"><img src="http://images.h-ui.net/www/1.png" width="300" height="150"></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<p>必须有一个打开</p>
+			<div class="codeView docs-example">
+				<div class="cl">
+					<div class="l" style="width:48%">
+						<p><strong>点击效果</strong></p>
+						<ul id="Huifold-demo2" class="Huifold">
+							<li class="item">
+								<h4>标题
+									<b>
+									+
+									</b>
+								</h4>
+								<div class="info"> 内容<br>很多内容 </div>
+							</li>
+							<li class="item">
+								<h4>标题
+									<b>
+									+
+									</b>
+								</h4>
+								<div class="info"><img src="http://images.h-ui.net/www/2.png" width="300" height="150"><br> 可以是图片</div>
+							</li>
+							<li class="item">
+								<h4>标题
+									<b>
+									+
+									</b>
+								</h4>
+								<div class="info"><img src="http://images.h-ui.net/www/1.png" width="300" height="150"></div>
+							</li>
+						</ul>
+					</div>
+					<div class="r" style="width:48%">
+						<p><strong>鼠标经过效果</strong></p>
+						<ul id="Huifold-demo5" class="Huifold">
+							<li class="item">
+								<h4>标题
+									<b>
+									+
+									</b>
+								</h4>
+								<div class="info"> 内容<br>很多内容 </div>
+							</li>
+							<li class="item">
+								<h4>标题
+									<b>
+									+
+									</b>
+								</h4>
+								<div class="info"><img src="http://images.h-ui.net/www/2.png" width="300" height="150"><br> 可以是图片</div>
+							</li>
+							<li class="item">
+								<h4>标题
+									<b>
+									+
+									</b>
+								</h4>
+								<div class="info"><img src="http://images.h-ui.net/www/1.png" width="300" height="150"></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<p>可打开多个</p>
+			<div class="codeView docs-example">
+				<div class="cl">
+					<div class="l" style="width:48%">
+						<p><strong>点击效果</strong></p>
+						<ul id="Huifold-demo3" class="Huifold">
+							<li class="item">
+								<h4>标题
+									<b>
+									+
+									</b>
+								</h4>
+								<div class="info"> 内容<br>很多内容 </div>
+							</li>
+							<li class="item">
+								<h4>标题
+									<b>
+									+
+									</b>
+								</h4>
+								<div class="info"><img src="http://images.h-ui.net/www/2.png" width="300" height="150"><br> 可以是图片</div>
+							</li>
+							<li class="item">
+								<h4>标题
+									<b>
+									+
+									</b>
+								</h4>
+								<div class="info"><img src="http://images.h-ui.net/www/1.png" width="300" height="150"></div>
+							</li>
+						</ul>
+					</div>
+					<div class="r" style="width:48%">
+						<p><strong>鼠标经过效果</strong></p>
+						<ul id="Huifold-demo6" class="Huifold">
+							<li class="item">
+								<h4>标题
+									<b>
+									+
+									</b>
+								</h4>
+								<div class="info"> 内容<br>很多内容 </div>
+							</li>
+							<li class="item">
+								<h4>标题
+									<b>
+									+
+									</b>
+								</h4>
+								<div class="info"><img src="http://images.h-ui.net/www/2.png" width="300" height="150"><br> 可以是图片</div>
+							</li>
+							<li class="item">
+								<h4>标题
+									<b>
+									+
+									</b>
+								</h4>
+								<div class="info"><img src="http://images.h-ui.net/www/1.png" width="300" height="150"></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<h2>相关参数</h2>
+			<table class="table table-border table-bg table-bordered">
+				<thead>
+					<tr>
+						<th width="10%">属性</th>
+						<th width="10%">默认值</th>
+						<th width="15%">描述</th>
+						<th>备注</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>titCell</td>
+						<td>'.item .Huifold-header'</td>
+						<td>触发区域</td>
+						<td>操作区</td>
+					</tr>
+					<tr>
+						<td>mainCell</td>
+						<td>'.item .Huifold-body'</td>
+						<td>主体区域</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>type</td>
+						<td>1</td>
+						<td>只打开一个，可以全部关闭</td>
+						<td>1 只打开一个，可以全部关闭;2 必须有一个打开;3 可打开多个</td>
+					</tr>
+					<tr>
+						<td>trigger</td>
+						<td>"click"</td>
+						<td>触发事件</td>
+						<td>"click" | "mouseover"</td>
+					</tr>
+					<tr>
+						<td>className</td>
+						<td>"selected"</td>
+						<td>折叠后添加样式</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>speed</td>
+						<td>"normal"</td>
+						<td>速度</td>
+						<td>"slow" | "normal" | "fast"</td>
+					</tr>
+				</tbody>
+			</table>
+		</article>
+		﻿<footer class="footer mt-20">
+	<div class="container-fluid">
+		<nav>
+			<a href="/aboutHui.shtml" target="_blank">关于H-ui</a>
+			<span class="pipe">|</span>
+			<a href="/copyright.shtml" target="_blank">软件著作权</a>
+			<span class="pipe">|</span>
+			<a href="/juanzeng.shtml" target="_blank">感谢捐赠</a>
+		</nav>
+		<p>Copyright &copy;2013-2017 H-ui.net All Rights Reserved. <br>
+			<a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">京ICP备15015336号-1</a><br>
+			未经允许，禁止转载、抄袭、镜像<br>
+			用心做站，做不一样的站</p>
+	</div>
+</footer>
+<script type="text/javascript" src="http://lib.h-ui.net/prettify.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/h-ui/3.1/js/H-ui.min.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/www/home/js/H-ui.admin.www.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/www/home/js/common.js"></script> 
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?080836300300be57b7f34f4b3e97d911";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s)})();
+</script> 
+	</div>
+</section>
+<script>
+$(function(){
+	$("#menu-hui dt").addClass("selected");$("#menu-hui dd").show();
+	//type 3种 1	只打开一个，可以全部关闭;2	必须有一个打开;3	可打开多个
+	$("#Huifold-demo1").Huifold({
+		titCell:'.item h4',
+		mainCell:'.item .info',
+		type:1,
+		trigger:'click',
+		className:"selected",
+		speed:"normal",
+	});
+	
+	$("#Huifold-demo2").Huifold({
+		titCell:'.item h4',
+		mainCell:'.item .info',
+		type:2,
+		trigger:'click',
+		className:"selected",
+		speed:"normal",
+	});
+	
+	$("#Huifold-demo3").Huifold({
+		titCell:'.item h4',
+		mainCell:'.item .info',
+		type:3,
+		trigger:'click',
+		className:"selected",
+		speed:"normal",
+	});
+	
+	$("#Huifold-demo4").Huifold({
+		titCell:'.item h4',
+		mainCell:'.item .info',
+		type:1,
+		trigger:'mouseover',
+		className:"selected",
+		speed:"normal",
+	});
+	
+	$("#Huifold-demo5").Huifold({
+		titCell:'.item h4',
+		mainCell:'.item .info',
+		type:2,
+		trigger:'mouseover',
+		className:"selected",
+		speed:"normal",
+	});
+	
+	$("#Huifold-demo6").Huifold({
+		titCell:'.item h4',
+		mainCell:'.item .info',
+		type:3,
+		trigger:'mouseover',
+		className:"selected",
+		speed:"normal",
+	});
+});
+</script>
+</body>
+</html>

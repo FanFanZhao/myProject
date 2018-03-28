@@ -1,0 +1,316 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<link rel="Bookmark" href="/favicon.ico" >
+<link rel="Shortcut Icon" href="/favicon.ico" />
+<!-- Standard iPhone -->  
+<link rel="apple-touch-icon" sizes="57x57" href="http://static.h-ui.net/www/home/images/touch-icon-iphone-114.png" />  
+<!-- Retina iPhone -->  
+<link rel="apple-touch-icon" sizes="114x114" href="http://static.h-ui.net/www/home/images/touch-icon-iphone-114.png" />  
+<!-- Standard iPad -->  
+<link rel="apple-touch-icon" sizes="72x72" href="http://static.h-ui.net/www/home/images/touch-icon-ipad-144.png" />  
+<!-- Retina iPad -->  
+<link rel="apple-touch-icon" sizes="144x144" href="http://static.h-ui.net/www/home/images/touch-icon-ipad-144.png" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="http://lib.h-ui.net/html5.js"></script>
+<script type="text/javascript" src="http://lib.h-ui.net/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/h-ui/3.1/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/h-ui.admin/3.1/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/www/home/css/H-ui.doc.css" />
+<link rel="stylesheet" type="text/css" href="http://lib.h-ui.net/Hui-iconfont/1.0.8/iconfont.min.css" />
+<!--[if lt IE 9]>
+<link href="http://static.h-ui.net/h-ui/css/H-ui.ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="text/javascript" src="http://lib.h-ui.net/jquery/1.9.1/jquery.min.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('.pngfix,.iconpic,.list-icon');</script>
+<![endif]-->
+<!-- 反运营商劫持 S -->
+<style type="text/css">
+html {
+	display:none}
+</style>
+<script>
+if( self == top ) {
+	document.documentElement.style.display = 'block' } else {
+	top.location = self.location }
+</script>
+<!-- 反运营商劫持 E -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2472599678883446",
+    enable_page_level_ads: true
+  });
+</script>
+<title>标签 - H-ui前端框架官方网站</title>
+<meta name="keywords" content="标签,tags,H-ui前端框架">
+<meta name="description" content="H-ui前端框架标签组件。">
+<style type="text/css">
+#Hui-nav li#Huinav_2 a, #Hui-nav li#Huinav_2 a:hover
+{
+	color: #fff;
+	background-color: #111
+}
+</style>
+<script type="text/javascript" src="http://static.h-ui.net/www/home/js/tagyun.js"></script>
+</head>
+<body onLoad="prettyPrint()">
+<header class="navbar-wrapper">
+	<div class="navbar navbar-black">
+		<div class="container-fluid cl"> <a class="logo navbar-logo hidden-xs" href="/aboutHui.shtml">H-ui前端框架</a> <a class="logo navbar-logo-m visible-xs" href="/aboutHui.shtml">H-ui</a> <span class="logo navbar-slogan hidden-xs">简单 &middot; 免费 &middot; 适合中国网站</span> <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:;">&#xe667;</a>
+			<nav id="Hui-nav" class="nav navbar-nav">
+				<ul class="cl">
+					<li id="Huinav_1"> <a href="/index.shtml">首页</a> </li>
+					<li id="Huinav_2"> <a href="/Hui-overview.shtml">核心</a> </li>
+					<li id="Huinav_3"> <a href="/lib/jQuery.cookie.js.shtml">脚本</a> </li>
+					<li id="Huinav_4"> <a href="/ext/list.shtml">扩展</a> </li>
+					<li id="Huinav_5"> <a href="/cases/index.shtml">案例</a> </li>
+				</ul>
+			</nav>
+			<nav class="navbar-userbar f-r hidden-xs hidden-sm">
+				<a href="javascript:void(0);" onclick="addFavoritepage();return !1;" class="btn btn-primary radius" title="收藏">收藏本页</a>
+				<a class="btn btn-success radius" target="_blank" href="/shareCode.shtml">代码分享</a>
+				<a class="btn btn-success radius juanzeng" target="_blank" href="/juanzeng.shtml">捐赠<span style="color:#333" class="bk-gray box-shadow text-c"><img width="300" src="http://static.h-ui.net/www/home/images/alipay.jpg"></span></a>
+			</nav>
+		</div>
+	</div>
+</header> 
+<aside class="Hui-aside">
+	<input runat="server" id="divScrollValue" type="hidden" value="" />
+	<div class="menu_dropdown bk_2">
+		<ul>
+			<li><a href="Hui-overview.shtml">&nbsp;&nbsp;&nbsp;&nbsp;概述</a></li>
+		</ul>
+		<dl id="menu_notes">
+			<dt>&nbsp;&nbsp;&nbsp;&nbsp;注释<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-notes-htmlStructure.shtml">Html书写规范</a></li>
+					<li><a href="Hui-notes-css.shtml">CSS写作注意事项</a></li>
+					<li><a href="Hui-notes-cnFont.shtml">中文字体css编码转换</a></li>
+					<li><a href="Hui-notes-cssHack.shtml">CSS Hack</a></li>
+					<li><a href="Hui-notes-keycode.shtml">键盘按钮keycode</a></li>
+					<li><a href="Hui-notes-ARIA.shtml">ARIA属性值</a></li>
+					<li><a href="Hui-notes-cssHame.shtml">css 命名规范</a></li>
+					<li><a href="Hui-notes-htmlName.shtml">html命名规范</a></li>
+					<li><a href="Hui-notes-fileName.shtml">文件夹命名规范</a></li>
+					<li><a href="Hui-notes-regular.shtml">常用正则表达式</a></li>
+					<li><a href="Hui-notes-csscursor.shtml">css中cursor(光标类型)</a></li>
+					<li><a href="Hui-notes-EDM.shtml">EDM制作规范</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<ul>
+			<li><a href="Hui-notes-menu.shtml">&nbsp;&nbsp;&nbsp;&nbsp;结构目录</a></li>
+		</ul>
+		<ul>
+			<li><a href="Hui-1-cssReset.shtml">1. css reset</a></li>
+		</ul>
+		<dl id="menu_2">
+			<dt>2. 框架<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-2.1-gridSystem.shtml">2.1 响应式栅格系统</a></li>
+					<li><a href="Hui-2.2-show&hide.shtml">2.2 响应式隐藏显示</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu_3">
+			<dt>3. 基础<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-3.1-typography.shtml">3.1 排版</a></li>
+					<li><a href="Hui-3.2-code.shtml">3.2 代码</a></li>
+					<li><a href="Hui-3.3-table.shtml">3.3 表格</a></li>
+					<li><a href="Hui-3.4-form.shtml">3.4 表单</a></li>
+					<li><a href="Hui-3.5-button.shtml">3.5 按钮</a></li>
+					<li><a href="Hui-3.6-images.shtml">3.6 图片</a></li>
+					<li><a href="Hui-3.7-Hui-iconfont.shtml">3.7 图标</a></li>
+					<li><a href="Hui-3.8-animation.shtml">3.8 动画</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu_4">
+			<dt>4. 组件<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-4.1-buttonGroups.shtml">4.1 按钮组</a></li>
+					<li><a href="Hui-4.2-nav.shtml">4.2 导航 &amp; 翻页</a></li>
+					<li><a href="Hui-4.3-dropDown.shtml">4.3 下拉菜单</a></li>
+					<li><a href="Hui-4.4-slider.shtml">4.4 幻灯片</a></li>
+					<li><a href="Hui-4.5-tab.shtml">4.5 选项卡</a></li>
+					<li><a href="Hui-4.6-labelBadge.shtml">4.6 便签与标号</a></li>
+					<li><a href="Hui-4.7-thumbnails.shtml"><del>4.7 缩略图</del></a></li>
+					<li><a href="Hui-4.8-alert.shtml">4.8 警告</a></li>
+					<li><a href="Hui-4.9-progress.shtml">4.9 进度条 loading</a></li>
+					<li><a href="Hui-4.10-modal.shtml">4.10 对话框 弹出层</a></li>
+					<li><a href="Hui-4.11-kefu.shtml">4.11 客服</a></li>
+					<li><a href="Hui-4.12-toTop.shtml">4.12 返回顶部</a></li>
+					<li><a href="Hui-4.13-share.shtml">4.13 分享</a></li>
+					<li><a href="Hui-4.14-panel.shtml">4.14 面板</a></li>
+					<li><a href="Hui-4.15-example.shtml">4.15 案例</a></li>
+					<li><a href="Hui-4.16-rolling.shtml">4.16 滚动</a></li>
+					<li><a href="Hui-4.17-search.shtml">4.17 搜索</a></li>
+					<li><a href="Hui-4.18-ad.shtml">4.18 广告</a></li>
+					<li><a href="Hui-4.19-tags.shtml">4.19 标签</a></li>
+					<li><a href="Hui-4.20-fold.shtml">4.20 折叠</a></li>
+					<li><a href="Hui-4.21-maskBar.shtml">4.21 遮罩条</a></li>
+					<li><a href="Hui-4.22-comment.shtml">4.22 评论列表</a></li>
+					<li><a href="Hui-4.23-footer.shtml">4.23 页脚</a></li>
+					<li><a href="Hui-4.24-star.shtml">4.24 星星评价</a></li>
+					<li><a href="Hui-4.25-tooltip.shtml">4.25 tooltip效果</a></li>
+					<li><a href="Hui-4.26-popover.shtml">4.26 popover效果</a></li>
+					<!--<li><a href="Hui-4.26-select-category.shtml">4.26 分类检索</a></li>-->
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu_5">
+			<dt>5. 页面<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="404.shtml" target="_blank">5.1 404页面</a></li>
+					<!--<li><a href="Hui-5.1-blog-list.shtml">5.2 博客列表页</a></li>
+					<li><a href="Hui-5.2-blog-show.shtml">5.3 博客详情页</a></li>
+					<li><a href="Hui-5.3-aboutus.shtml">5.4 关于我们页</a></li>
+					<li><a href="Hui-5.4-help-list.shtml">5.5 帮助列表页</a></li>
+					<li><a href="Hui-5.5-help-show.shtml">5.6 帮助详情页</a></li> -->
+					<li>&nbsp;</li>
+					<li>&nbsp;</li>
+				</ul>
+			</dd>
+		</dl>
+	</div>
+</aside>
+ 
+<div class="dislpayArrow hidden-xs"><a class="pngfix" href="javascript:void(0);" onClick="displaynavbar(this)"></a></div>
+<section class="Hui-article-box">
+  <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> <a class="maincolor" href="/">首页</a><span class="c-999 en">&gt;</span>组件<span class="c-999 en">&gt;</span><span class="c-666">标签</span></nav>
+  <div class="Hui-article">
+    <article class="cl pd-20">
+      <h1 class="page_title">标签 <small><a href="/lib/jQuery.Huitags.js.shtml">3.1版本之后请到这个地方查看文档</a></small></h1>
+      <h2>4.19.1 标签输入效果</h2>
+      <div class="codeView docs-example">
+        <div class="Hui-tags">
+          <div class="Hui-tags-editor cl"><i class="Hui-tags-icon Hui-iconfont">&#xe64b;</i> <span class="Hui-tags-token">Hui前端框架</span> <span class="Hui-tags-token">CSS3</span> <span class="Hui-tags-token">HTML5</span>
+            <div class="Hui-tags-iptwrap">
+              <input type="text" class="Hui-tags-input" maxlength="20" value="">
+              <label class="Hui-tags-label">添加相关标签，用空格或回车分隔</label>
+            </div>
+          </div>
+          <div class="Hui-tags-list">
+            <div class="Hui-notag" style="display:none">暂无常用标签</div>
+            <div class="Hui-tags-has"><span>前端框架</span> <span>前端开发</span> <span>H-ui</span></div>
+          </div>
+          <input type="hidden" class="Hui-tags-val" name="" value="">
+        </div>
+      </div>
+      <h3>HTML代码</h3>
+      <pre class="prettyprint linenums">&lt;div class=&quot;Hui-tags&quot;&gt;<br>	&lt;div class=&quot;Hui-tags-editor cl&quot;&gt;&lt;i class=&quot;Hui-tags-icon Hui-iconfont&quot;&gt;&amp;#xe64b;&lt;/i&gt; &lt;span class=&quot;Hui-tags-token&quot;&gt;Hui前端框架&lt;/span&gt; &lt;span class=&quot;Hui-tags-token&quot;&gt;CSS3&lt;/span&gt; &lt;span class=&quot;Hui-tags-token&quot;&gt;HTML5&lt;/span&gt;<br>		&lt;div class=&quot;Hui-tags-iptwrap&quot;&gt;<br>			&lt;input type=&quot;text&quot; class=&quot;Hui-tags-input&quot; maxlength=&quot;20&quot; value=&quot;&quot;&gt;<br>			&lt;label class=&quot;Hui-tags-label&quot;&gt;添加相关标签，用空格或回车分隔&lt;/label&gt;<br>		&lt;/div&gt;<br>	&lt;/div&gt;<br>	&lt;div class=&quot;Hui-tags-list&quot;&gt;<br>		&lt;div class=&quot;Hui-notag&quot; style=&quot;display:none&quot;&gt;暂无常用标签&lt;/div&gt;<br>		&lt;div class=&quot;Hui-tags-has&quot;&gt;&lt;span&gt;前端框架&lt;/span&gt; &lt;span&gt;前端开发&lt;/span&gt; &lt;span&gt;H-ui&lt;/span&gt;&lt;/div&gt;<br>	&lt;/div&gt;<br>	&lt;input type=&quot;hidden&quot; class=&quot;Hui-tags-val&quot; name=&quot;&quot; value=&quot;&quot;&gt;<br>&lt;/div&gt;</pre>
+      <h3>CSS代码</h3>
+      <pre class="prettyprint linenums">.Hui-tags{border:solid 1px #dedede; padding:0 10px}
+	.Hui-tags-editor{position:relative; padding:10px 0 10px 24px}
+	.Hui-tags-editor .Hui-tags-icon{position:absolute; left:0; top:11px; font-size:14px; color:#666}
+		.Hui-tags-token{color:#aaa; float:left; font-size:12px; height:20px; line-height:20px; margin-right:8px; padding:0 1px; white-space:nowrap; cursor:pointer}
+		.Hui-tags-token:before{content:"#"}
+		.Hui-tags-token:hover{text-decoration:line-through}
+		.Hui-tags-iptwrap{position:relative; float:left}
+			.Hui-tags-input{position:relative;height:20px;min-width:60px; border:0 none; vertical-align:top;line-height:20px; color:#333;z-index:2;background: url(../images/empty.png) repeat scroll 0 0; display:inline-block; width:100%}
+			.Hui-tags-label{position:absolute; top:0; left:2px; width:240px; height:20px; line-height:20px; font-size:14px; overflow:hidden; z-index:1; color:#ccc}
+		.Hui-tags-list{padding:0 0 10px 0; display:none}
+	.Hui-notag{font-size:12px}
+	.Hui-tags-has span{cursor:pointer; font-size:12px; white-space:nowrap; margin-right:10px}</pre>
+      <h3>JS代码</h3>
+      <pre class="prettyprint linenums">var time1;<br>	$(&quot;.Hui-tags-lable&quot;).show();<br>	$(&quot;.Hui-tags-input&quot;).val(&quot;&quot;);<br>	$(document).on(&quot;blur&quot;,&quot;.Hui-tags-input&quot;,function(){<br>		time1 = setTimeout(function(){<br>			$(this).parents(&quot;.Hui-tags&quot;).find(&quot;.Hui-tags-list&quot;).slideUp();<br>		}, 400);<br>	});<br>	$(document).on(&quot;focus&quot;,&quot;.Hui-tags-input&quot;,function(){<br>		clearTimeout(time1);<br>	});<br>	$(document).on(&quot;click&quot;,&quot;.Hui-tags-input&quot;,function(){<br>		$(this).find(&quot;.Hui-tags-input&quot;).focus();<br>		$(this).find(&quot;.Hui-tags-list&quot;).slideDown();<br>	});<br>	function gettagval(obj){<br>		var str =&quot;&quot;;<br>		var token =$(obj).parents(&quot;.Hui-tags&quot;).find(&quot;.Hui-tags-token&quot;);<br>		//alert(token.length)<br>		if(token.length&lt;1){<br>			$(obj).parents(&quot;.Hui-tags&quot;).find(&quot;.Hui-tags-val&quot;).val(&quot;&quot;);<br>			return false;<br>		}<br>		for(var i = 0;i&lt; token.length;i++){<br>			str += token.eq(i).text() + &quot;,&quot;;<br>			$(obj).parents(&quot;.Hui-tags&quot;).find(&quot;.Hui-tags-val&quot;).val(str);<br>		}<br>	}<br>	$(document).on(&quot;keydown&quot;,&quot;.Hui-tags-input&quot;,function(event){<br>		$(this).next().hide();<br>		var v = $(this).val().replace(/\s+/g, &quot;&quot;);<br>		var reg=/^,|,$/gi;<br>		v=v.replace(reg,&quot;&quot;);<br>		v=$.trim(v);<br>		var token =$(this).parents(&quot;.Hui-tags&quot;).find(&quot;.Hui-tags-token&quot;);<br>		if(v!=''){<br>			if(event.keyCode==13||event.keyCode==108||event.keyCode==32){<br>				$('&lt;span class=&quot;Hui-tags-token&quot;&gt;'+v+'&lt;/span&gt;').insertBefore($(this).parents(&quot;.Hui-tags&quot;).find(&quot;.Hui-tags-iptwrap&quot;));<br>				$(this).val(&quot;&quot;);<br>				gettagval(this);<br>			}<br>		}else{<br>			if(event.keyCode==8){<br>				if(token.length&gt;=1){<br>					$(this).parents(&quot;.Hui-tags&quot;).find(&quot;.Hui-tags-token:last&quot;).remove();<br>					gettagval(this);<br>				}<br>				else{<br>					$(this).parents(&quot;.Hui-tags&quot;).find(&quot;.Hui-tags-lable&quot;).show();<br>					return false;<br>				}<br>				<br>			}<br>		}	<br>	});<br>	<br>	$(document).on(&quot;click&quot;,&quot;.Hui-tags-has span&quot;,function(){<br>		var taghasV = $(this).text();<br>		taghasV=taghasV.replace(/(^\s*)|(\s*$)/g,&quot;&quot;);<br>		$('&lt;span class=&quot;Hui-tags-token&quot;&gt;'+taghasV+'&lt;/span&gt;').insertBefore($(this).parents(&quot;.Hui-tags&quot;).find(&quot;.Hui-tags-iptwrap&quot;));<br>		gettagval(this);<br>		$(this).parents(&quot;.Hui-tags&quot;).find(&quot;.Hui-tags-input&quot;).focus();<br>	});<br>	$(document).on(&quot;click&quot;,&quot;.Hui-tags-token&quot;,function(){<br>		var token =$(this).parents(&quot;.Hui-tags&quot;).find(&quot;.Hui-tags-token&quot;);<br>		var it = $(this).parents(&quot;.Hui-tags&quot;);<br>		$(this).remove();<br>		switch(token.length){<br>			case 1 : it.find(&quot;.Hui-tags-lable&quot;).show();<br>			break;<br>		}<br>		var str =&quot;&quot;;<br>		var token =it.find(&quot;.Hui-tags-token&quot;);<br>		//alert(token.length)<br>		if(token.length&lt;1){<br>			it.find(&quot;.Hui-tags-val&quot;).val(&quot;&quot;);<br>			return false;<br>		}<br>		for(var i = 0;i&lt; token.length;i++){<br>			str += token.eq(i).text() + &quot;,&quot;;<br>			it.find(&quot;.Hui-tags-val&quot;).val(str);<br>		}		<br>	});</pre>
+      <h2>4.19.2 标签混排效果</h2>
+      <div class="codeView docs-example">
+        <div class="bk_gray" style="width:250px;overflow:hidden;">
+          <div class="pd-10 tags"> <a href="http://www.h-ui.net/">H-ui前端框架</a> <a href="http://www.h-ui.net/websafecolors.shtml">Web安全色</a> <a href="http://www.h-ui.net/Hui-4.4-Unslider.shtml">jQuery轮播插件</a> <a href="http://idc.likejianzhan.com/vhost/korea_hosting.php">韩国云虚拟主机</a> <a href="http://www.h-ui.net/bug.shtml">IEbug</a> <a href="http://www.h-ui.net/site.shtml">IT网址导航</a> <a href="http://www.h-ui.net/icon/index.shtml">网站常用小图标</a> <a href="http://www.h-ui.net/tools/jsformat.shtml">web工具箱</a> <a href="http://www.h-ui.net/bg/index.shtml">网站常用背景素材</a> <a href="http://www.h-ui.net/yuedu/chm.shtml">H-ui阅读</a> <a href="http://www.h-ui.net/easydialog-v2.0/index.html">弹出层插件</a> <a href="http://www.h-ui.net/SuperSlide2.1/demo.html">SuperSlide插件</a> <a href="http://www.h-ui.net/TouchSlide1.1/demo.html">TouchSlide</a></div>
+        </div>
+      </div>
+      <h3>HTML代码</h3>
+      <pre class="prettyprint linenums">&lt;div class=&quot;pd-10 tags&quot;&gt; &lt;a href=&quot;http://www.h-ui.net/&quot;&gt;H-ui前端框架&lt;/a&gt; &lt;a href=&quot;http://www.h-ui.net/websafecolors.shtml&quot;&gt;Web安全色&lt;/a&gt; &lt;a href=&quot;http://www.h-ui.net/Hui-4.4-Unslider.shtml&quot;&gt;jQuery轮播插件&lt;/a&gt; &lt;a href=&quot;http://idc.likejianzhan.com/vhost/korea_hosting.php&quot;&gt;韩国云虚拟主机&lt;/a&gt; &lt;a href=&quot;http://www.h-ui.net/bug.shtml&quot;&gt;IEbug&lt;/a&gt; &lt;a href=&quot;http://www.h-ui.net/site.shtml&quot;&gt;IT网址导航&lt;/a&gt; &lt;a href=&quot;http://www.h-ui.net/icon/index.shtml&quot;&gt;网站常用小图标&lt;/a&gt; &lt;a href=&quot;http://www.h-ui.net/tools/jsformat.shtml&quot;&gt;web工具箱&lt;/a&gt; &lt;a href=&quot;http://www.h-ui.net/bg/index.shtml&quot;&gt;网站常用背景素材&lt;/a&gt; &lt;a href=&quot;http://www.h-ui.net/yuedu/chm.shtml&quot;&gt;H-ui阅读&lt;/a&gt; &lt;a href=&quot;http://www.h-ui.net/easydialog-v2.0/index.html&quot;&gt;弹出层插件&lt;/a&gt; &lt;a href=&quot;http://www.h-ui.net/SuperSlide2.1/demo.html&quot;&gt;SuperSlide插件&lt;/a&gt; &lt;a href=&quot;http://www.h-ui.net/TouchSlide1.1/demo.html&quot;&gt;TouchSlide&lt;/a&gt;&lt;/div&gt;</pre>
+      <h3>CSS代码</h3>
+      <pre class="prettyprint linenums">.tags a{height:26px; line-height:26px;padding-right:6px}
+	.tags0{}
+	.tags1{color:#C00; font-size:24px}
+	.tags2{color:#030; font-size:16px}
+	.tags3{color:#00F}
+	.tags4{font-size:16px}
+	.tags5{color:#C00; font-size:20px}
+	.tags6{color:#F06 font-size:20px}
+	.tags7{color:#030; font-weight:bold; font-size:18px}
+	.tags8{color:#F06; font-weight:bold}
+	.tags9{color:#C00; font-weight:bold;font-size:16px}
+.tags a:hover{color:#F00; text-decoration:underline}</pre>
+      <p>可根据自己的需求对css进行修改</p>
+      <h3>JS代码</h3>
+      <p>引入jQuery</p>
+      <pre class="prettyprint linenums">var tags_a = $(&quot;.tags a&quot;);
+tags_a.each(function(){
+	var x = 9;
+	var y = 0;
+	var rand = parseInt(Math.random() * (x - y + 1) + y);
+	$(this).addClass(&quot;tags&quot;+rand)});</pre>
+      <p><span class="label label-warning radius">注意：</span> 如果页面中引用了h-ui.js，无需重复粘贴上面脚本代码。</p>
+      <h2>4.19.3 tag云标签</h2>
+      <div class="codeView docs-example">
+        <div id="tagyun" style="width:450px; height:450px;"> <a href="http://www.h-ui.net/">H-ui前端框架</a> <a href="http://www.h-ui.net/websafecolors.shtml">Web安全色</a> <a href="http://www.h-ui.net/Hui-4.4-Unslider.shtml">jQuery轮播插件</a> <a href="http://idc.likejianzhan.com/vhost/korea_hosting.php">韩国云虚拟主机</a> <a href="http://www.h-ui.net/bug.shtml">IEbug</a> <a href="http://www.h-ui.net/site.shtml">IT网址导航</a> <a href="http://www.h-ui.net/icon/index.shtml">网站常用小图标</a> <a href="http://www.h-ui.net/tools/jsformat.shtml">web工具箱</a> <a href="http://www.h-ui.net/bg/index.shtml">网站常用背景素材</a> <a href="http://www.h-ui.net/yuedu/chm.shtml">H-ui阅读</a> <a href="http://www.h-ui.net/easydialog-v2.0/index.html">弹出层插件</a> <a href="http://www.h-ui.net/SuperSlide2.1/demo.html">SuperSlide插件</a> <a href="http://www.h-ui.net/TouchSlide1.1/demo.html">TouchSlide</a> </div>
+      </div>
+	  <!--高速版-->
+<div id="SOHUCS" sid=""></div>
+<script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: 'cystmLO0N',
+        conf: 'prod_06226f5d322c22bcd421cb90462fe2a2'
+    });
+</script> 
+    </article>
+    ﻿<footer class="footer mt-20">
+	<div class="container-fluid">
+		<nav>
+			<a href="/aboutHui.shtml" target="_blank">关于H-ui</a>
+			<span class="pipe">|</span>
+			<a href="/copyright.shtml" target="_blank">软件著作权</a>
+			<span class="pipe">|</span>
+			<a href="/juanzeng.shtml" target="_blank">感谢捐赠</a>
+		</nav>
+		<p>Copyright &copy;2013-2017 H-ui.net All Rights Reserved. <br>
+			<a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">京ICP备15015336号-1</a><br>
+			未经允许，禁止转载、抄袭、镜像<br>
+			用心做站，做不一样的站</p>
+	</div>
+</footer>
+<script type="text/javascript" src="http://lib.h-ui.net/prettify.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/h-ui/3.1/js/H-ui.min.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/www/home/js/H-ui.admin.www.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/www/home/js/common.js"></script> 
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?080836300300be57b7f34f4b3e97d911";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s)})();
+</script> 
+  </div>
+</section>
+<script type="text/javascript">
+$("#menu_4 dt").addClass("selected");$("#menu_4 dd").show();;
+$(".Hui-aside").scrollTop(566);	
+$(function(){	
+	$.Huitagsmixed(".tags a");
+});
+</script>
+</body>
+</html>

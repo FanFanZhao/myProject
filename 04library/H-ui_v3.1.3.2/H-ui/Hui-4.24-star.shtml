@@ -1,0 +1,414 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<link rel="Bookmark" href="/favicon.ico" >
+<link rel="Shortcut Icon" href="/favicon.ico" />
+<!-- Standard iPhone -->  
+<link rel="apple-touch-icon" sizes="57x57" href="http://static.h-ui.net/www/home/images/touch-icon-iphone-114.png" />  
+<!-- Retina iPhone -->  
+<link rel="apple-touch-icon" sizes="114x114" href="http://static.h-ui.net/www/home/images/touch-icon-iphone-114.png" />  
+<!-- Standard iPad -->  
+<link rel="apple-touch-icon" sizes="72x72" href="http://static.h-ui.net/www/home/images/touch-icon-ipad-144.png" />  
+<!-- Retina iPad -->  
+<link rel="apple-touch-icon" sizes="144x144" href="http://static.h-ui.net/www/home/images/touch-icon-ipad-144.png" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="http://lib.h-ui.net/html5.js"></script>
+<script type="text/javascript" src="http://lib.h-ui.net/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/h-ui/3.1/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/h-ui.admin/3.1/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/www/home/css/H-ui.doc.css" />
+<link rel="stylesheet" type="text/css" href="http://lib.h-ui.net/Hui-iconfont/1.0.8/iconfont.min.css" />
+<!--[if lt IE 9]>
+<link href="http://static.h-ui.net/h-ui/css/H-ui.ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="text/javascript" src="http://lib.h-ui.net/jquery/1.9.1/jquery.min.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('.pngfix,.iconpic,.list-icon');</script>
+<![endif]-->
+<!-- 反运营商劫持 S -->
+<style type="text/css">
+html {
+	display:none}
+</style>
+<script>
+if( self == top ) {
+	document.documentElement.style.display = 'block' } else {
+	top.location = self.location }
+</script>
+<!-- 反运营商劫持 E -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2472599678883446",
+    enable_page_level_ads: true
+  });
+</script>
+<title>星星评价 - H-ui前端框架官方网站</title>
+<meta name="keywords" content="jquery.raty评分插件,星星评价,星星打分,仿淘宝星星点评,H-ui前端框架">
+<meta name="description" content="H-ui前端框架星星评价打分组件。">
+<style type="text/css">
+#Hui-nav li#Huinav_2 a, #Hui-nav li#Huinav_2 a:hover
+{
+	color: #fff;
+	background-color: #111
+}
+</style>
+</head>
+<body onLoad="prettyPrint()">
+<header class="navbar-wrapper">
+	<div class="navbar navbar-black">
+		<div class="container-fluid cl"> <a class="logo navbar-logo hidden-xs" href="/aboutHui.shtml">H-ui前端框架</a> <a class="logo navbar-logo-m visible-xs" href="/aboutHui.shtml">H-ui</a> <span class="logo navbar-slogan hidden-xs">简单 &middot; 免费 &middot; 适合中国网站</span> <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:;">&#xe667;</a>
+			<nav id="Hui-nav" class="nav navbar-nav">
+				<ul class="cl">
+					<li id="Huinav_1"> <a href="/index.shtml">首页</a> </li>
+					<li id="Huinav_2"> <a href="/Hui-overview.shtml">核心</a> </li>
+					<li id="Huinav_3"> <a href="/lib/jQuery.cookie.js.shtml">脚本</a> </li>
+					<li id="Huinav_4"> <a href="/ext/list.shtml">扩展</a> </li>
+					<li id="Huinav_5"> <a href="/cases/index.shtml">案例</a> </li>
+				</ul>
+			</nav>
+			<nav class="navbar-userbar f-r hidden-xs hidden-sm">
+				<a href="javascript:void(0);" onclick="addFavoritepage();return !1;" class="btn btn-primary radius" title="收藏">收藏本页</a>
+				<a class="btn btn-success radius" target="_blank" href="/shareCode.shtml">代码分享</a>
+				<a class="btn btn-success radius juanzeng" target="_blank" href="/juanzeng.shtml">捐赠<span style="color:#333" class="bk-gray box-shadow text-c"><img width="300" src="http://static.h-ui.net/www/home/images/alipay.jpg"></span></a>
+			</nav>
+		</div>
+	</div>
+</header> 
+<aside class="Hui-aside">
+	<input runat="server" id="divScrollValue" type="hidden" value="" />
+	<div class="menu_dropdown bk_2">
+		<ul>
+			<li><a href="Hui-overview.shtml">&nbsp;&nbsp;&nbsp;&nbsp;概述</a></li>
+		</ul>
+		<dl id="menu_notes">
+			<dt>&nbsp;&nbsp;&nbsp;&nbsp;注释<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-notes-htmlStructure.shtml">Html书写规范</a></li>
+					<li><a href="Hui-notes-css.shtml">CSS写作注意事项</a></li>
+					<li><a href="Hui-notes-cnFont.shtml">中文字体css编码转换</a></li>
+					<li><a href="Hui-notes-cssHack.shtml">CSS Hack</a></li>
+					<li><a href="Hui-notes-keycode.shtml">键盘按钮keycode</a></li>
+					<li><a href="Hui-notes-ARIA.shtml">ARIA属性值</a></li>
+					<li><a href="Hui-notes-cssHame.shtml">css 命名规范</a></li>
+					<li><a href="Hui-notes-htmlName.shtml">html命名规范</a></li>
+					<li><a href="Hui-notes-fileName.shtml">文件夹命名规范</a></li>
+					<li><a href="Hui-notes-regular.shtml">常用正则表达式</a></li>
+					<li><a href="Hui-notes-csscursor.shtml">css中cursor(光标类型)</a></li>
+					<li><a href="Hui-notes-EDM.shtml">EDM制作规范</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<ul>
+			<li><a href="Hui-notes-menu.shtml">&nbsp;&nbsp;&nbsp;&nbsp;结构目录</a></li>
+		</ul>
+		<ul>
+			<li><a href="Hui-1-cssReset.shtml">1. css reset</a></li>
+		</ul>
+		<dl id="menu_2">
+			<dt>2. 框架<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-2.1-gridSystem.shtml">2.1 响应式栅格系统</a></li>
+					<li><a href="Hui-2.2-show&hide.shtml">2.2 响应式隐藏显示</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu_3">
+			<dt>3. 基础<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-3.1-typography.shtml">3.1 排版</a></li>
+					<li><a href="Hui-3.2-code.shtml">3.2 代码</a></li>
+					<li><a href="Hui-3.3-table.shtml">3.3 表格</a></li>
+					<li><a href="Hui-3.4-form.shtml">3.4 表单</a></li>
+					<li><a href="Hui-3.5-button.shtml">3.5 按钮</a></li>
+					<li><a href="Hui-3.6-images.shtml">3.6 图片</a></li>
+					<li><a href="Hui-3.7-Hui-iconfont.shtml">3.7 图标</a></li>
+					<li><a href="Hui-3.8-animation.shtml">3.8 动画</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu_4">
+			<dt>4. 组件<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-4.1-buttonGroups.shtml">4.1 按钮组</a></li>
+					<li><a href="Hui-4.2-nav.shtml">4.2 导航 &amp; 翻页</a></li>
+					<li><a href="Hui-4.3-dropDown.shtml">4.3 下拉菜单</a></li>
+					<li><a href="Hui-4.4-slider.shtml">4.4 幻灯片</a></li>
+					<li><a href="Hui-4.5-tab.shtml">4.5 选项卡</a></li>
+					<li><a href="Hui-4.6-labelBadge.shtml">4.6 便签与标号</a></li>
+					<li><a href="Hui-4.7-thumbnails.shtml"><del>4.7 缩略图</del></a></li>
+					<li><a href="Hui-4.8-alert.shtml">4.8 警告</a></li>
+					<li><a href="Hui-4.9-progress.shtml">4.9 进度条 loading</a></li>
+					<li><a href="Hui-4.10-modal.shtml">4.10 对话框 弹出层</a></li>
+					<li><a href="Hui-4.11-kefu.shtml">4.11 客服</a></li>
+					<li><a href="Hui-4.12-toTop.shtml">4.12 返回顶部</a></li>
+					<li><a href="Hui-4.13-share.shtml">4.13 分享</a></li>
+					<li><a href="Hui-4.14-panel.shtml">4.14 面板</a></li>
+					<li><a href="Hui-4.15-example.shtml">4.15 案例</a></li>
+					<li><a href="Hui-4.16-rolling.shtml">4.16 滚动</a></li>
+					<li><a href="Hui-4.17-search.shtml">4.17 搜索</a></li>
+					<li><a href="Hui-4.18-ad.shtml">4.18 广告</a></li>
+					<li><a href="Hui-4.19-tags.shtml">4.19 标签</a></li>
+					<li><a href="Hui-4.20-fold.shtml">4.20 折叠</a></li>
+					<li><a href="Hui-4.21-maskBar.shtml">4.21 遮罩条</a></li>
+					<li><a href="Hui-4.22-comment.shtml">4.22 评论列表</a></li>
+					<li><a href="Hui-4.23-footer.shtml">4.23 页脚</a></li>
+					<li><a href="Hui-4.24-star.shtml">4.24 星星评价</a></li>
+					<li><a href="Hui-4.25-tooltip.shtml">4.25 tooltip效果</a></li>
+					<li><a href="Hui-4.26-popover.shtml">4.26 popover效果</a></li>
+					<!--<li><a href="Hui-4.26-select-category.shtml">4.26 分类检索</a></li>-->
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu_5">
+			<dt>5. 页面<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="404.shtml" target="_blank">5.1 404页面</a></li>
+					<!--<li><a href="Hui-5.1-blog-list.shtml">5.2 博客列表页</a></li>
+					<li><a href="Hui-5.2-blog-show.shtml">5.3 博客详情页</a></li>
+					<li><a href="Hui-5.3-aboutus.shtml">5.4 关于我们页</a></li>
+					<li><a href="Hui-5.4-help-list.shtml">5.5 帮助列表页</a></li>
+					<li><a href="Hui-5.5-help-show.shtml">5.6 帮助详情页</a></li> -->
+					<li>&nbsp;</li>
+					<li>&nbsp;</li>
+				</ul>
+			</dd>
+		</dl>
+	</div>
+</aside>
+ 
+<div class="dislpayArrow hidden-xs"><a class="pngfix" href="javascript:void(0);" onClick="displaynavbar(this)"></a></div>
+<section class="Hui-article-box">
+	<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> <a class="maincolor" href="/">首页</a><span class="c-999 en">&gt;</span>组件<span class="c-999 en">&gt;</span><span class="c-666">星星评价</span></nav>
+	<div class="Hui-article">
+		<article class="cl pd-20">
+			<h1 class="page_title">4.24 星星评价</h1>
+			<h2>4.24.1 显示分数效果</h2>
+			<p>采用背景填充+百分比，可现实半颗星。</p>
+			<div class="codeView docs-example">
+				<div class="clearfix">
+					<span class="f-l f-14 va-m">宝贝描述：</span>
+					<div class="star-bar star-bar-show size-M f-l va-m mr-10">
+						<span class="star" style="width:82%"></span>
+					</div>
+					<strong class="f-l f-14 va-m">4.1</strong>
+				</div>
+				<div class="clearfix mt-10">
+					<span class="f-l f-14 va-m">宝贝描述：</span>
+					<div class="star-bar star-bar-show size-S f-l va-m mr-10">
+						<span class="star" style="width:90%"></span>
+					</div>
+					<strong class="f-l f-14 va-m">4.5</strong>
+				</div>
+			</div>
+			<h3>HTML代码</h3>
+<pre class="prettyprint linenums">&lt;div class=&quot;clearfix&quot;&gt;
+	&lt;span class=&quot;f-l f-14 va-m&quot;&gt;宝贝描述：&lt;/span&gt;
+	&lt;div class=&quot;star-bar star-bar-show size-M f-l va-m mr-10&quot;&gt;
+		&lt;span class=&quot;star&quot; style=&quot;width:82%&quot;&gt;&lt;/span&gt;
+	&lt;/div&gt;
+	&lt;strong class=&quot;f-l f-14 va-m&quot;&gt;4.1&lt;/strong&gt;
+&lt;/div&gt;</pre>
+			<p>通过.size-M，和.size-S 控制星星的大小。</p>
+			<h3>CSS代码</h3>
+<pre class="prettyprint linenums">.star-bar-show{background:url(../images/star/iconpic-star-S-default.png) repeat-x 0 0}
+.star-bar-show .star{background:url(../images/star/iconpic-star-S.png) repeat-x 0 0}
+.star-1{width:20%}
+.star-2{ width:40%}
+.star-3{width:60%}
+.star-4{ width:80%}
+.star-5{ width:100%}
+.star-bar-show.size-M{width:120px;height:24px}
+.star-bar-show.size-M,.star-bar-show.size-M .star{background-size:24px}
+.star-bar-show.size-M .star{ height:24px}
+.star-bar-show.size-S{width:80px; height:16px}
+.star-bar-show.size-S,.star-bar-show.size-S .star{background-size:16px}
+.star-bar-show.size-S .star{ height:16px}</pre>
+			<p>显示不需要脚本。只有在点评的时候需要脚本。</p>
+			<h2>4.24.2 打分效果</h2>
+			<div class="codeView docs-example">
+				<div class="clearfix">
+					<span class="f-l f-14 va-m">宝贝描述：</span>
+					<div id="star-1" class="star-bar size-M f-l mr-10 va-m"></div>
+					<strong id="result-1" class="f-l f-14 va-m"></strong>
+				</div>
+				<div class="clearfix mt-10">
+					<span class="f-l f-12 va-m">宝贝描述：</span>
+					<div id="star-2" class="star-bar size-S f-l mr-10 va-m"></div>
+					<strong id="result-2" class="f-l f-12 va-m"></strong>
+				</div>
+			</div>
+			<h3>HTML代码</h3>
+<pre class="prettyprint linenums">&lt;div class=&quot;clearfix&quot;&gt;
+	&lt;span class=&quot;f-l f-15 va-m&quot;&gt;描述相符：&lt;/span&gt;
+	&lt;div id=&quot;star-1&quot; class=&quot;star-bar size-M f-l mr-10 va-m&quot;&gt;&lt;/div&gt;
+	&lt;strong id=&quot;result-1&quot; class=&quot;f-l va-m&quot;&gt;&lt;/strong&gt;
+&lt;/div&gt;</pre>
+			<p>通过.size-M，和.size-S 控制星星的大小。</p>
+			<h3>CSS代码</h3>
+<pre class="prettyprint linenums">.star-bar{font-size:0; line-height:0}
+.star-bar .star{display:inline-block;text-align:center}
+/*中*/
+.size-M img{ width:24px;height:24px}
+/*小*/
+.size-S img{width:16px;height:16px}</pre>
+			<h3>JS代码</h3>
+<pre class="prettyprint linenums">$(function(){
+	$(&quot;#star-1&quot;).raty({<br>		hints: ['1','2', '3', '4', '5'],//自定义分数<br>		starOff: 'iconpic-star-S-default.png',//默认灰色星星<br>		starOn: 'iconpic-star-S.png',//黄色星星<br>		path: 'http://static.h-ui.net/h-ui/images/star',//可以是相对路径<br>		number: 5,//星星数量，要和hints数组对应<br>		showHalf: true,<br>		targetKeep : true,<br>		click: function (score, evt) {//点击事件<br>			//第一种方式：直接取值<br>			$(&quot;#result-1&quot;).html('你的评分是'+score+'分');<br>		}<br>	});<br>	$(&quot;#star-2&quot;).raty({<br>		hints: ['1','2', '3', '4', '5'],<br>		starOff: 'iconpic-star-S-default.png',<br>		starOn: 'iconpic-star-S.png',<br>		path: 'http://static.h-ui.net/h-ui/images/star',<br>		number: 5,<br>		showHalf: true,<br>		targetKeep : true,<br>		click: function (score, evt) {//点击事件<br>			//第一种方式：直接取值<br>			$(&quot;#result-2&quot;).html('你的评分是'+score+'分');<br>		}<br>	})});</pre>
+			<h3>相关参数</h3>
+			<table class="table table-border table-bordered table-bg">
+				<thead>
+					<tr class="imp">
+						<th width="15%">参数</th>
+						<th width="15%">默认值</th>
+						<th>说明</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>number</td>
+						<td>10</td>
+						<td>星星数量，默认10颗</td>
+					</tr>
+					<tr>
+						<td>hints</td>
+						<td>['10', '20', '30', '40', '50', '60', '70', '80', '90', '100' ]</td>
+						<td>星星对应的分数设置，一定要和星星数量（number参数）相对应</td>
+					</tr>
+					<tr>
+						<td>path</td>
+						<td>images/</td>
+						<td>图片存放目录环境</td>
+					</tr>
+					<tr>
+						<td>starOff</td>
+						<td>star-off.png</td>
+						<td>默认星星图片（依赖path参数）</td>
+					</tr>
+					<tr>
+						<td>starOn</td>
+						<td>star-on.png</td>
+						<td>激活状态星星图片（依赖path参数）</td>
+					</tr>
+					<tr>
+						<td>cancel</td>
+						<td>false</td>
+						<td>取消</td>
+					</tr>
+					<tr>
+						<td>cancelHint</td>
+						<td>取消评级</td>
+						<td>取消后的显示文案</td>
+					</tr>
+					<tr>
+						<td>cancelOff</td>
+						<td>cancel-off.png</td>
+						<td>取消按钮默认状态，（依赖path参数）</td>
+					</tr>
+					<tr>
+						<td>cancelOn</td>
+						<td>cancel-on.png</td>
+						<td>取消按钮激活状态，（依赖path参数）</td>
+					</tr>
+					<tr>
+						<td>readOnly</td>
+						<td>false</td>
+						<td>只读模式</td>
+					</tr>
+					<tr>
+						<td>score</td>
+						<td>undefined</td>
+						<td>默认选中星星数量（数字）</td>
+					</tr>
+					<tr>
+						<td>click</td>
+						<td>undefined</td>
+						<td>点击事件，回调函数，此处返回打分结果。</td>
+					</tr>
+				</tbody>
+			</table>
+			<!--高速版-->
+<div id="SOHUCS" sid=""></div>
+<script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: 'cystmLO0N',
+        conf: 'prod_06226f5d322c22bcd421cb90462fe2a2'
+    });
+</script> 
+		</article>
+		﻿<footer class="footer mt-20">
+	<div class="container-fluid">
+		<nav>
+			<a href="/aboutHui.shtml" target="_blank">关于H-ui</a>
+			<span class="pipe">|</span>
+			<a href="/copyright.shtml" target="_blank">软件著作权</a>
+			<span class="pipe">|</span>
+			<a href="/juanzeng.shtml" target="_blank">感谢捐赠</a>
+		</nav>
+		<p>Copyright &copy;2013-2017 H-ui.net All Rights Reserved. <br>
+			<a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">京ICP备15015336号-1</a><br>
+			未经允许，禁止转载、抄袭、镜像<br>
+			用心做站，做不一样的站</p>
+	</div>
+</footer>
+<script type="text/javascript" src="http://lib.h-ui.net/prettify.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/h-ui/3.1/js/H-ui.min.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/www/home/js/H-ui.admin.www.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/www/home/js/common.js"></script> 
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?080836300300be57b7f34f4b3e97d911";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s)})();
+</script> 
+	</div>
+</section>
+<script type="text/javascript">
+$("#menu_4 dt").addClass("selected");$("#menu_4 dd").show();
+	$(".Hui-aside").scrollTop(650);
+$(function(){
+	
+	$("#star-1").raty({
+		hints: ['1','2', '3', '4', '5'],
+		starOff: 'iconpic-star-S-default.png',
+		starOn: 'iconpic-star-S.png',
+		path: 'http://static.h-ui.net/h-ui/3.1/images/star',
+		number: 5,
+		showHalf: true,
+		targetKeep : true,
+		click: function (score, evt) {//点击事件
+			//第一种方式：直接取值
+			$("#result-1").html('你的评分是'+score+'分')}
+	});
+	$("#star-2").raty({
+		hints: ['1','2', '3', '4', '5'],
+		starOff: 'iconpic-star-S-default.png',
+		starOn: 'iconpic-star-S.png',
+		path: 'http://static.h-ui.net/h-ui/3.1/images/star',
+		number: 5,
+		showHalf: true,
+		targetKeep : true,
+		click: function (score, evt) {//点击事件
+			//第一种方式：直接取值
+			$("#result-2").html('你的评分是'+score+'分')}
+	})});
+</script>
+</body>
+</html>

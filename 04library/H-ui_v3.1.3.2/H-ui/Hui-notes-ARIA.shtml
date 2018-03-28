@@ -1,0 +1,748 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<link rel="Bookmark" href="/favicon.ico" >
+<link rel="Shortcut Icon" href="/favicon.ico" />
+<!-- Standard iPhone -->  
+<link rel="apple-touch-icon" sizes="57x57" href="http://static.h-ui.net/www/home/images/touch-icon-iphone-114.png" />  
+<!-- Retina iPhone -->  
+<link rel="apple-touch-icon" sizes="114x114" href="http://static.h-ui.net/www/home/images/touch-icon-iphone-114.png" />  
+<!-- Standard iPad -->  
+<link rel="apple-touch-icon" sizes="72x72" href="http://static.h-ui.net/www/home/images/touch-icon-ipad-144.png" />  
+<!-- Retina iPad -->  
+<link rel="apple-touch-icon" sizes="144x144" href="http://static.h-ui.net/www/home/images/touch-icon-ipad-144.png" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="http://lib.h-ui.net/html5.js"></script>
+<script type="text/javascript" src="http://lib.h-ui.net/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/h-ui/3.1/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/h-ui.admin/3.1/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/www/home/css/H-ui.doc.css" />
+<link rel="stylesheet" type="text/css" href="http://lib.h-ui.net/Hui-iconfont/1.0.8/iconfont.min.css" />
+<!--[if lt IE 9]>
+<link href="http://static.h-ui.net/h-ui/css/H-ui.ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="text/javascript" src="http://lib.h-ui.net/jquery/1.9.1/jquery.min.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('.pngfix,.iconpic,.list-icon');</script>
+<![endif]-->
+<!-- 反运营商劫持 S -->
+<style type="text/css">
+html {
+	display:none}
+</style>
+<script>
+if( self == top ) {
+	document.documentElement.style.display = 'block' } else {
+	top.location = self.location }
+</script>
+<!-- 反运营商劫持 E -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2472599678883446",
+    enable_page_level_ads: true
+  });
+</script>
+<title>ARIA无障碍网页应用属性 - H-ui前端框架官方网站</title>
+<meta name="keywords" content="ARIA属性,无障碍网页应用属性,H-ui前端框架">
+<meta name="description" content="H-ui前端框架之ARIA属性。">
+<style type="text/css">
+#Hui-nav li#Huinav_2 a, #Hui-nav li#Huinav_2 a:hover
+{
+	color: #fff;
+	background-color: #111
+}
+</style>
+</head>
+<body onLoad="prettyPrint()">
+<header class="navbar-wrapper">
+	<div class="navbar navbar-black">
+		<div class="container-fluid cl"> <a class="logo navbar-logo hidden-xs" href="/aboutHui.shtml">H-ui前端框架</a> <a class="logo navbar-logo-m visible-xs" href="/aboutHui.shtml">H-ui</a> <span class="logo navbar-slogan hidden-xs">简单 &middot; 免费 &middot; 适合中国网站</span> <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:;">&#xe667;</a>
+			<nav id="Hui-nav" class="nav navbar-nav">
+				<ul class="cl">
+					<li id="Huinav_1"> <a href="/index.shtml">首页</a> </li>
+					<li id="Huinav_2"> <a href="/Hui-overview.shtml">核心</a> </li>
+					<li id="Huinav_3"> <a href="/lib/jQuery.cookie.js.shtml">脚本</a> </li>
+					<li id="Huinav_4"> <a href="/ext/list.shtml">扩展</a> </li>
+					<li id="Huinav_5"> <a href="/cases/index.shtml">案例</a> </li>
+				</ul>
+			</nav>
+			<nav class="navbar-userbar f-r hidden-xs hidden-sm">
+				<a href="javascript:void(0);" onclick="addFavoritepage();return !1;" class="btn btn-primary radius" title="收藏">收藏本页</a>
+				<a class="btn btn-success radius" target="_blank" href="/shareCode.shtml">代码分享</a>
+				<a class="btn btn-success radius juanzeng" target="_blank" href="/juanzeng.shtml">捐赠<span style="color:#333" class="bk-gray box-shadow text-c"><img width="300" src="http://static.h-ui.net/www/home/images/alipay.jpg"></span></a>
+			</nav>
+		</div>
+	</div>
+</header> 
+<aside class="Hui-aside">
+	<input runat="server" id="divScrollValue" type="hidden" value="" />
+	<div class="menu_dropdown bk_2">
+		<ul>
+			<li><a href="Hui-overview.shtml">&nbsp;&nbsp;&nbsp;&nbsp;概述</a></li>
+		</ul>
+		<dl id="menu_notes">
+			<dt>&nbsp;&nbsp;&nbsp;&nbsp;注释<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-notes-htmlStructure.shtml">Html书写规范</a></li>
+					<li><a href="Hui-notes-css.shtml">CSS写作注意事项</a></li>
+					<li><a href="Hui-notes-cnFont.shtml">中文字体css编码转换</a></li>
+					<li><a href="Hui-notes-cssHack.shtml">CSS Hack</a></li>
+					<li><a href="Hui-notes-keycode.shtml">键盘按钮keycode</a></li>
+					<li><a href="Hui-notes-ARIA.shtml">ARIA属性值</a></li>
+					<li><a href="Hui-notes-cssHame.shtml">css 命名规范</a></li>
+					<li><a href="Hui-notes-htmlName.shtml">html命名规范</a></li>
+					<li><a href="Hui-notes-fileName.shtml">文件夹命名规范</a></li>
+					<li><a href="Hui-notes-regular.shtml">常用正则表达式</a></li>
+					<li><a href="Hui-notes-csscursor.shtml">css中cursor(光标类型)</a></li>
+					<li><a href="Hui-notes-EDM.shtml">EDM制作规范</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<ul>
+			<li><a href="Hui-notes-menu.shtml">&nbsp;&nbsp;&nbsp;&nbsp;结构目录</a></li>
+		</ul>
+		<ul>
+			<li><a href="Hui-1-cssReset.shtml">1. css reset</a></li>
+		</ul>
+		<dl id="menu_2">
+			<dt>2. 框架<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-2.1-gridSystem.shtml">2.1 响应式栅格系统</a></li>
+					<li><a href="Hui-2.2-show&hide.shtml">2.2 响应式隐藏显示</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu_3">
+			<dt>3. 基础<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-3.1-typography.shtml">3.1 排版</a></li>
+					<li><a href="Hui-3.2-code.shtml">3.2 代码</a></li>
+					<li><a href="Hui-3.3-table.shtml">3.3 表格</a></li>
+					<li><a href="Hui-3.4-form.shtml">3.4 表单</a></li>
+					<li><a href="Hui-3.5-button.shtml">3.5 按钮</a></li>
+					<li><a href="Hui-3.6-images.shtml">3.6 图片</a></li>
+					<li><a href="Hui-3.7-Hui-iconfont.shtml">3.7 图标</a></li>
+					<li><a href="Hui-3.8-animation.shtml">3.8 动画</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu_4">
+			<dt>4. 组件<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-4.1-buttonGroups.shtml">4.1 按钮组</a></li>
+					<li><a href="Hui-4.2-nav.shtml">4.2 导航 &amp; 翻页</a></li>
+					<li><a href="Hui-4.3-dropDown.shtml">4.3 下拉菜单</a></li>
+					<li><a href="Hui-4.4-slider.shtml">4.4 幻灯片</a></li>
+					<li><a href="Hui-4.5-tab.shtml">4.5 选项卡</a></li>
+					<li><a href="Hui-4.6-labelBadge.shtml">4.6 便签与标号</a></li>
+					<li><a href="Hui-4.7-thumbnails.shtml"><del>4.7 缩略图</del></a></li>
+					<li><a href="Hui-4.8-alert.shtml">4.8 警告</a></li>
+					<li><a href="Hui-4.9-progress.shtml">4.9 进度条 loading</a></li>
+					<li><a href="Hui-4.10-modal.shtml">4.10 对话框 弹出层</a></li>
+					<li><a href="Hui-4.11-kefu.shtml">4.11 客服</a></li>
+					<li><a href="Hui-4.12-toTop.shtml">4.12 返回顶部</a></li>
+					<li><a href="Hui-4.13-share.shtml">4.13 分享</a></li>
+					<li><a href="Hui-4.14-panel.shtml">4.14 面板</a></li>
+					<li><a href="Hui-4.15-example.shtml">4.15 案例</a></li>
+					<li><a href="Hui-4.16-rolling.shtml">4.16 滚动</a></li>
+					<li><a href="Hui-4.17-search.shtml">4.17 搜索</a></li>
+					<li><a href="Hui-4.18-ad.shtml">4.18 广告</a></li>
+					<li><a href="Hui-4.19-tags.shtml">4.19 标签</a></li>
+					<li><a href="Hui-4.20-fold.shtml">4.20 折叠</a></li>
+					<li><a href="Hui-4.21-maskBar.shtml">4.21 遮罩条</a></li>
+					<li><a href="Hui-4.22-comment.shtml">4.22 评论列表</a></li>
+					<li><a href="Hui-4.23-footer.shtml">4.23 页脚</a></li>
+					<li><a href="Hui-4.24-star.shtml">4.24 星星评价</a></li>
+					<li><a href="Hui-4.25-tooltip.shtml">4.25 tooltip效果</a></li>
+					<li><a href="Hui-4.26-popover.shtml">4.26 popover效果</a></li>
+					<!--<li><a href="Hui-4.26-select-category.shtml">4.26 分类检索</a></li>-->
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu_5">
+			<dt>5. 页面<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="404.shtml" target="_blank">5.1 404页面</a></li>
+					<!--<li><a href="Hui-5.1-blog-list.shtml">5.2 博客列表页</a></li>
+					<li><a href="Hui-5.2-blog-show.shtml">5.3 博客详情页</a></li>
+					<li><a href="Hui-5.3-aboutus.shtml">5.4 关于我们页</a></li>
+					<li><a href="Hui-5.4-help-list.shtml">5.5 帮助列表页</a></li>
+					<li><a href="Hui-5.5-help-show.shtml">5.6 帮助详情页</a></li> -->
+					<li>&nbsp;</li>
+					<li>&nbsp;</li>
+				</ul>
+			</dd>
+		</dl>
+	</div>
+</aside>
+ 
+<div class="dislpayArrow hidden-xs"><a class="pngfix" href="javascript:void(0);" onClick="displaynavbar(this)"></a></div>
+<section class="Hui-article-box">
+  <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> <a class="maincolor" href="/">首页</a><span class="c-999 en">&gt;</span>注释<span class="c-999 en">&gt;</span><span class="c-666">ARIA无障碍网页应用属性</span></nav>
+  <div class="Hui-article">
+    <article class="cl pd-20">
+      <h1 class="page_title">ARIA无障碍网页应用属性</h1>
+      <p><small><em>文章转载，请注明出处 <a href="http://www.h-ui.net/" target="_bank" class="maincolor"><u>H-ui前端框架</u></a>，网址http://www.h-ui.net/</em></small></p>
+      <div class="content">
+        <h3>ARIA是什么</h3>
+        <p class="indent">WAI-ARIA指无障碍网页应用。主要针对的是视觉缺陷，失聪，行动不便的残疾人以及假装残疾的测试人员。尤其像视障，眼睛看不到，其浏览网页则需要借助辅助设备，如屏幕阅读器，屏幕阅读机可以大声朗读或者输出盲文。</p>
+        <p class="indent">而ARIA就是可以让屏幕阅读器准确识别网页中的内容，变化，状态的技术规范，可以让视障这类用户也能无障碍阅读！</p>
+        <h3>为什么需要ARIA</h3>
+        <ol class="linenums">
+          <li>让视障用户知道当前浏览区域就是网站主导航；</li>
+          <li>让视障用户知道点击某个按钮后出来的是弹框跳转；</li>
+          <li>让视障用户知道点击某个按钮后页面另外一个区域的文字发生了变化；</li>
+          <li>让视障用户知道您使用了li标签是用来模拟标准select控件；</li>
+          <li>让视障用户知道您模拟的select控件是单选呢还是可以多选，等等。</li>
+        </ol>
+        <p class="indent">IE8+ 及其他所有浏览器，都已经全方位支持ARIA，真是可喜可贺！</p>
+        <h3>ARIA role 属性值表</h3>
+        <table class="table table-border table-bg table-bordered">
+          <thead>
+            <tr>
+              <th width="15%">role属性值</th>
+              <th width="20%">含义</th>
+              <th>说明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>role="alert"</td>
+              <td>警告</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>role="alertdialog"</td>
+              <td>警告框</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>role="application"</td>
+              <td>应用</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>role="button"</td>
+              <td>按钮</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>role="checkbox"</td>
+              <td>复选框</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>role="grid"</td>
+              <td>网格</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>role="gridcell"</td>
+              <td>网格单元</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>role="group"</td>
+              <td>组合</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>role="heading"</td>
+              <td>应用程序标题</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>role="listbox"</td>
+              <td>列表框</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>role="log"</td>
+              <td>日志</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>role="menu"</td>
+              <td>菜单</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>role="menubar"</td>
+              <td>菜单栏</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>role="menuitem"</td>
+              <td>菜单项</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>role="menuitemcheckbox"</td>
+              <td>可复选的菜单项</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>role="menuitemradio"</td>
+              <td>只能单选的菜单项</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>role="option"</td>
+              <td>选项</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>role="presentation"</td>
+              <td>陈述</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>role="progressbar"</td>
+              <td>进度条</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>role="radio"</td>
+              <td>单选</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>role="radiogroup"</td>
+              <td>单选按钮组</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>role="region"</td>
+              <td>区域</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>role="row"</td>
+              <td>行</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>role="separator"</td>
+              <td>分割</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>role="slider"</td>
+              <td>滑动条</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>role="spinbutton"</td>
+              <td>微调</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>role="tab"</td>
+              <td>tab标签</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>role="tablist"</td>
+              <td>标签列表</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>role="tabpanel"</td>
+              <td>标签面板</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>role="timer"</td>
+              <td>计数</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>role="toolbar"</td>
+              <td>工具栏</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>role="tooltip"</td>
+              <td>提示文本</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>role="tree"</td>
+              <td>树形</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>role="treeitem"</td>
+              <td>树结构选项</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>ARIA 属性表</h3>
+        <table class="table table-border table-bg table-bordered">
+          <thead>
+            <tr>
+              <th width="15%">属性名</th>
+              <th width="20%">属性值</th>
+              <th>HTML示意</th>
+              <th width="30%">说明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>aria-activedescendant</td>
+              <td>字符串。表示后代元素的<code>id</code>值。</td>
+              <td><pre class="prettyprint linenums">&lt;div role="toolbar" tabindex="0" aria-activedescendant="button1"&gt;
+  &lt;img src="btncut.png" id="button1" role="button" alt="cut" /&gt;
+  &lt;img src="btncopy.png" id="button2" role="button" alt="copy" /&gt;
+  &lt;img src="btnpaste.png" id="button3" role="button" alt="paste" /&gt;
+&lt;/div&gt;</pre></td>
+              <td>aria-activedescendant 属性定义了当工具栏获取焦点时，哪一个工具栏的子控件获取了焦点。在此HTML示例中，工具栏的第一个控件（拥有<code>id</code> “button1″）是能获取焦点的子控件。</td>
+            </tr>
+            <tr>
+              <td>aria-atomic</td>
+              <td>字符串。表示区域内容是否完整播报。值可以为<code>true</code>和<code>false</code>。当为<code>true</code>时，表示辅助设备需要把整个区域内容都通报给使用者；如果为<code>false</code>则表示只需要通报修改的部分。</td>
+              <td><pre class="prettyprint linenums">&lt;div role="heading" aria-live="assertive" aria-atomic="true"&gt;2012年 3月&lt;/div&gt;</pre></td>
+              <td>还是这个时间选择器年月标题的例子。这里的<code>aria-atomic</code>为<code>true</code>则表示当时间改变的时候，这里的年月日期要完整播放，不要只改了月份就只报月份内容。</td>
+            </tr>
+            <tr>
+              <td>aria-autocomplete</td>
+              <td>字符串。表示用户的文本框的自动提示是否提供。可选值有：<code>inline</code>, <code>list</code>, <code>both</code>, <code>none</code>.</td>
+              <td><pre class="prettyprint linenums">&lt;input id="cb1-edit" class="cb_edit" type="text" tabindex="0" role="combobox" aria-autocomplete="inline" aria-owns="list" /&gt;    
+&lt;ul id="list" tabindex="-1" role="listbox" aria-expanded="true"&gt;
+    &lt;li id="cb1-opt1" role="option"&gt;H-ui&lt;/li&gt;
+    &lt;li id="cb1-opt2" role="option"&gt;前端&lt;/li&gt;
+    &lt;li id="cb1-opt3" role="option"&gt;框架&lt;/li&gt;
+&lt;/ul&gt;</pre></td>
+              <td>目前，该属性对于<code>inline</code>和<code>list</code>两个值的含义暂不清楚。不过可以确定的是该属性对应HTML5中<code>autocomplete</code>属性。需要注意的是，如果<code>aria-autocomplete="list"</code>, <code>aria-autocomplete="inline"</code>或<code>aria-autocomplete="both"</code>被设置在支持<code>autocomplete</code>的元素上，则<code>autocomplete</code>的属性值需要设成<code>"on"</code>, 如果是<code>aria-autocomplete="none"</code>，则需要设成<code>"off"</code></td>
+            </tr>
+            <tr>
+              <td>aria-busy</td>
+              <td>字符串。表当前区域的忙碌状态。默认为<code>false</code>, 表清除busy状态；可选为<code>true</code>, 表该区域正在加载；或为<code>error</code>, 表示该区域验证无效。</td>
+              <td><pre class="prettyprint linenums">&lt;ul aria-atomic="true" aria-busy="true" aria-live="polite"&gt;</pre></td>
+              <td>如果某个区域内(如这里<code>ul</code>)有多个地方需要修改，需要全部修改完毕再通知使用者的话，就可以先将<code>aria-busy</code>设为<code>true</code>, 等到全部内容更新完毕后再设成<code>false</code>. 该属性可以避免辅助工具在区域内容更新完毕前不断即时提醒使用者。</td>
+            </tr>
+            <tr>
+              <td>aria-controls</td>
+              <td>字符串。空格分隔的<code>id</code>属性值列表。</td>
+              <td><pre class="prettyprint linenums">&lt;h3 id="tab1" aria-selected="true" aria-controls="panel1" aria-expanded="true" role="tab" tabindex="0"&gt;小的们&lt;/h3&gt;
+&lt;div id="panel1" aria-labelledby="tab1" aria-hidden="false" role="tabpanel"&gt;
+    &lt;h3 tabindex="0"&gt;请选择你中意的美女……&lt;/h3&gt;
+&lt;/div&gt;</pre></td>
+              <td>该属性定义了元素间不能通过文档结构决定的关联关系。<code>ariaControls</code>属性主要被<code>role</code>为<code>group</code>, <code>region</code>, 或<code>widget</code>的元素使用。</td>
+            </tr>
+            <tr>
+              <td>aria-describedby</td>
+              <td>字符串。空格分隔的<code>id</code>属性值列表。</td>
+              <td><pre class="prettyprint linenums">&lt;ul role="group"&gt;
+  &lt;li role="checkbox" aria-checked="mixed" tabindex="0"&gt;所有姑娘&lt;/li&gt;  
+  &lt;li role="checkbox" aria-checked="false" aria-describedby="desc1" tabindex="0"&gt;小龙女&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p id="desc1"&gt;杨幂饰演的穿越女王~~&lt;/p&gt;</pre></td>
+              <td>同样的，该属性定义了文档结构表现不出来的的元素间的相互关联性。该属性旨在通过标签提供更多用户可能需要的信息。如果指定了不只一个<code>id</code>, 所有元素会合并在一起共同创建一条单独的描述。</td>
+            </tr>
+            <tr>
+              <td>aria-dropeffect</td>
+              <td>字符串。表示拖拽效果。可选值有：<code>copy</code>, <code>move</code>, <code>reference</code>, <code>execute</code>, <code>popup</code>, <code>none</code>, 依次表示：复制，移动，参照，执行，弹出以及没有效果。</td>
+              <td>&nbsp;</td>
+              <td>该属性用在拖拽上。</td>
+            </tr>
+            <tr>
+              <td>aria-flowto</td>
+              <td>字符串。空格分隔的<code>id</code>值们。</td>
+              <td>&nbsp;</td>
+              <td>如果该属性值对应的是单独的<code>id</code>, 辅助技术会恢复目标元素的阅读；如果对应的是多个<code>id</code>, 则辅助技术会让用户去选择、导航到目标元素。</td>
+            </tr>
+            <tr>
+              <td>aria-grabbed</td>
+              <td>字符串。拖拽中元素的捕获状态。可选值有:<code>true</code>, <code>false</code>, <code>undefined</code>. 默认为<code>undefined</code>，表示元素捕获状态未知。<code>true</code>表示元素可以捕获；<code>false</code>表示不能被捕获。</td>
+              <td>&nbsp;</td>
+              <td>该属性用在拖拽上。类似于HTML5中的<code>draggable</code>属性。</td>
+            </tr>
+            <tr>
+              <td>aria-haspopup</td>
+              <td>字符串。<code>true</code>表示点击的时候会出现菜单或是浮动元素； <code>false</code>表示没有pop-up效果。</td>
+              <td><pre class="prettyprint linenums">&lt;ul role="menubar" title="美女菜单"&gt;
+  &lt;li role="menuitem" tabindex="0" aria-haspopup="true"&gt;
+      美女&lt;ul role="menu" aria-hidden="true"&gt;
+      &lt;li role="menuitemradio" tabindex="-1" aria-checked="true"&gt;小龙女&lt;/li&gt;
+      &lt;li role="menuitemradio" tabindex="-1" aria-checked="false"&gt;范爷&lt;/li&gt;
+      &lt;li role="menuitemradio" tabindex="-1" aria-checked="false"&gt;baby&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li role="menuitem" tabindex="-1" aria-haspopup="false"&gt;靓女&lt;/li&gt;
+  &lt;li role="menuitem" tabindex="-1" aria-haspopup="false"&gt;淑女&lt;/li&gt;
+  &lt;li role="menuitem" tabindex="-1" aria-haspopup="false"&gt;熟女&lt;/li&gt;
+&lt;/ul&gt;</pre></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>aria-label</td>
+              <td>字符串。</td>
+              <td>&nbsp;</td>
+              <td>定义一个字符串值标记当前元素。</td>
+            </tr>
+            <tr>
+              <td>aria-labelledby</td>
+              <td>字符串。空格分隔的<code>id</code>们</td>
+              <td><pre class="prettyprint linenums">&lt;div aria-labelledby="title" role="alertdialog"&gt;&lt;h3 id="title"&gt;标题&lt;/h3&gt;&lt;/div&gt;</pre></td>
+              <td><code>aria-labelledby</code>一般用在区域元素上，对于的<code>id</code>一般为对应的标题或是标签元素的<code>id</code>.关系型属性。</td>
+            </tr>
+            <tr>
+              <td>aria-level</td>
+              <td>数值。表示等级。</td>
+              <td><pre class="prettyprint linenums">&lt;div aria-level="2"&gt;次标题&lt;/div&gt;</pre></td>
+              <td>上面的HTML类似于<code>&lt;h2&gt;次标题&lt;/h2&gt;</code></td>
+            </tr>
+            <tr>
+              <td>aria-live</td>
+              <td>字符串。可选值有：<code>off</code>, <code>polite</code>, <code>assertive</code>, <code>rude</code>。默认为<code>off</code>, 表示不宣布更新；<code>polite</code>表示只有用户闲时宣布；<code>assertive</code>表示尽快对用户宣布；<code>rude</code>表示即时提醒用户，必要的时候甚至中断用户。</td>
+              <td><pre class="prettyprint linenums">&lt;div role="heading" aria-live="assertive" aria-atomic="true"&gt;2012年 3月&lt;/div&gt;</pre></td>
+              <td>绝大多数的更新应该在用户闲暇的时候告知，即时提示对用户是一种干扰。如果希望内容完全更新后再提示，可以使用上面提到的<code>aria-busy</code>.
+                <p>左侧的HTML为时间选择控件的年月标题部分，<code>aria-live="assertive"</code>表示的是当用户选择了新的时间的时候，尽快通知用户时间发生了变更。</p></td>
+            </tr>
+            <tr>
+              <td>aria-multiselectable</td>
+              <td>字符串。表示是否可多选。默认为<code>false</code>, 表示一次只能选择一个项。<code>true</code>表示一次可以选择多个项。</td>
+              <td>&nbsp;</td>
+              <td>例如手风琴展开收起效果，我们可以使用<code>aria-multiselectable</code>来告知辅助设备，一次可以展开多个项还是只有一个展开。</td>
+            </tr>
+            <tr>
+              <td>aria-owns</td>
+              <td>字符串。值为目标元素<code>id</code>.</td>
+              <td><pre class="prettyprint linenums">&lt;input id="cb1-edit" class="cb_edit" type="text" tabindex=" role="combobox" aria-autocomplete="inline" aria-owns="list" /&gt;
+      
+&lt;ul id="list" tabindex="-1" role="listbox" aria-expanded="true"&gt;
+    &lt;li id="cb1-opt1" role="option"&gt;小龙女&lt;/li&gt;
+    &lt;li id="cb1-opt2" role="option"&gt;范爷&lt;/li&gt;
+    &lt;li id="cb1-opt3" role="option"&gt;baby&lt;/li&gt;
+&lt;/ul&gt;</pre></td>
+              <td><code>aria-owns</code>表示元素所拥有的，这里这里的文本框拥有其对应的下拉列表。
+                <p>&nbsp;</p></td>
+            </tr>
+            <tr>
+              <td>aria-posinset</td>
+              <td>数值。表示当前位置。</td>
+              <td>&nbsp;</td>
+              <td>用在设置和获取一个集合内某项的当前位置。</td>
+            </tr>
+            <tr>
+              <td>aria-readonly</td>
+              <td>字符串。表示是否只读。默认为<code>false</code>, 表示元素值可以被修改；<code>true</code>表示元素指不能被改变。</td>
+              <td><pre class="prettyprint linenums">&lt;table id="grid1" role="grid" aria-labelledby="girl_label" aria-readonly="true"&gt;
+  &lt;caption id="girl_label"&gt;美女们&lt;/caption&gt;
+    &lt;tr&gt;
+      &lt;th id="grid1_q" tabindex="-1"&gt;小龙女&lt;/th&gt;
+      &lt;th id="grid1_j" tabindex="-1"&gt;范爷&lt;/th&gt;
+      &lt;th id="grid1_h" tabindex="-1"&gt;baby&lt;/th&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</pre></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>aria-relevant</td>
+              <td>字符串。表示区域内哪些操作行为需要做出反应。可选值有：<code>additions</code>, <code>removals</code>, <code>text</code>, <code>all</code>，可以空格分隔多个一起显示. <code>additions</code>表示新增节点的时候做出反应；<code>removals</code>表示删除节点时重要操作；<code>text</code>表示文本改变是值得重视的；<code>all</code>等同于同时使用上面三个属性值。</td>
+              <td><pre class="prettyprint linenums">&lt;div role="log" aria-atomic="false" aria-relevant="additions"&gt;&lt;/div&gt;</pre></td>
+              <td>左边的HTML表示当日志内容有添加的时候做出反应。</td>
+            </tr>
+            <tr>
+              <td>aria-required</td>
+              <td>字符串。元素值是否必需。默认为<code>false</code>, 表示元素值可以为空；<code>true</code>表示元素值是必需的。</td>
+              <td><pre class="prettyprint linenums">&lt;div class="text"&gt;
+   &lt;label id="name_label" for="name"&gt;* 姓名:&lt;/label&gt;
+   &lt;input type="text" id="name" name="name" aria-labelledby="name_label" aria-describedby="tip" aria-required="true" /&gt;
+   &lt;div id="tip" role="tooltip" aria-hidden="true"&gt;姓名不能为空&lt;/div&gt;
+&lt;/div&gt;</pre></td>
+              <td>多半用在表单控件中。对应HTML5中<code>required</code>属性。</td>
+            </tr>
+            <tr>
+              <td>aria-secret</td>
+              <td>字符串。表示机密状态。</td>
+              <td>&nbsp;</td>
+              <td>具体含义不详</td>
+            </tr>
+            <tr>
+              <td>aria-setsize</td>
+              <td>数值。设置的尺寸大小值。</td>
+              <td></td>
+              <td>顾名思意</td>
+            </tr>
+            <tr>
+              <td>aria-sort</td>
+              <td>字符串。表示表格或格栅中的项是以升序排列还是降序排列。可选值：<code>ascending</code>(↑), <code>descending</code>(↓), <code>none</code>, <code>other</code>.</td>
+              <td></td>
+              <td>Widget组件应用属性。</td>
+            </tr>
+            <tr>
+              <td>aria-valuemax</td>
+              <td>数值。表允许的最大值。</td>
+              <td><pre class="prettyprint linenums">&lt;div class="slider"&gt;
+    &lt;img aria-valuenow="45" aria-valuemax="100" aria-valuemin="0" role="slider" src="slider_control.png" /&gt;
+    &lt;div role="presentation" tabindex="0"&gt;45&lt;/div&gt;
+&lt;/div&gt;</pre></td>
+              <td>用在范围组件上。对应于HTML5中的<code>max</code>属性。</td>
+            </tr>
+            <tr>
+              <td>aria-valuemin</td>
+              <td>数值。表示允许的最小值。</td>
+              <td><pre class="prettyprint linenums">&lt;div class="slider"&gt;
+    &lt;img aria-valuenow="45" aria-valuemax="100" aria-valuemin="0 role="slider" src="slider_control.png" /&gt;
+    &lt;div role="presentation" tabindex="0"&gt;45&lt;/div&gt;
+&lt;/div&gt;</pre></td>
+              <td>用在范围组件上。对应于HTML5中的<code>min</code>属性。</td>
+            </tr>
+            <tr>
+              <td>aria-valuenow</td>
+              <td>数值。表示当前值。</td>
+              <td><pre class="prettyprint linenums">&lt;div class="slider"&gt;
+    &lt;img aria-valuenow="45" aria-valuemax="100" aria-valuemin="0"
+        role="slider" src="slider_control.png" /&gt;
+    &lt;div role="presentation" tabindex="0"&gt;45&lt;/div&gt;
+&lt;/div&gt;</pre></td>
+              <td>用在范围组件上。对应于<code>value</code>属性。</td>
+            </tr>
+            <tr>
+              <td>aria-valuetext</td>
+              <td>字符串。定义等同于<code>aria-valuenow</code>人可读的文本。</td>
+              <td></td>
+              <td>用在范围组件上。</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>ARIA 状态属性表</h3>
+        <table class="table table-border table-bg table-bordered">
+          <tbody>
+            <tr>
+              <th width="15%">属性状态</th>
+              <th width="20%">属性值</th>
+              <th>HTML示意</th>
+              <th width="30%">说明</th>
+            </tr>
+            <tr>
+              <td>aria-checked</td>
+              <td>字符串。表示检查的状态。<code>true</code>表示元素被选择；<code>false</code>表示元素未被选择；<code>mixed</code>表示元素同时有选择和为选择状态。</td>
+              <td><pre class="prettyprint linenums">&lt;ul role="group"&gt;
+  &lt;li role="checkbox" aria-checked="mixed" tabindex="0"&gt;所有姑娘&lt;/li&gt;  
+      &lt;li role="checkbox" aria-checked="false" tabindex="0"&gt;小龙女&lt;/li&gt;
+      &lt;li role="checkbox" aria-checked="true" tabindex="0"&gt;范爷&lt;/li&gt;
+      &lt;li role="checkbox" aria-checked="true" tabindex="0"&gt;baby&lt;/li&gt;
+&lt;/ul&gt;</pre></td>
+              <td>该属性用来表明用户是否选择了某些项（如左边这个截图所示）。</td>
+            </tr>
+            <tr>
+              <td>aria-disabled</td>
+              <td>字符串。表禁用状态，<code>true</code>表示当前是非激活状态；<code>false</code>表示清除非激活状态。</td>
+              <td><pre class="prettyprint linenums">&lt;div role="button" tabindex="0" title="添加个姑娘" aria-pressed="false"
+  aria-disabled="false"&gt;添加&lt;/div&gt;</pre></td>
+              <td>对应单复选框等控件的<code>disabled</code>属性，一般用在自定义模拟控件中。</td>
+            </tr>
+            <tr>
+              <td>aria-expanded</td>
+              <td>字符串。表示展开状态。默认为<code>undefined</code>, 表示当前展开状态未知。其它可选值：<code>true</code>表示元素是展开的；<code>false</code>表示元素不是展开的。</td>
+              <td><pre class="prettyprint linenums">&lt;h3 id="tab1" aria-selected="true" aria-controls="panel1" 
+    aria-expanded="true" role="tab" tabindex="0"&gt;姑娘们&lt;/h3&gt;
+&lt;div id="panel1" aria-labelledby="tab1" aria-hidden="false" role="tabpanel"&gt;
+    &lt;h3 tabindex="0"&gt;请选择你中意的：&lt;/h3&gt;
+    &lt;ul class="controlList"&gt;
+        &lt;li&gt;&lt;input id="p1_1" type="radio" name="girl" value="q" /&gt;
+            &lt;label for="p1_1"&gt;小龙女&lt;/label&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;input id="p1_2" type="radio" name="girl" value="j" checked /&gt;
+            &lt;label for="p1_2"&gt;范爷&lt;/label&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;input id="p1_3" type="radio" name="girl" value="h" /&gt;
+            &lt;label for="p1_3"&gt;baby&lt;/label&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</pre></td>
+              <td>例如在手风琴交互效果中标示展开与否的状态。该属性对应HTML5的<code>open</code>属性。</td>
+            </tr>
+            <tr>
+              <td>aria-hidden</td>
+              <td>字符串。可选值为<code>true</code>和<code>false</code>, <code>true</code>表示元素隐藏(不可见)，<code>false</code>表示元素可见。</td>
+              <td><pre class="prettyprint linenums">&lt;div aria-hidden="false"&gt;23%&lt;/div&gt;</pre></td>
+              <td>该属性使用非常普遍。几乎所有涉及到显示与隐藏这类交互或没有交互的地方都可以应用该属性。左边的示例HTML代码来自进度条进度值显示的<code>div</code>, 当前<code>aria-hidden</code>为<code>false</code>, 表示该进度值是可见的。</td>
+            </tr>
+            <tr>
+              <td>aria-invalid</td>
+              <td>字符串。表示元素值是否错误的。默认为<code>false</code>, 表示是OK的，如果为<code>true</code>, 则表示值验证不通过。</td>
+              <td><pre class="prettyprint linenums">&lt;input type="text" size="3" aria-labelledby="valid" aria-invalid="false" /&gt;</pre></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>aria-pressed</td>
+              <td>字符串。表示按下的状态，可选值有：<code>true</code>, <code>false</code>, <code>mixed</code>, <code>undfined</code>.默认为<code>undfined</code>, 表示按下状态未知；<code>true</code>表示元素往下（按钮按下）；<code>false</code>表示元素抬起；<code>mixed</code>表示元素同时有按下和没有按下的状态。</td>
+              <td><pre class="prettyprint linenums">&lt;div role="button" tabindex="0" title="添加个姑娘" aria-pressed="false"
+  aria-disabled="false"&gt;添加&lt;/div&gt;</pre></td>
+              <td>左边HTML表示按钮已经按下，同时处于禁用状态。</td>
+            </tr>
+            <tr>
+              <td>aria-selected</td>
+              <td>字符串。表示选择状态。可选值有：<code>true</code>, <code>false</code>, <code>undefined</code>. 默认为<code>undefined</code>，表示元素选择状态未知。<code>true</code>表示元素已选择；<code>false</code>表示未被选中。</td>
+              <td><pre class="prettyprint linenums">&lt;div class="tabpanel"&gt;
+  &lt;ul class="tablist" role="tablist"&gt;
+    &lt;li role="tab" aria-selected="true" tabindex="0"&gt;美女&lt;/li&gt;
+    &lt;li role="tab" aria-selected="false" tabindex="-1"&gt;淑女&lt;/li&gt;
+    &lt;li role="tab" aria-selected="false" tabindex="-1"&gt;熟女&lt;/li&gt;
+    &lt;li role="tab" aria-selected="false" tabindex="-1"&gt;腐女&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre></td>
+              <td><p>元素被选中表明其处于某种交互之中，因此选中元素很可能处于focus焦点获取状态。</p></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+	  <!--高速版-->
+<div id="SOHUCS" sid=""></div>
+<script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: 'cystmLO0N',
+        conf: 'prod_06226f5d322c22bcd421cb90462fe2a2'
+    });
+</script>
+    </article>
+    ﻿<footer class="footer mt-20">
+	<div class="container-fluid">
+		<nav>
+			<a href="/aboutHui.shtml" target="_blank">关于H-ui</a>
+			<span class="pipe">|</span>
+			<a href="/copyright.shtml" target="_blank">软件著作权</a>
+			<span class="pipe">|</span>
+			<a href="/juanzeng.shtml" target="_blank">感谢捐赠</a>
+		</nav>
+		<p>Copyright &copy;2013-2017 H-ui.net All Rights Reserved. <br>
+			<a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">京ICP备15015336号-1</a><br>
+			未经允许，禁止转载、抄袭、镜像<br>
+			用心做站，做不一样的站</p>
+	</div>
+</footer>
+<script type="text/javascript" src="http://lib.h-ui.net/prettify.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/h-ui/3.1/js/H-ui.min.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/www/home/js/H-ui.admin.www.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/www/home/js/common.js"></script> 
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?080836300300be57b7f34f4b3e97d911";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s)})();
+</script> 
+  </div>
+</section>
+<script type="text/javascript">$("#menu_notes dt").addClass("selected");$("#menu_notes dd").show();</script>
+</body>
+</html>

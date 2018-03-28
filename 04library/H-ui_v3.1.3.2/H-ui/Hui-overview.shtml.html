@@ -1,0 +1,345 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <link rel="Bookmark" href="/favicon.ico">
+    <link rel="Shortcut Icon" href="/favicon.ico" />
+    <!-- Standard iPhone -->
+    <link rel="apple-touch-icon" sizes="57x57" href="http://static.h-ui.net/www/home/images/touch-icon-iphone-114.png" />
+    <!-- Retina iPhone -->
+    <link rel="apple-touch-icon" sizes="114x114" href="http://static.h-ui.net/www/home/images/touch-icon-iphone-114.png" />
+    <!-- Standard iPad -->
+    <link rel="apple-touch-icon" sizes="72x72" href="http://static.h-ui.net/www/home/images/touch-icon-ipad-144.png" />
+    <!-- Retina iPad -->
+    <link rel="apple-touch-icon" sizes="144x144" href="http://static.h-ui.net/www/home/images/touch-icon-ipad-144.png" />
+    <!--[if lt IE 9]>
+<script type="text/javascript" src="http://lib.h-ui.net/html5.js"></script>
+<script type="text/javascript" src="http://lib.h-ui.net/respond.min.js"></script>
+<![endif]-->
+    <link rel="stylesheet" type="text/css" href="http://static.h-ui.net/h-ui/3.1/css/H-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="http://static.h-ui.net/h-ui.admin/3.1/css/H-ui.admin.css" />
+    <link rel="stylesheet" type="text/css" href="http://static.h-ui.net/www/home/css/H-ui.doc.css" />
+    <link rel="stylesheet" type="text/css" href="http://lib.h-ui.net/Hui-iconfont/1.0.8/iconfont.min.css" />
+    <!--[if lt IE 9]>
+<link href="http://static.h-ui.net/h-ui/css/H-ui.ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+    <script type="text/javascript" src="http://lib.h-ui.net/jquery/1.9.1/jquery.min.js"></script>
+    <!--[if IE 6]>
+<script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('.pngfix,.iconpic,.list-icon');</script>
+<![endif]-->
+    <!-- 反运营商劫持 S -->
+    <style type="text/css">
+    html {
+        display: none
+    }
+    </style>
+    <script>
+    if (self == top) {
+        document.documentElement.style.display = 'block'
+    } else {
+        top.location = self.location
+    }
+    </script>
+    <!-- 反运营商劫持 E -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-2472599678883446",
+        enable_page_level_ads: true
+    });
+    </script>
+    <title>H-ui概述 - H-ui前端框架官方网站</title>
+    <meta name="keywords" content="H-ui概述,H-ui前端框架">
+    <meta name="description" content="H-ui前端框架概述。">
+    <style type="text/css">
+    #Hui-nav li#Huinav_2 a,
+    #Hui-nav li#Huinav_2 a:hover {
+        color: #fff;
+        background-color: #111
+    }
+    </style>
+</head>
+
+<body onLoad="prettyPrint()">
+    <header class="navbar-wrapper">
+        <div class="navbar navbar-black">
+            <div class="container-fluid cl"> <a class="logo navbar-logo hidden-xs" href="/aboutHui.shtml">LARAVEL商城</a> <a class="logo navbar-logo-m visible-xs" href="/aboutHui.shtml">H-ui</a> <span class="logo navbar-slogan hidden-xs">简单 &middot; 免费 &middot; 适合中国网站</span> <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:;">&#xe667;</a>
+                <nav id="Hui-nav" class="nav navbar-nav">
+                    <ul class="cl">
+                        <li id="Huinav_1"> <a href="index.shtml">php开发手册</a> </li>
+                        <li id="Huinav_2"> <a href="index.shtml">App开发手册</a> </li>
+                        <li id="Huinav_3"> <a href="lib/jQuery.cookie.js.shtml">手机api手册</a> </li>
+                        <li id="Huinav_4"> <a href="ext/list.shtml">使用手册</a> </li>
+                        <!-- <li id="Huinav_5"> <a href="cases/index.shtml">案例</a> </li> -->
+                    </ul>
+                </nav>
+                <nav class="navbar-userbar f-r hidden-xs hidden-sm">
+                    <a href="javascript:void(0);" onclick="addFavoritepage();return !1;" class="btn btn-primary radius" title="收藏">收藏本页</a>
+                    <a class="btn btn-success radius" target="_blank" href="/shareCode.shtml">代码分享</a>
+                    <a class="btn btn-success radius juanzeng" target="_blank" href="/juanzeng.shtml">捐赠<span style="color:#333" class="bk-gray box-shadow text-c"><img width="300" src="http://static.h-ui.net/www/home/images/alipay.jpg"></span></a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <aside class="Hui-aside">
+        <input runat="server" id="divScrollValue" type="hidden" value="" />
+        <div class="menu_dropdown bk_2">
+            <ul>
+                <li><a href="Hui-overview.html">&nbsp;&nbsp;&nbsp;&nbsp;概述</a></li>
+            </ul>
+            <dl id="menu_notes">
+                <dt>&nbsp;&nbsp;&nbsp;&nbsp;注释<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+                <dd>
+                    <ul>
+                        <li><a href="Hui-notes-htmlStructure.shtml">Html书写规范</a></li>
+                        <li><a href="Hui-notes-css.shtml">CSS写作注意事项</a></li>
+                        <li><a href="Hui-notes-cnFont.shtml">中文字体css编码转换</a></li>
+                        <li><a href="Hui-notes-cssHack.shtml">CSS Hack</a></li>
+                        <li><a href="Hui-notes-keycode.shtml">键盘按钮keycode</a></li>
+                        <li><a href="Hui-notes-ARIA.shtml">ARIA属性值</a></li>
+                        <li><a href="Hui-notes-cssHame.shtml">css 命名规范</a></li>
+                        <li><a href="Hui-notes-htmlName.shtml">html命名规范</a></li>
+                        <li><a href="Hui-notes-fileName.shtml">文件夹命名规范</a></li>
+                        <li><a href="Hui-notes-regular.shtml">常用正则表达式</a></li>
+                        <li><a href="Hui-notes-csscursor.shtml">css中cursor(光标类型)</a></li>
+                        <li><a href="Hui-notes-EDM.shtml">EDM制作规范</a></li>
+                    </ul>
+                </dd>
+            </dl>
+            <ul>
+                <li><a href="Hui-notes-menu.shtml">&nbsp;&nbsp;&nbsp;&nbsp;结构目录</a></li>
+            </ul>
+            <ul>
+                <li><a href="Hui-1-cssReset.shtml">1. css reset</a></li>
+            </ul>
+            <dl id="menu_2">
+                <dt>2. 框架<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+                <dd>
+                    <ul>
+                        <li><a href="Hui-2.1-gridSystem.shtml">2.1 响应式栅格系统</a></li>
+                        <li><a href="Hui-2.2-show&hide.shtml">2.2 响应式隐藏显示</a></li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl id="menu_3">
+                <dt>3. 基础<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+                <dd>
+                    <ul>
+                        <li><a href="Hui-3.1-typography.shtml">3.1 排版</a></li>
+                        <li><a href="Hui-3.2-code.shtml">3.2 代码</a></li>
+                        <li><a href="Hui-3.3-table.shtml">3.3 表格</a></li>
+                        <li><a href="Hui-3.4-form.shtml">3.4 表单</a></li>
+                        <li><a href="Hui-3.5-button.shtml">3.5 按钮</a></li>
+                        <li><a href="Hui-3.6-images.shtml">3.6 图片</a></li>
+                        <li><a href="Hui-3.7-Hui-iconfont.shtml">3.7 图标</a></li>
+                        <li><a href="Hui-3.8-animation.shtml">3.8 动画</a></li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl id="menu_4">
+                <dt>4. 组件<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+                <dd>
+                    <ul>
+                        <li><a href="Hui-4.1-buttonGroups.shtml">4.1 按钮组</a></li>
+                        <li><a href="Hui-4.2-nav.shtml">4.2 导航 &amp; 翻页</a></li>
+                        <li><a href="Hui-4.3-dropDown.shtml">4.3 下拉菜单</a></li>
+                        <li><a href="Hui-4.4-slider.shtml">4.4 幻灯片</a></li>
+                        <li><a href="Hui-4.5-tab.shtml">4.5 选项卡</a></li>
+                        <li><a href="Hui-4.6-labelBadge.shtml">4.6 便签与标号</a></li>
+                        <li>
+                            <a href="Hui-4.7-thumbnails.shtml">
+                                <del>4.7 缩略图</del>
+                            </a>
+                        </li>
+                        <li><a href="Hui-4.8-alert.shtml">4.8 警告</a></li>
+                        <li><a href="Hui-4.9-progress.shtml">4.9 进度条 loading</a></li>
+                        <li><a href="Hui-4.10-modal.shtml">4.10 对话框 弹出层</a></li>
+                        <li><a href="Hui-4.11-kefu.shtml">4.11 客服</a></li>
+                        <li><a href="Hui-4.12-toTop.shtml">4.12 返回顶部</a></li>
+                        <li><a href="Hui-4.13-share.shtml">4.13 分享</a></li>
+                        <li><a href="Hui-4.14-panel.shtml">4.14 面板</a></li>
+                        <li><a href="Hui-4.15-example.shtml">4.15 案例</a></li>
+                        <li><a href="Hui-4.16-rolling.shtml">4.16 滚动</a></li>
+                        <li><a href="Hui-4.17-search.shtml">4.17 搜索</a></li>
+                        <li><a href="Hui-4.18-ad.shtml">4.18 广告</a></li>
+                        <li><a href="Hui-4.19-tags.shtml">4.19 标签</a></li>
+                        <li><a href="Hui-4.20-fold.shtml">4.20 折叠</a></li>
+                        <li><a href="Hui-4.21-maskBar.shtml">4.21 遮罩条</a></li>
+                        <li><a href="Hui-4.22-comment.shtml">4.22 评论列表</a></li>
+                        <li><a href="Hui-4.23-footer.shtml">4.23 页脚</a></li>
+                        <li><a href="Hui-4.24-star.shtml">4.24 星星评价</a></li>
+                        <li><a href="Hui-4.25-tooltip.shtml">4.25 tooltip效果</a></li>
+                        <li><a href="Hui-4.26-popover.shtml">4.26 popover效果</a></li>
+                        <!--<li><a href="Hui-4.26-select-category.shtml">4.26 分类检索</a></li>-->
+                    </ul>
+                </dd>
+            </dl>
+            <dl id="menu_5">
+                <dt>5. 页面<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+                <dd>
+                    <ul>
+                        <li><a href="404.shtml" target="_blank">5.1 404页面</a></li>
+                        <!--<li><a href="Hui-5.1-blog-list.shtml">5.2 博客列表页</a></li>
+					<li><a href="Hui-5.2-blog-show.shtml">5.3 博客详情页</a></li>
+					<li><a href="Hui-5.3-aboutus.shtml">5.4 关于我们页</a></li>
+					<li><a href="Hui-5.4-help-list.shtml">5.5 帮助列表页</a></li>
+					<li><a href="Hui-5.5-help-show.shtml">5.6 帮助详情页</a></li> -->
+                        <li>&nbsp;</li>
+                        <li>&nbsp;</li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+    </aside>
+    <div class="dislpayArrow hidden-xs"><a class="pngfix" href="javascript:void(0);" onClick="displaynavbar(this)"></a></div>
+    <section class="Hui-article-box">
+        <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> <a class="maincolor" href="/">首页</a>
+            <span class="c-999 en">&gt;</span>
+            <span class="c-666">概述</span>
+        </nav>
+        <div class="Hui-article">
+            <article class="cl pd-20">
+                <h1 class="page_title">概述</h1>
+                <h2>0. 引言</h2>
+                <p>老子《道德经》曰：道生一，一生二，二生三，三生万物。</p>
+                <p>H-ui前端框架将带你从点、线、面、体去剖析前端中的道！</p>
+                <p><strong>点：</strong>html标签、css属性、js语法</p>
+                <p><strong>线：</strong>由HTML+css+js 开发的组件、模块</p>
+                <p><strong>面：</strong>由组件组合起来的页面</p>
+                <p><strong>体：</strong>由多个页面组合起来的网站系统</p>
+                <h2>1.下载</h2>
+                <p>请具备一定的html和css web前端基础。</p>
+                <p><a class="btn radius btn-primary size-L" href="http://downs.h-ui.net/h-ui/H-ui_v3.1.3.2.zip"><i class="Hui-iconfont">&#xe640;</i> 下载H-ui
+					<smail>v3.1.1</smail>
+				</a></p>
+                <!--<p>GIthub地址: <a href="https://github.com/jackying/h-ui" target="_blank">https://github.com/jackying/h-ui</a></p>-->
+                <h2>2.目录结构</h2>
+                <pre>Copyright：h-ui.net	Last Modify：guojunhui	2017.01.01
+===================================================================
+static/	资源
+├── h-ui/				H-ui特有资源
+│    ├── css/				样式
+│    │    ├── H-ui.reset.css			CSS Reset
+│    │    ├── H-ui.css				H-ui.css
+│    │    ├── H-ui.min.css			H-ui.css(min版)
+│    │    ├── H-ui.ie.css			IE 下兼容css
+│    ├── images/			图片资源 
+│    ├── js/
+│    │    ├── H-ui.js				H-ui核心脚本
+│    │    ├── H-ui.min.js			H-ui核心脚本(min版)
+
+Lib/	第三方插件
+├── jquery				jQuery类库（v1.9.1）
+├── Hui-iconfont			阿里图标字体库（H-ui定制）
+├── jquery.SuperSlide			幻灯片组件
+├── Validform				表单验证插件
+├── jquery.validation			表单验证插件
+├── My97DatePicker			日期插件
+├── datatables				表格插件
+├── nprogress				进度条插件
+├── layer				layer弹出层插件
+├── laypage				laypage 翻页插件
+├── html5shiv.js			html5插件，让低版本IE支持html5元素
+├── DD_belatedPNG_0.0.8a-min.js		解决IE6png透明
+├── swfobject.js			Flash插件
+├── expressInstall.swf  		检查flash插件
+├── respond.min.js			让IE兼容media
+
+</pre>
+                <h3>html5shi.js</h3>
+                <p>让IE低版本浏览器兼容html5元素。</p>
+                <p>
+                    <span class="label label-warning radius">注意：</span> H-ui将全部采用HTML5的元素，所以为了更好的兼容IE低版本浏览器，请在&lt;head&gt;区优先引用html5shi.js。
+                </p>
+                <pre class="prettyprint linenums">
+&lt;!--[if lt IE 9]&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;Lib/html5shi.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;Lib/respond.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;Lib/PIE_IE678.js&quot;&gt;&lt;/script&gt;
+&lt;![endif]--&gt;</pre>
+                <h4>DD_belatedPNG_0.0.8a-min.js</h4>
+                <p>解决IE6png透明，请使用注释方式的方式加载，只有IE6的浏览器才会加载，避免增加其他浏览器的资源冗余。</p>
+                <pre class="prettyprint linenums">&lt;!--[if IE 6]&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;Lib/DD_belatedPNG_0.0.8a-min.js&quot; &gt;&lt;/script&gt;
+&lt;script&gt;DD_belatedPNG.fix('.pngfix,.icon');&lt;/script&gt;
+&lt;![endif]--&gt; </pre>
+                <p>经常见有人把这一块写成</p>
+                <pre class="prettyprint linenums">&lt;script&gt;DD_belatedPNG.fix('*');&lt;/script&gt;</pre>
+                <p>或者</p>
+                <pre class="prettyprint linenums">&lt;script&gt;DD_belatedPNG.fix('div,p,h1,h2……');&lt;/script&gt;</pre>
+                <p>
+                    <span class="label label-warning radius">注意：</span> 不建议使用*通配符或者"div,p,li……"等标签的形式，比较消耗系统资源。
+                </p>
+                <p>采用大量图片的作为UI的网站设计风格已经过时了，真正优雅的网站用到的图片并不多，在加上现在流行扁平化的设计风格，一个整站用到png 半透明的地方屈指可数，所以只需要在用到png半透明的css类名后面补个pngfix就可以了。或者我们可以采用<a href="#" target="_blank">css Sprites</a> 业界称精灵图，将全站的图片合并到一张图上，统一写到.icon样式中。</p>
+                <h4>jquery.min.js</h4>
+                <p>H-ui的脚本全部基于基于jquery，必须引用jquery.min.js。</p>
+                <h3>H-ui.reset.css</h3>
+                <p>就是我们常用的CSS Reset，许多大网站的CSS文件中也含有CSS Reset内容。</p>
+                <p>作用：把浏览器提供的默认样式覆盖掉。因为浏览器的默认样式往往会给我们带来麻烦，影响开发效率。所以解决的方法就是一开始就将浏览 器的默认样式全部去掉，更准确说就是通过重新定义标签样式。</p>
+                <p>H-ui.reset在传统的css reset基础上做了调整改进，增加了常用的.clearfix样式（简写.cl），增加了HTML5 的reset。</p>
+                <p>后面我们的框架，扩展，案例中都会首先引用到H-ui.reset.css文件，或者引用里面的代码。</p>
+                <p>
+                    <span class="label label-warning radius">注意：</span> 如果你直接调用了H-ui.css文件就不要调用H-ui.reset.css文件，避免代码重复。
+                </p>
+                <h3>H-ui.css</h3>
+                <p>H-ui的基础样式，也是核心样式，框架章节重要讲解的内容。</p>
+                <p>
+                    <span class="label label-warning radius">注意：</span> h-ui.min.css是H-ui.css的压缩版本，只用引用一个，请勿全部引用。建议项目发布时引用h-ui.min.css。
+                </p>
+                <p>详情请参考<a href="Hui-notes-htmlStructure.shtml" class="maincolor"><u>Html书写规范</u></a></p>
+                <p>剩下的文件都属于扩展文件，可以在实用项目实施过程中灵活调用修改。</p>
+                <p>后期会不断增加。H-ui的宗旨是：<strong class="c_green">不求多炫，实用为主</strong>。</p>
+                <!--高速版-->
+                <div id="SOHUCS" sid=""></div>
+                <script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js"></script>
+                <script type="text/javascript">
+                window.changyan.api.config({
+                    appid: 'cystmLO0N',
+                    conf: 'prod_06226f5d322c22bcd421cb90462fe2a2'
+                });
+                </script>
+            </article>
+        
+            <footer class="footer mt-20">
+                <div class="container-fluid">
+                    <nav>
+                        <a href="/aboutHui.shtml" target="_blank">关于H-ui</a>
+                        <span class="pipe">|</span>
+                        <a href="/copyright.shtml" target="_blank">软件著作权</a>
+                        <span class="pipe">|</span>
+                        <a href="/juanzeng.shtml" target="_blank">感谢捐赠</a>
+                    </nav>
+                    <p>Copyright &copy;2013-2017 H-ui.net All Rights Reserved.
+                        <br>
+                        <a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">京ICP备15015336号-1</a>
+                        <br> 未经允许，禁止转载、抄袭、镜像
+                        <br> 用心做站，做不一样的站
+                    </p>
+                </div>
+            </footer>
+            <script type="text/javascript" src="http://lib.h-ui.net/prettify.js"></script>
+            <script type="text/javascript" src="http://static.h-ui.net/h-ui/3.1/js/H-ui.min.js"></script>
+            <script type="text/javascript" src="http://static.h-ui.net/www/home/js/H-ui.admin.www.js"></script>
+            <script type="text/javascript" src="http://static.h-ui.net/www/home/js/common.js"></script>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?080836300300be57b7f34f4b3e97d911";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s)
+            })();
+            </script>
+        </div>
+    </section>
+</body>
+
+</html>

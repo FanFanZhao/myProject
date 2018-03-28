@@ -1,0 +1,501 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<link rel="Bookmark" href="/favicon.ico" >
+<link rel="Shortcut Icon" href="/favicon.ico" />
+<!-- Standard iPhone -->  
+<link rel="apple-touch-icon" sizes="57x57" href="http://static.h-ui.net/www/home/images/touch-icon-iphone-114.png" />  
+<!-- Retina iPhone -->  
+<link rel="apple-touch-icon" sizes="114x114" href="http://static.h-ui.net/www/home/images/touch-icon-iphone-114.png" />  
+<!-- Standard iPad -->  
+<link rel="apple-touch-icon" sizes="72x72" href="http://static.h-ui.net/www/home/images/touch-icon-ipad-144.png" />  
+<!-- Retina iPad -->  
+<link rel="apple-touch-icon" sizes="144x144" href="http://static.h-ui.net/www/home/images/touch-icon-ipad-144.png" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="http://lib.h-ui.net/html5.js"></script>
+<script type="text/javascript" src="http://lib.h-ui.net/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/h-ui/3.1/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/h-ui.admin/3.1/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/www/home/css/H-ui.doc.css" />
+<link rel="stylesheet" type="text/css" href="http://lib.h-ui.net/Hui-iconfont/1.0.8/iconfont.min.css" />
+<!--[if lt IE 9]>
+<link href="http://static.h-ui.net/h-ui/css/H-ui.ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="text/javascript" src="http://lib.h-ui.net/jquery/1.9.1/jquery.min.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('.pngfix,.iconpic,.list-icon');</script>
+<![endif]-->
+<!-- 反运营商劫持 S -->
+<style type="text/css">
+html {
+	display:none}
+</style>
+<script>
+if( self == top ) {
+	document.documentElement.style.display = 'block' } else {
+	top.location = self.location }
+</script>
+<!-- 反运营商劫持 E -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2472599678883446",
+    enable_page_level_ads: true
+  });
+</script>
+<title>幻灯片slider - 组件 - H-ui前端框架官方网站</title>
+<meta name="keywords" content="幻灯片,jquery.SuperSlide,H-ui前端框架组件">
+<meta name="description" content="H-ui前端框架幻灯片组件：jquery.SuperSlide.2.1.1。">
+<style type="text/css">
+#Hui-nav li#Huinav_2 a, #Hui-nav li#Huinav_2 a:hover
+{
+	color: #fff;
+	background-color: #111
+}
+</style>
+</head>
+<body onLoad="prettyPrint()">
+<header class="navbar-wrapper">
+	<div class="navbar navbar-black">
+		<div class="container-fluid cl"> <a class="logo navbar-logo hidden-xs" href="/aboutHui.shtml">H-ui前端框架</a> <a class="logo navbar-logo-m visible-xs" href="/aboutHui.shtml">H-ui</a> <span class="logo navbar-slogan hidden-xs">简单 &middot; 免费 &middot; 适合中国网站</span> <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:;">&#xe667;</a>
+			<nav id="Hui-nav" class="nav navbar-nav">
+				<ul class="cl">
+					<li id="Huinav_1"> <a href="/index.shtml">首页</a> </li>
+					<li id="Huinav_2"> <a href="/Hui-overview.shtml">核心</a> </li>
+					<li id="Huinav_3"> <a href="/lib/jQuery.cookie.js.shtml">脚本</a> </li>
+					<li id="Huinav_4"> <a href="/ext/list.shtml">扩展</a> </li>
+					<li id="Huinav_5"> <a href="/cases/index.shtml">案例</a> </li>
+				</ul>
+			</nav>
+			<nav class="navbar-userbar f-r hidden-xs hidden-sm">
+				<a href="javascript:void(0);" onclick="addFavoritepage();return !1;" class="btn btn-primary radius" title="收藏">收藏本页</a>
+				<a class="btn btn-success radius" target="_blank" href="/shareCode.shtml">代码分享</a>
+				<a class="btn btn-success radius juanzeng" target="_blank" href="/juanzeng.shtml">捐赠<span style="color:#333" class="bk-gray box-shadow text-c"><img width="300" src="http://static.h-ui.net/www/home/images/alipay.jpg"></span></a>
+			</nav>
+		</div>
+	</div>
+</header> 
+<aside class="Hui-aside">
+	<input runat="server" id="divScrollValue" type="hidden" value="" />
+	<div class="menu_dropdown bk_2">
+		<ul>
+			<li><a href="Hui-overview.shtml">&nbsp;&nbsp;&nbsp;&nbsp;概述</a></li>
+		</ul>
+		<dl id="menu_notes">
+			<dt>&nbsp;&nbsp;&nbsp;&nbsp;注释<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-notes-htmlStructure.shtml">Html书写规范</a></li>
+					<li><a href="Hui-notes-css.shtml">CSS写作注意事项</a></li>
+					<li><a href="Hui-notes-cnFont.shtml">中文字体css编码转换</a></li>
+					<li><a href="Hui-notes-cssHack.shtml">CSS Hack</a></li>
+					<li><a href="Hui-notes-keycode.shtml">键盘按钮keycode</a></li>
+					<li><a href="Hui-notes-ARIA.shtml">ARIA属性值</a></li>
+					<li><a href="Hui-notes-cssHame.shtml">css 命名规范</a></li>
+					<li><a href="Hui-notes-htmlName.shtml">html命名规范</a></li>
+					<li><a href="Hui-notes-fileName.shtml">文件夹命名规范</a></li>
+					<li><a href="Hui-notes-regular.shtml">常用正则表达式</a></li>
+					<li><a href="Hui-notes-csscursor.shtml">css中cursor(光标类型)</a></li>
+					<li><a href="Hui-notes-EDM.shtml">EDM制作规范</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<ul>
+			<li><a href="Hui-notes-menu.shtml">&nbsp;&nbsp;&nbsp;&nbsp;结构目录</a></li>
+		</ul>
+		<ul>
+			<li><a href="Hui-1-cssReset.shtml">1. css reset</a></li>
+		</ul>
+		<dl id="menu_2">
+			<dt>2. 框架<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-2.1-gridSystem.shtml">2.1 响应式栅格系统</a></li>
+					<li><a href="Hui-2.2-show&hide.shtml">2.2 响应式隐藏显示</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu_3">
+			<dt>3. 基础<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-3.1-typography.shtml">3.1 排版</a></li>
+					<li><a href="Hui-3.2-code.shtml">3.2 代码</a></li>
+					<li><a href="Hui-3.3-table.shtml">3.3 表格</a></li>
+					<li><a href="Hui-3.4-form.shtml">3.4 表单</a></li>
+					<li><a href="Hui-3.5-button.shtml">3.5 按钮</a></li>
+					<li><a href="Hui-3.6-images.shtml">3.6 图片</a></li>
+					<li><a href="Hui-3.7-Hui-iconfont.shtml">3.7 图标</a></li>
+					<li><a href="Hui-3.8-animation.shtml">3.8 动画</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu_4">
+			<dt>4. 组件<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-4.1-buttonGroups.shtml">4.1 按钮组</a></li>
+					<li><a href="Hui-4.2-nav.shtml">4.2 导航 &amp; 翻页</a></li>
+					<li><a href="Hui-4.3-dropDown.shtml">4.3 下拉菜单</a></li>
+					<li><a href="Hui-4.4-slider.shtml">4.4 幻灯片</a></li>
+					<li><a href="Hui-4.5-tab.shtml">4.5 选项卡</a></li>
+					<li><a href="Hui-4.6-labelBadge.shtml">4.6 便签与标号</a></li>
+					<li><a href="Hui-4.7-thumbnails.shtml"><del>4.7 缩略图</del></a></li>
+					<li><a href="Hui-4.8-alert.shtml">4.8 警告</a></li>
+					<li><a href="Hui-4.9-progress.shtml">4.9 进度条 loading</a></li>
+					<li><a href="Hui-4.10-modal.shtml">4.10 对话框 弹出层</a></li>
+					<li><a href="Hui-4.11-kefu.shtml">4.11 客服</a></li>
+					<li><a href="Hui-4.12-toTop.shtml">4.12 返回顶部</a></li>
+					<li><a href="Hui-4.13-share.shtml">4.13 分享</a></li>
+					<li><a href="Hui-4.14-panel.shtml">4.14 面板</a></li>
+					<li><a href="Hui-4.15-example.shtml">4.15 案例</a></li>
+					<li><a href="Hui-4.16-rolling.shtml">4.16 滚动</a></li>
+					<li><a href="Hui-4.17-search.shtml">4.17 搜索</a></li>
+					<li><a href="Hui-4.18-ad.shtml">4.18 广告</a></li>
+					<li><a href="Hui-4.19-tags.shtml">4.19 标签</a></li>
+					<li><a href="Hui-4.20-fold.shtml">4.20 折叠</a></li>
+					<li><a href="Hui-4.21-maskBar.shtml">4.21 遮罩条</a></li>
+					<li><a href="Hui-4.22-comment.shtml">4.22 评论列表</a></li>
+					<li><a href="Hui-4.23-footer.shtml">4.23 页脚</a></li>
+					<li><a href="Hui-4.24-star.shtml">4.24 星星评价</a></li>
+					<li><a href="Hui-4.25-tooltip.shtml">4.25 tooltip效果</a></li>
+					<li><a href="Hui-4.26-popover.shtml">4.26 popover效果</a></li>
+					<!--<li><a href="Hui-4.26-select-category.shtml">4.26 分类检索</a></li>-->
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu_5">
+			<dt>5. 页面<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="404.shtml" target="_blank">5.1 404页面</a></li>
+					<!--<li><a href="Hui-5.1-blog-list.shtml">5.2 博客列表页</a></li>
+					<li><a href="Hui-5.2-blog-show.shtml">5.3 博客详情页</a></li>
+					<li><a href="Hui-5.3-aboutus.shtml">5.4 关于我们页</a></li>
+					<li><a href="Hui-5.4-help-list.shtml">5.5 帮助列表页</a></li>
+					<li><a href="Hui-5.5-help-show.shtml">5.6 帮助详情页</a></li> -->
+					<li>&nbsp;</li>
+					<li>&nbsp;</li>
+				</ul>
+			</dd>
+		</dl>
+	</div>
+</aside>
+ 
+<div class="dislpayArrow hidden-xs"><a class="pngfix" href="javascript:void(0);" onClick="displaynavbar(this)"></a></div>
+<section class="Hui-article-box">
+	<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> <a class="maincolor" href="/">首页</a><span class="c-999 en">&gt;</span>组件<span class="c-999 en">&gt;</span><span class="c-666">幻灯片</span></nav>
+	<div class="Hui-article">
+		<article class="cl pd-20">
+			<h1 class="page_title">幻灯片<small>jquery.SuperSlide插件</small></h1>
+			<p><span class="label label-warning radius">本站郑重声明：</span>jquery.SuperSlide插件著作版权归原作者大话主席所有。感觉不错可以支持下作者：<a href="http://www.superslide2.com/" target="_blank">http://www.superslide2.com/</a>。</p>
+			<p>H-ui幻灯片将从原来的unslider改为jquery.SuperSlide插件，原因：jquery.SuperSlide插件接口更加丰富，调用更加灵活，能满足大部分的图片播放效果。更重要的一点是支持复用（一个页面多出使用）。</p>
+			
+			<p>本插件建议用于PC端网页，移动端建议使用TouchSlide插件。</p>
+			<p>引入jQuery 和 jquery.SuperSlide.js</p>
+<pre class="prettyprint linenums">&lt;script type=&quot;text/javascript&quot; src=&quot;http://lib.h-ui.net/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt; 
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://lib.h-ui.net/jquery.SuperSlide/2.1.1/jquery.SuperSlide.min.js&quot;&gt;&lt;/script&gt;</pre>
+			<h2>4.4.1 焦点图效果(自动播放，圆点控制)</h2>
+			<div class="codeView docs-example">
+				<iframe width="100%" height="275" src="http://lib.h-ui.net/jquery.SuperSlide/2.1.1/demo/03/demo.html" scrolling="no" frameborder="0"></iframe>
+			</div>
+			<h3>HTML代码</h3>
+<pre class="prettyprint linenums">&lt;div id=&quot;slider-3&quot;&gt;<br>	&lt;div class=&quot;slider&quot;&gt;<br>		&lt;div class=&quot;bd&quot;&gt;<br>			&lt;ul&gt;<br>				&lt;li&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;images/banner-1.jpg&quot; &gt;&lt;/a&gt;&lt;/li&gt;<br>				&lt;li&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;images/banner-1.jpg&quot; &gt;&lt;/a&gt;&lt;/li&gt;<br>				&lt;li&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;images/banner-1.jpg&quot; &gt;&lt;/a&gt;&lt;/li&gt;<br>				&lt;li&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;images/banner-1.jpg&quot; &gt;&lt;/a&gt;&lt;/li&gt;<br>			&lt;/ul&gt;<br>		&lt;/div&gt;<br>		&lt;ol class=&quot;hd cl dots&quot;&gt;<br>			&lt;li&gt;1&lt;/li&gt;<br>			&lt;li&gt;2&lt;/li&gt;<br>			&lt;li&gt;3&lt;/li&gt;<br>			&lt;li&gt;4&lt;/li&gt;<br>		&lt;/ol&gt;<br>	&lt;/div&gt;<br>&lt;/div&gt;		
+</pre>
+			<h3>CSS代码</h3>
+<pre class="prettyprint linenums">.slider{position:relative;text-align:center; margin:0 auto;z-index:1}<br>.slider .bd,.slider .bd li,.slider .bd img{width:960px; height:272px}/*请给每个幻灯片套个div并设置id，通过id重置这个地方的宽度，达到自定义效果*/<br>.slider .bd{z-index:2;overflow:hidden}<br>.slider .bd li{float:left;width: 100%;overflow:hidden; background-position:center; background-repeat:no-repeat}<br>.slider .bd li a{ display:block; width: 100%; height: 100%}<br>.slider .bd li img{display:block}<br>.slider .hd{ position: absolute; z-index: 3; left: 0; right: 0; bottom:10px; padding: 0 10px; text-align: center}<br>.slider .hd li{display:inline-block;text-align:center;margin-right:10px;cursor:pointer;background-color:#C2C2C2}<br>.slider .hd li.active{background-color:#222}<br>  /*圆点*/<br>  .dots li{width:10px; height:10px;font-size:0px;line-height:0px;border-radius:50%}<br>  /*数字*/<br>  .numbox li{width:20px; height:20px; line-height:20px; font-size:13px;font-family:Arial;font-weight:bold; text-indent:inherit}<br>  .numbox li.active{color:#fff}<br>  /*长方条*/<br>  .rectangle li{width:40px; height:10px;font-size:0px;line-height:0px}</pre>
+			<p>默认hd上面追加的dots为圆点，将dots改为numbox就变成带数字的方框，rectangle为不带数字长方条</p>
+<pre class="prettyprint linenums">
+#slider-3{ width: 960px; height: 273px; overflow: hidden}/*这个是demo页面定义尺寸的样式，请根据自己幻灯片的尺寸重新定义。切莫生搬硬套。*/
+</pre>
+			<h3>js 代码</h3>	
+			<p>调用代码：</p>
+<pre class="prettyprint linenums">$(function(){<br>	jQuery(&quot;#slider-3 .slider&quot;).slide({mainCell:&quot;.bd ul&quot;,titCell:&quot;.hd li&quot;,trigger:&quot;click&quot;,effect:&quot;leftLoop&quot;,autoPlay:true,delayTime:700,interTime:7000,pnLoop:false,titOnClassName:&quot;active&quot})});</pre>
+			<p>宽屏幻灯片效果，要想撑满屏幕，建议图片宽度做成2000px以上，中间主要视觉区间控制在网页的宽度之内，两边过渡到纯色，图片通过li上背景的方式去实现。这样不管是宽屏的还是窄屏的都可以很好的展示。具体效果见： <a href="http://lib.h-ui.net/jquery.SuperSlide/2.1.1/demo/02/demo.html" target="_blank">http://lib.h-ui.net/jquery.SuperSlide/2.1.1/demo/02/demo.html</a></p>
+			<h2>4.4.2 带缩略图效果</h2>
+			<div class="codeView docs-example">
+				<iframe width="100%" height="280" src="http://lib.h-ui.net/jquery.SuperSlide/2.1.1/demo/01/demo.html" scrolling="no" frameborder="0"></iframe>
+			</div>
+			<h3>HTML代码</h3>
+<pre class="prettyprint linenums">&lt;div id=&quot;slider-1&quot; class=&quot;bg-fff box-shadow radius&quot;&gt;<br>	&lt;div class=&quot;slider&quot;&gt;<br>		&lt;div class=&quot;bd bg-fff&quot;&gt;<br>			&lt;ul&gt;<br>				&lt;li&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;images/b-1.jpg&quot; &gt;&lt;/a&gt;&lt;/li&gt;<br>				&lt;li&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;images/b-2.jpg&quot; &gt;&lt;/a&gt;&lt;/li&gt;<br>				&lt;li&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;images/b-3.jpg&quot; &gt;&lt;/a&gt;&lt;/li&gt;<br>				&lt;li&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;images/b-4.jpg&quot; &gt;&lt;/a&gt;&lt;/li&gt;<br>				&lt;li&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;images/b-5.jpg&quot; &gt;&lt;/a&gt;&lt;/li&gt;<br>				&lt;li&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;images/b-6.jpg&quot; &gt;&lt;/a&gt;&lt;/li&gt;<br>			&lt;/ul&gt;<br>		&lt;/div&gt;<br>		&lt;ol class=&quot;hd cl&quot;&gt;<br>			&lt;li&gt;&lt;i&gt;&lt;/i&gt;&lt;img src=&quot;images/s-1.jpg&quot;&gt;&lt;/li&gt;<br>			&lt;li&gt;&lt;i&gt;&lt;/i&gt;&lt;img src=&quot;images/s-2.jpg&quot;&gt;&lt;/li&gt;<br>			&lt;li&gt;&lt;i&gt;&lt;/i&gt;&lt;img src=&quot;images/s-3.jpg&quot;&gt;&lt;/li&gt;<br>			&lt;li&gt;&lt;i&gt;&lt;/i&gt;&lt;img src=&quot;images/s-4.jpg&quot;&gt;&lt;/li&gt;<br>			&lt;li&gt;&lt;i&gt;&lt;/i&gt;&lt;img src=&quot;images/s-5.jpg&quot;&gt;&lt;/li&gt;<br>			&lt;li&gt;&lt;i&gt;&lt;/i&gt;&lt;img src=&quot;images/s-6.jpg&quot;&gt;&lt;/li&gt;<br>		&lt;/ol&gt;<br>	&lt;/div&gt;<br>&lt;/div&gt;</pre>
+			<h3>CSS 代码</h3>
+<pre class="prettyprint linenums">#slider-1{width:760px;text-align:center}<br>#slider-1 .bd,#slider-1 .bd li,#slider-1 .bd img{width:760px; height:220px}<br>#slider-1 .hd{ margin-top:2px;height:58px;width:762px}<br>#slider-1 .hd li{ position:relative; display:inline-block; float:left; margin-right:2px;cursor:pointer;width:125px; height:58px}<br>#slider-1 .hd li img{ display:block;width:125px; height:58px}<br>#slider-1 .hd li i{ position:absolute; display:block; z-index:9; left:0; top:0; right:0; bottom:0; background-color:rgba(0,0,0,0.6)}<br>#slider-1 .hd li.active i{ width:11px; height:6px; background:url(images/iconpic-arrow-up.png) no-repeat 0 0; top:-6px; left:50%; margin-left:-5px; bottom:auto; right:auto}</pre>
+			<h3>js 代码</h3>	
+			<p>调用代码：</p>
+<pre class="prettyprint linenums">$(function(){<br>	jQuery(&quot;#slider-1 .slider&quot;).slide({mainCell:&quot;.bd ul&quot;,titCell:&quot;.hd li&quot;,trigger:&quot;click&quot;,effect:&quot;leftLoop&quot;,autoPlay:true,delayTime:850,interTime:7000,pnLoop:false,titOnClassName:&quot;active&quot})});</pre>
+			<p>很多幻灯片的效果都大同小异，只要你熟悉前端布局，举一反三，少加修改，就能变成不同的布局效果。</p>
+			<h3>相关参数</h3>
+			<table class="table table-border table-bordered table-bg">
+				<thead>
+					<tr class="imp">
+						<th width="100">参数</th>
+						<th width="90">版本</th>
+						<th width="80">默认值</th>
+						<th>说明</th>
+						<th width="40">详细</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>type</td>
+						<td>2.1</td>
+						<td>slide</td>
+						<td>效果类型，可选"slide"||"menu"，引入type:"menu"专门处理菜单/导航效果</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>defaultPlay</td>
+						<td>2.1</td>
+						<td>true</td>
+						<td>默认是否执行效果（第一次运行是否执行效果）常用于导航/菜单</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>returnDefault</td>
+						<td>2.1</td>
+						<td>false</td>
+						<td>鼠标移出容器，是否返回默认状态，常用于导航/菜单</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>mouseOverStop</td>
+						<td>2.1</td>
+						<td>true</td>
+						<td>鼠标移到容器层（无缝滚动是mainCell）是否停止播放</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>playStateCell</td>
+						<td>2.1</td>
+						<td>".playState"</td>
+						<td>播放/暂停状态按钮，点击后会增加/删除"pauseState"类名用于控制样色。可参考 <a target="_blank" href="http://www.superslide2.com/otherDemo.html#effect2">[2.22-真·全屏焦点图]</a></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>switchLoad</td>
+						<td>2.0 &gt; 2.1</td>
+						<td>null</td>
+						<td>内容切换加载，暂时只支持图片，必须配合后台程序使用。当为图片的时候switchLoad为图片实际路径的属性名称，例如switchLoad:"_src"<br>
+							[v2.1] 修复当scroll&gt;1时，switchLoad无效的bug。 </td>
+						<td><a class="link" target="_blank" href="http://www.superslide2.com/otherDemo/T2.5/switchLoad.html">详解</a></td>
+					</tr>
+					<tr>
+						<td>easing</td>
+						<td>2.0 &gt; 2.1</td>
+						<td>"swing"</td>
+						<td>缓动效果；<br>
+							[v2.1]更改默认效果为“swing”，使效果更流畅</td>
+						<td><a class="link" target="_blank" href="http://www.superslide2.com/otherDemo/T2.1/easing.html">所有</a></td>
+					</tr>
+					<tr>
+						<td>startFun</td>
+						<td>2.0 &gt; 2.1</td>
+						<td>null</td>
+						<td>每次切换效果开始时执行函数，用于处理特殊情况或创建更多效果。用法 satrtFun:function(i,c){ }； 其中i为当前分页，c为总页数<br>
+							[v2.1]增加传递参数，startFun:function( i, c, slider, titCell, mainCell, targetCell, prevCell, nextCell ){}，这样简写就方便了。<br>
+							例如 jQuery(".slideBox").slide({ startFun:function( i,c,s ){ s.show() } }); 这里的 s.show() 相当于 jQuery(".slideBox").show() </td>
+						<td><a class="link" target="_blank" href="http://www.superslide2.com/otherDemo/T2.2/funIntro.html">详解</a></td>
+					</tr>
+					<tr>
+						<td>endFun</td>
+						<td>2.0 &gt; 2.1</td>
+						<td>null</td>
+						<td>每次切换效果结束时执行函数，用法和startFun一致<br></td>
+						<td><a class="link" target="_blank" href="http://www.superslide2.com/otherDemo/T2.2/funIntro.html">详解</a></td>
+					</tr>
+					<tr>
+						<td>triggerTime</td>
+						<td>2.0</td>
+						<td>150</td>
+						<td>毫秒，titCell触发时间，默认150毫秒延迟，以防重复执行效果。若为0即鼠标移过titCell立刻执行效果</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>targetCell</td>
+						<td>2.0 &gt; 2.1</td>
+						<td>null</td>
+						<td>切换元素对象，处理内容切换元素非包裹状态下等情况，实现更多效果，处理更多情况，能和titCell、mainCell同时使用。只支持fade效果。<br>
+							[v2.1] 增加支持slideDown效果。 </td>
+						<td><a class="link" target="_blank" href="http://www.superslide2.com/otherDemo/T2.3/targetCell.html">详解</a></td>
+					</tr>
+					<tr>
+						<td>pageStateCell</td>
+						<td>2.0</td>
+						<td>".pageState"</td>
+						<td>分页状态对象，用于显示分页状态，例如：2/3</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>pnLoop</td>
+						<td>2.0</td>
+						<td>true</td>
+						<td>前/后按钮是否继续循环，若为false则当翻动到最前/后页时，前/后按钮点击无效，同时增加prevStop/nextStop类名控制样色</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>opp</td>
+						<td>2.0</td>
+						<td>false</td>
+						<td>默认反方向运动，例如 effect:"leftMarquee" 然后设置 opp:true，则效果为右滚动。常用于leftMarquee/topMarquee</td>
+						<td></td>
+					</tr>
+					<tr class="imp">
+						<td><b>autoPage</b></td>
+						<td>1.2 &gt; 2.1</td>
+						<td>false</td>
+						<td> [v1.2] 程序自动分页，<i>需结合titCell使用，若为true，则titCell为导航元素的包裹层对象。ps：scroll&gt;1时，记得设置autoPage:true，否则分页错误</i>。<br>
+							[v2.1] 支持自定义分页html，$为数字替换位置。例如autoPage:"&lt;li&gt;&lt;a&gt;$&lt;/a&gt;&lt;/li&gt;"，如果不想输出数字：autoPage:"&lt;li&gt;&lt;a&gt;&lt;/a&gt;&lt;/li&gt;"。 </td>
+						<td><a class="link" target="_blank" href="images/autoPage.png">图解</a></td>
+					</tr>
+					<tr class="imp">
+						<td><b>titCell</b></td>
+						<td>1.0</td>
+						<td>".hd li"</td>
+						<td>导航元素对象（鼠标的触发元素对象）</td>
+						<td><a class="link" target="_blank" href="images/titCell_mainCell.png">图解</a></td>
+					</tr>
+					<tr class="imp">
+						<td><b>mainCell</b></td>
+						<td>1.0</td>
+						<td>".bd"</td>
+						<td>切换元素的包裹层对象</td>
+						<td><a class="link" target="_blank" href="images/titCell_mainCell.png">图解</a></td>
+					</tr>
+					<tr class="imp">
+						<td>effect</td>
+						<td>1.0 &gt; 2.0 &gt;2.1</td>
+						<td>"fade"</td>
+						<td>动画效果<br>
+							[v1.0] fade：渐显； ||   top：上滚动；||   left：左滚动；||  topLoop：上循环滚动；||   leftLoop：左循环滚动；||  topMarquee：上无缝循环滚动；||   leftMarquee：左无缝循环滚动；<br>
+							[v2.0] fold：淡入淡出<br>
+							[v2.1] slideDown：下拉效果</td>
+						<td></td>
+					</tr>
+					<tr class="imp">
+						<td>autoPlay</td>
+						<td>1.0</td>
+						<td>false</td>
+						<td>自动运行</td>
+						<td></td>
+					</tr>
+					<tr class="imp">
+						<td>interTime</td>
+						<td>1.0</td>
+						<td>2500</td>
+						<td>毫秒；自动运行间隔。当effect为无缝滚动(topMarquee/leftMarquee)时，相当于运行速度。</td>
+						<td></td>
+					</tr>
+					<tr class="imp">
+						<td>delayTime</td>
+						<td>1.0</td>
+						<td>500</td>
+						<td>毫秒；切换效果持续时间（一次切换效果执行所用的时间长度）。</td>
+						<td></td>
+					</tr>
+					<tr class="imp">
+						<td>trigger</td>
+						<td>1.0</td>
+						<td>"mouseover"</td>
+						<td>titCell触发方式 || mouseover：鼠标移过触发；|| click：鼠标点击触发；</td>
+						<td></td>
+					</tr>
+					<tr class="imp">
+						<td>scroll</td>
+						<td>1.0</td>
+						<td>1</td>
+						<td>每次滚动个数。</td>
+						<td></td>
+					</tr>
+					<tr class="imp">
+						<td>vis</td>
+						<td>1.0</td>
+						<td>1</td>
+						<td>visible缩写，<i>mainCell的可视范围个数，当实际内容个数少于可视个数的时候，不执行SuperSlide效果。</i></td>
+						<td><a class="link" target="_blank" href="images/vis.png">图解</a></td>
+					</tr>
+					<tr class="n">
+						<td>prevCell</td>
+						<td>1.0</td>
+						<td>".prev"</td>
+						<td>前一个/页按钮对象。</td>
+						<td></td>
+					</tr>
+					<tr class="n">
+						<td>nextCell</td>
+						<td>1.0</td>
+						<td>".next"</td>
+						<td>后一个/页按钮对象。</td>
+						<td></td>
+					</tr>
+					<tr class="n">
+						<td>defaultIndex</td>
+						<td>1.0</td>
+						<td>0</td>
+						<td>默认的当前位置索引。0是第一个； defaultIndex:1 时，相当于从第2个开始执行</td>
+						<td></td>
+					</tr>
+					<tr class="n">
+						<td>titOnClassName</td>
+						<td>1.0</td>
+						<td>"on"</td>
+						<td>当前titCell位置自动增加的class名称</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<!--高速版-->
+<div id="SOHUCS" sid=""></div>
+<script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: 'cystmLO0N',
+        conf: 'prod_06226f5d322c22bcd421cb90462fe2a2'
+    });
+</script> 
+		</article>
+		﻿<footer class="footer mt-20">
+	<div class="container-fluid">
+		<nav>
+			<a href="/aboutHui.shtml" target="_blank">关于H-ui</a>
+			<span class="pipe">|</span>
+			<a href="/copyright.shtml" target="_blank">软件著作权</a>
+			<span class="pipe">|</span>
+			<a href="/juanzeng.shtml" target="_blank">感谢捐赠</a>
+		</nav>
+		<p>Copyright &copy;2013-2017 H-ui.net All Rights Reserved. <br>
+			<a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">京ICP备15015336号-1</a><br>
+			未经允许，禁止转载、抄袭、镜像<br>
+			用心做站，做不一样的站</p>
+	</div>
+</footer>
+<script type="text/javascript" src="http://lib.h-ui.net/prettify.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/h-ui/3.1/js/H-ui.min.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/www/home/js/H-ui.admin.www.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/www/home/js/common.js"></script> 
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?080836300300be57b7f34f4b3e97d911";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s)})();
+</script> 
+	</div>
+</section>
+<script type="text/javascript" src="http://lib.h-ui.net/jquery.SuperSlide/2.1.1/jquery.SuperSlide.min.js"></script> 
+<script type="text/javascript">
+$("#menu_4 dt").addClass("selected");$("#menu_4 dd").show();
+$(".Hui-aside").scrollTop(210);
+</script>
+</body>
+</html>

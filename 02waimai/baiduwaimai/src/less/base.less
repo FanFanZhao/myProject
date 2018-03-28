@@ -1,0 +1,38 @@
+// 设置公共部分
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+@charset 'utf-8';
+@psdWidth:640;
+@bs:20rem;
+@baseSize:20;//基准值20，也就是1rem=20px;
+@deviceWidthList:320px,360px,375px,384px,400px,414px,424px,450px,480px,540px,640px,720px,750px;
+.adpterFunc(@index) when(@index<=length(@deviceWidthList)){
+	@media (min-width: extract(@deviceWidthList,@index)){
+		html{
+			font-size:extract(@deviceWidthList,@index)/@psdWidth*@baseSize;
+		}
+	}
+	.adpterFunc(@index+1)
+}
+
+.adpterFunc(1);
+.sn_layout{
+  width: 100%;
+  max-width: 750px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding-top: 90/@bs;
+  padding-bottom: 100/@bs;
+}

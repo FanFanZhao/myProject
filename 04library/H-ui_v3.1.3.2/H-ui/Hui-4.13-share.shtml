@@ -1,0 +1,521 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<link rel="Bookmark" href="/favicon.ico" >
+<link rel="Shortcut Icon" href="/favicon.ico" />
+<!-- Standard iPhone -->  
+<link rel="apple-touch-icon" sizes="57x57" href="http://static.h-ui.net/www/home/images/touch-icon-iphone-114.png" />  
+<!-- Retina iPhone -->  
+<link rel="apple-touch-icon" sizes="114x114" href="http://static.h-ui.net/www/home/images/touch-icon-iphone-114.png" />  
+<!-- Standard iPad -->  
+<link rel="apple-touch-icon" sizes="72x72" href="http://static.h-ui.net/www/home/images/touch-icon-ipad-144.png" />  
+<!-- Retina iPad -->  
+<link rel="apple-touch-icon" sizes="144x144" href="http://static.h-ui.net/www/home/images/touch-icon-ipad-144.png" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="http://lib.h-ui.net/html5.js"></script>
+<script type="text/javascript" src="http://lib.h-ui.net/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/h-ui/3.1/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/h-ui.admin/3.1/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/www/home/css/H-ui.doc.css" />
+<link rel="stylesheet" type="text/css" href="http://lib.h-ui.net/Hui-iconfont/1.0.8/iconfont.min.css" />
+<!--[if lt IE 9]>
+<link href="http://static.h-ui.net/h-ui/css/H-ui.ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="text/javascript" src="http://lib.h-ui.net/jquery/1.9.1/jquery.min.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('.pngfix,.iconpic,.list-icon');</script>
+<![endif]-->
+<!-- 反运营商劫持 S -->
+<style type="text/css">
+html {
+	display:none}
+</style>
+<script>
+if( self == top ) {
+	document.documentElement.style.display = 'block' } else {
+	top.location = self.location }
+</script>
+<!-- 反运营商劫持 E -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2472599678883446",
+    enable_page_level_ads: true
+  });
+</script>
+<title>分享share - H-ui前端框架官方网站</title>
+<meta name="keywords" content="分享组件,百度分享,jiathis分享,share,H-ui前端框架">
+<meta name="description" content="H-ui前端框架分享组件share。">
+<style type="text/css">
+#Hui-nav li#Huinav_2 a, #Hui-nav li#Huinav_2 a:hover
+{
+	color: #fff;
+	background-color: #111
+}
+</style>
+</head>
+<body onLoad="prettyPrint()">
+<header class="navbar-wrapper">
+	<div class="navbar navbar-black">
+		<div class="container-fluid cl"> <a class="logo navbar-logo hidden-xs" href="/aboutHui.shtml">H-ui前端框架</a> <a class="logo navbar-logo-m visible-xs" href="/aboutHui.shtml">H-ui</a> <span class="logo navbar-slogan hidden-xs">简单 &middot; 免费 &middot; 适合中国网站</span> <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:;">&#xe667;</a>
+			<nav id="Hui-nav" class="nav navbar-nav">
+				<ul class="cl">
+					<li id="Huinav_1"> <a href="/index.shtml">首页</a> </li>
+					<li id="Huinav_2"> <a href="/Hui-overview.shtml">核心</a> </li>
+					<li id="Huinav_3"> <a href="/lib/jQuery.cookie.js.shtml">脚本</a> </li>
+					<li id="Huinav_4"> <a href="/ext/list.shtml">扩展</a> </li>
+					<li id="Huinav_5"> <a href="/cases/index.shtml">案例</a> </li>
+				</ul>
+			</nav>
+			<nav class="navbar-userbar f-r hidden-xs hidden-sm">
+				<a href="javascript:void(0);" onclick="addFavoritepage();return !1;" class="btn btn-primary radius" title="收藏">收藏本页</a>
+				<a class="btn btn-success radius" target="_blank" href="/shareCode.shtml">代码分享</a>
+				<a class="btn btn-success radius juanzeng" target="_blank" href="/juanzeng.shtml">捐赠<span style="color:#333" class="bk-gray box-shadow text-c"><img width="300" src="http://static.h-ui.net/www/home/images/alipay.jpg"></span></a>
+			</nav>
+		</div>
+	</div>
+</header> 
+<aside class="Hui-aside">
+	<input runat="server" id="divScrollValue" type="hidden" value="" />
+	<div class="menu_dropdown bk_2">
+		<ul>
+			<li><a href="Hui-overview.shtml">&nbsp;&nbsp;&nbsp;&nbsp;概述</a></li>
+		</ul>
+		<dl id="menu_notes">
+			<dt>&nbsp;&nbsp;&nbsp;&nbsp;注释<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-notes-htmlStructure.shtml">Html书写规范</a></li>
+					<li><a href="Hui-notes-css.shtml">CSS写作注意事项</a></li>
+					<li><a href="Hui-notes-cnFont.shtml">中文字体css编码转换</a></li>
+					<li><a href="Hui-notes-cssHack.shtml">CSS Hack</a></li>
+					<li><a href="Hui-notes-keycode.shtml">键盘按钮keycode</a></li>
+					<li><a href="Hui-notes-ARIA.shtml">ARIA属性值</a></li>
+					<li><a href="Hui-notes-cssHame.shtml">css 命名规范</a></li>
+					<li><a href="Hui-notes-htmlName.shtml">html命名规范</a></li>
+					<li><a href="Hui-notes-fileName.shtml">文件夹命名规范</a></li>
+					<li><a href="Hui-notes-regular.shtml">常用正则表达式</a></li>
+					<li><a href="Hui-notes-csscursor.shtml">css中cursor(光标类型)</a></li>
+					<li><a href="Hui-notes-EDM.shtml">EDM制作规范</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<ul>
+			<li><a href="Hui-notes-menu.shtml">&nbsp;&nbsp;&nbsp;&nbsp;结构目录</a></li>
+		</ul>
+		<ul>
+			<li><a href="Hui-1-cssReset.shtml">1. css reset</a></li>
+		</ul>
+		<dl id="menu_2">
+			<dt>2. 框架<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-2.1-gridSystem.shtml">2.1 响应式栅格系统</a></li>
+					<li><a href="Hui-2.2-show&hide.shtml">2.2 响应式隐藏显示</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu_3">
+			<dt>3. 基础<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-3.1-typography.shtml">3.1 排版</a></li>
+					<li><a href="Hui-3.2-code.shtml">3.2 代码</a></li>
+					<li><a href="Hui-3.3-table.shtml">3.3 表格</a></li>
+					<li><a href="Hui-3.4-form.shtml">3.4 表单</a></li>
+					<li><a href="Hui-3.5-button.shtml">3.5 按钮</a></li>
+					<li><a href="Hui-3.6-images.shtml">3.6 图片</a></li>
+					<li><a href="Hui-3.7-Hui-iconfont.shtml">3.7 图标</a></li>
+					<li><a href="Hui-3.8-animation.shtml">3.8 动画</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu_4">
+			<dt>4. 组件<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-4.1-buttonGroups.shtml">4.1 按钮组</a></li>
+					<li><a href="Hui-4.2-nav.shtml">4.2 导航 &amp; 翻页</a></li>
+					<li><a href="Hui-4.3-dropDown.shtml">4.3 下拉菜单</a></li>
+					<li><a href="Hui-4.4-slider.shtml">4.4 幻灯片</a></li>
+					<li><a href="Hui-4.5-tab.shtml">4.5 选项卡</a></li>
+					<li><a href="Hui-4.6-labelBadge.shtml">4.6 便签与标号</a></li>
+					<li><a href="Hui-4.7-thumbnails.shtml"><del>4.7 缩略图</del></a></li>
+					<li><a href="Hui-4.8-alert.shtml">4.8 警告</a></li>
+					<li><a href="Hui-4.9-progress.shtml">4.9 进度条 loading</a></li>
+					<li><a href="Hui-4.10-modal.shtml">4.10 对话框 弹出层</a></li>
+					<li><a href="Hui-4.11-kefu.shtml">4.11 客服</a></li>
+					<li><a href="Hui-4.12-toTop.shtml">4.12 返回顶部</a></li>
+					<li><a href="Hui-4.13-share.shtml">4.13 分享</a></li>
+					<li><a href="Hui-4.14-panel.shtml">4.14 面板</a></li>
+					<li><a href="Hui-4.15-example.shtml">4.15 案例</a></li>
+					<li><a href="Hui-4.16-rolling.shtml">4.16 滚动</a></li>
+					<li><a href="Hui-4.17-search.shtml">4.17 搜索</a></li>
+					<li><a href="Hui-4.18-ad.shtml">4.18 广告</a></li>
+					<li><a href="Hui-4.19-tags.shtml">4.19 标签</a></li>
+					<li><a href="Hui-4.20-fold.shtml">4.20 折叠</a></li>
+					<li><a href="Hui-4.21-maskBar.shtml">4.21 遮罩条</a></li>
+					<li><a href="Hui-4.22-comment.shtml">4.22 评论列表</a></li>
+					<li><a href="Hui-4.23-footer.shtml">4.23 页脚</a></li>
+					<li><a href="Hui-4.24-star.shtml">4.24 星星评价</a></li>
+					<li><a href="Hui-4.25-tooltip.shtml">4.25 tooltip效果</a></li>
+					<li><a href="Hui-4.26-popover.shtml">4.26 popover效果</a></li>
+					<!--<li><a href="Hui-4.26-select-category.shtml">4.26 分类检索</a></li>-->
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu_5">
+			<dt>5. 页面<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="404.shtml" target="_blank">5.1 404页面</a></li>
+					<!--<li><a href="Hui-5.1-blog-list.shtml">5.2 博客列表页</a></li>
+					<li><a href="Hui-5.2-blog-show.shtml">5.3 博客详情页</a></li>
+					<li><a href="Hui-5.3-aboutus.shtml">5.4 关于我们页</a></li>
+					<li><a href="Hui-5.4-help-list.shtml">5.5 帮助列表页</a></li>
+					<li><a href="Hui-5.5-help-show.shtml">5.6 帮助详情页</a></li> -->
+					<li>&nbsp;</li>
+					<li>&nbsp;</li>
+				</ul>
+			</dd>
+		</dl>
+	</div>
+</aside>
+ 
+<div class="dislpayArrow hidden-xs"><a class="pngfix" href="javascript:void(0);" onClick="displaynavbar(this)"></a></div>
+<section class="Hui-article-box">
+	<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> <a class="maincolor" href="/">首页</a><span class="c-999 en">&gt;</span>组件<span class="c-999 en">&gt;</span><span class="c-666">分享</span></nav>
+	<div class="Hui-article">
+		<article class="cl pd-20">
+			<h1 class="page_title">分享</h1>
+			<h2>4.13.1百度分享</h2>
+			<p>更多样式设置请登录百度分享设置并获取代码<a href="http://share.baidu.com/code" target="_blank" class="c_blue"><u>http://share.baidu.com/code</u></a></p>
+			<p><span class="label label-warning radius">注意：</span> 直接获取的代码，是不能查看统计数据的，只有注册自己的百度分享账户，并登录获取代码才可以得到分享的统计数据。</p>
+			<div class="codeView docs-example">
+				<section class="share cl"> 
+					<div class="bdsharebuttonbox Hui-share">
+						<a href="#" class="bds_weixin Hui-iconfont" data-cmd="weixin" title="分享到微信">&#xe694;</a>
+						<a href="#" class="bds_qzone Hui-iconfont" data-cmd="qzone" title="分享到QQ空间">&#xe6c8;</a>
+						<a href="#" class="bds_sqq Hui-iconfont" data-cmd="sqq" title="分享到QQ好友">&#xe67b;</a>
+						<a href="#" class="bds_tsina Hui-iconfont" data-cmd="tsina" title="分享到新浪微博">&#xe6da;</a>
+						<a href="#" class="bds_tqq Hui-iconfont" data-cmd="tqq" title="分享到腾讯微博">&#xe6d9;</a>
+						<a href="#" class="bds_douban Hui-iconfont" data-cmd="douban" title="分享到豆瓣网">&#xe67c;</a>
+					</div>
+					<script type="text/javascript">
+					window._bd_share_config={
+						"common":{
+							"bdSnsKey":{},
+							"bdText":"H-ui前端框架，架起设计与后端的桥梁轻量级前端框架，简单免费，兼容性好，服务中国网站。",
+							'bdDes':'国内免费轻量级前端框架',
+							'bdPopTitle':'H-ui前端框架',
+							"bdMini":"2",
+							"bdMiniList":false,
+							"bdPic":"http://static.h-ui.net/h-ui/images/logo-big.jpeg",
+							"bdStyle":"0",
+							"bdSize":"24"
+						},
+						"share":{},
+						"image":{
+							"viewList":["weixin","qzone","sqq","tsina","tqq","douban"],
+							"viewText":"分享到：",
+							"viewSize":"16"
+						},
+						"selectShare":{
+							"bdContainerClass":null,
+							"bdSelectMiniList":["weixin","qzone","sqq","tsina","tqq","douban"]
+						}
+					};
+					with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+					</script>
+				</section>
+			</div>
+			<h3>HTML代码</h3>
+<pre class="prettyprint linenums">&lt;section class=&quot;share cl&quot;&gt;
+	&lt;div class=&quot;bdsharebuttonbox Hui-share&quot;&gt;
+		&lt;span class=&quot;share-text Hui-iconfont&quot;&gt;&amp;#xe715;&lt;/span&gt;
+		&lt;a href=&quot;#&quot; class=&quot;bds_weixin Hui-iconfont&quot; data-cmd=&quot;weixin&quot; title=&quot;分享到微信&quot;&gt;&amp;#xe694;&lt;/a&gt;
+		&lt;a href=&quot;#&quot; class=&quot;bds_qzone Hui-iconfont&quot; data-cmd=&quot;qzone&quot; title=&quot;分享到QQ空间&quot;&gt;&amp;#xe6c8;&lt;/a&gt;	
+		&lt;a href=&quot;#&quot; class=&quot;bds_sqq Hui-iconfont&quot; data-cmd=&quot;sqq&quot; title=&quot;分享到QQ好友&quot;&gt;&amp;#xe67b;&lt;/a&gt;
+		&lt;a href=&quot;#&quot; class=&quot;bds_tsina Hui-iconfont&quot; data-cmd=&quot;tsina&quot; title=&quot;分享到新浪微博&quot;&gt;&amp;#xe6da;&lt;/a&gt;
+		&lt;a href=&quot;#&quot; class=&quot;bds_tqq Hui-iconfont&quot; data-cmd=&quot;tqq&quot; title=&quot;分享到腾讯微博&quot;&gt;&amp;#xe6d9;&lt;/a&gt;
+		&lt;a href=&quot;#&quot; class=&quot;bds_douban Hui-iconfont&quot; data-cmd=&quot;douban&quot; title=&quot;分享到豆瓣网&quot;&gt;&amp;#xe67c;&lt;/a&gt;
+	&lt;/div&gt;
+	&lt;script type=&quot;text/javascript&quot;&gt;
+	window._bd_share_config={
+		&quot;common&quot;:{
+			&quot;bdSnsKey&quot;:{},
+			&quot;bdText&quot;:&quot;&quot;,
+			&quot;bdMini&quot;:&quot;2&quot;,
+			&quot;bdMiniList&quot;:false,
+			&quot;bdPic&quot;:&quot;&quot;,
+			&quot;bdStyle&quot;:&quot;0&quot;,
+		},
+		&quot;share&quot;:{},
+		&quot;image&quot;:{
+			&quot;viewList&quot;:[&quot;weixin&quot;,&quot;qzone&quot;,&quot;sqq&quot;,&quot;tsina&quot;,&quot;tqq&quot;,&quot;douban&quot;],
+			&quot;viewText&quot;:&quot;分享到：&quot;,&quot;viewSize&quot;:&quot;16&quot},
+		&quot;selectShare&quot;:{
+			&quot;bdContainerClass&quot;:null,
+			&quot;bdSelectMiniList&quot;:[&quot;weixin&quot;,&quot;qzone&quot;,&quot;sqq&quot;,&quot;tsina&quot;,&quot;tqq&quot;,&quot;douban&quot;]
+		}
+	};
+	with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+	&lt;/script&gt;
+&lt;/section&gt;</pre>
+			<h3>自定义参数</h3>
+<pre class="prettyprint linenums">var bds_config = {
+	'bdDes':'您的自定义分享摘要',		//'<a href="http://share.baidu.com/help/customization/summary">请参考自定义分享摘要</a>'
+	'bdText':'您的自定义分享内容',		//'<a href="http://share.baidu.com/help/customization/content">请参考自定义分享内容</a>'
+	'bdPopTitle':'您的自定义pop窗口标题',	//'<a href="http://share.baidu.com/help/customization/pop">请参考自定义pop窗口标题</a>'
+	'bdTop':'您的自定义侧栏高度',		//'<a href="http://share.baidu.com/help/customization/slidetop">请参考自定义侧栏高度</a>'
+	'bdComment':'您的自定义分享评论',	//'<a href="http://share.baidu.com/help/customization/comment">请参考自定义分享评论</a>'
+	'bdPic':'您的自定义分享出去的图片',	//'<a href="http://share.baidu.com/help/customization/image">请参考自定义分享出去的图片</a>'
+	'searchPic':'是否自动抓取页面图片',//'0为抓取，1为不抓取，默认为0，目前只针对新浪微博'
+	'wbUid':'您的自定义微博 ID',		//'<a href="http://share.baidu.com/help/customization/wbuid">请参考自定义微博 id</a>'
+	'render':false,				//'<a href="http://share.baidu.com/help/customization/render">请参考自定义分享回流量统计</a>'
+	'review':'normal',			//'<a href="http://share.baidu.com/help/customization/review">请参考自定义分享回流签名</a>'
+	'snsKey':{'tsina':'appkey'}		//'<a href="http://share.baidu.com/help/customization/appkey">请参考自定义分享到平台的appkey</a>'
+}</pre>
+
+			<h2>4.13.2 JiaThis分享</h2>
+			<p>更多样式设置请登录jiathis分享设置并获取代码<a href="http://www.jiathis.com/getcode" target="_blank" class="c_blue"><u>http://www.jiathis.com/getcode</u></a></p>
+			<p><span class="label label-warning radius">注意：</span> 直接获取的代码，是不能查看统计数据的，只有注册自己的jiathis分享账户，并登录获取代码才可以得到分享的统计数据。</p>
+			<div class="codeView docs-example">
+				<!-- JiaThis Button BEGIN -->
+				<div class="jiathis_style_24x24 Hui-share cl">
+					<a class="jiathis_button_weixin Hui-iconfont">&#xe694;</a>
+					<a class="jiathis_button_cqq Hui-iconfont">&#xe67b;</a>
+					<a class="jiathis_button_tqq Hui-iconfont">&#xe6d9;</a>
+					<a class="jiathis_button_tsina Hui-iconfont">&#xe6da;</a>
+					<a class="jiathis_button_qzone Hui-iconfont">&#xe6c8;</a>
+					<a class="jiathis_button_douban Hui-iconfont">&#xe67c;</a>
+					<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis Hui-iconfont" target="_blank">&#xe715;</a>
+					<a class="jiathis_counter_style"></a>
+				</div>
+				<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+				<script type="text/javascript">
+				var jiathis_config = {
+					title:"H-ui前端框架 #前端框架#",
+					pic:"http://static.h-ui.net/h-ui/images/logo-big.jpeg",
+					summary:"架起设计与后端的桥梁轻量级前端框架，简单免费，兼容性好，服务中国网站。",
+				}
+				</script>
+				<!-- JiaThis Button END -->
+			</div>
+			<h3>HTML代码</h3>
+<pre class="prettyprint linenums">&lt;div class=&quot;jiathis_style_24x24 Hui-share cl&quot;&gt;
+	&lt;a class=&quot;jiathis_button_weixin Hui-iconfont&quot;&gt;&amp;#xe694;&lt;/a&gt;
+	&lt;a class=&quot;jiathis_button_cqq Hui-iconfont&quot;&gt;&amp;#xe67b;&lt;/a&gt;
+	&lt;a class=&quot;jiathis_button_tqq Hui-iconfont&quot;&gt;&amp;#xe6d9;&lt;/a&gt;
+	&lt;a class=&quot;jiathis_button_tsina Hui-iconfont&quot;&gt;&amp;#xe6da;&lt;/a&gt;
+	&lt;a class=&quot;jiathis_button_qzone Hui-iconfont&quot;&gt;&amp;#xe6c8;&lt;/a&gt;
+	&lt;a class=&quot;jiathis_button_douban Hui-iconfont&quot;&gt;&amp;#xe67c;&lt;/a&gt;
+	&lt;a href=&quot;http://www.jiathis.com/share&quot; class=&quot;jiathis jiathis_txt jtico jtico_jiathis Hui-iconfont&quot; target=&quot;_blank&quot;&gt;&amp;#xe715;&lt;/a&gt;
+	&lt;a class=&quot;jiathis_counter_style&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://v3.jiathis.com/code/jia.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</pre>
+<h3>参数自定义</h3>
+<pre class="prettyprint linenums">
+var jiathis_config = {
+    boldNum:0,
+    siteNum:7,
+    showClose:false,
+    sm:"weixin,cqq,tqq,tsina,qzone,douban",
+    imageUrl:"http://v2.jiathis.com/code/images/r5.gif",
+    imageWidth:26,
+    marginTop:150,
+    url:"http://www.jiathis.com",
+    title:"自定义TITLE #微博话题#",
+    summary:"分享的文本摘要",
+    pic:"自定义分享的图片连接地址",
+    data_track_clickback:true,
+    appkey:{
+        "tsina":"您网站的新浪微博APPKEY",
+        "tqq":"您网站的腾讯微博APPKEY",
+        "tpeople":"您网站的人民微博APPKEY"
+    },
+    ralateuid:{
+        "tsina":"您的新浪微博UID"
+    },
+    "shortUrl":是否开启短链接,
+    evt:{
+        "share":"用户自定义函数" ( 可以根据自己的命名规范来定义一个自定义函数，如：getEvent )
+        说明：evt参数可以得到用户的分享操作的相关信息。比如：用户分享的URL，用户分享到的媒体。但是，我们不能确定用
+        户是否真正成功的分享了内容，只能确定用户确实是点击了分享按钮……
+    }
+}
+</pre>
+			<table class="table table-border table-bordered table-bg">
+	<thead>
+		<tr>
+			<th width="20%"> 参数名 </th>
+			<th width="60%"> 描述 </th>
+			<th width="10%"> 类型 </th>
+			<th width="10%"> 默认值 </th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td> url </td>
+			<td> 自定义分享的URL </td>
+			<td> string </td>
+			<td> 网页地址 </td>
+		</tr>
+		<tr>
+			<td> title </td>
+			<td> 自定义分享的TITLE </td>
+			<td> string </td>
+			<td> 网页标题 </td>
+		</tr>
+		<tr>
+			<td> summary </td>
+			<td> 定义要分享页面的摘要，摘要默认为Meta标签中Description部分的内容 </td>
+			<td> string </td>
+			<td> 无 </td>
+		</tr>
+		<tr>
+			<td> boldNum </td>
+			<td> 分享面板上加粗媒体的个数。如果缺省，则标准风格的分享面板默认是6个加粗，迷你风格的分享面板默认是3个加粗。<br>
+				<b>何时会加粗：</b>当用户使用过JiaThis分享到功能后，JiaThis会依据该浏览者的喜好产生一个智能排序的顺序，这个顺序的前几个会被加粗，您可以通过这个参数自由控制加粗的个数，如果您想关闭加粗的功能，则将此参数写成数字0就可以了。 </td>
+			<td> integer </td>
+			<td> 标准:6<br>
+				迷你:3 </td>
+		</tr>
+		<tr>
+			<td> siteNum </td>
+			<td> 分享面板上的社会化媒体的个数。通常情况，这个数字应当大于或等于boldNum参数，因为需要加粗的个数不会多于整个分享面板媒体的个数。如果缺省，标准风格默认为15个，迷你风格默认为6个。 </td>
+			<td> integer </td>
+			<td> 标准:15<br>
+				迷你:6 </td>
+		</tr>
+		<tr>
+			<td> sm </td>
+			<td> 自定义分享面板上社会化媒体的排序。填写媒体网站的WEBID（如：tsina表示新浪微博,tqq表示腾讯微博，更多的社会化媒体WEBID参见这里），用英文半角逗号分隔。如果网站主使用了此自定义功能，则自定义的媒体网站会优先固定出现在前面，后面紧跟依据网站浏览者分享行为产生的智能排序结果。这个结果不会与您自定义的媒体重复。如果缺省，分享面板会按照智能排序的规则出现媒体。 <br>
+				<br>
+				特别的，<strong>siteNum</strong> 参数与 <strong>sm</strong> 参数交替使用几乎可以让您自定义任何您想要的分享面板。 <br>
+				举例一：
+				<div> var jiathis_config = {<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;sm:"tsina,tqq",<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;siteNum:7<br>
+					} </div>
+				这表示：分享面板上总共会出现7个媒体，前两个是新浪微博和腾讯微博，后面剩下的5个则根据智能排序规则出现。当然，和您想的一样，这剩下的5个不会再次包含新浪微博或者是腾讯微博了。 <br>
+				举例二：
+				<div> var jiathis_config = {<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;sm:"tsina,tqq,t163,tsohu",<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;siteNum:4<br>
+					} </div>
+				这表示：分享面板公共会出现4个媒体，这4个媒体全都是您自定义的。如果这里的 siteNum小于4，比如假设是3，则分享面板会出现3个媒体，sm参数中的最后一个tsohu(搜狐微博)不会出现。 </td>
+			<td> string </td>
+			<td> 无 </td>
+		</tr>
+		<tr>
+			<td> imageWidth </td>
+			<td> （只对侧栏式有效）：这是imageUrl参数的一个补充。如果您自定义了分享图片，且这个图片宽度不与我们官方标准风格或迷你风格的图片宽度一致时，可能出现显示的偏差或错位，这时候您就需要将imageUrl参数中图片的实际宽度填写在这里。缺省状态下，标准风格的图片宽度为26，迷你风格的图片宽度为20。 </td>
+			<td> integer </td>
+			<td> 标准:26<br>
+				迷你:20 </td>
+		</tr>
+		<tr>
+			<td> marginTop </td>
+			<td> （只对侧栏式有效）：如果我们不想让分享按钮处于页面的中间部位，我们就可以用marginTop属性来控制分享按钮在页面中的位置，是位于页面的上边，还是页面的下边，或是偏上、偏下，都可以实现。默认的位置就是中间位置，也就是距离页面上边是150px。 </td>
+			<td> integer </td>
+			<td> 无 </td>
+		</tr>
+		<tr>
+			<td> showClose </td>
+			<td> （只对侧栏式有效）：是否在分享面板中加入关闭按钮。如果缺省，默认会开启关闭按钮。这表示浏览者可以通过这个关闭按钮关闭侧栏式分享按钮。 </td>
+			<td> boolean </td>
+			<td> true </td>
+		</tr>
+		<tr>
+			<td> imageUrl </td>
+			<td> （只对侧栏式有效）：侧栏式风格的图片地址。侧栏式风格的"分享到"图片允许网站主自定义，当您觉得JiaThis官方提供的所有图片风格都无法满足您的要求时，您或者您的团队可以自己设计一个分享到图片。将这个图片放入您的服务器。保该图片可以通过因特网正常访问，如：http://yourdomain/images/share.gif， 然后将该地址填写到这里这里即可。 </td>
+			<td> string </td>
+			<td> 无 </td>
+		</tr>
+		<tr>
+			<td> appkey </td>
+			<td> 您网站对应各大社会化媒体的APPKEY，内容被分享后，显示的来源将是您自己的网站。 </td>
+			<td> object </td>
+			<td> 无 </td>
+		</tr>
+		<tr>
+			<td> ralateuid </td>
+			<td> 目前仅新浪微博支持，此处填写您的新浪微博UID，内容被分享后，将会自动@分享者提示他关注您。默认情况下此值为空，不会出现@提示。 </td>
+			<td> object </td>
+			<td> 无 </td>
+		</tr>
+		<tr>
+			<td> data_track_clickback </td>
+			<td> 是否启用回流量统计，启用后，分享出去的链接会自动在后面加上jtss=xxx的参数，这样可以精确统计到您网站的回流量。 </td>
+			<td> boolean </td>
+			<td> false </td>
+		</tr>
+		<tr>
+			<td> pic </td>
+			<td> 支持新浪微博、腾讯微博、搜狐微博、网易微博，可以自定义分享的图片，如果此值为空，将会根据社会化媒体原有的抓图机制来获取您网站的图片。 </td>
+			<td> string </td>
+			<td> 无 </td>
+		</tr>
+		<tr>
+			<td> shortUrl </td>
+			<td> 是否针对新浪微博开启短链接传递，如果缺省，默认为true(开启)，关闭定义为false(不开启) <span style="color:red;font-weight:bold;">不加引号</span></td>
+			<td> string </td>
+			<td> true </td>
+		</tr>
+	</tbody>
+</table>
+			<!--高速版-->
+<div id="SOHUCS" sid=""></div>
+<script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: 'cystmLO0N',
+        conf: 'prod_06226f5d322c22bcd421cb90462fe2a2'
+    });
+</script> 
+		</article>
+		﻿<footer class="footer mt-20">
+	<div class="container-fluid">
+		<nav>
+			<a href="/aboutHui.shtml" target="_blank">关于H-ui</a>
+			<span class="pipe">|</span>
+			<a href="/copyright.shtml" target="_blank">软件著作权</a>
+			<span class="pipe">|</span>
+			<a href="/juanzeng.shtml" target="_blank">感谢捐赠</a>
+		</nav>
+		<p>Copyright &copy;2013-2017 H-ui.net All Rights Reserved. <br>
+			<a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">京ICP备15015336号-1</a><br>
+			未经允许，禁止转载、抄袭、镜像<br>
+			用心做站，做不一样的站</p>
+	</div>
+</footer>
+<script type="text/javascript" src="http://lib.h-ui.net/prettify.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/h-ui/3.1/js/H-ui.min.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/www/home/js/H-ui.admin.www.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/www/home/js/common.js"></script> 
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?080836300300be57b7f34f4b3e97d911";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s)})();
+</script> 
+	</div>
+</section>
+<script type="text/javascript">
+$("#menu_4 dt").addClass("selected");$("#menu_4 dd").show();
+$(".Hui-aside").scrollTop(280);
+</script>
+</body>
+</html>

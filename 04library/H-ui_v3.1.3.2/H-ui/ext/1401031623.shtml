@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="Bookmark" href="/favicon.ico" >
+<link rel="Shortcut Icon" href="/favicon.ico" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="http://lib.h-ui.net/html5.js"></script>
+<script type="text/javascript" src="http://lib.h-ui.net/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/h-ui/3.1/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/h-ui.admin/3.1/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/www/home/css/H-ui.doc.css" />
+<link rel="stylesheet" type="text/css" href="http://lib.h-ui.net/Hui-iconfont/1.0.8/iconfont.min.css" />
+<!--[if lt IE 9]>
+<link href="http://static.h-ui.net/h-ui/css/H-ui.ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="text/javascript" src="http://lib.h-ui.net/jquery/1.9.1/jquery.min.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('.pngfix,.iconpic,.list-icon');</script>
+<![endif]-->
+<!-- 反运营商劫持 S -->
+<style type="text/css">
+html {
+	display:none}
+</style>
+<script>
+if( self == top ) {
+	document.documentElement.style.display = 'block' } else {
+	top.location = self.location }
+</script>
+<!-- 反运营商劫持 E -->
+<title>微博剩余字数输入统计 - H-ui前端框架代码特效</title>
+<meta name="keywords" content="微博剩余字数输入统计,表单代码特效,H-ui前端框架">
+<meta name="description" content="H-ui前端框架表单代码特效微博剩余字数输入统计">
+<style type="text/css">
+#Hui-nav li#Huinav_4 a, #Hui-nav li#Huinav_4 a:hover
+{
+	color: #fff;
+	background-color: #111
+}
+</style>
+</head>
+<body onLoad="prettyPrint()">
+<header class="navbar-wrapper">
+	<div class="navbar navbar-black">
+		<div class="container-fluid cl"> <a class="logo navbar-logo hidden-xs" href="/aboutHui.shtml">H-ui前端框架</a> <a class="logo navbar-logo-m visible-xs" href="/aboutHui.shtml">H-ui</a> <span class="logo navbar-slogan hidden-xs">简单 &middot; 免费 &middot; 适合中国网站</span> <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:;">&#xe667;</a>
+			<nav id="Hui-nav" class="nav navbar-nav">
+				<ul class="cl">
+					<li id="Huinav_1"> <a href="/index.shtml">首页</a> </li>
+					<li id="Huinav_2"> <a href="/Hui-overview.shtml">核心</a> </li>
+					<li id="Huinav_3"> <a href="/lib/jQuery.cookie.js.shtml">脚本</a> </li>
+					<li id="Huinav_4"> <a href="/ext/list.shtml">扩展</a> </li>
+					<li id="Huinav_5"> <a href="/cases/index.shtml">案例</a> </li>
+				</ul>
+			</nav>
+			<nav class="navbar-userbar f-r hidden-xs hidden-sm">
+				<a href="javascript:void(0);" onclick="addFavoritepage();return !1;" class="btn btn-primary radius" title="收藏">收藏本页</a>
+				<a class="btn btn-success radius" target="_blank" href="/shareCode.shtml">代码分享</a>
+				<a class="btn btn-success radius juanzeng" target="_blank" href="/juanzeng.shtml">捐赠<span style="color:#333" class="bk-gray box-shadow text-c"><img width="300" src="http://static.h-ui.net/www/home/images/alipay.jpg"></span></a>
+			</nav>
+		</div>
+	</div>
+</header> 
+<aside class="Hui-aside">
+	<div class="menu_dropdown bk_2">
+		<dl id="extMenu_1">
+			<dt>表单<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li>
+						<a href="1401030938.shtml">城市三级联动</a>
+					</li>
+					<li>
+						<a href="1401031019.shtml">机票城市选择</a>
+					</li>
+					<li>
+						<a href="1401031623.shtml">微博剩余字数输入统计</a>
+					</li>
+					<li>
+						<a href="1503061744.shtml">仿新浪微博@功能</a>
+					</li>
+				</ul>
+			</dd>
+		</dl>
+		<dl id="extMenu_2">
+			<dt>焦点图<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li>
+						<a href="1401031602.shtml">flash焦点图</a>
+					</li>
+				</ul>
+			</dd>
+		</dl>
+		<!--<dl id="extMenu_3">
+    <dt>电商<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+    <dd>
+      <ul>
+        <li><a href="1401031709.shtml">添加购物车效果</a></li>
+      </ul>
+    </dd>
+  </dl>-->
+		<dl id="extMenu_4">
+			<dt>图片效果<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li>
+						<a href="1401172111.shtml">360音乐盒光盘旋转效果</a>
+					</li>
+					<li>
+						<a href="1401180822.shtml">灯泡，开关灯效果</a>
+					</li>
+					<li>
+						<a href="1403161424.shtml">仿京东图片视差效果</a>
+					</li>
+					<li>
+						<a href="1405081144.shtml">新浪旅游图片放大效果</a>
+					</li>
+					<li>
+						<a href="1407241836.shtml">CSS3 动画集</a>
+					</li>
+				</ul>
+			</dd>
+		</dl>
+		<dl id="extMenu_5">
+			<dt>进度条<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li>
+						<a href="1701101714.shtml">多彩进度条</a>
+					</li>
+				</ul>
+			</dd>
+		</dl>
+	</div>
+</aside>
+ 
+<div class="dislpayArrow hidden-xs"><a class="pngfix" href="javascript:void(0);" onClick="displaynavbar(this)"></a></div>
+<section class="Hui-article-box">
+  <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> <a class="maincolor" href="/">首页</a> <span class="c-999 en">&gt;</span> 表单 <span class="c-999 en">&gt;</span> <span class="c-666">微博剩余字数输入统计</span></nav>
+  <div class="Hui-article">
+    <article class="cl pd-20">
+      <h1 class="page_title">微博剩余字数输入统计</h1>
+      <h3>预览效果</h3>
+      <div class="codeView bs-docs-example">
+        <div class="pos-r"><a class="btn radius_newView btn btn-primary" href="1401031623/index.html" target="_blank" style="color:#fff; text-decoration:none">新窗口</a></div>
+        <iframe width="100%" height="200" src="1401031623/index.html" scrolling="no" frameborder="0"></iframe>
+      </div>
+      <h3>HTML代码</h3>
+      <pre class="prettyprint linenums">&lt;div class=&quot;cl share_weibo_wp&quot; style=&quot;&quot;&gt;
+  &lt;div class=&quot;cl&quot;&gt;
+    &lt;h4 class=&quot;l&quot;&gt;分享到微博&lt;/h4&gt;
+    &lt;span class=&quot;r count_txt&quot;&gt;还能输入&lt;strong id=&quot;currentLength&quot;&gt;120&lt;/strong&gt;字&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;textarea onkeyup=&quot;checkLength(this);&quot; class=&quot;textarea radius inputstyle&quot; name=&quot;&quot; cols=&quot;&quot; rows=&quot;&quot;&gt;&lt;/textarea&gt;
+&lt;/div&gt;</pre>
+      <h3>CSS代码</h3>
+      <pre class="prettyprint linenums">body{ background-color:#71C5F2}
+.share_weibo_wp{width:480px; padding:20px; background-color:#fff; margin-left:auto; margin-right:auto; margin-top:20px;-khtml-border-radius:10px;-ms-border-radius:10px;-o-border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;behavior: url(ie-css3.htc)}
+.count_txt{color: #B5B5B5;text-align: right}
+.count_txt strong {font-family: georgia;font-size: 24px; padding: 0 2px}
+.inputstyle {height: 75px;line-height: 18px;overflow-x: hidden;overflow-y: auto;width: 472px}</pre>
+      <h3>JS代码</h3>
+      <pre class="prettyprint linenums">function checkLength(which) {
+  var maxChars = 120;
+  if (which.value.length &gt; maxChars)
+  which.value = which.value.substring(0,maxChars);
+  var curr = maxChars - which.value.length;
+  document.getElementById(&quot;currentLength&quot;).innerHTML = curr.toString()}</pre>
+    </article>
+    ﻿<footer class="footer mt-20">
+	<div class="container-fluid">
+		<nav>
+			<a href="/aboutHui.shtml" target="_blank">关于H-ui</a>
+			<span class="pipe">|</span>
+			<a href="/copyright.shtml" target="_blank">软件著作权</a>
+			<span class="pipe">|</span>
+			<a href="/juanzeng.shtml" target="_blank">感谢捐赠</a>
+		</nav>
+		<p>Copyright &copy;2013-2017 H-ui.net All Rights Reserved. <br>
+			<a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">京ICP备15015336号-1</a><br>
+			未经允许，禁止转载、抄袭、镜像<br>
+			用心做站，做不一样的站</p>
+	</div>
+</footer>
+<script type="text/javascript" src="http://lib.h-ui.net/prettify.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/h-ui/3.1/js/H-ui.min.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/www/home/js/H-ui.admin.www.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/www/home/js/common.js"></script> 
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?080836300300be57b7f34f4b3e97d911";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s)})();
+</script> 
+  </div>
+</section>
+<a id="btn_down" href="1401031623/1401031623.zip" class="btn btn-success radius size-L"><i class="Hui-iconfont">&#xe640;</i> 打包下载</a> 
+<script type="text/javascript">$("#extMenu_1 dt").addClass("selected");$("#extMenu_1 dd").show();</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			height: 4000px;
+			width: 2000px;
+		}
+		img{
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<img src="images/01.jpg" alt="" id="img">
+</body>
+<script>
+	document.addEventListener('mousemove',function(e){
+		e=e||window.event;
+		console.log('offset'+e.offsetX+"--"+e.offsetY);
+		console.log('screen'+e.screenX+"--"+e.screenY);
+		console.log('client'+e.clientX+"--"+e.clientY);
+		console.log('page'+e.pageX+"--"+e.pageY);
+		console.log('----------------------------------------------')
+		// console.log(e);
+		var img=document.getElementById('img');
+		var scrollx=document.documentElement.scrollLeft || document.body.scrollLeft;
+		var scrolly=document.documentElement.scrollTop || document.body.scrollTop;
+		img.style.left=e.clientX+scrollx+'px';
+		img.style.top=e.clientY+scrolly + 'px';
+	})
+</script>
+</html>

@@ -1,0 +1,957 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<link rel="Bookmark" href="/favicon.ico" >
+<link rel="Shortcut Icon" href="/favicon.ico" />
+<!-- Standard iPhone -->  
+<link rel="apple-touch-icon" sizes="57x57" href="http://static.h-ui.net/www/home/images/touch-icon-iphone-114.png" />  
+<!-- Retina iPhone -->  
+<link rel="apple-touch-icon" sizes="114x114" href="http://static.h-ui.net/www/home/images/touch-icon-iphone-114.png" />  
+<!-- Standard iPad -->  
+<link rel="apple-touch-icon" sizes="72x72" href="http://static.h-ui.net/www/home/images/touch-icon-ipad-144.png" />  
+<!-- Retina iPad -->  
+<link rel="apple-touch-icon" sizes="144x144" href="http://static.h-ui.net/www/home/images/touch-icon-ipad-144.png" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="http://lib.h-ui.net/html5.js"></script>
+<script type="text/javascript" src="http://lib.h-ui.net/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/h-ui/3.1/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/h-ui.admin/3.1/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/www/home/css/H-ui.doc.css" />
+<link rel="stylesheet" type="text/css" href="http://lib.h-ui.net/Hui-iconfont/1.0.8/iconfont.min.css" />
+<!--[if lt IE 9]>
+<link href="http://static.h-ui.net/h-ui/css/H-ui.ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="text/javascript" src="http://lib.h-ui.net/jquery/1.9.1/jquery.min.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('.pngfix,.iconpic,.list-icon');</script>
+<![endif]-->
+<!-- 反运营商劫持 S -->
+<style type="text/css">
+html {
+	display:none}
+</style>
+<script>
+if( self == top ) {
+	document.documentElement.style.display = 'block' } else {
+	top.location = self.location }
+</script>
+<!-- 反运营商劫持 E -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2472599678883446",
+    enable_page_level_ads: true
+  });
+</script>
+<meta property="og:type" content="article"/>
+<meta property="og:image" content=""/>
+<meta property="og:release_date" content=""/>
+<meta property="og:title" content="[H-ui] 3.1 排版"/>
+<title>排版 - 基础 - H-ui前端框架官方网站</title>
+<meta name="keywords" content="排版,H-ui前端框架">
+<meta name="description" content="H-ui前端框架排版。">
+<style type="text/css">
+#Hui-nav li#Huinav_2 a, #Hui-nav li#Huinav_2 a:hover
+{
+	color: #fff;
+	background-color: #111
+}
+</style>
+</head>
+<body onLoad="prettyPrint()">
+<header class="navbar-wrapper">
+	<div class="navbar navbar-black">
+		<div class="container-fluid cl"> <a class="logo navbar-logo hidden-xs" href="/aboutHui.shtml">H-ui前端框架</a> <a class="logo navbar-logo-m visible-xs" href="/aboutHui.shtml">H-ui</a> <span class="logo navbar-slogan hidden-xs">简单 &middot; 免费 &middot; 适合中国网站</span> <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:;">&#xe667;</a>
+			<nav id="Hui-nav" class="nav navbar-nav">
+				<ul class="cl">
+					<li id="Huinav_1"> <a href="/index.shtml">首页</a> </li>
+					<li id="Huinav_2"> <a href="/Hui-overview.shtml">核心</a> </li>
+					<li id="Huinav_3"> <a href="/lib/jQuery.cookie.js.shtml">脚本</a> </li>
+					<li id="Huinav_4"> <a href="/ext/list.shtml">扩展</a> </li>
+					<li id="Huinav_5"> <a href="/cases/index.shtml">案例</a> </li>
+				</ul>
+			</nav>
+			<nav class="navbar-userbar f-r hidden-xs hidden-sm">
+				<a href="javascript:void(0);" onclick="addFavoritepage();return !1;" class="btn btn-primary radius" title="收藏">收藏本页</a>
+				<a class="btn btn-success radius" target="_blank" href="/shareCode.shtml">代码分享</a>
+				<a class="btn btn-success radius juanzeng" target="_blank" href="/juanzeng.shtml">捐赠<span style="color:#333" class="bk-gray box-shadow text-c"><img width="300" src="http://static.h-ui.net/www/home/images/alipay.jpg"></span></a>
+			</nav>
+		</div>
+	</div>
+</header> 
+<aside class="Hui-aside">
+	<input runat="server" id="divScrollValue" type="hidden" value="" />
+	<div class="menu_dropdown bk_2">
+		<ul>
+			<li><a href="Hui-overview.shtml">&nbsp;&nbsp;&nbsp;&nbsp;概述</a></li>
+		</ul>
+		<dl id="menu_notes">
+			<dt>&nbsp;&nbsp;&nbsp;&nbsp;注释<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-notes-htmlStructure.shtml">Html书写规范</a></li>
+					<li><a href="Hui-notes-css.shtml">CSS写作注意事项</a></li>
+					<li><a href="Hui-notes-cnFont.shtml">中文字体css编码转换</a></li>
+					<li><a href="Hui-notes-cssHack.shtml">CSS Hack</a></li>
+					<li><a href="Hui-notes-keycode.shtml">键盘按钮keycode</a></li>
+					<li><a href="Hui-notes-ARIA.shtml">ARIA属性值</a></li>
+					<li><a href="Hui-notes-cssHame.shtml">css 命名规范</a></li>
+					<li><a href="Hui-notes-htmlName.shtml">html命名规范</a></li>
+					<li><a href="Hui-notes-fileName.shtml">文件夹命名规范</a></li>
+					<li><a href="Hui-notes-regular.shtml">常用正则表达式</a></li>
+					<li><a href="Hui-notes-csscursor.shtml">css中cursor(光标类型)</a></li>
+					<li><a href="Hui-notes-EDM.shtml">EDM制作规范</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<ul>
+			<li><a href="Hui-notes-menu.shtml">&nbsp;&nbsp;&nbsp;&nbsp;结构目录</a></li>
+		</ul>
+		<ul>
+			<li><a href="Hui-1-cssReset.shtml">1. css reset</a></li>
+		</ul>
+		<dl id="menu_2">
+			<dt>2. 框架<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-2.1-gridSystem.shtml">2.1 响应式栅格系统</a></li>
+					<li><a href="Hui-2.2-show&hide.shtml">2.2 响应式隐藏显示</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu_3">
+			<dt>3. 基础<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-3.1-typography.shtml">3.1 排版</a></li>
+					<li><a href="Hui-3.2-code.shtml">3.2 代码</a></li>
+					<li><a href="Hui-3.3-table.shtml">3.3 表格</a></li>
+					<li><a href="Hui-3.4-form.shtml">3.4 表单</a></li>
+					<li><a href="Hui-3.5-button.shtml">3.5 按钮</a></li>
+					<li><a href="Hui-3.6-images.shtml">3.6 图片</a></li>
+					<li><a href="Hui-3.7-Hui-iconfont.shtml">3.7 图标</a></li>
+					<li><a href="Hui-3.8-animation.shtml">3.8 动画</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu_4">
+			<dt>4. 组件<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="Hui-4.1-buttonGroups.shtml">4.1 按钮组</a></li>
+					<li><a href="Hui-4.2-nav.shtml">4.2 导航 &amp; 翻页</a></li>
+					<li><a href="Hui-4.3-dropDown.shtml">4.3 下拉菜单</a></li>
+					<li><a href="Hui-4.4-slider.shtml">4.4 幻灯片</a></li>
+					<li><a href="Hui-4.5-tab.shtml">4.5 选项卡</a></li>
+					<li><a href="Hui-4.6-labelBadge.shtml">4.6 便签与标号</a></li>
+					<li><a href="Hui-4.7-thumbnails.shtml"><del>4.7 缩略图</del></a></li>
+					<li><a href="Hui-4.8-alert.shtml">4.8 警告</a></li>
+					<li><a href="Hui-4.9-progress.shtml">4.9 进度条 loading</a></li>
+					<li><a href="Hui-4.10-modal.shtml">4.10 对话框 弹出层</a></li>
+					<li><a href="Hui-4.11-kefu.shtml">4.11 客服</a></li>
+					<li><a href="Hui-4.12-toTop.shtml">4.12 返回顶部</a></li>
+					<li><a href="Hui-4.13-share.shtml">4.13 分享</a></li>
+					<li><a href="Hui-4.14-panel.shtml">4.14 面板</a></li>
+					<li><a href="Hui-4.15-example.shtml">4.15 案例</a></li>
+					<li><a href="Hui-4.16-rolling.shtml">4.16 滚动</a></li>
+					<li><a href="Hui-4.17-search.shtml">4.17 搜索</a></li>
+					<li><a href="Hui-4.18-ad.shtml">4.18 广告</a></li>
+					<li><a href="Hui-4.19-tags.shtml">4.19 标签</a></li>
+					<li><a href="Hui-4.20-fold.shtml">4.20 折叠</a></li>
+					<li><a href="Hui-4.21-maskBar.shtml">4.21 遮罩条</a></li>
+					<li><a href="Hui-4.22-comment.shtml">4.22 评论列表</a></li>
+					<li><a href="Hui-4.23-footer.shtml">4.23 页脚</a></li>
+					<li><a href="Hui-4.24-star.shtml">4.24 星星评价</a></li>
+					<li><a href="Hui-4.25-tooltip.shtml">4.25 tooltip效果</a></li>
+					<li><a href="Hui-4.26-popover.shtml">4.26 popover效果</a></li>
+					<!--<li><a href="Hui-4.26-select-category.shtml">4.26 分类检索</a></li>-->
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu_5">
+			<dt>5. 页面<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a href="404.shtml" target="_blank">5.1 404页面</a></li>
+					<!--<li><a href="Hui-5.1-blog-list.shtml">5.2 博客列表页</a></li>
+					<li><a href="Hui-5.2-blog-show.shtml">5.3 博客详情页</a></li>
+					<li><a href="Hui-5.3-aboutus.shtml">5.4 关于我们页</a></li>
+					<li><a href="Hui-5.4-help-list.shtml">5.5 帮助列表页</a></li>
+					<li><a href="Hui-5.5-help-show.shtml">5.6 帮助详情页</a></li> -->
+					<li>&nbsp;</li>
+					<li>&nbsp;</li>
+				</ul>
+			</dd>
+		</dl>
+	</div>
+</aside>
+ 
+<div class="dislpayArrow hidden-xs"><a class="pngfix" href="javascript:void(0);" onClick="displaynavbar(this)"></a></div>
+  <section class="Hui-article-box">
+    <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> <a class="maincolor" href="/">首页</a><span class="c-999 en">&gt;</span>基础<span class="c-999 en">&gt;</span><span class="c-666">排版</span></nav>
+    <div class="Hui-article">
+      <div class="cl pd-20">
+        <h1 class="page_title">排版</h1>
+        <h2 id="title">3.1.1  标题</h2>
+        <div class="codeView docs-example">
+          <h1>h1. 大标题<small>小标题</small></h1>
+          <h2>h2. 大标题<small>小标题</small></h2>
+          <h3>h3. 大标题<small>小标题</small></h3>
+          <h4>h4. 大标题<small>小标题</small></h4>
+          <h5>h5. 大标题<small>小标题</small></h5>
+          <h6>h6. 大标题<small>小标题</small></h6>
+        </div>
+        <h3>HTML代码</h3><pre class="prettyprint linenums">
+&lt;h1&gt;h1. 大标题&lt;small&gt;小标题&lt;/small&gt;&lt;/h1&gt;
+&lt;h2&gt;h2. 大标题&lt;small&gt;小标题&lt;/small&gt;&lt;/h2&gt;
+&lt;h3&gt;h3. 大标题&lt;small&gt;小标题&lt;/small&gt;&lt;/h3&gt;
+&lt;h4&gt;h4. 大标题&lt;small&gt;小标题&lt;/small&gt;&lt;/h4&gt;
+&lt;h5&gt;h5. 大标题&lt;small&gt;小标题&lt;/small&gt;&lt;/h5&gt;
+&lt;h6&gt;h6. 大标题&lt;small&gt;小标题&lt;/small&gt;&lt;/h6&gt;</pre>
+        <h3>CSS代码</h3><pre class="prettyprint linenums">h1,h2,h3,h4,h5,h6{font-weight:500;line-height:1.1;color:inherit}
+h1 small,h2 small,h3 small,h4 small,h5 small,h6 small,h1 .small,h2 .small,h3 .small,h4 .small,h5 .small,h6 .small{font-weight:normal;line-height:1;color:#999}
+h1,h2,h3{margin-top:20px;margin-bottom:10px}
+h1 small,h2 small,h3 small,h1 .small,h2 .small,h3 .small{font-size:65%}
+h4,h5,h6{margin-top:10px;margin-bottom:10px}
+h4 small,h5 small,h6 small,h4 .small,h5 .small,h6 .small{font-size:75%}
+h1{font-size:36px}
+h2{font-size:30px}
+h3{font-size:24px}
+h4{font-size:18px}
+h5{font-size:14px}
+h6{font-size:12px}</pre>
+        <p>可根据自己的实际项目情况进行重写，为了保持h-ui正常升级，最好保持h-ui文件不动，在自己定义的css文件中重写。</p>
+        <h2 id="qiangdiao">3.1.2  强调</h2>
+        <div class="codeView docs-example f-14">
+          <p>这是段落，向下10像素间距</p>
+          <p>
+            <smail>小型文本，是父容器字体大小的85%</smail>
+          </p>
+          <p><strong>重要文本，加粗显示</strong></p>
+          <p><em>被强调的文本，斜体显示</em></p>
+          <p><u>带下划线的文本</u></p>
+          <cite>引用的内容</cite>
+          <p>
+            <mark>突出显示文本</mark>
+          </p>
+          <p><del>带删除线的文本</del></p>
+          <p class="uppercase">guojunhui 大写字母</p>
+          <p class="lowercase">GuoJUNHUI 小写字母</p>
+          <p class="capitalize">guojunhui 首字母大写</p>
+        </div>
+        <h3>HTML代码</h3><pre class="prettyprint linenums">
+&lt;p&gt;这是段落，向下10像素间距&lt;/p&gt;
+&lt;smail&gt;小型文本，是父容器字体大小的85%&lt;/smail&gt;
+&lt;strong&gt;重要文本，加粗显示&lt;/strong&gt;
+&lt;em&gt;被强调的文本，斜体显示&lt;/em&gt;
+&lt;u&gt;带下划线的文本&lt;/u&gt;
+&lt;cite&gt;引用&lt;/cite&gt;
+&lt;mark&gt;突出显示文本&lt;/mark&gt;
+&lt;del&gt;带删除线的文本&lt;/del&gt;
+&lt;p class=&quot;uppercase&quot;&gt;guojunhui 大写字母&lt;/p&gt;
+&lt;p class=&quot;lowercase&quot;&gt;GuoJUNHUI 小写字母&lt;/p&gt;
+&lt;p class=&quot;capitalize&quot;&gt;guojunhui 首字母大写&lt;/p&gt;</pre>
+        <h3>CSS代码</h3><pre class="prettyprint linenums">
+p{margin-bottom:10px}		/*段落*/
+small{font-size:85%}		/*小型文本*/
+b,strong {font-weight: bold}	/*重要的文本，加粗*/
+em{font-style:italic}		/*被强调的文本*/
+i{}				/*斜体*/
+u{}				/*加下划线*/
+cite{font-style:normal}		/*引用*/
+mark{color:#000;background:#ff0}/*突出显示文本*/
+var{}				/*变量*/
+kbd{}				/*键盘文本*/
+code{}				/*计算机代码文本*/
+dfn{font-style: italic}	/*一个定义项目*/
+del{font-family:Simsun}		/*删除线*/
+code,kbd,pre,samp {font-family: monospace, serif;font-size: 1em}
+pre{white-space: pre-wrap}	/*预格式化的文本*/
+.uppercase{text-transform:uppercase} /*文字大写*/
+.lowercase{text-transform:lowercase} /*文字小写*/
+.capitalize{text-transform:capitalize} /*首字母大写*</pre>
+        <h2 id="textAlign">3.1.3  对齐</h2>
+        <div class="codeView docs-example">
+          <div class="text-l">左对齐</div>
+          <div class="text-c">居中对齐</div>
+          <div class="text-r">右对齐</div>
+          <table class="table table-border table-bordered">
+            <tr>
+              <th class="va-t" height="50">居上对齐</th>
+              <th class="va-m">居中对齐</th>
+              <th class="va-b">距底对齐</th>
+            </tr>
+            <tr>
+              <td class="va-t" height="50">.va-t</td>
+              <td class="va-m">.va-m</td>
+              <td class="va-b">.va-b</td>
+            </tr>
+          </table>
+        </div>
+        <h3>HTML代码</h3><pre class="prettyprint linenums">
+&lt;div class=&quot;text-l&quot;&gt;左对齐&lt;/div&gt;
+&lt;div class=&quot;text-c&quot;&gt;居中对齐&lt;/div&gt;
+&lt;div class=&quot;text-r&quot;&gt;右对齐&lt;/div&gt;
+&lt;table class=&quot;table table-border table-bordered&quot;&gt;
+  &lt;tr&gt;
+    &lt;th class=&quot;va-t&quot; height=&quot;50&quot;&gt;居上对齐&lt;/th&gt;
+    &lt;th class=&quot;va-m&quot;&gt;居中对齐&lt;/th&gt;
+    &lt;th class=&quot;va-b&quot;&gt;距底对齐&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&quot;va-t&quot; height=&quot;50&quot;&gt;.va-t&lt;/td&gt;
+    &lt;td class=&quot;va-m&quot;&gt;.va-m&lt;/td&gt;
+    &lt;td class=&quot;va-b&quot;&gt;.va-b&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</pre>
+        <h3>CSS代码</h3><pre class="prettyprint linenums">
+.text-l{text-align:left}/*水平居左*/
+.text-r{text-align:right}/*水平居中*/
+.text-c{text-align:center}/*水平居右*/
+.va *{vertical-align:sub!important;*vertical-align:middle!important;_vertical-align:middle!important}
+.va-t{ vertical-align:top!important}/*上下居顶*/
+.va-m{ vertical-align:middle!important}/*上下居中*/
+.va-b{ vertical-align:bottom!important}/*上下居底*/</pre>
+        <h2 id="position">3.1.4  定位</h2>
+        <h3>HTML代码</h3><pre class="prettyprint linenums">class=&quot;pos-r|pos-a|pos-f&quot;</pre>
+        <p>.pos-r 相对定位， .pos-a 绝对定位， .pos-f 固定</p>
+        <h3>CSS代码</h3><pre class="prettyprint linenums">
+.pos-r{position:relative}
+.pos-a{position:absolute}
+.pos-f{position:fixed}</pre>
+        <h2 id="float">3.1.5  浮动</h2>
+        <div class="codeView docs-example">
+          <div class="cl"><span class="l">左浮动</span><span class="r">右浮动</span></div>
+        </div>
+        <h3>HTML代码</h3><pre class="prettyprint linenums">
+&lt;div class=&quot;cl&quot;&gt;&lt;span class=&quot;f-l&quot;&gt;左浮动&lt;/span&gt;&lt;span class=&quot;f-r&quot;&gt;右浮动&lt;/span&gt;&lt;/div&gt;</pre>
+        <p>.f-l 左浮动，.f-r 右浮动</p>
+        <h3>CSS代码</h3><pre class="prettyprint linenums">.f-l{float:left!important;_display:inline}
+.f-r{float:right!important;_display:inline}</pre>
+        <p><span class="label label-warning radius">注意：</span> 浮动的父级元素一定要用 <span class="c_blue">cl</span> 清除浮动，否则高度会无法撑开。</p>
+        <p>/*控制元素对定位的位置：居左|居右|j居上|居下*/</p>
+        <p><span class="label label-warning radius">注意：</span>须配合position 属性使用。</p><pre class="prettyprint linenums">.left{ left:0; right:auto}
+.right{ right:0; left:auto}
+.top{ top:auto; bottom:0}
+.bottom{ top:0; bottom:auto}</pre>
+        <h2 id="margin">3.1.6 文字单行溢出省略号</h2>
+        <div class="codeView docs-example">
+          <div class="text-overflow" style="width:300px;">我是很长很长的文字，我的所在的容器尺寸有限，所以我溢出了，并且显示省略号</div>
+        </div>
+        <h3>HTML代码</h3><pre class="prettyprint linenums">&lt;div class=&quot;text-overflow&quot; style=&quot;width:300px;&quot;&gt;我是很长很长的文字，我的所在的容器尺寸有限，所以我溢出了，并且显示省略号&lt;/div&gt;</pre>
+        <h3>CSS代码</h3><pre class="prettyprint linenums">.text-overflow{overflow: hidden;text-overflow: ellipsis;white-space: nowrap}</pre>
+        <h2 id="margin">3.1.7 线条</h2>
+        <div class="codeView docs-example">
+          <div class="line"></div>
+        </div>
+        <h3>HTML代码</h3><pre class="prettyprint linenums">&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;</pre>
+        <h3>CSS代码</h3><pre class="prettyprint linenums">.line{ font-size: 0px; line-height: 0px; border-top: solid 1px #ddd; float: none}</pre>
+        <h2 id="margin">3.1.8  外边距</h2>
+        <div class="codeView docs-example">
+          <div style="border-bottom:solid 1px #c00;">参考线</div>
+          <div class="mt-10" style="border:solid 1px #ddd; background-color:#428BCA;padding:20px">蓝色div，距上面红色线条10像素</div>
+        </div>
+        <h3>HTML代码</h3><pre class="prettyprint linenums">&lt;div class=&quot;mt-10&quot;&gt;距上10像素&lt;/div&gt;</pre>
+        <p><span class="c_blue">.mt</span> 表示上边距，<span class="c_blue">.mb</span> 表示下边距，<span class="c_blue">.ml</span> 表示左边距，<span class="c_blue">.mr</span> 表示右边距</p>
+        <p>支持任何块级元素，如果行内元素要想使用margin，请使用
+          <mark>display：block</mark>
+          先将其转化为块级元素 </p>
+        <h3>CSS代码</h3><pre class="prettyprint linenums">.mt-5{margin-top:5px}/*距上5像素*/
+.mt-10{margin-top:10px}/*距上10像素*/
+.mt-15{margin-top:15px}/*距上15像素*/
+.mt-20{margin-top:20px}/*距上20像素*/
+.mt-25{margin-top:25px}/*距上25像素*/
+.mt-30{margin-top:30px}/*距上30像素*/
+.mt-35{margin-top:35px}/*距上35像素*/
+.mt-40{margin-top:40px}/*距上40像素*/
+.mt-50{margin-top:50px}/*距上50像素*/
+
+.mb-5{margin-bottom:5px}/*距下5像素*/
+.mb-10{margin-bottom:10px}/*距下10像素*/
+.mb-15{margin-bottom:15px}/*距下15像素*/
+.mb-20{margin-bottom:20px}/*距下20像素*/
+.mb-25{margin-bottom:25px}/*距下25像素*/
+.mb-30{margin-bottom:30px}/*距下30像素*/
+.mb-35{margin-bottom:35px}/*距下35像素*/
+.mb-40{margin-bottom:40px}/*距下40像素*/
+.mb-50{margin-bottom:50px}/*距下50像素*/
+
+.ml-5{margin-left:5px}/*距左5像素*/
+.ml-10{margin-left:10px}/*距左10像素*/
+.ml-15{margin-left:15px}/*距左15像素*/
+.ml-20{margin-left:20px}/*距左20像素*/
+.ml-30{margin-left:30px}/*距左30像素*/
+.ml-40{margin-left:40px}/*距左40像素*/
+.ml-50{margin-left:50px}/*距左50像素*/
+
+.mr-5{margin-right:5px}/*距右5像素*/
+.mr-10{margin-right:10px}/*距右10像素*/
+.mr-15{margin-right:15px}/*距右15像素*/
+.mr-20{margin-right:20px}/*距右20像素*/
+.mr-30{margin-right:30px}/*距右30像素*/
+.mr-40{margin-right:40px}/*距右40像素*/
+.mr-50{margin-right:50px}/*距右50像素*/</pre>
+        <p><span class="label label-warning radius">注意：</span> 上下模块不要同时使用margin-top和margin-bottom，会存在兼容性问题，所以上下模块之间的间距统一使用下一个模块的margin-top来实现，另一个优点是：如果没有下一个模块也不会多出一段空隙。</p>
+        <p>margin的兼容性问题：div设置左浮动，margin-left在ie中会出现2倍边距bug，<strong>解决办法：</strong>在style里面添加display:inline。</p>
+        <h2 id="padding">3.1.9 内填充</h2>
+        <div class="codeView docs-example">
+          <div class="pd-10" style="background-color:#e5e5e5; border:solid 1px #ddd">
+            <div style=" background-color:#fff">10像素填充，来点背景效果更明显</div>
+          </div>
+        </div>
+        <h3>HTML代码</h3><pre class="prettyprint linenums">&lt;div class=&quot;pd-10&quot;&gt;10像素填充&lt;/div&gt;</pre>
+        <h3>CSS代码</h3><pre class="prettyprint linenums">.pt-5{padding-top:5px}/*上填充5像素*/
+.pt-10{padding-top:10px}/*上填充10像素*/
+.pt-15{padding-top:15px}/*上填充15像素*/
+.pt-20{padding-top:20px}/*上填充20像素*/
+
+.pb-5{padding-bottom:5px}/*下填充5像素*/
+.pb-10{padding-bottom:10px}/*下填充10像素*/
+.pb-15{padding-bottom:15px}/*下填充15像素*/
+.pb-20{padding-bottom:20px}/*下填充20像素*/
+
+.pl-5{padding-left:5px}/*左填充5像素*/
+.pl-10{padding-left:10px}/*左填充10像素*/
+.pl-15{padding-left:15px}/*左填充15像素*/
+.pl-20{padding-left:20px}/*左填充20像素*/
+
+.pr-5{padding-right:5px}/*右填充5像素*/
+.pr-10{padding-right:10px}/*右填充10像素*/
+.pr-15{padding-right:15px}/*右填充15像素*/
+.pr-20{padding-right:20px}/*右填充20像素*/
+
+.pd-5{padding:5px}/*填充5像素*/
+.pd-10{padding:10px}/*填充10像素*/
+.pd-15{padding:15px}/*填充15像素*/
+.pd-20{padding:20px}/*填充20像素*/</pre>
+        <h2 id="boxborder">3.1.10  边框，css3圆角</h2>
+        <div class="codeView docs-example">
+          <div class="bk-gray pd-20">边框</div>
+          <div class="bk-gray radius pd-20 mt-10">圆角边框</div>
+        </div>
+        <h3>HTML代码</h3><pre class="prettyprint linenums">&lt;div class=&quot;bk-gray&quot;&gt;边框&lt;/div&gt;&lt;div class=&quot;bk-gray radius&quot;&gt;圆角边框&lt;/div&gt;</pre>
+        <h3>CSS代码</h3><pre class="prettyprint linenums">.bk-gray{border:solid 1px #ddd}
+.radius{border-radius:4px; overflow:hidden}
+.size-MINI.radius{ border-radius:3px}
+.size-L.radius{ border-radius:5px}
+.size-XL.radius{ border-radius:6px}
+.round{border-radius:1000px; overflow:hidden}
+.circle{ border-radius:50%; overflow:hidden}</pre>
+        <h2 id="boxShadow">3.1.11  css3阴影</h2>
+        <div class="codeView docs-example">
+          <div class="box-shadow">css3阴影效果</div>
+          <span class="text-shadow">css3文字阴影效果</span> </div>
+        <h3>HTML代码</h3><pre class="prettyprint linenums">&lt;div class=&quot;box-shadow&quot;&gt;css3阴影效果&lt;/div&gt;
+&lt;span class=&quot;text-shadow&quot;&gt;css3文字阴影效果&lt;/span&gt;</pre>
+        <h3>CSS代码</h3><pre class="prettyprint linenums">.box-shadow{-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.1);box-shadow:0 1px 2px rgba(0,0,0,0.1)}
+.text-shadow{-webkit-text-shadow:0 0 2px rgba(0,0,0,0.2);text-shadow:0 0 2px rgba(0,0,0,0.2)}</pre>
+        <p>圆角阴影可以组合使用。</p>
+        <div class="codeView docs-example">
+          <div class="bk-gray box-shadow radius text-c pd-20">css3 圆角阴影效果</div>
+        </div>
+        <h2 id="fontSize">3.1.12  行内分割竖线</h2>
+        <div class="codeView docs-example"> 注册<span class="pipe">|</span>登录 </div>
+        <h3>HTML代码</h3><pre class="prettyprint linenums">&lt;span class=&quot;pipe&quot;&gt;|&lt;/span&gt;</pre>
+        <h3>CSS代码</h3><pre class="prettyprint linenums">.pipe{margin:0 5px;color:#CCC}</pre>
+        <h2 id="fontSize">3.1.13  文字尺寸</h2>
+        <div class="codeView docs-example">
+          <p class="f-12">12px 字体</p>
+          <p class="f-14">14px 字体</p>
+          <p class="f-16">16px 字体</p>
+          <p class="f-18">18px 字体</p>
+          <p class="f-20">20px 字体</p>
+          <p class="f-24">24px 字体</p>
+          <p class="f-26">26px 字体</p>
+          <p class="f-28">28px 字体</p>
+          <p class="f-30">30px 字体</p>
+        </div>
+        <h3>HTML代码</h3>
+        <p>列出一些常用的，常规字号。</p><pre class="prettyprint linenums">&lt;p class=&quot;f-12&quot;&gt;12px 字体&lt;/p&gt;
+&lt;p class=&quot;f-14&quot;&gt;14px 字体&lt;/p&gt;
+&lt;p class=&quot;f-16&quot;&gt;16px 字体&lt;/p&gt;
+&lt;p class=&quot;f-18&quot;&gt;18px 字体&lt;/p&gt;
+&lt;p class=&quot;f-20&quot;&gt;20px 字体&lt;/p&gt;
+&lt;p class=&quot;f-24&quot;&gt;24px 字体&lt;/p&gt;
+&lt;p class=&quot;f-26&quot;&gt;26px 字体&lt;/p&gt;
+&lt;p class=&quot;f-28&quot;&gt;28px 字体&lt;/p&gt;
+&lt;p class=&quot;f-30&quot;&gt;30px 字体&lt;/p&gt;</pre>
+        <h3>CSS代码</h3><pre class="prettyprint linenums">.f-12{font-size:12px}
+.f-14{font-size:14px}
+.f-16{font-size:16px}
+.f-18{font-size:18px}
+.f-20{font-size:20px}
+.f-24{font-size:24px}
+.f-26{font-size:26px}
+.f-28{font-size:28px}
+.f-30{font-size:30px}</pre>
+        <h2 id="lineHeight">3.1.14  文字行距</h2>
+        <div class="codeView docs-example">
+          <p class="lh-16 bk-gray">16像素行距</p>
+          <p class="lh-18 bk-gray">18像素行距</p>
+          <p class="lh-20 bk-gray">20像素行距</p>
+          <p class="lh-22 bk-gray">22像素行距</p>
+          <p class="lh-24 bk-gray">24像素行距</p>
+          <p class="lh-26 bk-gray">26像素行距</p>
+          <p class="lh-28 bk-gray">28像素行距</p>
+          <p class="lh-30 bk-gray">30像素行距</p>
+        </div>
+        <p>根据黄金比例0.618，h-ui在css reset中已将全局body,th,td,button,input,select,textarea行高定为文本的1.6倍。</p>
+        <p>当然如果个人不喜欢，可以二次重写。</p>
+        <h3>HTML代码</h3><pre class="prettyprint linenums">&lt;p class=&quot;lh-16&quot;&gt;16像素行距&lt;/p&gt;
+&lt;p class=&quot;lh-18&quot;&gt;18像素行距&lt;/p&gt;
+&lt;p class=&quot;lh-20&quot;&gt;20像素行距&lt;/p&gt;
+&lt;p class=&quot;lh-22&quot;&gt;22像素行距&lt;/p&gt;
+&lt;p class=&quot;lh-24&quot;&gt;24像素行距&lt;/p&gt;
+&lt;p class=&quot;lh-26&quot;&gt;26像素行距&lt;/p&gt;
+&lt;p class=&quot;lh-28&quot;&gt;28像素行距&lt;/p&gt;
+&lt;p class=&quot;lh-30&quot;&gt;30像素行距&lt;/p&gt;</pre>
+        <h3>CSS代码</h3><pre class="prettyprint linenums">.lh-16{line-height:16px}/*16像素行距*/
+.lh-18{line-height:18px}/*18像素行距*/
+.lh-20{line-height:20px}/*20像素行距*/
+.lh-22{line-height:22px}/*22像素行距*/
+.lh-24{line-height:24px}/*24像素行距*/
+.lh-26{line-height:26px}/*26像素行距*/
+.lh-28{line-height:28px}/*28像素行距*/
+.lh-30{line-height:30px}/*30像素行距*/</pre>
+        <h2 id="fontColor">3.1.15 文字颜色</h2>
+        <div class="codeView docs-example">
+          <p class="c-primary">主色</p>
+          <p class="c-secondary">次色</p>
+          <p class="c-success">强调色 - 成功</p>
+          <p class="c-danger">强调色 - 危险</p>
+          <p class="c-warning">强调色 - 警告</p>
+          <p class="c-error">强调色 - 出错</p>
+          <p class="c-333">辅助色 - #333333灰</p>
+          <p class="c-666">辅助色 - #666666灰</p>
+          <p class="c-999">辅助色 - #999999灰</p>
+          <p class="c-red">标准色 - 红色</p>
+          <p class="c-green">标准色 - 绿色</p>
+          <p class="c-blue">标准色 - 蓝色</p>
+          <p class="c-white"><span style="background-color:#06C">标准色 - 白色，为了看到效果，加个背景</span></p>
+          <p class="c-black">标准色 - 黑色字体</p>
+          <p class="c-orange">标准色 - 橙色</p>
+        </div>
+        <h3>HTML代码</h3><pre class="prettyprint linenums">&lt;p class=&quot;c-primary&quot;&gt;主色&lt;/p&gt;
+&lt;p class=&quot;c-secondary&quot;&gt;次色&lt;/p&gt;
+&lt;p class=&quot;c-success&quot;&gt;强调色-成功&lt;/p&gt;
+&lt;p class=&quot;c-error&quot;&gt;强调色-错误&lt;/p&gt;
+&lt;p class=&quot;c-warning&quot;&gt;强调色-警告&lt;/p&gt;
+&lt;p class=&quot;c-333&quot;&gt;辅助色-#333333灰色&lt;/p&gt;
+&lt;p class=&quot;c-666&quot;&gt;辅助色-#666666灰色&lt;/p&gt;
+&lt;p class=&quot;c-999&quot;&gt;辅助色-#999999灰色&lt;/p&gt;
+&lt;p class=&quot;c-red&quot;&gt;标准色-红色&lt;/p&gt;
+&lt;p class=&quot;c-green&quot;&gt;标准色-绿色&lt;/p&gt;
+&lt;p class=&quot;c-blue&quot;&gt;标准色-蓝色&lt;/p&gt;
+&lt;p class=&quot;c-white&quot;&gt;标准色-白色&lt;/p&gt;
+&lt;p class=&quot;c-black&quot;&gt;标准色-黑色&lt;/p&gt;
+&lt;p class=&quot;c-orange&quot;&gt;标准色-橙色&lt;/p&gt;</pre>
+        <h3>CSS代码</h3><pre class="prettyprint linenums">/*主要颜色*/
+.c-primary,.c-primary a,a.c-primary{color:#5a98de}
+.c-primary a:hover,a.c-primary:hover{ color:#5a98de}
+
+/*次主色*/
+.c-secondary,.c-secondary a,a.c-secondary{color:#555}
+.c-secondary a:hover,a.c-secondary:hover{ color:#555}
+
+/*强调色—成功*/
+.c-success,.c-success a,a.c-success{color:#5eb95e}
+.c-success a:hover,a.c-success:hover{ color:#5eb95e}
+
+/*强调色—危险*/
+.c-danger,.c-danger a,a.c-danger{color:#dd514c}
+.c-danger a:hover,a.c-danger:hover{ color:#dd514c}
+
+/*强调色—警告*/
+.c-warning,.c-warning a,a.c-warning{color:#f37b1d}
+.c-warning a:hover,a.c-warning:hover{ color:#f37b1d}
+
+/*强调色—错误*/
+.c-error,.c-error a,a.c-error{color:#c00}
+.c-error a:hover,a.c-error:hover{ color:#c00}
+
+/*辅助色—浅黑*/
+.c-333,.c-333 a,a.c-333{color:#333}
+.c-333 a:hover,a.c-333:hover{ color:#333}
+
+/*辅助色—灰色*/
+.c-666,.c-666 a,a.c-666{color:#666}
+.c-666 a:hover,a.c-666:hover{ color:#666}
+.c-999,.c-999 a,a.c-999{color:#999}
+.c-999 a:hover,a.c-999:hover{color:#999}
+
+/*标准色—红色*/
+.c-red,.c-red a,a.c-red{color:red}
+.c-red a:hover,a.c-red:hover{ color:red}
+
+/*标准色—绿色*/
+.c-green,.c-green a,a.c-green{color:green}
+.c-red a:hover,a.c-red:hover{color:green}
+
+/*标准色—蓝色*/
+.c-blue,.c-blue a,a.c-blue{color:blue}
+.c-blue a:hover,a.c-blue:hover{color:blue}
+
+/*标准色—白色*/
+.c-white,.c-white a,a.c-white{color:white}
+.c-white a:hover,a.c-white:hover{color:white}
+
+/*标准色—黑色*/
+.c-black,.c-black a{color:black}
+.c-black a:hover,a.c-black:hover{color:black}
+
+/*标准色—橙色*/
+.c-orange,.c-orange a,a.c-orange{color:orange}
+.c-orange a:hover,a.c-orange:hover{color:orange}</pre>
+        <h2 id="fontMuted">3.1.16 文字颜色强调</h2>
+        <p>从2.0起废弃3.1.16 文字强调，字体颜色全部放入到3.1.15。</p>
+        <h2 id="abbr">3.1.17 缩略语</h2>
+        <h3>HTML代码</h3>
+        <div class="codeView docs-example"> 这是缩略语 <abbr title="User Interface" class="initialism">UI</abbr> </div>
+        <h3>HTML代码</h3><pre class="prettyprint linenums">&lt;abbr title=&quot;User Interface&quot; class=&quot;initialism&quot;&gt;UI&lt;/abbr&gt;</pre>
+        <h3>CSS代码</h3><pre class="prettyprint linenums">abbr[title],abbr[data-original-title]{cursor:help;border-bottom:1px dotted #999}
+abbr.initialism{font-size:90%;text-transform:uppercase}</pre>
+        <h2 id="address">3.1.18 地址</h2>
+        <div class="codeView docs-example">
+          <address>
+          北京市海淀区上地……
+          </address>
+        </div>
+        <h3>HTML代码</h3><pre class="prettyprint linenums">&lt;address&gt;北京市海淀区上地……&lt;/address&gt;</pre>
+        <h3>CSS代码</h3><pre class="prettyprint linenums">address{display:block;margin-bottom:20px;font-style:normal;line-height:20px}</pre>
+        <h2 id="blockquote">3.1.19 引用</h2>
+        <div class="codeView docs-example">
+          <blockquote>这是引用的内容
+            <p>p标签显示的引用内容</p>
+          <small>small标签显示小号字体</small></blockquote>
+          <blockquote class="text-r">这是引用的内容，右对齐效果
+            <p>p标签显示的引用内容</p>
+          <small>small标签显示小号字体</small></blockquote>
+        </div>
+        <h3>HTML代码</h3><pre class="prettyprint linenums">&lt;blockquote&gt;这是引用的内容&lt;p&gt;p标签显示的引用内容&lt;/p&gt;&lt;small&gt;small标签显示小号字体&lt;/small&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&quot;text-r&quot;&gt;这是引用的内容，右对齐效果&lt;p&gt;p标签显示的引用内容&lt;/p&gt;&lt;small&gt;small标签显示小号字体&lt;/small&gt;&lt;/blockquote&gt;</pre>
+        <h3>CSS代码</h3><pre class="prettyprint linenums">blockquote{padding:0 0 0 15px;margin:0 0 20px;border-left:5px solid #eee}
+blockquote p{margin-bottom:0;font-size:17.5px;font-weight:300;line-height:1.25}
+blockquote small{display:block;line-height:20px;color:#999}
+blockquote small:before{content:'\2014 \00A0'}
+blockquote.text-r{padding-right:15px;padding-left:0;border-right:5px solid #eee;border-left:0}
+blockquote.text-r p,blockquote.text-r small{text-align:right}
+blockquote.text-r small:before{content:''}
+blockquote.text-r small:after{content:'\00A0 \2014'}
+q:before,q:after,blockquote:before,blockquote:after{content:&quot;&quot}
+q {/*短的引用*/quotes: &quot;\201C&quot; &quot;\201D&quot; &quot;\2018&quot; &quot;\2019&quot}</pre>
+        <h2 id="subSup">3.1.20 上标 下标</h2>
+        <div class="codeView docs-example"> 平方米m<sup>2</sup><br>
+          二氧化碳CO<sub>2</sub> </div>
+        <h3>HTML代码</h3><pre class="prettyprint linenums">m&lt;sup&gt;2&lt;/sup&gt;
+CO&lt;sub&gt;2&lt;/sub&gt;</pre>
+        <h3>CSS代码</h3><pre class="prettyprint linenums">sub,sup{position:relative;font-size:75%;line-height:0;vertical-align:baseline}
+sup{top:-0.5em}
+sub{bottom:-0.25em}</pre>
+        <h2 id="content">3.1.21 内容样式</h2>
+        <div class="codeView docs-example">
+          <div class="content cl">
+            <p class="indent">content是内容样式，14号字体，25px行高，遇到&lt;P&gt;段落标签会自动首行缩进两个字符，如果换行就用&lt;br&gt;。<strong>重点显示就用</strong>&lt;strong&gt;&lt;/strong&gt;便签。切目前主流的门户网站，如：腾讯、网易、新浪等资讯详情页采用的都是这个效果。简单、优雅、规范。</p>
+            <p class="indent">再次强烈建议采用最源生的html标签进行手动格式化，抛弃像word那样的后台编辑器，因为它会产生非常多的冗余代码。做过编辑的朋友都知道，如过用cms系统后台自带的编辑器进行可视化编辑是件很辛苦的事。经常把格式搞的一团糟，各种标签如font、内链的style样式一坨一坨的。标签也很容易嵌套出错，或者无法闭合。更重要的一点是冗余的代码增加服务器的负载，影响网页加载速度，很多人可能不在乎这些，那是因为你的网站访问量还没有达到一定的数量级。对于一个访问量千万级的，上亿级别的网站，每节省几个字节都意味着节约更多的带宽，省掉大把的银子。</p>
+            <p class="indent">如果是从网络上转载文章的编辑，最好将文章先拷贝到记事本去除下格式，然后再进行手动添加标签进行格式化。</p>
+            <p class="indent">说到这里肯定会有一些小编喷我了，搞代码那是工程师的事，让我们搞代码，有没有搞错。如果你不会写html编码，那只能说明你还不是个专业的编辑，专业编辑就应该具备一定的html手写编码能力。</p>
+            <p class="indent"><strong>切忌使用过多的修饰，华而不实，很山寨，很雷人。</strong></p>
+          </div>
+        </div>
+        <h3>HTML代码</h3><pre class="prettyprint linenums">&lt;div class=&quot;content&quot;&gt;
+  &lt;p&gt;content是内容样式，14号字体，25px行高，段落自动首行缩进两个字符。&lt;/p&gt;
+&lt;/div&gt;</pre>
+        <h3>CSS代码</h3><pre class="prettyprint linenums">.content{position:relative;font-size:14px;line-height:25px;overflow:hidden;text-align:left}
+.content h3{ margin-top:20px;font-size:16px}
+.content p{text-indent:2em;margin-top:20px}
+.content ul{text-indent:2em}</pre>
+        <h2 id="ulolli">3.1.22 列表</h2>
+        <div class="codeView docs-example">
+          <ul>
+            <li>无序列表无序列表无序列表</li>
+          </ul>
+          <ol>
+            <li>有序列表有序列表有序列表</li>
+          </ol>
+        </div>
+        <h3>HTML代码</h3><pre class="prettyprint linenums">&lt;ul&gt;
+  &lt;li&gt;无序列表&lt;/li&gt;
+  &lt;li&gt;无序列表&lt;/li&gt;
+  &lt;li&gt;无序列表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol class=&quot;linenums&quot;&gt;
+  &lt;li&gt;有序列表&lt;/li&gt;
+  &lt;li&gt;有序列表&lt;/li&gt;
+  &lt;li&gt;有序列表&lt;/li&gt;
+&lt;/ol&gt;</pre>
+        <h3>CSS代码</h3><pre class="prettyprint linenums">ul.unstyled,ol.unstyled{margin-left:0;list-style:none}
+ul.inline,ol.inline{margin-left:0;list-style:none}
+ul.inline&gt;li,ol.inline&gt;li{display:inline-block;*display:inline;padding-right:5px;padding-left:5px;*zoom:1}
+ol.linenums{list-style:decimal outside none;margin:0 0 0 22px}/* IE indents via margin-left */
+.tlist li{line-height:22px;overflow:hidden;white-space:nowrap}/*禁止换行*/
+.tlist .time{ font-size:12px; font-family:Arial; color:#999}</pre>
+
+        <h2>排行榜</h2>
+        <div class="codeView docs-example">
+          <ol class="top-list">
+            <li class="top"><em>1</em><a href="#">排行榜列表</a><span class="date">12</span></li>
+            <li class="top"><em>2</em><a href="#">排行榜列表</a><span class="date">12</span></li>
+            <li class="top"><em>3</em><a href="#">排行榜列表</a><span class="date">12</span></li>
+            <li><em>4</em><a href="#">排行榜列表</a><span class="date">12</span></li>
+            <li><em>5</em><a href="#">排行榜列表</a><span class="date">12</span></li>
+            <li><em>6</em><a href="#">排行榜列表</a><span class="date">12</span></li>
+            <li><em>7</em><a href="#">排行榜列表</a><span class="date">12</span></li>
+            <li><em>8</em><a href="#">排行榜列表</a><span class="date">12</span></li>
+            <li><em>9</em><a href="#">排行榜列表</a><span class="date">12</span></li>
+            <li><em>10</em><a href="#">排行榜列表</a><span class="date">12</span></li>
+          </ol>
+        </div>
+        <h3>HTML代码</h3><pre class="prettyprint linenums">&lt;ol class=&quot;top-list&quot;&gt;
+  &lt;li class=&quot;top&quot;&gt;&lt;em&gt;1&lt;/em&gt;&lt;a href=&quot;#&quot;&gt;排行榜列表&lt;/a&gt;&lt;span class=&quot;date&quot;&gt;12&lt;/span&gt;&lt;/li&gt;
+  &lt;li class=&quot;top&quot;&gt;&lt;em&gt;2&lt;/em&gt;&lt;a href=&quot;#&quot;&gt;排行榜列表&lt;/a&gt;&lt;span class=&quot;date&quot;&gt;12&lt;/span&gt;&lt;/li&gt;
+  &lt;li class=&quot;top&quot;&gt;&lt;em&gt;3&lt;/em&gt;&lt;a href=&quot;#&quot;&gt;排行榜列表&lt;/a&gt;&lt;span class=&quot;date&quot;&gt;12&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;4&lt;/em&gt;&lt;a href=&quot;#&quot;&gt;排行榜列表&lt;/a&gt;&lt;span class=&quot;date&quot;&gt;12&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;5&lt;/em&gt;&lt;a href=&quot;#&quot;&gt;排行榜列表&lt;/a&gt;&lt;span class=&quot;date&quot;&gt;12&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;6&lt;/em&gt;&lt;a href=&quot;#&quot;&gt;排行榜列表&lt;/a&gt;&lt;span class=&quot;date&quot;&gt;12&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;7&lt;/em&gt;&lt;a href=&quot;#&quot;&gt;排行榜列表&lt;/a&gt;&lt;span class=&quot;date&quot;&gt;12&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;8&lt;/em&gt;&lt;a href=&quot;#&quot;&gt;排行榜列表&lt;/a&gt;&lt;span class=&quot;date&quot;&gt;12&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;9&lt;/em&gt;&lt;a href=&quot;#&quot;&gt;排行榜列表&lt;/a&gt;&lt;span class=&quot;date&quot;&gt;12&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;10&lt;/em&gt;&lt;a href=&quot;#&quot;&gt;排行榜列表&lt;/a&gt;&lt;span class=&quot;date&quot;&gt;12&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;</pre>
+        <h3>CSS代码</h3><pre class="prettyprint linenums">.top-list li{height: 20px;line-height: 20px;margin-bottom: 15px;overflow: hidden;padding-left: 30px;position: relative;text-overflow: ellipsis;vertical-align: bottom;white-space: nowrap}
+.top-list em {background-color: #F8F8F8;border: 1px solid #EBEBEB;color: #333;height: 18px;left: 0;line-height: 18px;position: absolute;text-align: center;top: 0;width: 20px; font-style:normal}
+.top-list .top em{ background-color:#390;border:none;color: #fff;height: 20px;line-height: 20px;width: 22px}
+.top-list .date {color: #999;font-size: 12px;position: absolute;right: 0;top: 0}</pre>
+        <h2 id="dldtdd">3.1.23 描述</h2>
+        <div class="codeView docs-example">
+          <dl>
+            <dt>H-ui</dt>
+            <dd>轻量级前端框架，完全免费!</dd>
+          </dl>
+          <dl class="dl-horizontal cl">
+            <dt>描述</dt>
+            <dd>水平状态的描述</dd>
+          </dl>
+        </div>
+        <h3>HTML代码</h3><pre class="prettyprint linenums">&lt;dl class=&quot;dl-horizontal cl&quot;&gt;&lt;dt&gt;H-ui&lt;/dt&gt;&lt;dd&gt;轻量级前端框架，完全免费!&lt;/dd&gt;&lt;/dl&gt;</pre>
+        <p>.dl-horizontal 水平描述，默认不加为垂直模式。</p>
+        <h3>CSS代码</h3><pre class="prettyprint linenums">
+.dl-horizontal.cl{}
+.dl-horizontal dt{float:left;width:160px;overflow:hidden;clear:left;text-align:right;text-overflow:ellipsis;white-space:nowrap}
+.dl-horizontal dd{margin-left:180px}</pre>
+        <h2>3.1.24 隐藏 显示</h2>
+        <h3>CSS代码</h3><pre class="prettyprint linenums">
+.hide{display:none}[hidden]{display: none}
+.hidden{display:none!important;visibility:hidden!important}
+.f-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}
+[class*="span"].hide,.row-fluid [class*="span"].hide{display:none}
+.show{display:block}
+.invisible{visibility:hidden}</pre>
+        <h2>3.1.25 尺寸</h2>
+        <p>新增尺寸全局类名，用于<strong class="c-primary">表单、按钮、表格、头像、标签</strong>等元素上，要与元素一起配合使用，方能看到效果。</p>
+        <p>PS：它使用起来很简单，就像我们衣服的SIZE，是一个通用单位。不管是上衣、裤子、还是内裤都可使用。</p>
+        <div class="codeView docs-example">
+          <table class="table table-border table-bordered table-bg">
+            <thead>
+              <tr>
+                <th>class=""</th>
+                <th>描述</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>size-MINI</code></td>
+                <td>迷你</td>
+              </tr>
+              <tr>
+                <td><code>size-S</code></td>
+                <td>小</td>
+              </tr>
+              <tr>
+                <td><code>size-M</code></td>
+                <td>中 （默认尺寸，可以不写，可以理解为：均码）</td>
+              </tr>
+              <tr>
+                <td><code>size-L</code></td>
+                <td>稍大</td>
+              </tr>
+              <tr>
+                <td><code>size-XL</code></td>
+                <td>大</td>
+              </tr>
+              <tr>
+                <td><code>size-XXL</code></td>
+                <td>加大</td>
+              </tr>
+              <tr>
+                <td><code>size-XXXL</code></td>
+                <td>超大</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>举例说明</h3>
+        <div class="codeView docs-example">
+          <table class="table table-border table-bordered table-bg">
+            <thead>
+              <tr>
+                <th>class=""</th>
+                <th>表单</th>
+                <th>下拉框</th>
+                <th>按钮</th>
+                <th>头像</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>size-MINI</th>
+                <td><input type="text" value="" placeholder="" class="input-text size-MINI"></td>
+                <td><span class="select-box size-MINI">
+              <select nullmsg="请选择所在城市！" datatype="*" name="" size="1" class="select">
+                <option selected="" value="">请选择城市</option>
+                <option value="1">北京</option>
+                <option value="2">上海</option>
+                <option value="3">广州</option>
+              </select>
+              </span></td>
+                <td><input type="button" class="btn btn-primary size-MINI" value="按钮"></td>
+                <td><img class="avatar size-MINI" src="http://static.h-ui.net/www/home/images/ucnter/avatar-default.jpg"></td>
+              </tr>
+              <tr>
+                <th>size-S</th>
+                <td><input type="text" value="" placeholder="" class="input-text size-S"></td>
+                <td><span class="select-box size-S">
+              <select nullmsg="请选择所在城市！" datatype="*" name="" size="1" class="select">
+                <option selected="" value="">请选择城市</option>
+                <option value="1">北京</option>
+                <option value="2">上海</option>
+                <option value="3">广州</option>
+              </select>
+              </span></td>
+                <td><input type="button" class="btn btn-primary size-S" value="按钮"></td>
+                <td><img class="avatar size-S" src="http://static.h-ui.net/www/home/images/ucnter/avatar-default.jpg"></td>
+              </tr>
+              <tr>
+                <th>size-M</th>
+                <td><input type="text" value="" placeholder="" class="input-text size-M"></td>
+                <td><span class="select-box size-M">
+              <select nullmsg="请选择所在城市！" datatype="*" name="" size="1" class="select">
+                <option selected="" value="">请选择城市</option>
+                <option value="1">北京</option>
+                <option value="2">上海</option>
+                <option value="3">广州</option>
+              </select>
+              </span></td>
+                <td><input type="button" class="btn btn-primary size-M" value="按钮"></td>
+                <td><img class="avatar size-M" src="http://static.h-ui.net/www/home/images/ucnter/avatar-default.jpg"></td>
+              </tr>
+              <tr>
+                <th>size-L</th>
+                <td><input type="text" value="" placeholder="" class="input-text size-L"></td>
+                <td><span class="select-box size-L">
+              <select nullmsg="请选择所在城市！" datatype="*" name="" size="1" class="select">
+                <option selected="" value="">请选择城市</option>
+                <option value="1">北京</option>
+                <option value="2">上海</option>
+                <option value="3">广州</option>
+              </select>
+              </span></td>
+                <td><input type="button" class="btn btn-primary size-L" value="按钮"></td>
+                <td><img class="avatar size-L" src="http://static.h-ui.net/www/home/images/ucnter/avatar-default.jpg"></td>
+              </tr>
+              <tr>
+                <th>size-XL</th>
+                <td><input type="text" value="" placeholder="" class="input-text size-XL"></td>
+                <td><span class="select-box size-XL">
+              <select nullmsg="请选择所在城市！" datatype="*" name="" size="1" class="select">
+                <option selected="" value="">请选择城市</option>
+                <option value="1">北京</option>
+                <option value="2">上海</option>
+                <option value="3">广州</option>
+              </select>
+              </span></td>
+                <td><input type="button" class="btn btn-primary size-XL" value="按钮"></td>
+                <td><img class="avatar size-XL" src="http://static.h-ui.net/www/home/images/ucnter/avatar-default.jpg"></td>
+              </tr>
+              <tr>
+                <th>size-XXL</th>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td><img class="avatar size-XXL" src="http://static.h-ui.net/www/home/images/ucnter/avatar-default.jpg"></td>
+              </tr>
+              <tr>
+                <th>size-XXXL</th>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td><img class="avatar size-XXXL" src="http://static.h-ui.net/www/home/images/ucnter/avatar-default.jpg"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <div class="panel panel-default">
+          <div class="panel-header">推荐课程</div>
+          <div class="panel-body">
+            <ul class="clearfix">
+            <li><a href="http://www.imooc.com/learn/755" target="_blank">CSS深入理解之border</a></li>
+            <li><a href="http://www.imooc.com/learn/710" target="_blank">CSS深入理解之padding</a></li>
+            <li><a href="http://www.imooc.com/learn/680" target="_blank">CSS深入理解之margin</a></li>
+          </ul>
+          </div>
+        </div>
+        
+		    <!--高速版-->
+<div id="SOHUCS" sid=""></div>
+<script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: 'cystmLO0N',
+        conf: 'prod_06226f5d322c22bcd421cb90462fe2a2'
+    });
+</script> 
+      </div>
+      ﻿<footer class="footer mt-20">
+	<div class="container-fluid">
+		<nav>
+			<a href="/aboutHui.shtml" target="_blank">关于H-ui</a>
+			<span class="pipe">|</span>
+			<a href="/copyright.shtml" target="_blank">软件著作权</a>
+			<span class="pipe">|</span>
+			<a href="/juanzeng.shtml" target="_blank">感谢捐赠</a>
+		</nav>
+		<p>Copyright &copy;2013-2017 H-ui.net All Rights Reserved. <br>
+			<a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">京ICP备15015336号-1</a><br>
+			未经允许，禁止转载、抄袭、镜像<br>
+			用心做站，做不一样的站</p>
+	</div>
+</footer>
+<script type="text/javascript" src="http://lib.h-ui.net/prettify.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/h-ui/3.1/js/H-ui.min.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/www/home/js/H-ui.admin.www.js"></script> 
+<script type="text/javascript" src="http://static.h-ui.net/www/home/js/common.js"></script> 
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?080836300300be57b7f34f4b3e97d911";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s)})();
+</script> 
+    </div>
+  </section>
+
+<script type="text/javascript">
+  $("#menu_3 dt").addClass("selected");$("#menu_3 dd").show();;
+</script>
+</body>
+</html>

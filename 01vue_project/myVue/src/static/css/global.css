@@ -1,0 +1,13 @@
+body{
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+}
+.templ{
+	margin-bottom: 50px;
+}
+ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}

@@ -378,6 +378,7 @@ a {
 html,
 body {
   height: 100%;
+  overflow: hidden;
 }
 body > div {
   position: absolute;
@@ -484,26 +485,110 @@ body > div {
 .go-layout .tree {
   width: 29.95rem;
   height: 3.55rem;
-  position: absolute;
   background: url("../images/page1/trees.png") no-repeat center / 100% 100%;
   left: 50%;
   margin-left: -14.975rem;
   bottom: 17.6rem;
+  position: absolute;
 }
 .go-layout .bear-title {
   width: 19.85rem;
   height: 12.2rem;
-  position: absolute;
   background: url("../images/page1/theme-title.png") no-repeat center / 100% 100%;
   left: 50%;
   margin-left: -9.925rem;
   top: 2.1rem;
+  position: absolute;
 }
 .go-layout .bear-title .bear-hello {
   width: 3.75rem;
   height: 3.5rem;
-  position: absolute;
   background: url("../images/page1/hello.png") no-repeat center / 100% 100%;
   top: 1rem;
+  position: absolute;
   right: 0.4rem;
+}
+.go-layout .bear-box {
+  width: 8.35rem;
+  height: 13.95rem;
+  left: 50%;
+  margin-left: -4.175rem;
+  bottom: 17.3rem;
+  position: absolute;
+}
+.go-layout .bear-box .bear {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url("../images/page1/rider2.png") no-repeat center / 100% 100%;
+}
+.go-layout .bear-box .smoke {
+  width: 8.35rem;
+  height: 1.6rem;
+  position: absolute;
+  background: url("../images/page1/jet1.png") no-repeat center / 100% 100%;
+  bottom: 0;
+}
+.waimai-container {
+  width: 100%;
+  height: 100%;
+  top: 0rem;
+  position: absolute;
+  left: 0rem;
+}
+.waimai-container .page1 {
+  background-color: #be8651;
+}
+.waimai-container .page1 .title {
+  left: 1.6rem;
+  position: absolute;
+  top: 1.6rem;
+  padding-left: 1rem;
+}
+.waimai-container .page1 .title h3 {
+  color: #fff;
+  font-size: 3.2rem;
+}
+.waimai-container .page1 .title p {
+  color: #fff;
+  font-size: 1.2rem;
+  padding-bottom: 0.6rem;
+}
+.waimai-container .page1 .title .line {
+  width: 0.25rem;
+  height: 100%;
+  top: 0rem;
+  position: absolute;
+  left: 0rem;
+  background-color: #fff;
+}
+.waimai-container .page1 .bear {
+  width: 8.9rem;
+  height: 6.7rem;
+  background: url("../images/page2/bear1.png") no-repeat center / 100% 100%;
+  right: 1.9rem;
+  position: absolute;
+  bottom: 0rem;
+}
+.waimai-container .page1 .scroll-page1 .bg {
+  width: 28.8rem;
+  height: 28.65rem;
+  position: absolute;
+  background: url("../images/page2/bg1.png") no-repeat center / 100% 100%;
+  bottom: 12.6rem;
+}
+.waimai-container .page1 .scroll-page1 .person {
+  width: 21.95rem;
+  height: 17.45rem;
+  position: absolute;
+  background: url("../images/page2/front1.png") no-repeat center / 100% 100%;
+  bottom: 10rem;
+  z-index: 1;
+}
+.waimai-container .page1 .scroll-page1 .sphere {
+  width: 32rem;
+  height: 17.8rem;
+  position: absolute;
+  background: url("../images/page2/sphere1.png") no-repeat center / 100% 100%;
+  bottom: 0;
 }

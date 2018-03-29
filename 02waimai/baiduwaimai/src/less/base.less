@@ -34,7 +34,7 @@ a {
 } 
 .w(@width) when (ispercentage(@width)){
   width:@width;
-}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+}                     
 .h(@height) when not(ispercentage(@height)){
   height: @height/@bs;
 }
@@ -81,9 +81,11 @@ a {
 }
 .pos_defined(@pos1:top;@top:0;@pos2:right;@right:0){
   @{pos1}:@top/@bs;
+  position: absolute;
   @{pos2}:@right/@bs;
+
 }
 // div{
-//   // .posc(bottom,100,20);
-//   .pos_defined(top;20;right;8);
+//   .pos(100;20);
+//   // .pos_defined(top;20;right;8);
 // }

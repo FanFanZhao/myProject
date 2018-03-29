@@ -592,3 +592,20 @@ body > div {
   background: url("../images/page2/sphere1.png") no-repeat center / 100% 100%;
   bottom: 0;
 }
+.waimai-container .page1 .scroll-page1 .message-container {
+  width: 18.15rem;
+  height: 5.95rem;
+  background: url("../images/page2/txt-bubbl.png") no-repeat center / 100% 100%;
+  bottom: 7rem;
+  position: absolute;
+  right: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.waimai-container .page1 .scroll-page1 .message-container .info {
+  width: 11rem;
+  height: 1.5rem;
+  position: absolute;
+  background: url("../images/page2/txt-work.png") no-repeat center / 100% 100%;
+}

@@ -1,8 +1,8 @@
 const gulp =require('gulp');
 
 const less=require('gulp-less');
-gulp.task('dist',function(){
-	// gulp.src(['src/**/*.*','!src/less/*.*'])
+const lessChanged = require('gulp-less-changed');
+gulp.task('distTask',function(){
 	gulp.src('src/**/*.*')
 	//将less转成css gulp-less
 	.pipe(gulp.dest('dist/'))
@@ -11,12 +11,17 @@ gulp.task('dist',function(){
 gulp.task('less2css',function(){
 	gulp.src('src/less/*.less')
 	//将less转成css gulp-less
+	.pipe(lessChanged())
 	.pipe(less())
 	.pipe(gulp.dest('dist/css/'))
 })
-
+gulp.task('multiLess',function(){
+	gulpMultiProcess('less2css',function () {
+		
+	})
+})
 gulp.task('default',function () {
-	gulp.watch('src/**/*.*',['dist','less2css']);
+	gulp.watch('src/**/*.*',['less2css','distTask']);
 })
 
 const connect=require('gulp-connect');
@@ -24,7 +29,7 @@ const connect=require('gulp-connect');
 gulp.task('server',function(){
 	connect.server({
 	    root: 'dist',
-	    port:'8889',
+	    port:'8899',
 	    livereload: true
 	  });
 	gulp.watch('dist/**/*.*',['reload']);

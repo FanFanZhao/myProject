@@ -4,7 +4,9 @@
 html,
 body {
     height: 100%;
+    overflow:hidden;
 }
+
 body>div{
 	position:absolute;
 	top:0;
@@ -14,7 +16,9 @@ body>div{
 
 .loading{
 	background-color: #ffece9;
-	padding-top:233/@bs;
+	// padding-top:233/@bs;
+	.p2r(233);
+	padding-top: @res;
 	display: flex;
 	flex-direction:column;
 	align-items: center;
@@ -36,4 +40,80 @@ body>div{
 			right:0;
 		}
 	}
+	.info{
+		.wh(220,26);
+		.p2r(40);
+		margin-top:@res;
+		background: url('../images/loading/loading-txt.png')no-repeat center/100% 100%;
+	}
+	.desc{
+		text-align: center;
+		color:#ed8895;
+		position:absolute;
+		width:100%;
+		.p2r(70);
+		bottom:@res;
+		font-size:24/@bs;		
+	}
 }
+.go-layout{
+	background-color: deepskyblue;
+	.clouds{
+		.pos(100%;673;'page1/clouds.png');
+		bottom:0;
+	}
+	.grass1{
+		.pos(100%;396;'page1/grass1.png');
+		bottom:0;
+	}
+	.grass2{
+		.pos(100%;228;'page1/grass2.png');
+		bottom:0;
+	}
+	.btn-container{
+		.pos(208;208;'page1/bear-btn-aft.png';124;113);
+		bottom:86/@bs;
+		left:50%;
+		margin-left: (-208/2/@bs);
+		.circle1{
+			.pos(100%;100%;'page1/circle1.png');
+			top:0;
+			left:0;
+		}
+		.circle2{
+			.pos(100%;100%;'page1/circle2.png');
+			top:0;
+			left:0;
+		}
+	}
+	.waimai-load{
+		position:absolute;
+		width:100%;
+		text-align: center;
+		bottom:38/@bs;
+	}
+	.tree{
+		.pos(599;71;'page1/trees.png');
+		.posc(3;599;352);
+	}
+	.bear-title{
+		.pos(397;244;'page1/theme-title.png');
+		.posc(1;397;42);
+		.bear-hello{
+			.pos(75;70;'page1/hello.png');
+			.pos_defined(top;20;right;8);
+		}
+	}
+	.bear-box{
+		.pos(167;279);
+		.posc(3;167;346);
+		.bear{
+			.pos(100%;100%;'page1/rider2.png');
+		}
+		.smoke{
+			.pos(167;32;'page1/jet1.png');
+			bottom:0;
+		}
+	}
+}
+

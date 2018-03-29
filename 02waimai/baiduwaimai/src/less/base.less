@@ -29,13 +29,61 @@ a {
 
 .adpterFunc(1);
 
-.w(@width){
+.w(@width) when not(ispercentage(@width)){
   width:@width/@bs;
-}
-.h(@height){
+} 
+.w(@width) when (ispercentage(@width)){
+  width:@width;
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+.h(@height) when not(ispercentage(@height)){
   height: @height/@bs;
+}
+.h(@height) when (ispercentage(@height)){
+  height:@height;
 }
 .wh(@width,@height){
   .w(@width);
   .h(@height);
 }
+@res:0;
+.p2r(@size){
+  @res:@size/@bs;
+}
+.pos(@width;@height){
+  .w(@width);
+  .h(@height);
+  position:absolute;
+
+}
+.pos(@width;@height;@url){
+  .w(@width);
+  .h(@height);
+  position:absolute;
+  background:  url("../images/@{url}")  no-repeat center/ 100% 100%;
+}
+.pos(@width;@height;@url;@pos1;@pos2){
+   .w(@width);
+  .h(@height);
+  position:absolute;
+  background:  url("../images/@{url}")  no-repeat center/ @pos1/@bs @pos2/@bs;
+}
+.posc(3;@width;@bottom;){
+  left:50%;
+  margin-left: -@width/2/@bs;
+  bottom:@bottom/@bs;
+  position:absolute;
+}
+.posc(1;@width;@top){
+  left:50%;
+  margin-left:-@width/2/@bs;
+  top:@top/@bs;
+  position:absolute;
+}
+.pos_defined(@pos1:top;@top:0;@pos2:right;@right:0){
+  @{pos1}:@top/@bs;
+  @{pos2}:@right/@bs;
+}
+// div{
+//   // .posc(bottom,100,20);
+//   .pos_defined(top;20;right;8);
+// }

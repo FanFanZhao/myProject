@@ -378,6 +378,7 @@ a {
 html,
 body {
   height: 100%;
+  overflow: hidden;
 }
 body > div {
   position: absolute;
@@ -411,4 +412,120 @@ body > div {
   width: 50%;
   position: absolute;
   right: 0;
+}
+.loading .info {
+  width: 11rem;
+  height: 1.3rem;
+  margin-top: 2rem;
+  background: url('../images/loading/loading-txt.png') no-repeat center / 100% 100%;
+}
+.loading .desc {
+  text-align: center;
+  color: #ed8895;
+  position: absolute;
+  width: 100%;
+  bottom: 3.5rem;
+  font-size: 1.2rem;
+}
+.go-layout {
+  background-color: deepskyblue;
+}
+.go-layout .clouds {
+  width: 100%;
+  height: 33.65rem;
+  position: absolute;
+  background: url("../images/page1/clouds.png") no-repeat center / 100% 100%;
+  bottom: 0;
+}
+.go-layout .grass1 {
+  width: 100%;
+  height: 19.8rem;
+  position: absolute;
+  background: url("../images/page1/grass1.png") no-repeat center / 100% 100%;
+  bottom: 0;
+}
+.go-layout .grass2 {
+  width: 100%;
+  height: 11.4rem;
+  position: absolute;
+  background: url("../images/page1/grass2.png") no-repeat center / 100% 100%;
+  bottom: 0;
+}
+.go-layout .btn-container {
+  width: 10.4rem;
+  height: 10.4rem;
+  position: absolute;
+  background: url("../images/page1/bear-btn-aft.png") no-repeat center / 6.2rem 5.65rem;
+  bottom: 4.3rem;
+  left: 50%;
+  margin-left: -5.2rem;
+}
+.go-layout .btn-container .circle1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url("../images/page1/circle1.png") no-repeat center / 100% 100%;
+  top: 0;
+  left: 0;
+}
+.go-layout .btn-container .circle2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url("../images/page1/circle2.png") no-repeat center / 100% 100%;
+  top: 0;
+  left: 0;
+}
+.go-layout .waimai-load {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 1.9rem;
+}
+.go-layout .tree {
+  width: 29.95rem;
+  height: 3.55rem;
+  background: url("../images/page1/trees.png") no-repeat center / 100% 100%;
+  left: 50%;
+  margin-left: -14.975rem;
+  bottom: 17.6rem;
+  position: absolute;
+}
+.go-layout .bear-title {
+  width: 19.85rem;
+  height: 12.2rem;
+  background: url("../images/page1/theme-title.png") no-repeat center / 100% 100%;
+  left: 50%;
+  margin-left: -9.925rem;
+  top: 2.1rem;
+  position: absolute;
+}
+.go-layout .bear-title .bear-hello {
+  width: 3.75rem;
+  height: 3.5rem;
+  position: absolute;
+  background: url("../images/page1/hello.png") no-repeat center / 100% 100%;
+  top: 1rem;
+  right: 0.4rem;
+}
+.go-layout .bear-box {
+  width: 8.35rem;
+  height: 13.95rem;
+  left: 50%;
+  margin-left: -4.175rem;
+  bottom: 17.3rem;
+  position: absolute;
+}
+.go-layout .bear-box .bear {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url("../images/page1/rider2.png") no-repeat center / 100% 100%;
+}
+.go-layout .bear-box .smoke {
+  width: 8.35rem;
+  height: 1.6rem;
+  position: absolute;
+  background: url("../images/page1/jet1.png") no-repeat center / 100% 100%;
+  bottom: 0;
 }

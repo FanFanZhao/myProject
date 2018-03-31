@@ -495,7 +495,7 @@ body > div {
   bottom: 17.6rem;
   position: absolute;
 }
-.welcome .bear-title {
+.welcome .info {
   width: 19.85rem;
   height: 12.2rem;
   background: url("../images/page1/theme-title.png") no-repeat center / 100% 100%;
@@ -504,7 +504,7 @@ body > div {
   top: 2.1rem;
   position: absolute;
 }
-.welcome .bear-title .bear-hello {
+.welcome .info .hello {
   width: 3.75rem;
   height: 3.5rem;
   background: url("../images/page1/hello.png") no-repeat center / 100% 100%;
@@ -1295,7 +1295,7 @@ body > div {
 }
 @keyframes bearRide {
   10% {
-    transform: translateX(-1.4rem) translateY(-0.25rem);
+    transform: translateX(-1.9rem) translateY(-0.25rem);
   }
   20% {
     transform: translateX(-2.8rem) translateY(0.25rem);
@@ -1310,24 +1310,440 @@ body > div {
     transform: translateX(-7rem) translateY(-0.25rem);
   }
   60% {
-    transform: translateX(-8.4rem) translateY(0.25rem);
+    transform: translateX(-8.54rem) translateY(0.25rem);
   }
   70% {
-    transform: translateX(-9.8rem) translateY(-0.25rem);
+    transform: translateX(-9.94rem) translateY(-0.25rem);
   }
   80% {
-    transform: translateX(-11.2rem) translateY(0.25rem);
+    transform: translateX(-11.48rem) translateY(0.25rem);
   }
   90% {
-    transform: translateX(-12.6rem) translateY(-0.25rem);
+    transform: translateX(-12.88rem) translateY(-0.25rem);
   }
   100% {
-    transform: translateX(-15rem) translateY(0.25rem);
+    transform: translateX(-14rem) translateY(0.25rem);
   }
 }
 .loading.animate .rider {
-  animation: bearRide 2s forwards;
+  animation: bearRide .5s linear forwards;
 }
 .loading.animate .progress .step {
-  animation: steps 2s forwards;
+  animation: steps .5s linear forwards;
+}
+@keyframes grass2 {
+  from {
+    -webkit-transform: scale(2, 1);
+    -ms-transform: scale(2, 1);
+    -o-transform: scale(2, 1);
+    transform: scale(2, 1);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes tree {
+  from {
+    transform: translateY(-200%);
+  }
+  80% {
+    transform: translateY(10%);
+  }
+  90% {
+    transform: translateY(-10%);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes btnBox {
+  from {
+    opacity: 0;
+    transform: scale(2);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes bearBox {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes bear {
+  from {
+    transform: translateY(-5%);
+    opacity: 1;
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes smoke {
+  from {
+    transform: scale(0, 0);
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+@keyframes welcome_dis {
+  from {
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+.welcome .grass1 {
+  height: 1rem;
+}
+.welcome .grass2 {
+  opacity: 0;
+}
+.welcome .tree {
+  opacity: 0;
+}
+.welcome .btn-container {
+  opacity: 0;
+}
+.welcome .bear-box {
+  opacity: 0;
+}
+.welcome .bear-box .smoke {
+  opacity: 0;
+}
+.welcome .info {
+  opacity: 0;
+}
+.welcome .hello {
+  opacity: 0;
+}
+.welcome.animate .grass1 {
+  height: 19.8rem;
+  transition: all .5s ;
+}
+.welcome.animate .grass2 {
+  animation: grass2 .5s .5s forwards;
+}
+.welcome.animate .tree {
+  animation: tree .5s 1s forwards;
+}
+.welcome.animate .btn-container {
+  animation: btnBox .5s 1.5s forwards;
+}
+.welcome.animate .circle2 {
+  animation: rotate .5s 1.5s linear  infinite;
+}
+.welcome.animate .bear-box {
+  animation: bearBox .5s 2s forwards;
+}
+.welcome.animate .bear-box .bear {
+  animation: bear .5s 2.5s infinite;
+}
+.welcome.animate .bear-box .smoke {
+  animation: smoke .5s 2.5s infinite;
+}
+.welcome.animate .info {
+  animation: bearBox .5s 3s forwards;
+}
+.welcome.animate .info .hello {
+  animation: smoke .5s 3.5s forwards;
+}
+@keyframes left2right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes top2bottom {
+  to {
+    height: 100%;
+  }
+}
+.swiper-slide .title h3 {
+  opacity: 0;
+}
+.swiper-slide .title p {
+  opacity: 0;
+}
+.swiper-slide .title .line {
+  height: 0 !important;
+}
+.page1 .scroll-page1 .bg {
+  opacity: 0;
+  transform-origin: 50% 200%;
+}
+.page1 .scroll-page1 .person {
+  opacity: 0;
+  transform-origin: 50% 200%;
+}
+.page1 .scroll-page1 .message-container {
+  opacity: 0;
+  transform-origin: right bottom;
+}
+.page1 .scroll-page2 .bg {
+  opacity: 0;
+  transform-origin: 50% 200%;
+}
+.page1 .scroll-page2 .person {
+  opacity: 0;
+  transform-origin: 50% 200%;
+}
+.page1 .scroll-page2 .person .leg2 {
+  transform-origin: left bottom;
+}
+.page1 .scroll-page2 .message-container {
+  opacity: 0;
+  transform-origin: right bottom;
+}
+.page1 .scroll-page3 .bg {
+  opacity: 0;
+  transform-origin: 50% 200%;
+}
+.page1 .scroll-page3 .person {
+  opacity: 0;
+  transform-origin: 50% 200%;
+}
+.page1 .scroll-page3 .message-container {
+  opacity: 0;
+  transform-origin: right bottom;
+}
+@keyframes rotate2left {
+  0% {
+    transform: rotateZ(90deg);
+  }
+  25% {
+    opacity: 1;
+    transform: rotateZ(-5deg);
+  }
+  30% {
+    opacity: 1;
+    transform: rotateZ(0);
+  }
+  70% {
+    transform: rotateZ(0);
+    opacity: 1;
+  }
+  75% {
+    transform: rotateZ(5deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateZ(-90deg);
+    opacity: 0;
+  }
+}
+@keyframes rotate2rotate {
+  0% {
+    transform: rotateZ(90deg);
+  }
+  95% {
+    opacity: 1;
+    transform: rotateZ(-5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes left2right2left {
+  30% {
+    transform: translateX(-10%);
+  }
+  60% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: none;
+  }
+}
+@keyframes leg {
+  from {
+    transform: rotateZ(30deg);
+  }
+  to {
+    transform: none;
+  }
+}
+.swiper-slide.animate h3 {
+  animation: left2right .5s forwards;
+}
+.swiper-slide.animate p {
+  animation: left2right .5s .2s forwards;
+}
+.swiper-slide.animate .line {
+  animation: top2bottom .5s .4s forwards;
+}
+.swiper-slide.animate .scroll-page1 .bg {
+  animation: rotate2left 1.5s forwards;
+}
+.swiper-slide.animate .scroll-page1 .person {
+  animation: rotate2left 1.5s .2s forwards;
+}
+.swiper-slide.animate .scroll-page1 .message-container {
+  animation: rotate2left 1s .2s forwards;
+}
+.swiper-slide.animate .scroll-page2 .bg {
+  animation: rotate2left 1.5s 1.7s forwards;
+}
+.swiper-slide.animate .scroll-page2 .person {
+  animation: rotate2left 1.5s 1.9s forwards;
+}
+.swiper-slide.animate .scroll-page2 .person .leg2 {
+  animation: leg .5s 2.2s forwards;
+}
+.swiper-slide.animate .scroll-page2 .message-container {
+  animation: rotate2left 1s 1.7s forwards;
+}
+.swiper-slide.animate .scroll-page3 .bg {
+  animation: rotate2rotate .5s 3.4s forwards;
+}
+.swiper-slide.animate .scroll-page3 .person {
+  animation: rotate2rotate .5s 3.7s forwards;
+}
+.swiper-slide.animate .scroll-page3 .message-container {
+  animation: rotate2rotate .3s 3.8s forwards;
+}
+.swiper-slide.animate .scroll-page3 .message1,
+.swiper-slide.animate .scroll-page3 .message4 {
+  animation: left2right2left 1s infinite;
+}
+.swiper-slide.animate .scroll-page3 .message3,
+.swiper-slide.animate .scroll-page3 .message2 {
+  animation: left2right2left .5s infinite;
+}
+@keyframes bottom2top {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes small2big2small {
+  0% {
+    transform: scale(0, 0);
+  }
+  95% {
+    transform: scale(1.2, 1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes leftShake {
+  0% {
+    transform: rotateZ(10deg);
+  }
+  50% {
+    transform: rotateZ(-10deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+@keyframes rightShake {
+  0% {
+    transform: rotateZ(10deg);
+  }
+  50% {
+    transform: rotateZ(-10deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+.page2 .bear {
+  opacity: 0;
+}
+.page2 .bear .face1 {
+  opacity: 0;
+}
+.page2 .bear .face2 {
+  opacity: 0;
+}
+.page2 .bear .hand-left {
+  transform-origin: left top;
+}
+.page2 .bear .hand-right {
+  transform-origin: right top;
+}
+.page2 .table {
+  opacity: 0;
+}
+.page2 .food {
+  opacity: 0;
+}
+.page2.animate .bg {
+  animation: rotate2rotate .5s forwards;
+  transform-origin: 50% 200%;
+}
+.page2.animate .table {
+  animation: bearBox .5s .5s forwards;
+}
+.page2.animate .bear {
+  animation: bottom2top .5s 1s forwards;
+}
+.page2.animate .bear .face1 {
+  animation: small2big2small .5s 1.5s forwards;
+}
+.page2.animate .bear .face2 {
+  animation: small2big2small .5s 1.5s forwards;
+}
+.page2.animate .bear .hand-left {
+  animation: leftShake .5s 1s infinite;
+}
+.page2.animate .bear .hand-right {
+  animation: rightShake .5s 1s infinite;
+}
+.page2.animate .food {
+  animation: bearBox .5s 1.5s forwards;
+}
+.page3 .bg {
+  opacity: 0;
+}
+.page3 .bear {
+  opacity: 0;
+}
+.page3 .bear .license {
+  opacity: 0;
+}
+.page3 .bear .oil {
+  opacity: 0;
+}
+.page3 .bear .evil {
+  opacity: 0;
+}
+.page3.animate .bg {
+  animation: rotate2rotate .5s forwards;
+  transform-origin: 50% 200%;
+}
+.page3.animate .bear {
+  animation: bottom2top .5s .5s forwards;
+}
+.page3.animate .bear .license {
+  animation: left2right2left .5s 1s infinite;
+}
+.page3.animate .bear .oil {
+  animation: left2right2left .5s 1s infinite;
+}
+.page3.animate .bear .evil {
+  animation: left2right2left .5s 1s infinite;
 }

@@ -22,9 +22,12 @@ body>div{
 	display: flex;
 	flex-direction:column;
 	align-items: center;
+	z-index:3;
 	.rider{
 		.wh(154,121);
 		background:url('../images/loading/rider1_.png') no-repeat center/100% 100%;
+		align-self:flex-end;
+		margin-right: 80/@bs;
 	}
 	.progress{
 		.wh(416,20);
@@ -35,7 +38,7 @@ body>div{
 		.step{
 			height:100%;
 			background-color: #ff2947;
-			width:50%;
+			width:10%;
 			position:absolute;
 			right:0;
 		}
@@ -56,8 +59,9 @@ body>div{
 		font-size:24/@bs;		
 	}
 }
-.go-layout{
+.welcome{
 	background-color: deepskyblue;
+	z-index:2;
 	.clouds{
 		.pos(100%;673;'page1/clouds.png');
 		bottom:0;
@@ -286,8 +290,9 @@ body>div{
 			bottom: 0;
 		}
 		.bear{
-			.pos(368;427;'page3/bear2.png');
-			.posc(3;368;310);
+			.pos(227;336;'page3/bear2.png';368;427);
+			background-position:-103/@bs -96/@bs;
+			.posc(3;227;310);
 			.face1{
 				.pos(102;102;'page3/face1.png');
 				.pos_defined(@pos2:left;@right:-102);
@@ -351,11 +356,11 @@ body>div{
 				.pos_defined(left;40;bottom;500);
 			}
 			.oil{
-				.pos(101;102;'page4/oil.png');
+				.pos(205;107;'page4/oil.png');
 				.pos_defined(left;225;bottom;660);
 			}
 			.evil{
-				.pos(74;77;'page4/evil2.png.png');
+				.pos(198;163;'page4/evil2.png');
 				.pos_defined(right;30;bottom;480);
 			}
 			
@@ -396,10 +401,246 @@ body>div{
 			.pos_defined(left;200;bottom;170);
 		}
 		.card1{
-			
+			.pos(160;175;'page5/card1.png');
+			.pos_defined(left;32;bottom;435);
 		}
-		.card2{}
-		.card3{}
+		.card2{
+			.pos(161;209;'page5/card2.png');
+			.pos_defined(left;240;bottom;530);
+		}
+		.card3{
+			.pos(167;184;'page5/card3.png');
+			.pos_defined(right;45;bottom;420);
+		}
+	}
+	.page5{
+		height:100%;
+		background-color: #0098cf;
+		.title{
+			.pos_defined(left;32;top;32);
+			padding-left: 20/@bs;
+			h3{
+				color: #fff;
+				font-size: 64/@bs;
+				padding-bottom: 12/@bs;
+			}
+			p{
+				color:#fff;
+				font-size: 24/@bs;
+			}
+			.line{
+				.pos(5;100%);
+				.pos_defined(@pos2:left);
+				background-color: #fff;
+			}
+		}
+		.bg{
+			.pos(594;493;'page6/bg7.png');
+			bottom:300/@bs;
+		}
+		.sphere{
+			.pos(640;356;'page6/sphere5.png');
+			bottom: 0;
+		}
+		.bear{
+			.pos(230;390;'page6/rider2.png');
+			.pos_defined(left;200;bottom;175);
+			.smoke{
+				.pos(114;26;'page6/shadow.png');
+				.posc(3;114;0);
+			}
+		}
+		.cloud{
+			.pos(432;160;'page6/weather-cloud.png');
+			.posc(3;432;640);
+		}
+	}
+	.page6{
+		height:100%;
+		background-color: #b527a0;
+		.title{
+			.pos_defined(left;32;top;32);
+			padding-left: 20/@bs;
+			h3{
+				color: #fff;
+				font-size: 64/@bs;
+				padding-bottom: 12/@bs;
+			}
+			p{
+				color:#fff;
+				font-size: 24/@bs;
+			}
+			.line{
+				.pos(5;100%);
+				.pos_defined(@pos2:left);
+				background-color: #fff;
+			}
+		}
+		.bg{
+			.pos(588;333;'page7/bg8.png');
+			bottom:300/@bs;
+		}
+		.sphere{
+			.pos(640;356;'page7/sphere6.png');
+			bottom: 0;
+		}
+		.bear{
+			.pos(285;328;'page7/bear5.png');
+			.posc(3;285;200);
+			.gift-box{
+				top:0;
+				left:50%;
+				position:absolute;
+				.gift1{
+					.pos(39;25;'page7/gift1.png');
+					transform:rotateZ(28deg) translateY(240/@bs);
+				}
+				.gift2{
+					.pos(93;79;'page7/gift2.png');
+					transform:rotateZ(28deg*2) translateY(240/@bs);
+				}
+				.gift3{
+					.pos(39;25;'page7/gift3.png');
+					transform:rotateZ(28deg*3) translateY(240/@bs);
+				}
+				.gift4{
+					.pos(72;64;'page7/gift4.png');
+					transform:rotateZ(28deg*4) translateY(240/@bs);
+				}
+				.gift5{
+					.pos(99;65;'page7/gift5.png');
+					transform:rotateZ(28deg*5) translateY(240/@bs);
+				}
+				.gift6{
+					.pos(107;80;'page7/gift6.png');
+					transform:rotateZ(28deg*6) translateY(240/@bs);
+				}
+				.gift7{
+					.pos(107;80;'page7/gift7.png');
+					transform:rotateZ(28deg*7) translateY(240/@bs);
+				}
+				.gift8{
+					.pos(88;64;'page7/gift8.png');
+					transform:rotateZ(28deg*8) translateY(240/@bs);
+				}
+				.gift9{
+					.pos(78;50;'page7/gift9.png');
+					transform:rotateZ(28deg*9) translateY(240/@bs);
+				}
+				.gift10{
+					.pos(49;37;'page7/gift10.png');
+					transform:rotateZ(28deg*10) translateY(240/@bs);
+				}
+				.gift11{
+					.pos(51;31;'page7/gift11.png');
+					transform:rotateZ(28deg*11) translateY(240/@bs);
+				}
+				.gift12{
+					.pos(37;23;'page7/gift12.png');
+					transform:rotateZ(28deg*12-5deg) translateY(240/@bs);
+				}
+			}
+		}
+		
+	}
+	.page7{
+		height:100%;
+		background-color: #19072a;
+		.title{
+			.pos_defined(left;32;top;32);
+			padding-left: 20/@bs;
+			h3{
+				color: #fff;
+				font-size: 64/@bs;
+				padding-bottom: 12/@bs;
+			}
+			p{
+				color:#fff;
+				font-size: 24/@bs;
+			}
+			.line{
+				.pos(5;100%);
+				.pos_defined(@pos2:left);
+				background-color: #fff;
+			}
+		}
+		
+		.streetlight{
+			.pos(80;443;'page8/streetlight.png');
+			.pos_defined(left;240;bottom;300);
+			.lamplight{
+				.pos(437;427;'page8/lamplight.png');
+				.pos_defined(top;10;left;-140);
+			}
+		}
+		.sphere{
+			.pos(640;384;'page8/sphere7.png');
+			bottom: 0;
+		}
+		.bear{
+			.pos(276;271;'page8/bear6.png');
+			.pos_defined(lfet;230;bottom;280);
+		}
+		.moto{
+			.pos(200;137;'page8/moto.png');
+			.pos_defined(left;110;bottom;137);
+		}
+		.share{
+			.pos(379;113;'page8/share.png');
+			.posc(3;379;140);
+		}
+	}
+}
+// 动画
+// 
+@keyframes steps{
+	from{
+
+	}
+	to{
+		width:100%;
+	}
+}
+@keyframes bearRide{
+	10%{
+		transform:translateX(-28/@bs) translateY(-5/@bs);
+	}
+	20%{
+		transform:translateX(-28*2/@bs) translateY(5/@bs);
+	}
+	30%{
+		transform:translateX(-28*3/@bs) translateY(-5/@bs);
+	}
+	40%{
+		transform:translateX(-28*4/@bs) translateY(5/@bs);
+	}
+	50%{
+		transform:translateX(-28*5/@bs) translateY(-5/@bs);
+	}
+	60%{
+		transform:translateX(-28*6/@bs) translateY(5/@bs);
+	}
+	70%{
+		transform:translateX(-28*7/@bs) translateY(-5/@bs);
+	}
+	80%{
+		transform:translateX(-28*8/@bs) translateY(5/@bs);
+	}
+	90%{
+		transform:translateX(-28*9/@bs) translateY(-5/@bs);
+	}
+	100%{
+		transform:translateX(-30*10/@bs) translateY(5/@bs);
+	}
+}
+.loading.animate{
+	.rider{
+		animation:bearRide 2s forwards;
+	}
+	.progress{
+		.step{
+			animation:steps 2s forwards;
+		}
 	}
 }
 

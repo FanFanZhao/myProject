@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<div class="loading" style="display: none;">
+	<div class="loading" >
 		<div class="rider"></div>
 		<div class="progress">
 			<div class="step"></div>
@@ -27,7 +27,7 @@
 			@ 2018 Fanfan  Produced
 		</div>
 	</div>
-	<div class="go-layout" style="display: none;">
+	<div class="welcome" style="display: none;">
 		<div class="clouds"></div>
 		<div class="grass1"></div>
 		<div class="grass2"></div>
@@ -130,18 +130,89 @@
 	    		<p>只做有品质的外卖。。。<br>操作快捷。。。。</p>
 				<div class="line"></div>
 	    	</div>
+	    	<div class="bg"></div>
+	    	<div class="sphere"></div>
+	    	<div class="bear"></div>
+	    	<div class="card1"></div>
+	    	<div class="card2"></div>
+	    	<div class="card3"></div>
 	    </div>
-	    <div class="swiper-slide page5">5</div>
-	    <div class="swiper-slide page6">6</div>
-	    <div class="swiper-slide page7">6</div>
-	    <div class="swiper-slide page8">6</div>
+	    <div class="swiper-slide page5">
+	    	<div class="title">
+	    		<h3>无论前方</h3>
+	    		<p>狂风，大雨，还是飘雪。。。<br>始终坚持在路上。。。。</p>
+				<div class="line"></div>
+	    	</div>
+	    	<div class="bg"></div>
+	    	<div class="sphere"></div>
+	    	<div class="cloud"></div>
+	    	<div class="bear">
+	    		<div class="smoke"></div>
+	    	</div>
+	    </div>
+	    <div class="swiper-slide page6">
+	    	<div class="title">
+	    		<h3>丰富礼品</h3>
+	    		<p>买什么送什么。。。<br>就问你怕不怕。。。。</p>
+				<div class="line"></div>
+	    	</div>
+	    	<div class="bg"></div>
+	    	<div class="sphere"></div>
+	    	<div class="bear">
+	    		<div class="gift-box">
+	    			<div class="gift1"></div>
+	    			<div class="gift2"></div>
+	    			<div class="gift3"></div>
+	    			<div class="gift4"></div>
+	    			<div class="gift5"></div>
+	    			<div class="gift6"></div>
+	    			<div class="gift7"></div>
+	    			<div class="gift8"></div>
+	    			<div class="gift9"></div>
+	    			<div class="gift10"></div>
+	    			<div class="gift11"></div>
+	    			<div class="gift12"></div>
+	    		</div>
+	    	</div>
+	    </div>
+	    <div class="swiper-slide page7">
+	    	<div class="title">
+	    		<h3>我这么努力</h3>
+	    		<p>还是败给了你<br>亲，不要差评好不好。。。。</p>
+				<div class="line"></div>
+	    	</div>
+	    	<div class="streetlight">
+	    		<div class="lamplight"></div>
+	    	</div>
+	    	<div class="sphere"></div>
+	    	<div class="bear"></div>
+	    	<div class="moto"></div>
+	    	<div class="share"></div>
+	    	
+	    </div>
 	  </div>
 	</div>
 	
 	<script src="lib/swiper/swiper.min.js"></script>
+	<script src="lib/zepto/zepto.js"></script>
+	<script src="lib/zepto/event.js"></script>
+	<script src="lib/zepto/touch.js"></script>
+	<script src="lib/zepto/fx.js"></script>
+	<script src="lib/zepto/fx_methods.js"></script>
 	<script>
 		var mySwiper=new Swiper('.waimai-container',{
 			direction:'vertical'
+		})
+		$(function(){
+			setTimeout(function(){
+				$('.loading').addClass('animate');
+			},1000)
+			$('.loading .rider').on('animationend',function(){
+				console.log('animationend end');
+			})
+			$('.loading .rider').on('transitionend',function(){
+				console.log('transitionend end');
+			})
 		})
 	</script>
 </body>

@@ -495,7 +495,7 @@ body > div {
   bottom: 17.6rem;
   position: absolute;
 }
-.welcome .bear-title {
+.welcome .info {
   width: 19.85rem;
   height: 12.2rem;
   background: url("../images/page1/theme-title.png") no-repeat center / 100% 100%;
@@ -504,7 +504,7 @@ body > div {
   top: 2.1rem;
   position: absolute;
 }
-.welcome .bear-title .bear-hello {
+.welcome .info .hello {
   width: 3.75rem;
   height: 3.5rem;
   background: url("../images/page1/hello.png") no-repeat center / 100% 100%;
@@ -910,7 +910,7 @@ body > div {
   bottom: 9.75rem;
   position: absolute;
 }
-.waimai-container .page3 .bear .license {
+.waimai-container .page3 .license {
   width: 9.85rem;
   height: 7rem;
   background: url("../images/page4/license.png") no-repeat center / 100% 100%;
@@ -918,7 +918,7 @@ body > div {
   position: absolute;
   bottom: 25rem;
 }
-.waimai-container .page3 .bear .oil {
+.waimai-container .page3 .oil {
   width: 10.25rem;
   height: 5.35rem;
   background: url("../images/page4/oil.png") no-repeat center / 100% 100%;
@@ -926,7 +926,7 @@ body > div {
   position: absolute;
   bottom: 33rem;
 }
-.waimai-container .page3 .bear .evil {
+.waimai-container .page3 .evil {
   width: 9.9rem;
   height: 8.15rem;
   background: url("../images/page4/evil2.png") no-repeat center / 100% 100%;
@@ -1126,7 +1126,7 @@ body > div {
 }
 .waimai-container .page6 .bear .gift-box {
   top: 0;
-  left: 50%;
+  left: 40%;
   position: absolute;
 }
 .waimai-container .page6 .bear .gift-box .gift1 {
@@ -1134,84 +1134,84 @@ body > div {
   height: 1.25rem;
   position: absolute;
   background: url("../images/page7/gift1.png") no-repeat center / 100% 100%;
-  transform: rotateZ(28deg) translateY(12rem);
+  transform: rotateZ(29deg) translateY(12rem);
 }
 .waimai-container .page6 .bear .gift-box .gift2 {
   width: 4.65rem;
   height: 3.95rem;
   position: absolute;
   background: url("../images/page7/gift2.png") no-repeat center / 100% 100%;
-  transform: rotateZ(56deg) translateY(12rem);
+  transform: rotateZ(58deg) translateY(12rem);
 }
 .waimai-container .page6 .bear .gift-box .gift3 {
   width: 1.95rem;
   height: 1.25rem;
   position: absolute;
   background: url("../images/page7/gift3.png") no-repeat center / 100% 100%;
-  transform: rotateZ(84deg) translateY(12rem);
+  transform: rotateZ(87deg) translateY(12rem);
 }
 .waimai-container .page6 .bear .gift-box .gift4 {
   width: 3.6rem;
   height: 3.2rem;
   position: absolute;
   background: url("../images/page7/gift4.png") no-repeat center / 100% 100%;
-  transform: rotateZ(112deg) translateY(12rem);
+  transform: rotateZ(116deg) translateY(12rem);
 }
 .waimai-container .page6 .bear .gift-box .gift5 {
   width: 4.95rem;
   height: 3.25rem;
   position: absolute;
   background: url("../images/page7/gift5.png") no-repeat center / 100% 100%;
-  transform: rotateZ(140deg) translateY(12rem);
+  transform: rotateZ(145deg) translateY(12rem);
 }
 .waimai-container .page6 .bear .gift-box .gift6 {
   width: 5.35rem;
   height: 4rem;
   position: absolute;
   background: url("../images/page7/gift6.png") no-repeat center / 100% 100%;
-  transform: rotateZ(168deg) translateY(12rem);
+  transform: rotateZ(174deg) translateY(12rem);
 }
 .waimai-container .page6 .bear .gift-box .gift7 {
   width: 5.35rem;
   height: 4rem;
   position: absolute;
   background: url("../images/page7/gift7.png") no-repeat center / 100% 100%;
-  transform: rotateZ(196deg) translateY(12rem);
+  transform: rotateZ(203deg) translateY(12rem);
 }
 .waimai-container .page6 .bear .gift-box .gift8 {
   width: 4.4rem;
   height: 3.2rem;
   position: absolute;
   background: url("../images/page7/gift8.png") no-repeat center / 100% 100%;
-  transform: rotateZ(224deg) translateY(12rem);
+  transform: rotateZ(232deg) translateY(12rem);
 }
 .waimai-container .page6 .bear .gift-box .gift9 {
   width: 3.9rem;
   height: 2.5rem;
   position: absolute;
   background: url("../images/page7/gift9.png") no-repeat center / 100% 100%;
-  transform: rotateZ(252deg) translateY(12rem);
+  transform: rotateZ(261deg) translateY(12rem);
 }
 .waimai-container .page6 .bear .gift-box .gift10 {
   width: 2.45rem;
   height: 1.85rem;
   position: absolute;
   background: url("../images/page7/gift10.png") no-repeat center / 100% 100%;
-  transform: rotateZ(280deg) translateY(12rem);
+  transform: rotateZ(290deg) translateY(12rem);
 }
 .waimai-container .page6 .bear .gift-box .gift11 {
   width: 2.55rem;
   height: 1.55rem;
   position: absolute;
   background: url("../images/page7/gift11.png") no-repeat center / 100% 100%;
-  transform: rotateZ(308deg) translateY(12rem);
+  transform: rotateZ(319deg) translateY(12rem);
 }
 .waimai-container .page6 .bear .gift-box .gift12 {
   width: 1.85rem;
   height: 1.15rem;
   position: absolute;
   background: url("../images/page7/gift12.png") no-repeat center / 100% 100%;
-  transform: rotateZ(331deg) translateY(12rem);
+  transform: rotateZ(338deg) translateY(12rem);
 }
 .waimai-container .page7 {
   height: 100%;
@@ -1267,7 +1267,7 @@ body > div {
   width: 13.8rem;
   height: 13.55rem;
   background: url("../images/page8/bear6.png") no-repeat center / 100% 100%;
-  lfet: 11.5rem;
+  left: 11.5rem;
   position: absolute;
   bottom: 14rem;
 }
@@ -1295,7 +1295,7 @@ body > div {
 }
 @keyframes bearRide {
   10% {
-    transform: translateX(-1.4rem) translateY(-0.25rem);
+    transform: translateX(-1.9rem) translateY(-0.25rem);
   }
   20% {
     transform: translateX(-2.8rem) translateY(0.25rem);
@@ -1310,24 +1310,707 @@ body > div {
     transform: translateX(-7rem) translateY(-0.25rem);
   }
   60% {
-    transform: translateX(-8.4rem) translateY(0.25rem);
+    transform: translateX(-8.54rem) translateY(0.25rem);
   }
   70% {
-    transform: translateX(-9.8rem) translateY(-0.25rem);
+    transform: translateX(-9.94rem) translateY(-0.25rem);
   }
   80% {
-    transform: translateX(-11.2rem) translateY(0.25rem);
+    transform: translateX(-11.48rem) translateY(0.25rem);
   }
   90% {
-    transform: translateX(-12.6rem) translateY(-0.25rem);
+    transform: translateX(-12.88rem) translateY(-0.25rem);
   }
   100% {
-    transform: translateX(-15rem) translateY(0.25rem);
+    transform: translateX(-14rem) translateY(0.25rem);
   }
 }
 .loading.animate .rider {
-  animation: bearRide 2s forwards;
+  animation: bearRide .5s linear forwards;
 }
 .loading.animate .progress .step {
-  animation: steps 2s forwards;
+  animation: steps .5s linear forwards;
+}
+@keyframes grass2 {
+  from {
+    -webkit-transform: scale(2, 1);
+    -ms-transform: scale(2, 1);
+    -o-transform: scale(2, 1);
+    transform: scale(2, 1);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes tree {
+  from {
+    transform: translateY(-200%);
+  }
+  80% {
+    transform: translateY(10%);
+  }
+  90% {
+    transform: translateY(-10%);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes btnBox {
+  from {
+    opacity: 0;
+    transform: scale(2);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes bearBox {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes bear {
+  from {
+    transform: translateY(-5%);
+    opacity: 1;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes smoke {
+  from {
+    transform: scale(0, 0);
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+@keyframes welcome_dis {
+  from {
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+.welcome .grass1 {
+  height: 1rem;
+}
+.welcome .grass2 {
+  opacity: 0;
+}
+.welcome .tree {
+  opacity: 0;
+}
+.welcome .btn-container {
+  opacity: 0;
+}
+.welcome .bear-box {
+  opacity: 0;
+}
+.welcome .bear-box .smoke {
+  opacity: 0;
+}
+.welcome .info {
+  opacity: 0;
+}
+.welcome .hello {
+  opacity: 0;
+}
+.welcome.animate .grass1 {
+  height: 19.8rem;
+  transition: all .5s ;
+}
+.welcome.animate .grass2 {
+  animation: grass2 .5s .5s forwards;
+}
+.welcome.animate .tree {
+  animation: tree .5s 1s forwards;
+}
+.welcome.animate .btn-container {
+  animation: btnBox .5s 1.5s forwards;
+}
+.welcome.animate .circle2 {
+  animation: rotate .5s 1.5s linear  infinite;
+}
+.welcome.animate .bear-box {
+  animation: bearBox .5s 2s forwards;
+}
+.welcome.animate .bear-box .bear {
+  animation: bear .5s 2.5s infinite;
+}
+.welcome.animate .bear-box .smoke {
+  animation: smoke .5s 2.5s infinite;
+}
+.welcome.animate .info {
+  animation: bearBox .5s 3s forwards;
+}
+.welcome.animate .info .hello {
+  animation: smoke .5s 3.5s forwards;
+}
+@keyframes left2right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes top2bottom {
+  to {
+    height: 100%;
+  }
+}
+.swiper-slide .title h3 {
+  opacity: 0;
+}
+.swiper-slide .title p {
+  opacity: 0;
+}
+.swiper-slide .title .line {
+  height: 0 !important;
+}
+.page1 .scroll-page1 .bg {
+  opacity: 0;
+  transform-origin: 50% 200%;
+}
+.page1 .scroll-page1 .person {
+  opacity: 0;
+  transform-origin: 50% 200%;
+}
+.page1 .scroll-page1 .message-container {
+  opacity: 0;
+  transform-origin: right bottom;
+}
+.page1 .scroll-page2 .bg {
+  opacity: 0;
+  transform-origin: 50% 200%;
+}
+.page1 .scroll-page2 .person {
+  opacity: 0;
+  transform-origin: 50% 200%;
+}
+.page1 .scroll-page2 .person .leg2 {
+  transform-origin: left bottom;
+}
+.page1 .scroll-page2 .message-container {
+  opacity: 0;
+  transform-origin: right bottom;
+}
+.page1 .scroll-page3 .bg {
+  opacity: 0;
+  transform-origin: 50% 200%;
+}
+.page1 .scroll-page3 .person {
+  opacity: 0;
+  transform-origin: 50% 200%;
+}
+.page1 .scroll-page3 .message-container {
+  opacity: 0;
+  transform-origin: right bottom;
+}
+@keyframes rotate2left {
+  0% {
+    transform: rotateZ(90deg);
+  }
+  25% {
+    opacity: 1;
+    transform: rotateZ(-5deg);
+  }
+  30% {
+    opacity: 1;
+    transform: rotateZ(0);
+  }
+  70% {
+    transform: rotateZ(0);
+    opacity: 1;
+  }
+  75% {
+    transform: rotateZ(5deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateZ(-90deg);
+    opacity: 0;
+  }
+}
+@keyframes rotate2rotate {
+  0% {
+    transform: rotateZ(90deg);
+  }
+  95% {
+    opacity: 1;
+    transform: rotateZ(-5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes left2right2left {
+  30% {
+    transform: translateX(-5%);
+  }
+  60% {
+    transform: translateX(5%);
+  }
+  100% {
+    transform: none;
+  }
+}
+@keyframes leg {
+  from {
+    transform: rotateZ(30deg);
+  }
+  to {
+    transform: none;
+  }
+}
+.swiper-slide.animate h3 {
+  animation: left2right .5s forwards;
+}
+.swiper-slide.animate p {
+  animation: left2right .5s .2s forwards;
+}
+.swiper-slide.animate .line {
+  animation: top2bottom .5s .4s forwards;
+}
+.swiper-slide.animate .scroll-page1 .bg {
+  animation: rotate2left 1.5s forwards;
+}
+.swiper-slide.animate .scroll-page1 .person {
+  animation: rotate2left 1.5s .2s forwards;
+}
+.swiper-slide.animate .scroll-page1 .message-container {
+  animation: rotate2left 1s .2s forwards;
+}
+.swiper-slide.animate .scroll-page2 .bg {
+  animation: rotate2left 1.5s 1.7s forwards;
+}
+.swiper-slide.animate .scroll-page2 .person {
+  animation: rotate2left 1.5s 1.9s forwards;
+}
+.swiper-slide.animate .scroll-page2 .person .leg2 {
+  animation: leg .5s 2.2s forwards;
+}
+.swiper-slide.animate .scroll-page2 .message-container {
+  animation: rotate2left 1s 1.7s forwards;
+}
+.swiper-slide.animate .scroll-page3 .bg {
+  animation: rotate2rotate .5s 3.4s forwards;
+}
+.swiper-slide.animate .scroll-page3 .person {
+  animation: rotate2rotate .5s 3.7s forwards;
+}
+.swiper-slide.animate .scroll-page3 .message-container {
+  animation: rotate2rotate .3s 3.8s forwards;
+}
+.swiper-slide.animate .scroll-page3 .message1,
+.swiper-slide.animate .scroll-page3 .message4 {
+  animation: left2right2left 1s infinite;
+}
+.swiper-slide.animate .scroll-page3 .message3,
+.swiper-slide.animate .scroll-page3 .message2 {
+  animation: left2right2left .5s infinite;
+}
+@keyframes bottom2top {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes small2big2small {
+  0% {
+    transform: scale(0, 0);
+  }
+  95% {
+    transform: scale(1.2, 1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes leftShake {
+  0% {
+    transform: rotateZ(10deg);
+  }
+  50% {
+    transform: rotateZ(-10deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+@keyframes rightShake {
+  0% {
+    transform: rotateZ(10deg);
+  }
+  50% {
+    transform: rotateZ(-10deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+.page2 .bear {
+  opacity: 0;
+}
+.page2 .bear .face1 {
+  opacity: 0;
+}
+.page2 .bear .face2 {
+  opacity: 0;
+}
+.page2 .bear .hand-left {
+  transform-origin: left top;
+}
+.page2 .bear .hand-right {
+  transform-origin: right top;
+}
+.page2 .table {
+  opacity: 0;
+}
+.page2 .food {
+  opacity: 0;
+}
+.page2.animate .bg {
+  animation: rotate2rotate .5s forwards;
+  transform-origin: 50% 200%;
+}
+.page2.animate .table {
+  animation: bearBox .5s .5s forwards;
+}
+.page2.animate .bear {
+  animation: bottom2top .5s 1s forwards;
+}
+.page2.animate .bear .face1 {
+  animation: small2big2small .5s 1.5s forwards;
+}
+.page2.animate .bear .face2 {
+  animation: small2big2small .5s 1.5s forwards;
+}
+.page2.animate .bear .hand-left {
+  animation: leftShake .5s 1s infinite;
+}
+.page2.animate .bear .hand-right {
+  animation: rightShake .5s 1s infinite;
+}
+.page2.animate .food {
+  animation: bearBox .5s 1.5s forwards;
+}
+.page3 .bg {
+  opacity: 0;
+}
+.page3 .bear {
+  opacity: 0;
+}
+.page3 .license {
+  opacity: 0;
+}
+.page3 .oil {
+  opacity: 0;
+}
+.page3 .evil {
+  opacity: 0;
+}
+.page3.animate .bg {
+  animation: rotate2rotate .5s forwards;
+  transform-origin: 50% 200%;
+}
+.page3.animate .bear {
+  animation: bottom2top .5s .5s forwards;
+}
+.page3.animate .license {
+  animation: smoke .5s 1s forwards, left2right2left .5s 1.5s infinite;
+}
+.page3.animate .oil {
+  animation: smoke .5s 1s forwards, left2right2left 1s 1.5s infinite;
+}
+.page3.animate .evil {
+  animation: smoke .5s 1s forwards,left2right2left .5s 1.5s infinite;
+}
+.page3 .animation-bear-box .animate-bear1 {
+  width: 12.55rem;
+  height: 16.75rem;
+  background: url("../images/page4/bear3-1-1.png") no-repeat center / 100% 100%;
+  left: 50%;
+  margin-left: -6.275rem;
+  bottom: 9.75rem;
+  position: absolute;
+  opacity: 0;
+}
+.page3 .animation-bear-box .animate-bear2 {
+  width: 10.75rem;
+  height: 15.65rem;
+  background: url("../images/page4/bear3-2-1.png") no-repeat center / 100% 100%;
+  left: 50%;
+  margin-left: -5.375rem;
+  bottom: 9.75rem;
+  position: absolute;
+  opacity: 0;
+}
+.page3 .animation-bear-box .animate-bear3 {
+  width: 14.5rem;
+  height: 16.05rem;
+  background: url("../images/page4/bear3-3-1.png") no-repeat center / 100% 100%;
+  left: 50%;
+  margin-left: -7.25rem;
+  bottom: 9.75rem;
+  position: absolute;
+  opacity: 0;
+}
+.page3 .hit-card-box .card1 {
+  width: 11.4rem;
+  height: 7.55rem;
+  background: url("../images/page4/license1.png") no-repeat center / 100% 100%;
+  left: 2rem;
+  position: absolute;
+  bottom: 25rem;
+  opacity: 0;
+}
+.page3 .hit-card-box .card2 {
+  width: 11.55rem;
+  height: 7.8rem;
+  background: url("../images/page4/oil1.png") no-repeat center / 100% 100%;
+  left: 11.25rem;
+  position: absolute;
+  bottom: 33rem;
+  opacity: 0;
+}
+.page3 .hit-card-box .card3 {
+  width: 10.55rem;
+  height: 8.65rem;
+  background: url("../images/page4/evil21.png") no-repeat center / 100% 100%;
+  right: 1.5rem;
+  position: absolute;
+  bottom: 24rem;
+  opacity: 0;
+}
+.page4 .bg {
+  opacity: 0;
+}
+.page4 .bear {
+  opacity: 0;
+}
+.page4 .card1 {
+  opacity: 0;
+}
+.page4 .card2 {
+  opacity: 0;
+}
+.page4 .card3 {
+  opacity: 0;
+}
+.page4.animate .bg {
+  animation: rotate2rotate .5s forwards;
+  transform-origin: 50% 200%;
+}
+.page4.animate .bear {
+  animation: bottom2top .5s .5s forwards;
+}
+.page4.animate .card1 {
+  animation: smoke .5s 1s forwards;
+}
+.page4.animate .card2 {
+  animation: smoke .5s 1s forwards;
+}
+.page4.animate .card3 {
+  animation: smoke .5s 1s forwards;
+}
+.page5 .bg {
+  opacity: 0;
+}
+.page5 .bear {
+  opacity: 0;
+}
+.page5 .cloud {
+  opacity: 0;
+}
+.page5 .cloud .snow {
+  width: 1.6rem;
+  height: 1.6rem;
+  position: absolute;
+  background: url("../images/page6/snow-piece.png") no-repeat center / 100% 100%;
+  opacity: 0;
+}
+.page5 .cloud .snow:nth-child(1) {
+  left: 0rem;
+  position: absolute;
+  bottom: 0rem;
+}
+.page5 .cloud .snow:nth-child(2) {
+  left: 1.6rem;
+  position: absolute;
+  bottom: 0rem;
+}
+.page5 .cloud .snow:nth-child(3) {
+  left: 3.2rem;
+  position: absolute;
+  bottom: 0rem;
+}
+.page5 .cloud .snow:nth-child(4) {
+  left: 4.8rem;
+  position: absolute;
+  bottom: 0rem;
+}
+.page5 .cloud .snow:nth-child(5) {
+  left: 6.4rem;
+  position: absolute;
+  bottom: 0rem;
+}
+.page5 .cloud .snow:nth-child(6) {
+  left: 8rem;
+  position: absolute;
+  bottom: 0rem;
+}
+.page5 .cloud .snow:nth-child(7) {
+  left: 9.6rem;
+  position: absolute;
+  bottom: 0rem;
+}
+.page5 .cloud .snow:nth-child(8) {
+  right: 11.2rem;
+  position: absolute;
+  bottom: 0rem;
+}
+.page5 .cloud .snow:nth-child(9) {
+  right: 1.6rem;
+  position: absolute;
+  bottom: 0rem;
+}
+.page5 .cloud .snow:nth-child(10) {
+  right: 3.2rem;
+  position: absolute;
+  bottom: 0rem;
+}
+.page5 .cloud .snow:nth-child(11) {
+  right: 4.8rem;
+  position: absolute;
+  bottom: 0rem;
+}
+.page5 .cloud .snow:nth-child(12) {
+  right: 6.4rem;
+  position: absolute;
+  bottom: 0rem;
+}
+.page5 .cloud .snow:nth-child(13) {
+  right: 8rem;
+  position: absolute;
+  bottom: 0rem;
+}
+.page5 .cloud .snow:nth-child(14) {
+  right: 9.6rem;
+  position: absolute;
+  bottom: 0rem;
+}
+.page5 .cloud .snow:nth-child(15) {
+  right: 11.2rem;
+  position: absolute;
+  bottom: 0rem;
+}
+.page5 .smoke {
+  opacity: 0;
+}
+.page5.animate .bg {
+  animation: rotate2rotate .5s forwards;
+  transform-origin: 50% 200%;
+}
+.page5.animate .bear {
+  animation: bearBox .5s 1s forwards , bear .5s 1.5s infinite;
+}
+.page5.animate .cloud {
+  animation: smoke .5s .5s forwards ,left2right2left 1s 1s infinite;
+}
+.page5.animate .cloud .snow:nth-child(1) {
+  animation: snowLeft .8s 1.5s infinite;
+}
+.page5.animate .cloud .snow:nth-child(2) {
+  animation: snowRigth 1s 1.5s infinite;
+}
+.page5.animate .cloud .snow:nth-child(3) {
+  animation: snowLeft 1.8s 1.5s infinite;
+}
+.page5.animate .cloud .snow:nth-child(4) {
+  animation: snowRigth 3s 1.5s infinite;
+}
+.page5.animate .cloud .snow:nth-child(5) {
+  animation: snowLeft 1.2s 1.5s infinite;
+}
+.page5.animate .cloud .snow:nth-child(6) {
+  animation: snowRigth 1.3s 1.5s infinite;
+}
+.page5.animate .cloud .snow:nth-child(7) {
+  animation: snowLeft 2s 1.5s infinite;
+}
+.page5.animate .cloud .snow:nth-child(8) {
+  animation: snowRigth 1s 1.5s infinite;
+}
+.page5.animate .cloud .snow:nth-child(9) {
+  animation: snowLeft .8s 1.5s infinite;
+}
+.page5.animate .cloud .snow:nth-child(10) {
+  animation: snowRigth .5s 1.5s infinite;
+}
+.page5.animate .cloud .snow:nth-child(11) {
+  animation: snowLeft .1.5s 1.5s infinite;
+}
+.page5.animate .cloud .snow:nth-child(12) {
+  animation: snowRigth 1.2s 1.5s infinite;
+}
+.page5.animate .cloud .snow:nth-child(13) {
+  animation: snowLeft .2s 1.5s infinite;
+}
+.page5.animate .cloud .snow:nth-child(14) {
+  animation: snowRigth .1.5s 1.5s infinite;
+}
+.page5.animate .cloud .snow:nth-child(15) {
+  animation: snowLeft 2s 1.5s infinite;
+}
+.page5.animate .smoke {
+  animation: smoke .5s 1.5s infinite;
+}
+@keyframes snowLeft {
+  from {
+    opacity: 1;
+  }
+  to {
+    transform: translateY(1000%) translateX(-200%);
+    opacity: 1;
+  }
+}
+@keyframes snowRight {
+  to {
+    transform: translateY(1000%) translateX(200%);
+    opacity: 1;
+  }
+}
+@keyframes none2Noraml {
+  to {
+    opacity: 1;
+  }
+}
+.page6 .gift-box > div {
+  opacity: 0;
+}
+.page6.animate .gift-box > div {
+  animation: none2Noraml 1s 1s forwards;
 }

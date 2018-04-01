@@ -13,7 +13,9 @@
 		// }
 	</script>
 	<link rel="stylesheet" href="lib/swiper/swiper.min.css">	
-	<link rel="stylesheet" href="less/main.css">
+	<!-- <link rel="stylesheet" href="less/main.css"> -->
+	<link rel="stylesheet" href="../dist/css/main.css">
+
 </head>
 <body>
 	<div class="loading" style="opacity: 0;">
@@ -92,6 +94,7 @@
 
 	    	</div>
 	    	<div class="bear"></div>
+	    	
 	    </div>
 	    <div class="swiper-slide page2">
 	    	<div class="title">
@@ -118,11 +121,23 @@
 	    	</div>
 	    	<div class="bg"></div>
 	    	<div class="sphere"></div>
-	    	<div class="bear">
-	    		<div class="license"></div>
-	    		<div class="oil"></div>
-	    		<div class="evil"></div>
+	    	<div class="bear"></div>
+	    		
+	    	<div class="animation-bear-box">
+	    		<div class="animate-bear1"></div>
+	    		<div class="animate-bear2"></div>
+	    		<div class="animate-bear3"></div>
 	    	</div>
+	    	<div class="normal-card">
+	    		<div class="license"></div>
+    			<div class="oil"></div>
+    			<div class="evil"></div>
+	    	</div>
+    		<div class="hit-card-box">
+    			<div class="card1"></div>
+    			<div class="card2"></div>
+    			<div class="card3"></div>
+    		</div>
 	    </div>
 	    <div class="swiper-slide page4">
 	    	<div class="title">
@@ -145,7 +160,23 @@
 	    	</div>
 	    	<div class="bg"></div>
 	    	<div class="sphere"></div>
-	    	<div class="cloud"></div>
+	    	<div class="cloud">
+	    		<div class="snow"></div>
+	    		<div class="snow"></div>
+	    		<div class="snow"></div>
+	    		<div class="snow"></div>
+	    		<div class="snow"></div>
+	    		<div class="snow"></div>
+	    		<div class="snow"></div>
+	    		<div class="snow"></div>
+	    		<div class="snow"></div>
+	    		<div class="snow"></div>
+	    		<div class="snow"></div>
+	    		<div class="snow"></div>
+	    		<div class="snow"></div>
+	    		<div class="snow"></div>
+	    		<div class="snow"></div>
+	    	</div>
 	    	<div class="bear">
 	    		<div class="smoke"></div>
 	    	</div>
@@ -204,6 +235,15 @@
 			direction:'vertical',
 			onSlideChangeEnd:function(){
 				$('.swiper-slide').eq(mySwiper.activeIndex).addClass('animate').siblings().removeClass('animate');
+				// if (mySwiper.activeIndex==2) {
+				// 	$('.swiper-slide').eq(2).addClass('swiper-no-swiping')
+				// }
+				if (mySwiper.previousIndex==2) {
+					$('.swiper-slide').eq(2).find('.bear').attr('style','');
+					$('.animation-bear-box div').attr('style','');
+					$('.normal-card div').attr('style','');
+					$('.hit-card-box div').attr('style','');
+				}
 			}
 		})
 		$(function(){
@@ -226,6 +266,27 @@
 			// 	},1000)
 				
 			// })
+			$('.swiper-slide').eq(2).click(function(){
+				var index=0;
+				var _this=$(this);
+				$(this).children('.bear').css('animation','none');
+				var interId=setInterval(function(){
+					// t牌子
+					$('.animation-bear-box div').css('opacity',0);
+					$('.animation-bear-box div').eq(index).css('opacity',1);
+					$('.normal-card div').eq(index).css('animation','none');
+					$('.hit-card-box div').eq(index).css('opacity',1);
+					if (index==2) {
+						clearInterval(interId);
+						$('.hit-card-box div').css('animation','welcome_dis 1s forwards');
+						setTimeout(function(){
+							_this.removeClass('swiper-no-swiping');
+
+						})
+					}
+					index++;
+				},1000)
+			})
 		})
 	</script>
 </body>

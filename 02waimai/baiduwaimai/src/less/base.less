@@ -13,6 +13,10 @@ ol {
 a {
     text-decoration: none;
 }
+input{
+  border:none;
+  outline:none;
+}
 @charset 'utf-8';
 @psdWidth:640;
 @bs:20rem;
@@ -53,7 +57,6 @@ a {
   .w(@width);
   .h(@height);
   position:absolute;
-
 }
 .pos(@width;@height;@url){
   .w(@width);
@@ -67,13 +70,13 @@ a {
   position:absolute;
   background:  url("../images/@{url}")  no-repeat center/ @pos1/@bs @pos2/@bs;
 }
-.posc(3;@width;@bottom;){
+.posc(3;@width;@bottom:0){
   left:50%;
   margin-left: -@width/2/@bs;
   bottom:@bottom/@bs;
   position:absolute;
 }
-.posc(1;@width;@top){
+.posc(1;@width;@top:0){
   left:50%;
   margin-left:-@width/2/@bs;
   top:@top/@bs;

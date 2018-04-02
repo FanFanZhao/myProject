@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form id="form">
+		姓名:<input type="text" name="name">
+		年龄:<input type="text" name="name">
+		照片：<input type="file" name="file" id="file">
+		<input type="submit" value="提交" id="submit">
+	</form>
+	<script>
+		var form=document.getElementById('form');
+		form.onsubmit=function(e){
+			// e.preventDefault();
+			var formData=new FormData(form);
+			//方式也可以用这种 formData.append('myfile',document.getElementById('file').files[0]);
+			var xhr =new XMLHttpRequest();
+			xhr.open('post','url');
+			xhr.onreadystatechange=function(){
+				if (xhr.readyState===4&&xhr.status==200) {
+					console.log('ok')
+				}
+			}
+			xhr.send(formData);
+		}
+		return false;
+	</script>
+</body>
+</html>

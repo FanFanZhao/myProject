@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+	<input type="file" name="file">
+	<input type="button" id="btn" value="上传文件">
+	读取字节数：<span id='bytesRead'></span>
+	文件总大小：<span id="bytesTotal"></span>
+	<script>
+
+		var files=document.querySelector('input[name=file]');
+		var readBytes=document.querySelector('#bytesRead');
+		var totalBytes=document.querySelector('#bytesTotal');
+		if(!XMLHttpRequest.prototype.sendAsBinary){  
+	      XMLHttpRequest.prototype.sendAsBinary = function(datastr) {  
+	        function byteValue(x) {  
+	          return x.charCodeAt(0) & 0xff;  
+	        }  
+	        var ords = Array.prototype.map.call(datastr, byteValue);  
+	        var ui8a = new Uint8Array(ords);  
+	        this.send(ui8a.buffer);  
+	      };  
+	    }   
+		document.querySelector('#btn').onclick=function(){
+			// console.dir(files.files[0]);
+			var file=files.files[0];
+			var reader=new FileReader();
+			totalBytes.innerHtml=file.size;
+			reader.Onloadstart=function(e){
+				console.log('Onloadstart'+e);
+			}
+			reader.Progress=function(e){
+				console.log('Progress'+e);
+				bytesRead.innerHtml=e.loaded;
+			}
+			reader.Abort=function(e){
+				console.log('Abort'+e);	
+			}
+			reader.Error=function(e){
+				console.log('Error'+e);	
+			}
+			reader.Load=function(e){
+				console.log('Load'+e);	
+			}
+			reader.Loadend=function(e){
+				console.log('Loadend'+e)
+			}
+			reader.readAsBinaryString(file);
+			console.log(reader)
+			var xhr=new XMLHttpRequest();
+			xhr.open('post','fileGet.php?fileName='+file.name);
+			xhr.overrideMimeType("application/octet-stream"); 
+			xhr.sendAsBinary(reader.result); 
+			xhr.onreadystatechange=function(){
+				if (xhr.readyState==4 && xhr.satus==200 ) {
+					console.log('upload complate'+xhr.responseText)
+				}
+			}
+
+		}
+
+	</script>
+</body>
+</html>

@@ -309,6 +309,10 @@ ol {
 a {
   text-decoration: none;
 }
+input {
+  border: none;
+  outline: none;
+}
 @charset 'utf-8';
 @media (min-width: 320px) {
   html {
@@ -377,8 +381,8 @@ a {
 }
 html,
 body {
-  height: 100%;
   overflow: hidden;
+  height: 100%;
 }
 body > div {
   position: absolute;
@@ -387,104 +391,104 @@ body > div {
   height: 100%;
 }
 .loading {
-  background-color: #ffece9;
-  padding-top: 11.65rem;
+  z-index: 3;
   display: flex;
   flex-direction: column;
+  padding-top: 11.65rem;
+  background-color: #ffece9;
   align-items: center;
-  z-index: 3;
 }
 .loading .rider {
+  margin-right: 4rem;
+  background: url('../images/loading/rider1_.png') no-repeat center / 100% 100%;
   width: 7.7rem;
   height: 6.05rem;
-  background: url('../images/loading/rider1_.png') no-repeat center / 100% 100%;
   align-self: flex-end;
-  margin-right: 4rem;
 }
 .loading .progress {
+  position: relative;
+  margin-top: 0.3rem;
+  border: 0.1rem solid #000000;
+  border-radius: 1rem;
   width: 20.8rem;
   height: 1rem;
-  border-radius: 1rem;
-  border: 0.1rem solid #000000;
-  margin-top: 0.3rem;
-  position: relative;
 }
 .loading .progress .step {
-  height: 100%;
-  background-color: #ff2947;
-  width: 10%;
   position: absolute;
   right: 0;
+  width: 10%;
+  height: 100%;
+  background-color: #ff2947;
 }
 .loading .info {
-  width: 11rem;
-  height: 1.3rem;
   margin-top: 2rem;
   background: url('../images/loading/loading-txt.png') no-repeat center / 100% 100%;
+  width: 11rem;
+  height: 1.3rem;
 }
 .loading .desc {
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 3.5rem;
+  width: 100%;
   text-align: center;
   color: #ed8895;
-  position: absolute;
-  width: 100%;
-  bottom: 3.5rem;
-  font-size: 1.2rem;
 }
 .welcome {
-  background-color: deepskyblue;
   z-index: 2;
+  background-color: deepskyblue;
 }
 .welcome .clouds {
+  bottom: 0;
   width: 100%;
   height: 33.65rem;
   position: absolute;
   background: url("../images/page1/clouds.png") no-repeat center / 100% 100%;
-  bottom: 0;
 }
 .welcome .grass1 {
+  bottom: 0;
   width: 100%;
   height: 19.8rem;
   position: absolute;
   background: url("../images/page1/grass1.png") no-repeat center / 100% 100%;
-  bottom: 0;
 }
 .welcome .grass2 {
+  bottom: 0;
   width: 100%;
   height: 11.4rem;
   position: absolute;
   background: url("../images/page1/grass2.png") no-repeat center / 100% 100%;
-  bottom: 0;
 }
 .welcome .btn-container {
+  bottom: 4.3rem;
+  left: 50%;
+  margin-left: -5.2rem;
   width: 10.4rem;
   height: 10.4rem;
   position: absolute;
   background: url("../images/page1/bear-btn-aft.png") no-repeat center / 6.2rem 5.65rem;
-  bottom: 4.3rem;
-  left: 50%;
-  margin-left: -5.2rem;
 }
 .welcome .btn-container .circle1 {
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   position: absolute;
   background: url("../images/page1/circle1.png") no-repeat center / 100% 100%;
-  top: 0;
-  left: 0;
 }
 .welcome .btn-container .circle2 {
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   position: absolute;
   background: url("../images/page1/circle2.png") no-repeat center / 100% 100%;
-  top: 0;
-  left: 0;
 }
 .welcome .waimai-load {
   position: absolute;
+  bottom: 1.9rem;
   width: 100%;
   text-align: center;
-  bottom: 1.9rem;
 }
 .welcome .tree {
   width: 29.95rem;
@@ -527,11 +531,11 @@ body > div {
   background: url("../images/page1/rider2.png") no-repeat center / 100% 100%;
 }
 .welcome .bear-box .smoke {
+  bottom: 0;
   width: 8.35rem;
   height: 1.6rem;
   position: absolute;
   background: url("../images/page1/jet1.png") no-repeat center / 100% 100%;
-  bottom: 0;
 }
 .waimai-container {
   width: 100%;
@@ -541,38 +545,38 @@ body > div {
   left: 0rem;
 }
 .waimai-container .page1 {
-  background-color: #be8651;
   height: 100%;
+  background-color: #be8651;
 }
 .waimai-container .page1 .title {
+  padding-left: 1rem;
   left: 1.6rem;
   position: absolute;
   top: 1.6rem;
-  padding-left: 1rem;
 }
 .waimai-container .page1 .title h3 {
-  color: #fff;
   font-size: 3.2rem;
   padding-bottom: 0.6rem;
+  color: #fff;
 }
 .waimai-container .page1 .title p {
-  color: #fff;
   font-size: 1.2rem;
+  color: #fff;
 }
 .waimai-container .page1 .title .line {
+  background-color: #fff;
   width: 0.25rem;
   height: 100%;
   top: 0rem;
   position: absolute;
   left: 0rem;
-  background-color: #fff;
 }
 .waimai-container .page1 .sphere {
+  bottom: 0;
   width: 32rem;
   height: 17.8rem;
   position: absolute;
   background: url("../images/page2/sphere1.png") no-repeat center / 100% 100%;
-  bottom: 0;
 }
 .waimai-container .page1 .bear {
   width: 8.9rem;
@@ -583,13 +587,14 @@ body > div {
   bottom: 0rem;
 }
 .waimai-container .page1 .scroll-page1 .bg {
+  bottom: 12.6rem;
   width: 28.8rem;
   height: 28.65rem;
   position: absolute;
   background: url("../images/page2/bg1.png") no-repeat center / 100% 100%;
-  bottom: 12.6rem;
 }
 .waimai-container .page1 .scroll-page1 .person {
+  z-index: 1;
   width: 21.95rem;
   height: 17.45rem;
   background: url("../images/page2/front1.png") no-repeat center / 100% 100%;
@@ -597,43 +602,42 @@ body > div {
   margin-left: -10.975rem;
   bottom: 14.5rem;
   position: absolute;
-  z-index: 1;
 }
 .waimai-container .page1 .scroll-page1 .person .files {
+  background-position: bottom right;
   width: 4.25rem;
   height: 2.5rem;
   background: url("../images/page2/papers.png") no-repeat center / 5.75rem 5.7rem;
   left: 1.35rem;
   position: absolute;
   bottom: 5.2rem;
-  background-position: bottom right;
 }
 .waimai-container .page1 .scroll-page1 .person .files .paper1 {
+  background-position: 0 -1.6rem;
   width: 4.3rem;
   height: 1.3rem;
   background: url("../images/page2/papers.png") no-repeat center / 5.75rem 5.7rem;
   left: -3.5rem;
   position: absolute;
   bottom: 2.25rem;
-  background-position: 0 -1.6rem;
 }
 .waimai-container .page1 .scroll-page1 .person .files .paper2 {
+  background-position: -2.25rem 0;
   width: 3.2rem;
   height: 1rem;
   background: url("../images/page2/papers.png") no-repeat center / 5.75rem 5.7rem;
   right: 0rem;
   position: absolute;
   bottom: 4rem;
-  background-position: -2.25rem 0;
 }
 .waimai-container .page1 .scroll-page1 .message-container {
+  display: flex;
   width: 18.15rem;
   height: 5.95rem;
   background: url("../images/page2/txt-bubbl.png") no-repeat center / 100% 100%;
   bottom: 7rem;
   position: absolute;
   right: 7rem;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -644,13 +648,14 @@ body > div {
   background: url("../images/page2/txt-work.png") no-repeat center / 100% 100%;
 }
 .waimai-container .page1 .scroll-page2 .bg {
+  bottom: 12.6rem;
   width: 29.1rem;
   height: 29rem;
   position: absolute;
   background: url("../images/page2/bg2.png") no-repeat center / 100% 100%;
-  bottom: 12.6rem;
 }
 .waimai-container .page1 .scroll-page2 .person {
+  z-index: 1;
   width: 21.8rem;
   height: 16.6rem;
   background: url("../images/page2/relax.png") no-repeat center / 100% 100%;
@@ -658,7 +663,6 @@ body > div {
   margin-left: -10.9rem;
   bottom: 13.5rem;
   position: absolute;
-  z-index: 1;
 }
 .waimai-container .page1 .scroll-page2 .person .leg1 {
   width: 5.65rem;
@@ -677,13 +681,13 @@ body > div {
   bottom: 6rem;
 }
 .waimai-container .page1 .scroll-page2 .message-container {
+  display: flex;
   width: 18.15rem;
   height: 5.95rem;
   background: url("../images/page2/txt-bubbl.png") no-repeat center / 100% 100%;
   bottom: 7rem;
   position: absolute;
   right: 7rem;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -694,13 +698,14 @@ body > div {
   background: url("../images/page2/txt-life.png") no-repeat center / 100% 100%;
 }
 .waimai-container .page1 .scroll-page3 .bg {
+  bottom: 13.5rem;
   width: 25.8rem;
   height: 25.8rem;
   position: absolute;
   background: url("../images/page2/bg3.png") no-repeat center / 100% 100%;
-  bottom: 13.5rem;
 }
 .waimai-container .page1 .scroll-page3 .person {
+  z-index: 1;
   width: 25.15rem;
   height: 11.45rem;
   background: url("../images/page2/person.png") no-repeat center / 100% 100%;
@@ -708,7 +713,6 @@ body > div {
   margin-left: -12.575rem;
   bottom: 15rem;
   position: absolute;
-  z-index: 1;
 }
 .waimai-container .page1 .scroll-page3 .person .message1 {
   width: 4.6rem;
@@ -743,13 +747,13 @@ body > div {
   bottom: 11.5rem;
 }
 .waimai-container .page1 .scroll-page3 .message-container {
+  display: flex;
   width: 18.15rem;
   height: 5.95rem;
   background: url("../images/page2/txt-bubbl.png") no-repeat center / 100% 100%;
   bottom: 7rem;
   position: absolute;
   right: 7rem;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -760,51 +764,51 @@ body > div {
   background: url("../images/page2/txt-res.png") no-repeat center / 100% 100%;
 }
 .waimai-container .page2 {
-  background-color: #ee4143;
   height: 100%;
+  background-color: #ee4143;
 }
 .waimai-container .page2 .title {
+  padding-left: 1rem;
   left: 1.6rem;
   position: absolute;
   top: 1.6rem;
-  padding-left: 1rem;
 }
 .waimai-container .page2 .title h3 {
-  color: #fff;
   font-size: 3.2rem;
   padding-bottom: 0.6rem;
+  color: #fff;
 }
 .waimai-container .page2 .title p {
-  color: #fff;
   font-size: 1.2rem;
+  color: #fff;
 }
 .waimai-container .page2 .title .line {
+  background-color: #fff;
   width: 0.25rem;
   height: 100%;
   top: 0rem;
   position: absolute;
   left: 0rem;
-  background-color: #fff;
 }
 .waimai-container .page2 .bg {
+  bottom: 16.5rem;
   width: 29.6rem;
   height: 24.5rem;
   position: absolute;
   background: url("../images/page3/bg4_.png") no-repeat center / 100% 100%;
-  bottom: 16.5rem;
 }
 .waimai-container .page2 .sphere {
+  bottom: 0;
   width: 32rem;
   height: 17.8rem;
   position: absolute;
   background: url("../images/page3/sphere2.png") no-repeat center / 100% 100%;
-  bottom: 0;
 }
 .waimai-container .page2 .bear {
+  background-position: -5.15rem -4.8rem;
   width: 11.35rem;
   height: 16.8rem;
   background: url("../images/page3/bear2.png") no-repeat center / 18.4rem 21.35rem;
-  background-position: -5.15rem -4.8rem;
   left: 50%;
   margin-left: -5.675rem;
   bottom: 15.5rem;
@@ -865,41 +869,41 @@ body > div {
   background-color: #dd8a03;
 }
 .waimai-container .page3 .title {
+  padding-left: 1rem;
   left: 1.6rem;
   position: absolute;
   top: 1.6rem;
-  padding-left: 1rem;
 }
 .waimai-container .page3 .title h3 {
-  color: #fff;
   font-size: 3.2rem;
   padding-bottom: 0.6rem;
+  color: #fff;
 }
 .waimai-container .page3 .title p {
-  color: #fff;
   font-size: 1.2rem;
+  color: #fff;
 }
 .waimai-container .page3 .title .line {
+  background-color: #fff;
   width: 0.25rem;
   height: 100%;
   top: 0rem;
   position: absolute;
   left: 0rem;
-  background-color: #fff;
 }
 .waimai-container .page3 .bg {
+  bottom: 16.5rem;
   width: 29.6rem;
   height: 29rem;
   position: absolute;
   background: url("../images/page4/bg5.png") no-repeat center / 100% 100%;
-  bottom: 16.5rem;
 }
 .waimai-container .page3 .sphere {
+  bottom: 0;
   width: 32rem;
   height: 17.8rem;
   position: absolute;
   background: url("../images/page4/sphere3.png") no-repeat center / 100% 100%;
-  bottom: 0;
 }
 .waimai-container .page3 .bear {
   width: 10.3rem;
@@ -910,7 +914,7 @@ body > div {
   bottom: 9.75rem;
   position: absolute;
 }
-.waimai-container .page3 .bear .license {
+.waimai-container .page3 .license {
   width: 9.85rem;
   height: 7rem;
   background: url("../images/page4/license.png") no-repeat center / 100% 100%;
@@ -918,7 +922,7 @@ body > div {
   position: absolute;
   bottom: 25rem;
 }
-.waimai-container .page3 .bear .oil {
+.waimai-container .page3 .oil {
   width: 10.25rem;
   height: 5.35rem;
   background: url("../images/page4/oil.png") no-repeat center / 100% 100%;
@@ -926,7 +930,7 @@ body > div {
   position: absolute;
   bottom: 33rem;
 }
-.waimai-container .page3 .bear .evil {
+.waimai-container .page3 .evil {
   width: 9.9rem;
   height: 8.15rem;
   background: url("../images/page4/evil2.png") no-repeat center / 100% 100%;
@@ -939,41 +943,41 @@ body > div {
   background-color: #3fa100;
 }
 .waimai-container .page4 .title {
+  padding-left: 1rem;
   left: 1.6rem;
   position: absolute;
   top: 1.6rem;
-  padding-left: 1rem;
 }
 .waimai-container .page4 .title h3 {
-  color: #fff;
   font-size: 3.2rem;
   padding-bottom: 0.6rem;
+  color: #fff;
 }
 .waimai-container .page4 .title p {
-  color: #fff;
   font-size: 1.2rem;
+  color: #fff;
 }
 .waimai-container .page4 .title .line {
+  background-color: #fff;
   width: 0.25rem;
   height: 100%;
   top: 0rem;
   position: absolute;
   left: 0rem;
-  background-color: #fff;
 }
 .waimai-container .page4 .bg {
+  bottom: 15rem;
   width: 29.4rem;
   height: 16.65rem;
   position: absolute;
   background: url("../images/page5/bg6.png") no-repeat center / 100% 100%;
-  bottom: 15rem;
 }
 .waimai-container .page4 .sphere {
+  bottom: 0;
   width: 32rem;
   height: 17.8rem;
   position: absolute;
   background: url("../images/page5/sphere4.png") no-repeat center / 100% 100%;
-  bottom: 0;
 }
 .waimai-container .page4 .bear {
   width: 15.45rem;
@@ -1012,41 +1016,41 @@ body > div {
   background-color: #0098cf;
 }
 .waimai-container .page5 .title {
+  padding-left: 1rem;
   left: 1.6rem;
   position: absolute;
   top: 1.6rem;
-  padding-left: 1rem;
 }
 .waimai-container .page5 .title h3 {
-  color: #fff;
   font-size: 3.2rem;
   padding-bottom: 0.6rem;
+  color: #fff;
 }
 .waimai-container .page5 .title p {
-  color: #fff;
   font-size: 1.2rem;
+  color: #fff;
 }
 .waimai-container .page5 .title .line {
+  background-color: #fff;
   width: 0.25rem;
   height: 100%;
   top: 0rem;
   position: absolute;
   left: 0rem;
-  background-color: #fff;
 }
 .waimai-container .page5 .bg {
+  bottom: 15rem;
   width: 29.7rem;
   height: 24.65rem;
   position: absolute;
   background: url("../images/page6/bg7.png") no-repeat center / 100% 100%;
-  bottom: 15rem;
 }
 .waimai-container .page5 .sphere {
+  bottom: 0;
   width: 32rem;
   height: 17.8rem;
   position: absolute;
   background: url("../images/page6/sphere5.png") no-repeat center / 100% 100%;
-  bottom: 0;
 }
 .waimai-container .page5 .bear {
   width: 11.5rem;
@@ -1079,41 +1083,41 @@ body > div {
   background-color: #b527a0;
 }
 .waimai-container .page6 .title {
+  padding-left: 1rem;
   left: 1.6rem;
   position: absolute;
   top: 1.6rem;
-  padding-left: 1rem;
 }
 .waimai-container .page6 .title h3 {
-  color: #fff;
   font-size: 3.2rem;
   padding-bottom: 0.6rem;
+  color: #fff;
 }
 .waimai-container .page6 .title p {
-  color: #fff;
   font-size: 1.2rem;
+  color: #fff;
 }
 .waimai-container .page6 .title .line {
+  background-color: #fff;
   width: 0.25rem;
   height: 100%;
   top: 0rem;
   position: absolute;
   left: 0rem;
-  background-color: #fff;
 }
 .waimai-container .page6 .bg {
+  bottom: 15rem;
   width: 29.4rem;
   height: 16.65rem;
   position: absolute;
   background: url("../images/page7/bg8.png") no-repeat center / 100% 100%;
-  bottom: 15rem;
 }
 .waimai-container .page6 .sphere {
+  bottom: 0;
   width: 32rem;
   height: 17.8rem;
   position: absolute;
   background: url("../images/page7/sphere6.png") no-repeat center / 100% 100%;
-  bottom: 0;
 }
 .waimai-container .page6 .bear {
   width: 14.25rem;
@@ -1125,120 +1129,180 @@ body > div {
   position: absolute;
 }
 .waimai-container .page6 .bear .gift-box {
+  position: absolute;
   top: 0;
   left: 50%;
-  position: absolute;
+}
+.waimai-container .page6 .bear .gift-box > div:nth-child(1) {
+  transform: rotateZ(29deg) translateY(12rem);
+}
+.waimai-container .page6 .bear .gift-box > div:nth-child(2) {
+  transform: rotateZ(58deg) translateY(12rem);
+}
+.waimai-container .page6 .bear .gift-box > div:nth-child(3) {
+  transform: rotateZ(87deg) translateY(12rem);
+}
+.waimai-container .page6 .bear .gift-box > div:nth-child(4) {
+  transform: rotateZ(116deg) translateY(12rem);
+}
+.waimai-container .page6 .bear .gift-box > div:nth-child(5) {
+  transform: rotateZ(145deg) translateY(12rem);
+}
+.waimai-container .page6 .bear .gift-box > div:nth-child(6) {
+  transform: rotateZ(174deg) translateY(12rem);
+}
+.waimai-container .page6 .bear .gift-box > div:nth-child(7) {
+  transform: rotateZ(203deg) translateY(12rem);
+}
+.waimai-container .page6 .bear .gift-box > div:nth-child(8) {
+  transform: rotateZ(232deg) translateY(12rem);
+}
+.waimai-container .page6 .bear .gift-box > div:nth-child(9) {
+  transform: rotateZ(261deg) translateY(12rem);
+}
+.waimai-container .page6 .bear .gift-box > div:nth-child(10) {
+  transform: rotateZ(290deg) translateY(12rem);
+}
+.waimai-container .page6 .bear .gift-box > div:nth-child(11) {
+  transform: rotateZ(319deg) translateY(12rem);
+}
+.waimai-container .page6 .bear .gift-box > div:nth-child(12) {
+  transform: rotateZ(338deg) translateY(12rem);
 }
 .waimai-container .page6 .bear .gift-box .gift1 {
   width: 1.95rem;
   height: 1.25rem;
-  position: absolute;
   background: url("../images/page7/gift1.png") no-repeat center / 100% 100%;
-  transform: rotateZ(28deg) translateY(12rem);
+  left: 50%;
+  margin-left: -0.975rem;
+  top: 0rem;
+  position: absolute;
 }
 .waimai-container .page6 .bear .gift-box .gift2 {
   width: 4.65rem;
   height: 3.95rem;
-  position: absolute;
   background: url("../images/page7/gift2.png") no-repeat center / 100% 100%;
-  transform: rotateZ(56deg) translateY(12rem);
+  left: 50%;
+  margin-left: -2.325rem;
+  top: 0rem;
+  position: absolute;
 }
 .waimai-container .page6 .bear .gift-box .gift3 {
   width: 1.95rem;
   height: 1.25rem;
-  position: absolute;
   background: url("../images/page7/gift3.png") no-repeat center / 100% 100%;
-  transform: rotateZ(84deg) translateY(12rem);
+  left: 50%;
+  margin-left: -0.975rem;
+  top: 0rem;
+  position: absolute;
 }
 .waimai-container .page6 .bear .gift-box .gift4 {
   width: 3.6rem;
   height: 3.2rem;
-  position: absolute;
   background: url("../images/page7/gift4.png") no-repeat center / 100% 100%;
-  transform: rotateZ(112deg) translateY(12rem);
+  left: 50%;
+  margin-left: -1.8rem;
+  top: 0rem;
+  position: absolute;
 }
 .waimai-container .page6 .bear .gift-box .gift5 {
   width: 4.95rem;
   height: 3.25rem;
-  position: absolute;
   background: url("../images/page7/gift5.png") no-repeat center / 100% 100%;
-  transform: rotateZ(140deg) translateY(12rem);
+  left: 50%;
+  margin-left: -2.475rem;
+  top: 0rem;
+  position: absolute;
 }
 .waimai-container .page6 .bear .gift-box .gift6 {
   width: 5.35rem;
   height: 4rem;
-  position: absolute;
   background: url("../images/page7/gift6.png") no-repeat center / 100% 100%;
-  transform: rotateZ(168deg) translateY(12rem);
+  left: 50%;
+  margin-left: -2.675rem;
+  top: 0rem;
+  position: absolute;
 }
 .waimai-container .page6 .bear .gift-box .gift7 {
   width: 5.35rem;
   height: 4rem;
-  position: absolute;
   background: url("../images/page7/gift7.png") no-repeat center / 100% 100%;
-  transform: rotateZ(196deg) translateY(12rem);
+  left: 50%;
+  margin-left: -2.675rem;
+  top: 0rem;
+  position: absolute;
 }
 .waimai-container .page6 .bear .gift-box .gift8 {
   width: 4.4rem;
   height: 3.2rem;
-  position: absolute;
   background: url("../images/page7/gift8.png") no-repeat center / 100% 100%;
-  transform: rotateZ(224deg) translateY(12rem);
+  left: 50%;
+  margin-left: -2.2rem;
+  top: 0rem;
+  position: absolute;
 }
 .waimai-container .page6 .bear .gift-box .gift9 {
   width: 3.9rem;
   height: 2.5rem;
-  position: absolute;
   background: url("../images/page7/gift9.png") no-repeat center / 100% 100%;
-  transform: rotateZ(252deg) translateY(12rem);
+  left: 50%;
+  margin-left: -1.95rem;
+  top: 0rem;
+  position: absolute;
 }
 .waimai-container .page6 .bear .gift-box .gift10 {
   width: 2.45rem;
   height: 1.85rem;
-  position: absolute;
   background: url("../images/page7/gift10.png") no-repeat center / 100% 100%;
-  transform: rotateZ(280deg) translateY(12rem);
+  left: 50%;
+  margin-left: -1.225rem;
+  top: 0rem;
+  position: absolute;
 }
 .waimai-container .page6 .bear .gift-box .gift11 {
   width: 2.55rem;
   height: 1.55rem;
-  position: absolute;
   background: url("../images/page7/gift11.png") no-repeat center / 100% 100%;
-  transform: rotateZ(308deg) translateY(12rem);
+  left: 50%;
+  margin-left: -1.275rem;
+  top: 0rem;
+  position: absolute;
 }
 .waimai-container .page6 .bear .gift-box .gift12 {
   width: 1.85rem;
   height: 1.15rem;
-  position: absolute;
   background: url("../images/page7/gift12.png") no-repeat center / 100% 100%;
-  transform: rotateZ(331deg) translateY(12rem);
+  left: 50%;
+  margin-left: -0.925rem;
+  top: 0rem;
+  position: absolute;
 }
 .waimai-container .page7 {
   height: 100%;
   background-color: #19072a;
 }
 .waimai-container .page7 .title {
+  padding-left: 1rem;
   left: 1.6rem;
   position: absolute;
   top: 1.6rem;
-  padding-left: 1rem;
 }
 .waimai-container .page7 .title h3 {
-  color: #fff;
   font-size: 3.2rem;
   padding-bottom: 0.6rem;
+  color: #fff;
 }
 .waimai-container .page7 .title p {
-  color: #fff;
   font-size: 1.2rem;
+  color: #fff;
 }
 .waimai-container .page7 .title .line {
+  background-color: #fff;
   width: 0.25rem;
   height: 100%;
   top: 0rem;
   position: absolute;
   left: 0rem;
-  background-color: #fff;
 }
 .waimai-container .page7 .streetlight {
   width: 4rem;
@@ -1257,17 +1321,17 @@ body > div {
   left: -7rem;
 }
 .waimai-container .page7 .sphere {
+  bottom: 0;
   width: 32rem;
   height: 19.2rem;
   position: absolute;
   background: url("../images/page8/sphere7.png") no-repeat center / 100% 100%;
-  bottom: 0;
 }
 .waimai-container .page7 .bear {
   width: 13.8rem;
   height: 13.55rem;
   background: url("../images/page8/bear6.png") no-repeat center / 100% 100%;
-  lfet: 11.5rem;
+  left: 11.5rem;
   position: absolute;
   bottom: 14rem;
 }
@@ -1353,14 +1417,14 @@ body > div {
     transform: translateY(-10%);
   }
   100% {
-    opacity: 1;
     transform: none;
+    opacity: 1;
   }
 }
 @keyframes btnBox {
   from {
-    opacity: 0;
     transform: scale(2);
+    opacity: 0;
   }
   to {
     opacity: 1;
@@ -1386,6 +1450,7 @@ body > div {
   }
   to {
     transform: none;
+    opacity: 1;
   }
 }
 @keyframes smoke {
@@ -1432,7 +1497,7 @@ body > div {
 }
 .welcome.animate .grass1 {
   height: 19.8rem;
-  transition: all .5s ;
+  transition: all .5s;
 }
 .welcome.animate .grass2 {
   animation: grass2 .5s .5s forwards;
@@ -1444,7 +1509,7 @@ body > div {
   animation: btnBox .5s 1.5s forwards;
 }
 .welcome.animate .circle2 {
-  animation: rotate .5s 1.5s linear  infinite;
+  animation: rotate .5s 1.5s linear infinite;
 }
 .welcome.animate .bear-box {
   animation: bearBox .5s 2s forwards;
@@ -1484,55 +1549,55 @@ body > div {
   height: 0 !important;
 }
 .page1 .scroll-page1 .bg {
-  opacity: 0;
   transform-origin: 50% 200%;
+  opacity: 0;
 }
 .page1 .scroll-page1 .person {
-  opacity: 0;
   transform-origin: 50% 200%;
+  opacity: 0;
 }
 .page1 .scroll-page1 .message-container {
-  opacity: 0;
   transform-origin: right bottom;
+  opacity: 0;
 }
 .page1 .scroll-page2 .bg {
-  opacity: 0;
   transform-origin: 50% 200%;
+  opacity: 0;
 }
 .page1 .scroll-page2 .person {
-  opacity: 0;
   transform-origin: 50% 200%;
+  opacity: 0;
 }
 .page1 .scroll-page2 .person .leg2 {
   transform-origin: left bottom;
 }
 .page1 .scroll-page2 .message-container {
-  opacity: 0;
   transform-origin: right bottom;
+  opacity: 0;
 }
 .page1 .scroll-page3 .bg {
-  opacity: 0;
   transform-origin: 50% 200%;
+  opacity: 0;
 }
 .page1 .scroll-page3 .person {
-  opacity: 0;
   transform-origin: 50% 200%;
+  opacity: 0;
 }
 .page1 .scroll-page3 .message-container {
-  opacity: 0;
   transform-origin: right bottom;
+  opacity: 0;
 }
 @keyframes rotate2left {
   0% {
     transform: rotateZ(90deg);
   }
   25% {
-    opacity: 1;
     transform: rotateZ(-5deg);
+    opacity: 1;
   }
   30% {
-    opacity: 1;
     transform: rotateZ(0);
+    opacity: 1;
   }
   70% {
     transform: rotateZ(0);
@@ -1552,20 +1617,20 @@ body > div {
     transform: rotateZ(90deg);
   }
   95% {
-    opacity: 1;
     transform: rotateZ(-5deg);
+    opacity: 1;
   }
   100% {
-    opacity: 1;
     transform: none;
+    opacity: 1;
   }
 }
 @keyframes left2right2left {
   30% {
-    transform: translateX(-10%);
+    transform: translateX(-5%);
   }
   60% {
-    transform: translateX(10%);
+    transform: translateX(5%);
   }
   100% {
     transform: none;
@@ -1692,8 +1757,8 @@ body > div {
   opacity: 0;
 }
 .page2.animate .bg {
-  animation: rotate2rotate .5s forwards;
   transform-origin: 50% 200%;
+  animation: rotate2rotate .5s forwards;
 }
 .page2.animate .table {
   animation: bearBox .5s .5s forwards;
@@ -1722,28 +1787,378 @@ body > div {
 .page3 .bear {
   opacity: 0;
 }
-.page3 .bear .license {
+.page3 .license {
   opacity: 0;
 }
-.page3 .bear .oil {
+.page3 .oil {
   opacity: 0;
 }
-.page3 .bear .evil {
+.page3 .evil {
   opacity: 0;
 }
 .page3.animate .bg {
-  animation: rotate2rotate .5s forwards;
   transform-origin: 50% 200%;
+  animation: rotate2rotate .5s forwards;
 }
 .page3.animate .bear {
   animation: bottom2top .5s .5s forwards;
 }
-.page3.animate .bear .license {
-  animation: left2right2left .5s 1s infinite;
+.page3.animate .license {
+  animation: smoke .5s 1s forwards, left2right2left .5s 1.5s infinite;
 }
-.page3.animate .bear .oil {
-  animation: left2right2left .5s 1s infinite;
+.page3.animate .oil {
+  animation: smoke .5s 1s forwards, left2right2left 1s 1.5s infinite;
 }
-.page3.animate .bear .evil {
-  animation: left2right2left .5s 1s infinite;
+.page3.animate .evil {
+  animation: smoke .5s 1s forwards, left2right2left .5s 1.5s infinite;
+}
+.page3 .animation-bear-box .animate-bear1 {
+  opacity: 0;
+  width: 12.55rem;
+  height: 16.75rem;
+  background: url("../images/page4/bear3-1-1.png") no-repeat center / 100% 100%;
+  left: 50%;
+  margin-left: -6.275rem;
+  bottom: 9.75rem;
+  position: absolute;
+}
+.page3 .animation-bear-box .animate-bear2 {
+  opacity: 0;
+  width: 10.75rem;
+  height: 15.65rem;
+  background: url("../images/page4/bear3-2-1.png") no-repeat center / 100% 100%;
+  left: 50%;
+  margin-left: -5.375rem;
+  bottom: 9.75rem;
+  position: absolute;
+}
+.page3 .animation-bear-box .animate-bear3 {
+  opacity: 0;
+  width: 14.5rem;
+  height: 16.05rem;
+  background: url("../images/page4/bear3-3-1.png") no-repeat center / 100% 100%;
+  left: 50%;
+  margin-left: -7.25rem;
+  bottom: 9.75rem;
+  position: absolute;
+}
+.page3 .hit-card-box .card1 {
+  opacity: 0;
+  width: 11.4rem;
+  height: 7.55rem;
+  background: url("../images/page4/license1.png") no-repeat center / 100% 100%;
+  left: 2rem;
+  position: absolute;
+  bottom: 25rem;
+}
+.page3 .hit-card-box .card2 {
+  opacity: 0;
+  width: 11.55rem;
+  height: 7.8rem;
+  background: url("../images/page4/oil1.png") no-repeat center / 100% 100%;
+  left: 11.25rem;
+  position: absolute;
+  bottom: 33rem;
+}
+.page3 .hit-card-box .card3 {
+  opacity: 0;
+  width: 10.55rem;
+  height: 8.65rem;
+  background: url("../images/page4/evil21.png") no-repeat center / 100% 100%;
+  right: 1.5rem;
+  position: absolute;
+  bottom: 24rem;
+}
+.page4 .bg {
+  opacity: 0;
+}
+.page4 .bear {
+  opacity: 0;
+}
+.page4 .card1 {
+  opacity: 0;
+}
+.page4 .card2 {
+  opacity: 0;
+}
+.page4 .card3 {
+  opacity: 0;
+}
+.page4.animate .bg {
+  transform-origin: 50% 200%;
+  animation: rotate2rotate .5s forwards;
+}
+.page4.animate .bear {
+  animation: bottom2top .5s .5s forwards;
+}
+.page4.animate .card1 {
+  animation: smoke .5s 1s forwards;
+}
+.page4.animate .card2 {
+  animation: smoke .5s 1s forwards;
+}
+.page4.animate .card3 {
+  animation: smoke .5s 1s forwards;
+}
+.page5 .bg {
+  opacity: 0;
+}
+.page5 .bear {
+  opacity: 0;
+}
+.page5 .cloud {
+  opacity: 0;
+}
+.page5 .cloud .snow {
+  opacity: 0;
+  width: 1.6rem;
+  height: 1.6rem;
+  position: absolute;
+  background: url("../images/page6/snow-piece.png") no-repeat center / 100% 100%;
+}
+.page5 .cloud .snow:nth-child(1) {
+  left: 0rem;
+  position: absolute;
+  bottom: 0rem;
+}
+.page5 .cloud .snow:nth-child(2) {
+  left: 1.6rem;
+  position: absolute;
+  bottom: 0rem;
+}
+.page5 .cloud .snow:nth-child(3) {
+  left: 3.2rem;
+  position: absolute;
+  bottom: 0rem;
+}
+.page5 .cloud .snow:nth-child(4) {
+  left: 4.8rem;
+  position: absolute;
+  bottom: 0rem;
+}
+.page5 .cloud .snow:nth-child(5) {
+  left: 6.4rem;
+  position: absolute;
+  bottom: 0rem;
+}
+.page5 .cloud .snow:nth-child(6) {
+  left: 8rem;
+  position: absolute;
+  bottom: 0rem;
+}
+.page5 .cloud .snow:nth-child(7) {
+  left: 9.6rem;
+  position: absolute;
+  bottom: 0rem;
+}
+.page5 .cloud .snow:nth-child(8) {
+  right: 11.2rem;
+  position: absolute;
+  bottom: 0rem;
+}
+.page5 .cloud .snow:nth-child(9) {
+  right: 1.6rem;
+  position: absolute;
+  bottom: 0rem;
+}
+.page5 .cloud .snow:nth-child(10) {
+  right: 3.2rem;
+  position: absolute;
+  bottom: 0rem;
+}
+.page5 .cloud .snow:nth-child(11) {
+  right: 4.8rem;
+  position: absolute;
+  bottom: 0rem;
+}
+.page5 .cloud .snow:nth-child(12) {
+  right: 6.4rem;
+  position: absolute;
+  bottom: 0rem;
+}
+.page5 .cloud .snow:nth-child(13) {
+  right: 8rem;
+  position: absolute;
+  bottom: 0rem;
+}
+.page5 .cloud .snow:nth-child(14) {
+  right: 9.6rem;
+  position: absolute;
+  bottom: 0rem;
+}
+.page5 .cloud .snow:nth-child(15) {
+  right: 11.2rem;
+  position: absolute;
+  bottom: 0rem;
+}
+.page5 .smoke {
+  opacity: 0;
+}
+.page5.animate .bg {
+  transform-origin: 50% 200%;
+  animation: rotate2rotate .5s forwards;
+}
+.page5.animate .bear {
+  animation: bearBox .5s 1s forwards, bear .5s 1.5s infinite;
+}
+.page5.animate .cloud {
+  animation: smoke .5s .5s forwards, left2right2left 1s 1s infinite;
+}
+.page5.animate .cloud .snow:nth-child(1) {
+  animation: snowLeft .8s 1.5s infinite;
+}
+.page5.animate .cloud .snow:nth-child(2) {
+  animation: snowRigth 1s 1.5s infinite;
+}
+.page5.animate .cloud .snow:nth-child(3) {
+  animation: snowLeft 1.8s 1.5s infinite;
+}
+.page5.animate .cloud .snow:nth-child(4) {
+  animation: snowRigth 3s 1.5s infinite;
+}
+.page5.animate .cloud .snow:nth-child(5) {
+  animation: snowLeft 1.2s 1.5s infinite;
+}
+.page5.animate .cloud .snow:nth-child(6) {
+  animation: snowRigth 1.3s 1.5s infinite;
+}
+.page5.animate .cloud .snow:nth-child(7) {
+  animation: snowLeft 2s 1.5s infinite;
+}
+.page5.animate .cloud .snow:nth-child(8) {
+  animation: snowRigth 1s 1.5s infinite;
+}
+.page5.animate .cloud .snow:nth-child(9) {
+  animation: snowLeft .8s 1.5s infinite;
+}
+.page5.animate .cloud .snow:nth-child(10) {
+  animation: snowRigth .5s 1.5s infinite;
+}
+.page5.animate .cloud .snow:nth-child(11) {
+  animation: snowLeft .1.5s 1.5s infinite;
+}
+.page5.animate .cloud .snow:nth-child(12) {
+  animation: snowRigth 1.2s 1.5s infinite;
+}
+.page5.animate .cloud .snow:nth-child(13) {
+  animation: snowLeft .2s 1.5s infinite;
+}
+.page5.animate .cloud .snow:nth-child(14) {
+  animation: snowRigth .1.5s 1.5s infinite;
+}
+.page5.animate .cloud .snow:nth-child(15) {
+  animation: snowLeft 2s 1.5s infinite;
+}
+.page5.animate .smoke {
+  animation: smoke .5s 1.5s infinite;
+}
+@keyframes snowLeft {
+  from {
+    opacity: 1;
+  }
+  to {
+    transform: translateY(1000%) translateX(-200%);
+    opacity: 1;
+  }
+}
+@keyframes snowRight {
+  to {
+    transform: translateY(1000%) translateX(200%);
+    opacity: 1;
+  }
+}
+@keyframes none2Noraml {
+  from {
+    transform: none;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.page6 .gift-box > div {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+}
+.page6.animate .gift-box > div:nth-child( 1) {
+  animation: none2Noraml 1.5s 0.05s infinite;
+}
+.page6.animate .gift-box > div:nth-child( 1) > div {
+  animation: rotate 1.5s 0.1 infinite;
+}
+.page6.animate .gift-box > div:nth-child( 2) {
+  animation: none2Noraml 1.5s 0.1s infinite;
+}
+.page6.animate .gift-box > div:nth-child( 2) > div {
+  animation: rotate 1.5s 0.2 infinite;
+}
+.page6.animate .gift-box > div:nth-child( 3) {
+  animation: none2Noraml 1.5s 0.15s infinite;
+}
+.page6.animate .gift-box > div:nth-child( 3) > div {
+  animation: rotate 1.5s 0.3 infinite;
+}
+.page6.animate .gift-box > div:nth-child( 4) {
+  animation: none2Noraml 1.5s 0.2s infinite;
+}
+.page6.animate .gift-box > div:nth-child( 4) > div {
+  animation: rotate 1.5s 0.4 infinite;
+}
+.page6.animate .gift-box > div:nth-child( 5) {
+  animation: none2Noraml 1.5s 0.25s infinite;
+}
+.page6.animate .gift-box > div:nth-child( 5) > div {
+  animation: rotate 1.5s 0.5 infinite;
+}
+.page6.animate .gift-box > div:nth-child( 6) {
+  animation: none2Noraml 1.5s 0.3s infinite;
+}
+.page6.animate .gift-box > div:nth-child( 6) > div {
+  animation: rotate 1.5s 0.6 infinite;
+}
+.page6.animate .gift-box > div:nth-child( 7) {
+  animation: none2Noraml 1.5s 0.35s infinite;
+}
+.page6.animate .gift-box > div:nth-child( 7) > div {
+  animation: rotate 1.5s 0.7 infinite;
+}
+.page6.animate .gift-box > div:nth-child( 8) {
+  animation: none2Noraml 1.5s 0.4s infinite;
+}
+.page6.animate .gift-box > div:nth-child( 8) > div {
+  animation: rotate 1.5s 0.8 infinite;
+}
+.page6.animate .gift-box > div:nth-child( 9) {
+  animation: none2Noraml 1.5s 0.45s infinite;
+}
+.page6.animate .gift-box > div:nth-child( 9) > div {
+  animation: rotate 1.5s 0.9 infinite;
+}
+.page6.animate .gift-box > div:nth-child( 10) {
+  animation: none2Noraml 1.5s 0.5s infinite;
+}
+.page6.animate .gift-box > div:nth-child( 10) > div {
+  animation: rotate 1.5s 1 infinite;
+}
+.page6.animate .gift-box > div:nth-child( 11) {
+  animation: none2Noraml 1.5s 0.55s infinite;
+}
+.page6.animate .gift-box > div:nth-child( 11) > div {
+  animation: rotate 1.5s 1.1 infinite;
+}
+.page6.animate .gift-box > div:nth-child( 12) {
+  animation: none2Noraml 1.5s 0.6s infinite;
+}
+.page6.animate .gift-box > div:nth-child( 12) > div {
+  animation: rotate 1.5s 1.2 infinite;
+}
+.music-control {
+  width: 1.8rem;
+  height: 1.8rem;
+  background: url("../images/play.png") no-repeat center / 100% 100%;
+  right: 1.6rem;
+  position: absolute;
+  top: 1.6rem;
+  z-index: 6;
 }
